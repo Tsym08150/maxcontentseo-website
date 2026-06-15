@@ -1,0 +1,7 @@
+# Website-Repo — nur Website-Dateien, nie Pipeline-Code
+node_modules/
+qa_output/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log

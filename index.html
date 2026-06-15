@@ -1,0 +1,2123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO für Kosmetik- & Wellnessstudios | MaxContentSEO</title>
+<link rel="canonical" href="https://maxcontentseo.de/" />
+<meta name="description" content="Mehr qualifizierte Anfragen aus Google für Kosmetik- und Wellnessstudios. Kostenlose Potenzialanalyse — kein Agentur-Vertrag.">
+<style>
+:root {
+  --bg: #FAFAF8;
+  --bg-alt: #F2F1ED;
+  --text: #141414;
+  --text-muted: #6B6B6B;
+  --accent: #1B6B4A;
+  --accent-light: #E8F5EE;
+  --accent-dark: #134D35;
+  --border: #E2E0DA;
+  --white: #FFFFFF;
+  --serif: Georgia, 'Times New Roman', serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --max-w: 1100px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+  --shadow-soft: 0 18px 48px rgba(20, 20, 20, 0.06);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.container {
+  width: min(calc(100% - (var(--space-sm) * 2)), var(--max-w));
+  margin: 0 auto;
+}
+
+.section {
+  padding-block: clamp(var(--space-lg), 10vw, var(--space-xl));
+}
+
+.section-alt {
+  background: var(--bg-alt);
+}
+
+.section-head {
+  display: grid;
+  gap: var(--space-sm);
+  margin-bottom: clamp(var(--space-md), 5vw, var(--space-lg));
+}
+
+.eyebrow {
+  width: fit-content;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.83rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.section-kicker {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.section-title {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  line-height: 1.05;
+  font-weight: 400;
+}
+
+.section-intro {
+  margin: 0;
+  max-width: 60ch;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 2vw, 1.12rem);
+}
+
+.card-grid {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.card {
+  padding: clamp(1.25rem, 3vw, 1.6rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+}
+
+.card h3,
+.card h4,
+.card p {
+  margin-top: 0;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 2rem;
+  padding-inline: 0.8rem;
+  border-radius: 999px;
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.site-nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  border-bottom: 1px solid rgba(226, 224, 218, 0.8);
+  background: rgba(250, 250, 248, 0.82);
+  backdrop-filter: blur(14px);
+}
+
+.site-nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  min-height: 4.5rem;
+}
+
+.brand {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.brand span {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links a:not(.nav-cta) {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+.nav-links a:not(.nav-cta):hover {
+  color: var(--accent);
+}
+
+.nav-cta,
+.button-primary,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.85rem;
+  padding-inline: 1.2rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-size: 0.96rem;
+  font-weight: 600;
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.nav-cta,
+.button-primary {
+  background: var(--accent);
+  color: #fff !important;
+  border: 1px solid var(--accent);
+}
+
+.nav-cta:hover,
+.button-primary:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+.button-secondary {
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: transparent;
+}
+
+.button-secondary:hover {
+  border-color: var(--text);
+}
+
+.text-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.text-link:hover {
+  color: var(--accent);
+}
+
+.hero {
+  padding-top: clamp(7rem, 15vw, 9.5rem);
+  padding-bottom: clamp(var(--space-lg), 8vw, 5.5rem);
+}
+
+.hero__grid {
+  display: grid;
+  gap: clamp(var(--space-md), 6vw, 5rem);
+  align-items: center;
+}
+
+.hero__copy {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.hero__title {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  line-height: 0.98;
+  font-weight: 400;
+  max-width: 100%;
+}
+
+.hero__lead {
+  margin: 0;
+  max-width: 58ch;
+  color: var(--text-muted);
+  font-size: clamp(1.05rem, 2.3vw, 1.18rem);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1rem;
+  align-items: center;
+}
+
+.hero__proof-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+  align-items: center;
+  color: var(--color-text-primary, var(--text));
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hero__proof-point {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.hero__proof-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 0.95rem;
+  height: 0.95rem;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.hero__metrics {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 0.4rem;
+}
+
+.hero__metric {
+  display: grid;
+  gap: 0.2rem;
+  padding-block: 0.85rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.hero__metric strong {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.hero__metric span {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero__visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: clamp(240px, 30vw, 380px);
+}
+
+.hero__blob {
+  position: absolute;
+  inset: auto auto 0 50%;
+  width: min(100%, 26rem);
+  transform: translateX(-42%);
+  color: var(--accent);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.hero-photo {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 24rem);
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: linear-gradient(145deg, var(--accent-light), var(--bg-alt));
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-photo__placeholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: var(--accent-dark);
+  font-weight: 600;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 48%),
+    linear-gradient(145deg, var(--accent-light), var(--bg-alt));
+}
+
+.georg-section {
+  padding-block: clamp(var(--space-md), 6vw, var(--space-lg));
+}
+
+.georg-card {
+  display: grid;
+  gap: var(--space-sm);
+  padding: clamp(1.25rem, 3vw, 1.6rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-alt);
+}
+
+.georg-avatar {
+  display: inline-grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+}
+
+.georg-card__body {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.georg-card__name {
+  margin: 0;
+  font-weight: 800;
+}
+
+.georg-card__text {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.feature-board {
+  padding-block: clamp(var(--space-lg), 8vw, 6rem);
+}
+
+.feature-board__grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.feature-column {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.feature-column__head {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  align-items: end;
+}
+
+.feature-column__head h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  line-height: 1.05;
+  font-weight: 400;
+}
+
+.feature-card {
+  display: grid;
+  min-height: 18rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  color: inherit;
+  text-decoration: none;
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+}
+
+.feature-card--static {
+  box-shadow: none;
+}
+
+.feature-card__media {
+  min-height: 11rem;
+  background: #E2E0DA;
+}
+
+.feature-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-card__media--contain {
+  background: #142037;
+}
+
+.feature-card__media--contain img {
+  object-fit: contain;
+}
+
+.feature-card__body {
+  display: grid;
+  gap: 0.7rem;
+  padding: clamp(1.2rem, 3vw, 1.55rem);
+}
+
+.feature-card__tag {
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.feature-card h3,
+.feature-card p {
+  margin: 0;
+}
+
+.feature-card h3 {
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  line-height: 1.12;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.feature-card p {
+  color: var(--text-muted);
+}
+
+.logo-strip {
+  padding-block: 0 var(--space-lg);
+}
+
+.logo-strip__inner {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.logo-strip__label {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.logo-strip__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.logo-strip__logo {
+  width: 120px;
+  height: 40px;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.context-note {
+  margin-top: var(--space-md);
+  padding: 1rem 1.15rem;
+  border-left: 3px solid var(--accent);
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.metrics-grid,
+.problems-grid,
+.solutions-grid,
+.pricing-grid {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.metric-card strong {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1;
+}
+
+.metric-card h3 {
+  margin-bottom: 0.35rem;
+  font-size: 1.05rem;
+}
+
+.metric-card p {
+  margin-bottom: 0;
+  color: var(--text-muted);
+}
+
+.problem-card {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.problem-card__icon,
+.solution-card__icon,
+.process-step__icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+.problem-card h3,
+.solution-card h3 {
+  margin-bottom: 0.35rem;
+  font-size: 1.05rem;
+}
+
+.problem-card p,
+.solution-card p {
+  margin-bottom: 0;
+  color: var(--text-muted);
+}
+
+.solution-stack {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.credibility-grid {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.credibility-item {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.credibility-item h4 {
+  margin: 0 0 0.3rem;
+  font-size: 0.98rem;
+}
+
+.credibility-item p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.process-grid {
+  display: grid;
+  gap: var(--space-sm);
+  align-items: stretch;
+}
+
+.process-step {
+  display: grid;
+  gap: 1rem;
+  height: 100%;
+  grid-template-rows: 2.75rem minmax(1.1rem, auto) minmax(2.6rem, auto) 1fr;
+  padding: 1.35rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+}
+
+.process-step__meta {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.process-step h3 {
+  margin: 0;
+  font-size: 1.08rem;
+}
+
+.process-step p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.case-study {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.case-study__panel {
+  padding: clamp(1.35rem, 3vw, 1.7rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+}
+
+.case-study__top {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.case-study__meta {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.case-study__title {
+  margin: 0;
+  font-size: clamp(1.45rem, 3vw, 1.8rem);
+}
+
+.case-study__metrics {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.case-study__metric strong {
+  display: block;
+  font-size: clamp(1.45rem, 4vw, 1.95rem);
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.case-study__metric h4 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+}
+
+.case-study__metric p,
+.case-study__body p,
+.case-study__list,
+.case-study__callout p {
+  color: var(--text-muted);
+}
+
+.case-study__split {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.case-study__body h4,
+.case-study__callout h4 {
+  margin: 0 0 0.55rem;
+  font-size: 1rem;
+}
+
+.case-study__body p {
+  margin: 0;
+}
+
+.case-study__list {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.case-study__callout {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+  padding: 1rem 1.1rem;
+}
+
+.case-study__callout p {
+  margin: 0;
+}
+
+.pricing-wrap {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.pricing-block {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.pricing-block__head {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.pricing-block__head h3 {
+  margin: 0;
+  font-size: clamp(1.35rem, 3vw, 1.7rem);
+}
+
+.pricing-divider {
+  border: 0;
+  border-top: 1px solid var(--border);
+  width: 100%;
+  margin: 0;
+}
+
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pricing-card--secondary {
+  background: var(--white);
+}
+
+.pricing-card--featured {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-soft);
+}
+
+.pricing-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.pricing-card__price strong {
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  line-height: 1;
+}
+
+.pricing-card__price span {
+  color: var(--text-muted);
+}
+
+.pricing-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+  display: grid;
+  gap: 0.55rem;
+  flex: 1;
+}
+
+.pricing-card .button-primary,
+.pricing-card .button-secondary {
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.pricing-note {
+  display: grid;
+  gap: 0.85rem;
+  justify-items: start;
+}
+
+.pricing-callout {
+  margin: 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--accent);
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.56);
+  font-size: 0.95rem;
+}
+
+.pricing-footnote {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.accordion {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.accordion-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  overflow: clip;
+}
+
+.accordion-trigger {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 1.15rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: left;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.accordion-trigger span:first-child {
+  font-weight: 600;
+}
+
+.accordion-icon {
+  color: var(--accent);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.accordion-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 180ms ease;
+}
+
+.accordion-panel__inner {
+  overflow: hidden;
+}
+
+.accordion-panel__inner p {
+  margin: 0;
+  padding: 0 1.2rem 1.2rem;
+  color: var(--text-muted);
+}
+
+.accordion-item.is-open .accordion-panel {
+  grid-template-rows: 1fr;
+}
+
+.accordion-item.is-open .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.cta-final {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.cta-final .section-intro,
+.cta-final .section-kicker,
+.cta-final .contact-meta,
+.cta-final .contact-note {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.contact-grid {
+  display: grid;
+  gap: var(--space-md);
+  align-items: start;
+}
+
+.contact-meta {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-checks {
+  display: grid;
+  gap: 0.7rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.contact-checks li {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+}
+
+.contact-form {
+  padding: clamp(1.35rem, 3vw, 1.8rem);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  color: var(--text);
+}
+
+.contact-form h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.35rem;
+}
+
+.contact-form p {
+  margin-top: 0;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.form-field label {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  padding: 0.9rem 0.95rem;
+  color: var(--text);
+}
+
+.form-field textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.form-hint,
+.optional {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.legal {
+  background: var(--bg-alt);
+}
+
+.legal-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.legal details {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  overflow: hidden;
+}
+
+.legal summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1rem 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-weight: 700;
+}
+
+.legal summary::-webkit-details-marker {
+  display: none;
+}
+
+.legal__content {
+  padding: 0 1.15rem 1.2rem;
+  color: var(--text-muted);
+}
+
+.legal__content p {
+  margin-block: 0 1rem;
+}
+
+.site-footer {
+  padding-block: var(--space-md);
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.site-footer__inner {
+  display: grid;
+  gap: 1rem;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.1rem;
+}
+
+.site-footer__links a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.site-footer__links a:hover {
+  color: var(--accent);
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .hero__grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 400px);
+  }
+
+  .hero__metrics {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .georg-card {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+
+  .logo-strip__inner {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+
+  .logo-strip__list {
+    justify-content: flex-end;
+  }
+
+  .feature-board__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .metrics-grid,
+  .problems-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .solutions-grid,
+  .process-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pricing-grid--three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .credibility-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .case-study__metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .case-study__split {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  }
+
+  .pricing-grid {
+    align-items: stretch;
+  }
+
+  .contact-grid {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  }
+
+  .site-footer__inner {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-nav__inner {
+    min-height: 4rem;
+  }
+
+  .nav-cta {
+    padding-inline: 0.8rem;
+    font-size: 0.82rem;
+  }
+
+  .nav-links {
+    gap: 0.75rem;
+  }
+
+  .nav-links a:not(.nav-cta) {
+    font-size: 0.88rem;
+  }
+
+  .hero__visual {
+    order: 2;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero__blob {
+    width: min(100%, 19rem);
+    transform: translateX(-45%);
+  }
+
+  .hero__title {
+    max-width: 13ch;
+  }
+}
+
+.nav-toggle {
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--text);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 1.25rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.site-nav.is-open .nav-toggle span:first-child { transform: translateY(7px) rotate(45deg); }
+.site-nav.is-open .nav-toggle span:nth-child(2) { opacity: 0; }
+.site-nav.is-open .nav-toggle span:last-child { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 767px) {
+  .site-nav__inner {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+    max-height: 0;
+    padding: 0 0.85rem;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transform: translateY(-0.35rem);
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    background: rgba(250, 250, 248, 0.98);
+    box-shadow: 0 18px 50px rgba(20, 20, 20, 0.12);
+    transition: max-height 200ms ease, opacity 160ms ease, transform 160ms ease, padding 160ms ease;
+  }
+
+  .site-nav.is-open .nav-links {
+    max-height: 22rem;
+    padding: 0.85rem;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateY(0);
+    border-color: var(--border);
+  }
+
+  .site-nav.is-open .nav-links a {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .site-nav.is-open .nav-links .nav-cta,
+  .site-nav.is-open .nav-links .button-primary {
+    justify-content: center;
+  }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://maxcontentseo.de/#organization",
+      "name": "MaxContentSEO",
+      "description": "SEO-Beratung für Kosmetik- und Wellnessstudios in Deutschland",
+      "url": "https://maxcontentseo.de/",
+      "email": "georg@maxcontentseo.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hauptstr. 29",
+        "postalCode": "85551",
+        "addressLocality": "Kirchheim b. München",
+        "addressCountry": "DE"
+      },
+      "founder": {"@id": "https://maxcontentseo.de/#georg"},
+      "areaServed": [
+        {"@type": "City", "name": "München"},
+        {"@type": "City", "name": "Hamburg"},
+        {"@type": "City", "name": "Frankfurt"},
+        {"@type": "City", "name": "Berlin"}
+      ],
+      "knowsAbout": [
+        "Local SEO",
+        "Suchmaschinenoptimierung für Beauty-Studios",
+        "Suchmaschinenoptimierung für Wellness-Studios",
+        "Suchmaschinenoptimierung für TCM-Praxen"
+      ],
+      "priceRange": "€€"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://maxcontentseo.de/#georg",
+      "name": "Georg Stopfer",
+      "url": "https://maxcontentseo.de/",
+      "jobTitle": "SEO-Berater",
+      "worksFor": {"@id": "https://maxcontentseo.de/#organization"}
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/assets/tap-targets.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Hauptnavigation" data-mobile-nav>
+    <div class="container site-nav__inner">
+      <a class="brand" href="#top">Max<span>ContentSEO</span></a>
+      <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="primary-navigation">
+        <a href="/leistungen/">Leistungen</a>
+        <a href="/seo-muenchen/">SEO München</a>
+        <a href="/ki-sichtbarkeit/">KI-Sichtbarkeit</a>
+        <a href="cases/">Referenzen</a>
+        <a href="/blog/">Blog</a>
+        <a href="/audit-beispiel.html">Premium-Audit Muster</a>
+        <a href="/ai-analyse-firmen.html">AI-Analyse</a>
+        <a class="nav-cta" href="#kontakt">Kostenlose Potenzialanalyse</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="eyebrow">SEO für Beauty- &amp; Wellnessstudios</div>
+          <h1 class="hero__title">Mehr qualifizierte Anfragen aus Google — für Kosmetik- und Wellnessstudios</h1>
+          <p class="hero__lead">Ich zeige Studios in Deutschland, welche Inhalte sie bei Google sichtbar machen — messbar, ohne Agentur-Vertrag.</p>
+          <div class="hero__actions">
+            <a class="button-primary" href="#kontakt">Kostenlose Potenzialanalyse</a>
+            <a class="text-link" href="/leistungen/">Leistungen ansehen</a>
+            <a class="text-link" href="/seo-muenchen/">SEO München</a>
+          </div>
+          <div class="hero__proof-points" aria-label="Kurzvorteile">
+            <span class="hero__proof-point"><span class="hero__proof-icon" aria-hidden="true">◷</span>48h Ersteinschätzung</span>
+            <span class="hero__proof-point"><span class="hero__proof-icon" aria-hidden="true">×</span>Kein Agentur-Vertrag</span>
+            <span class="hero__proof-point"><span class="hero__proof-icon" aria-hidden="true">✓</span>Konkrete Maßnahmen statt Theorie</span>
+          </div>
+          <div class="hero__metrics" aria-label="Kurze Kennzahlen">
+            <div class="hero__metric">
+              <span>Referenz</span>
+              <strong>LingQi TCM München</strong>
+            </div>
+            <div class="hero__metric">
+              <span>Audit-Einstieg</span>
+              <strong>499€ · ohne Vertrag</strong>
+            </div>
+            <div class="hero__metric">
+              <span>Lieferzeit</span>
+              <strong>48h Analyse</strong>
+            </div>
+            <div class="hero__metric">
+              <span>Spezialisierung</span>
+              <strong>Beauty &amp; Wellness</strong>
+            </div>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <svg class="hero__blob" viewBox="0 0 520 520" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M437.9 112.4C476.4 154 486.4 216.7 468.8 272.4C451.3 328.1 406.3 376.7 355.1 414.2C304 451.7 246.8 478 188.2 464.4C129.7 450.7 69.9 397 49.5 331.7C29 266.4 47.8 189.5 93.3 142.9C138.8 96.3 210.9 80 279.3 72.7C347.6 65.4 399.3 70.8 437.9 112.4Z"/>
+          </svg>
+          <div class="hero-photo">
+            <img src="/assets/georg.webp" alt="Georg Stopfer von MaxContentSEO" width="544" height="725" fetchpriority="high" loading="eager">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="ki-verantwortung-title">
+      <div class="container pricing-wrap">
+        <div class="pricing-block">
+          <div class="section-head">
+            <div class="eyebrow">Marktentwicklung</div>
+            <h2 class="section-title" id="ki-verantwortung-title">KI-Sichtbarkeit braucht klare Verantwortung.</h2>
+            <p class="section-intro">IBM zeigt: Große Organisationen schaffen eigene Verantwortung für KI. 2026 haben 76 % der befragten Organisationen einen Chief AI Officer — ein Jahr zuvor waren es 26 %. Gleichzeitig nutzt nur 25 % der Belegschaft KI regelmäßig im Job.</p>
+            <p class="section-intro">Für lokale Studios heißt das nicht: Sie brauchen einen Chief AI Officer. Aber sie brauchen jemanden, der KI-Sichtbarkeit, Website-Inhalte, lokale Auffindbarkeit und Umsetzung systematisch steuert.</p>
+            <a class="text-link" href="https://newsroom.ibm.com/2026-05-04-ibm-study-ceos-are-reshaping-c-suite-roles-for-the-ai-era" target="_blank" rel="noopener">Quelle: IBM CEO Study 2026 / IBM Institute for Business Value</a>
+          </div>
+        </div>
+        <div class="pricing-block">
+          <div class="section-head">
+            <div class="eyebrow">Was das für Ihr Studio bedeutet</div>
+            <h2 class="section-title">Ich übernehme diese Aufgabe für Sie.</h2>
+            <p class="section-intro">KI-Antwortsysteme wie ChatGPT, Gemini und Perplexity beantworten Fragen — und nennen dabei Anbieter, für die sie klare, vertrauenswürdige und auslesbare Informationen finden.</p>
+            <p class="section-intro">Ich analysiere, ob Ihr Studio in solchen Antworten auftaucht, warum es möglicherweise fehlt und welche konkreten Maßnahmen sinnvoll sind. Das umfasst Website-Inhalte, technische Struktur, lokale Auffindbarkeit und die Aufbereitung Ihrer Leistungen für KI-Systeme.</p>
+            <p class="section-intro">Kein Agentur-Overhead. Keine Theorie. Klare Analyse und konkrete Umsetzung.</p>
+            <a class="button-primary" href="#kontakt">Kostenlose Potenzialanalyse anfragen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="georg-section" aria-labelledby="georg-section-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Wer Ihre Analyse macht</div>
+          <h2 class="section-title" id="georg-section-title">Kein Team. Kein Übergabe-Risiko.</h2>
+          <p class="section-intro">Ich arbeite bewusst spezialisiert — SEO nur für lokale Beauty-, Wellness- und TCM-Anbieter. Keine Agentur-Struktur, keine Übergabe an ein Junior-Team.</p>
+        </div>
+        <div class="georg-card">
+          <div class="georg-avatar" aria-hidden="true">GS</div>
+          <div class="georg-card__body">
+            <p class="georg-card__name">Georg Stopfer · MaxContentSEO</p>
+            <p class="georg-card__text">Ich analysiere Ihre Website selbst, schreibe die Inhalte selbst und liefere konkrete Maßnahmen — nicht eine Präsentation voller Theorie. Sie wissen immer, mit wem Sie arbeiten.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-board" aria-labelledby="feature-board-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Referenzen &amp; Blog</div>
+          <h2 class="section-title" id="feature-board-title">Echte Beispiele und nützliche SEO-Impulse</h2>
+          <p class="section-intro">Ein kompakter Einstieg in veröffentlichte Arbeit und Inhalte rund um lokale Sichtbarkeit.</p>
+        </div>
+        <div class="feature-board__grid">
+          <div class="feature-column">
+            <div class="feature-column__head">
+              <h2>Referenzen</h2>
+            </div>
+            <a class="feature-card" href="cases/lingqi.html">
+              <div class="feature-card__media">
+                <img src="/assets/lingqi-foto.webp" alt="LingQi TCM Head Spa München">
+              </div>
+              <div class="feature-card__body">
+                <div class="feature-card__tag">TCM · München</div>
+                <h3>LingQi TCM Head Spa München</h3>
+                <p>Fallstudie zur lokalen Sichtbarkeit rund um Head Spa und TCM.</p>
+              </div>
+            </a>
+            <article class="feature-card feature-card--static">
+              <div class="feature-card__media">
+                <img src="assets/kosmetikstudio-muenchen.webp" alt="Kosmetikstudio München">
+              </div>
+              <div class="feature-card__body">
+                <div class="feature-card__tag">Kosmetikstudio München</div>
+                <h3>Kosmetikstudio München</h3>
+                <p>Referenz in Vorbereitung</p>
+              </div>
+            </article>
+          </div>
+          <div class="feature-column">
+            <div class="feature-column__head">
+              <h2>Blog</h2>
+            </div>
+            <a class="feature-card" href="blog/google-bewertung-loeschen.html">
+              <div class="feature-card__media feature-card__media--contain">
+                <img src="/assets/google-bewertung-loeschen.png" alt="Negative Google-Bewertung löschen lassen">
+              </div>
+              <div class="feature-card__body">
+                <div class="feature-card__tag">Local SEO</div>
+                <h3>Google Bewertung löschen</h3>
+                <p>Was Kosmetikstudios bei problematischen Bewertungen prüfen sollten.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Vertrauen entsteht durch klare Rahmenbedingungen</div>
+          <h2 class="section-title">Kompakter Einstieg statt schwerer Agentur-Struktur</h2>
+          <p class="section-intro">Wenn Sie Sichtbarkeit aufbauen wollen, brauchen Sie keine langen Verträge. Sie brauchen eine ehrliche Analyse, klare Prioritäten und eine Umsetzung, die zu Ihrem Studio-Alltag passt.</p>
+        </div>
+        <div class="card-grid metrics-grid">
+          <article class="card metric-card">
+            <strong>35+</strong>
+            <h3>Befunde im Premium-Audit</h3>
+            <p>Priorisiert nach Wirkung</p>
+          </article>
+          <article class="card metric-card">
+            <strong>Fallstudie veröffentlicht</strong>
+            <h3>Transparenter SEO-Audit-Einblick</h3>
+            <p>LingQi TCM München</p>
+          </article>
+          <article class="card metric-card">
+            <strong>ab 490€</strong>
+            <h3>Audit-Einstieg</h3>
+            <p>Ohne Agentur-Vertrag</p>
+          </article>
+          <article class="card metric-card">
+            <strong>48h</strong>
+            <h3>Analyse-Lieferzeit</h3>
+            <p>Kein Verkaufsgespräch</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Wo Sichtbarkeit verloren geht</div>
+          <h2 class="section-title">Diese Probleme kosten lokale Anfragen</h2>
+          <p class="section-intro">Viele Studios haben bereits eine gute Dienstleistung und eine ordentliche Website. Das Problem ist meist nicht das Angebot — sondern die fehlende Sichtbarkeit bei den Suchanfragen, die kurz vor einer Entscheidung stehen.</p>
+        </div>
+        <div class="card-grid problems-grid">
+          <article class="card problem-card">
+            <div class="problem-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 12C5.2 7.7 8.3 5.5 12 5.5C15.7 5.5 18.8 7.7 21 12C18.8 16.3 15.7 18.5 12 18.5C8.3 18.5 5.2 16.3 3 12Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="1.7"/></svg>
+            </div>
+            <div>
+              <h3>Bei Google unsichtbar</h3>
+              <p>Mitbewerber erscheinen zuerst.</p>
+            </div>
+          </article>
+          <article class="card problem-card">
+            <div class="problem-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 6.5H20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M4 12H14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M4 17.5H11" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M18 18.5L20.5 16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M20.5 18.5L18 16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h3>Website ohne Anfragen</h3>
+              <p>Traffic kommt, fragt nicht an.</p>
+            </div>
+          </article>
+          <article class="card problem-card">
+            <div class="problem-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 6V12L15.8 14.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.7"/></svg>
+            </div>
+            <div>
+              <h3>Kein Content, keine Zeit</h3>
+              <p>Zwischen Terminen bleibt nichts.</p>
+            </div>
+          </article>
+          <article class="card problem-card">
+            <div class="problem-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 18L10.5 11.5L14.5 15.5L20 10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 10H20V14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3>Falsche Keywords</h3>
+              <p>Keine kaufbereiten Kundinnen.</p>
+            </div>
+          </article>
+          <article class="card problem-card">
+            <div class="problem-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3V21" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M17 7.5C17 6.1 15.4 5 13.5 5H10.8C8.7 5 7 6.3 7 7.9C7 9.5 8.4 10.4 10 10.8L14 11.8C15.6 12.2 17 13.1 17 14.7C17 16.3 15.3 17.6 13.2 17.6H10.5C8.6 17.6 7 16.5 7 15.1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h3>Investition ohne Ergebnis</h3>
+              <p>Budget geflossen, keine Anfragen.</p>
+            </div>
+          </article>
+          <article class="card problem-card">
+            <div class="problem-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 21C16.4 21 20 17.4 20 13C20 8.6 16.4 5 12 5C7.6 5 4 8.6 4 13C4 17.4 7.6 21 12 21Z" stroke="currentColor" stroke-width="1.7"/><path d="M12 5V2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M8 13L10.7 15.7L16 10.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3>Konkurrenz zieht davon</h3>
+              <p>Google Maps: andere zuerst.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container solution-stack">
+        <div class="section-head">
+          <div class="section-kicker">Wie die Zusammenarbeit aufgebaut ist</div>
+          <h2 class="section-title">Vier Bausteine für bessere Sichtbarkeit</h2>
+          <p class="section-intro">Der Ablauf bleibt bewusst übersichtlich: erst verstehen, dann priorisieren, dann umsetzen. So sehen Sie schnell, welche Maßnahmen realistisch sind und was zuerst Wirkung entfalten kann.</p>
+        </div>
+        <div class="card-grid solutions-grid">
+          <article class="card solution-card">
+            <div class="solution-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 6.5H20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M4 12H20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M4 17.5H13" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h3>SEO-Audit</h3>
+              <p>Ich prüfe Ihre Website auf Sichtbarkeit, Struktur und die größten Hebel für lokale Suchanfragen.</p>
+            </div>
+          </article>
+          <article class="card solution-card">
+            <div class="solution-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.7"/><path d="M20 20L15.8 15.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h3>Keyword-Analyse</h3>
+              <p>Statt allgemeiner Begriffe fokussiere ich Suchanfragen, die wirklich zu Ihrem Angebot und Ihrem Standort passen.</p>
+            </div>
+          </article>
+          <article class="card solution-card">
+            <div class="solution-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M6 5.5H18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M6 10.5H18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M6 15.5H12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M15.5 16L17 17.5L20 14.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3>Content-Erstellung</h3>
+              <p>Ich schreibe Inhalte mit klarer Suchintention, damit Google Ihr Studio besser einordnen kann.</p>
+            </div>
+          </article>
+          <article class="card solution-card">
+            <div class="solution-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 20C12 20 18 14.8 18 10.5C18 7.5 15.3 5 12 5C8.7 5 6 7.5 6 10.5C6 14.8 12 20 12 20Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10.5" r="2" stroke="currentColor" stroke-width="1.7"/></svg>
+            </div>
+            <div>
+              <h3>Local SEO</h3>
+              <p>Ich optimiere Ihr lokales Profil, Ihre Standortsignale und die Seiten, über die Sie regional gefunden werden sollen.</p>
+            </div>
+          </article>
+        </div>
+        <div class="credibility-grid" aria-label="Zusammenarbeit mit MaxContentSEO">
+          <div class="credibility-item">
+            <h4>Direkter Ansprechpartner</h4>
+            <p>Keine Weitergabe an Junioren, kein Pingpong zwischen Vertrieb und Umsetzung.</p>
+          </div>
+          <div class="credibility-item">
+            <h4>Fokus auf qualifizierte Anfragen</h4>
+            <p>Kein SEO-Jargon und keine Vanity-Metriken, sondern Prioritäten mit Geschäftsbezug.</p>
+          </div>
+          <div class="credibility-item">
+            <h4>Keine Blackbox</h4>
+            <p>Sie sehen, was ich tue, warum es wichtig ist und welche Schritte als Nächstes sinnvoll sind.</p>
+          </div>
+          <div class="credibility-item">
+            <h4>Priorisierung nach Hebel</h4>
+            <p>Ich sortiere Maßnahmen nach Wirkung und Aufwand, statt alles gleichzeitig anzufassen.</p>
+          </div>
+          <div class="credibility-item">
+            <h4>Spezialisiert auf lokale Dienstleister</h4>
+            <p>Beauty, Wellness, Gesundheit und Handwerk funktionieren online anders als klassische E-Commerce-Projekte.</p>
+          </div>
+          <div class="credibility-item">
+            <h4>Umsetzung, nicht nur Beratung</h4>
+            <p>Auf Wunsch liefere ich Texte, technische Änderungen und Local-SEO-Maßnahmen direkt mit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Vom ersten Blick bis zur Umsetzung</div>
+          <h2 class="section-title">So läuft ein Projekt in vier Schritten</h2>
+          <p class="section-intro">Sie bekommen keinen schwer verständlichen Report, sondern einen Ablauf, der aus Beobachtung, Priorisierung und umsetzbaren Maßnahmen besteht.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-step">
+            <div class="process-step__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.7"/><path d="M20 20L15.8 15.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </div>
+            <div class="process-step__meta">Schritt 1</div>
+            <h3>Analyse</h3>
+            <p>Kostenlose Erstanalyse mit klarer Einschätzung Ihrer aktuellen Sichtbarkeit.</p>
+          </article>
+          <article class="process-step">
+            <div class="process-step__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M5 6H19V18H5V6Z" stroke="currentColor" stroke-width="1.7"/><path d="M8 10H16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M8 14H13" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </div>
+            <div class="process-step__meta">Schritt 2</div>
+            <h3>Strategie</h3>
+            <p>Priorisierte Maßnahmen statt langer Listen: Was lohnt sich zuerst, was später.</p>
+          </article>
+          <article class="process-step">
+            <div class="process-step__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M6 12L10 16L18 8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/></svg>
+            </div>
+            <div class="process-step__meta">Schritt 3</div>
+            <h3>Umsetzung</h3>
+            <p>Auf Wunsch mit Content, Local SEO und technischen Anpassungen direkt aus einer Hand.</p>
+          </article>
+          <article class="process-step">
+            <div class="process-step__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 18L9 13L12 16L20 8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 8H20V12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="process-step__meta">Schritt 4</div>
+            <h3>Ergebnisse</h3>
+            <p>Mehr Sichtbarkeit bei kaufnahen Suchanfragen und eine bessere Grundlage für qualifizierte Anfragen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="resultate">
+      <div class="container case-study">
+        <div class="section-head">
+          <div class="section-kicker">Aktuelle Referenz</div>
+          <h2 class="section-title">LingQi — TCM Head Spa München</h2>
+          <p class="section-intro">Ein kompakter Einblick in die Ausgangslage, die SEO-Prüfung und die nächsten sinnvollen Schritte für lokale Sichtbarkeit.</p>
+        </div>
+        <div class="case-study__panel">
+          <div class="case-study__top">
+            <div class="pill">LingQi TCM München</div>
+            <div class="case-study__meta">TCM-Praxis · München</div>
+          </div>
+          <div class="case-study__split">
+            <div class="case-study__body">
+              <h4>Ausgangssituation</h4>
+              <p>Hochwertige Praxis mit geringer Sichtbarkeit bei relevanten Suchanfragen rund um Haarausfall, Kopfhautbehandlung und TCM. Bestehende Inhalte waren vorhanden, jedoch nicht gezielt auf Suchintention und Keywords ausgerichtet.</p>
+            </div>
+            <div class="case-study__body">
+              <h4>Ergebnis</h4>
+              <p>Klare SEO-Strategie mit priorisierten Keywords und konkretem Content-Plan als Grundlage für organische Sichtbarkeit bei relevanten Suchanfragen.</p>
+            </div>
+          </div>
+          <div class="case-study__split">
+            <div class="case-study__body">
+              <h4>Vorgehen</h4>
+              <ul class="case-study__list">
+                <li>SEO-Analyse der gesamten Website</li>
+                <li>Keyword-Recherche mit Fokus auf kaufnahe Suchanfragen</li>
+                <li>Wettbewerbsanalyse im lokalen Umfeld</li>
+                <li>Strukturierte Content-Strategie inklusive interner Verlinkung und FAQ-Struktur</li>
+              </ul>
+            </div>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:0.9rem; margin-top:1.25rem;">
+            <a class="button-primary" href="cases/lingqi.html">Vollständige Fallstudie lesen</a>
+            <a class="button-secondary" href="cases/">Alle Referenzen ansehen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="pricing">
+      <div class="container pricing-wrap">
+        <div class="section-head">
+          <h2 class="section-title">Ein klarer Einstieg, danach entscheiden Sie</h2>
+          <p class="section-intro">Sie können mit einem einmaligen Audit starten oder eine laufende Betreuung wählen. Die Preise bleiben übersichtlich, und Sie entscheiden, wie viel Unterstützung Sie wirklich brauchen.</p>
+        </div>
+
+        <div class="pricing-block">
+          <div class="pricing-block__head">
+            <h3>Einmaliger Einstieg</h3>
+          </div>
+          <div class="card-grid pricing-grid pricing-grid--three">
+            <article class="card pricing-card pricing-card--secondary">
+              <div>
+                <h3>Kostenlose Erstanalyse</h3>
+                <div class="pricing-card__price">
+                  <strong>0€</strong>
+                  <span>unverbindlich · 48h Lieferzeit</span>
+                </div>
+              </div>
+              <ul>
+                <li>3 konkrete Befunde</li>
+                <li>Kein Verkaufsgespräch</li>
+                <li>Per E-Mail</li>
+              </ul>
+              <a class="button-secondary" href="#kontakt">Erstanalyse anfordern</a>
+            </article>
+            <article class="card pricing-card">
+              <div>
+                <h3>SEO-Audit</h3>
+                <div class="pricing-card__price">
+                  <strong>499€</strong>
+                  <span>einmalig · zzgl. MwSt.</span>
+                </div>
+              </div>
+              <ul>
+                <li>Vollständige Website-Analyse</li>
+                <li>Priorisierte Maßnahmen</li>
+                <li>Kein Agentur-Vertrag</li>
+              </ul>
+              <a class="button-secondary" href="#kontakt">Audit anfragen</a>
+            </article>
+            <article class="card pricing-card pricing-card--featured">
+              <div class="pill">Empfohlen</div>
+              <div>
+                <h3>Premium-Audit</h3>
+                <div class="pricing-card__price">
+                  <strong>1.299€</strong>
+                  <span>einmalig · zzgl. MwSt.</span>
+                </div>
+              </div>
+              <ul>
+                <li>15-seitiges PDF</li>
+                <li>24 Maßnahmen · 11 Kapitel</li>
+                <li>3 Wettbewerber</li>
+                <li>Strategie-Einschätzung per E-Mail</li>
+              </ul>
+              <a class="button-primary" href="#kontakt">Audit anfragen</a>
+            </article>
+          </div>
+          <p class="pricing-callout">Nach dem Premium-Audit optional: Quick Fix — Umsetzung der Top-3-Hebel für 699€.</p>
+        </div>
+
+        <hr class="pricing-divider">
+
+        <div class="pricing-block">
+          <div class="pricing-block__head">
+            <h3>Laufende Betreuung · Monatlich kündbar</h3>
+          </div>
+          <div class="card-grid pricing-grid">
+            <article class="card pricing-card">
+              <div>
+                <h3>SEO-Betreuung</h3>
+                <div class="pricing-card__price">
+                  <strong>ab 499€</strong>
+                  <span>pro Monat · zzgl. MwSt.</span>
+                </div>
+              </div>
+              <ul>
+                <li>2 SEO-Artikel pro Monat</li>
+                <li>Monatlicher Ranking-Report (GSC)*</li>
+                <li>Keyword-Anpassungen bei Bedarf</li>
+                <li>Kein Mindestvertrag</li>
+              </ul>
+              <a class="button-secondary" href="#kontakt">Betreuung anfragen</a>
+            </article>
+            <article class="card pricing-card">
+              <div>
+                <h3>Premium</h3>
+                <div class="pricing-card__price">
+                  <strong>ab 899€</strong>
+                  <span>pro Monat · zzgl. MwSt.</span>
+                </div>
+              </div>
+              <ul>
+                <li>4 SEO-Artikel pro Monat</li>
+                <li>Monatlicher Ranking-Report (GSC)*</li>
+                <li>Tech-SEO &amp; Google Business Profil</li>
+                <li>Mehr Umsetzungstiefe</li>
+              </ul>
+              <a class="button-secondary" href="#kontakt">Premium anfragen</a>
+            </article>
+          </div>
+          <p class="pricing-footnote">* Für den monatlichen Report wird ein GSC-Lesezugang oder Screenshot benötigt. Einrichtung dauert 5 Minuten.</p>
+        </div>
+
+        <hr class="pricing-divider">
+
+        <div class="pricing-block">
+          <div class="pricing-block__head">
+            <h3>Einzelne Blogartikel · Ohne Abo</h3>
+          </div>
+          <div class="card-grid pricing-grid">
+            <article class="card pricing-card">
+              <div>
+                <h3>1 Blogartikel</h3>
+                <div class="pricing-card__price">
+                  <strong>149€</strong>
+                  <span>einmalig · zzgl. MwSt.</span>
+                </div>
+              </div>
+              <ul>
+                <li>1.500–2.500 Wörter</li>
+                <li>SEO-optimiert</li>
+                <li>Title, Meta, interne Links</li>
+              </ul>
+              <a class="button-secondary" href="#kontakt">Artikel anfragen</a>
+            </article>
+            <article class="card pricing-card">
+              <div class="pill">Spart 48€</div>
+              <div>
+                <h3>3 Artikel-Paket</h3>
+                <div class="pricing-card__price">
+                  <strong>399€</strong>
+                  <span>einmalig · zzgl. MwSt.</span>
+                </div>
+              </div>
+              <ul>
+                <li>3 × 1.500–2.500 Wörter</li>
+                <li>SEO-optimiert</li>
+                <li>Themenplanung inklusive</li>
+              </ul>
+              <a class="button-secondary" href="#kontakt">Paket anfragen</a>
+            </article>
+          </div>
+        </div>
+
+        <div class="pricing-note">
+          <p class="muted">Keine Mindestlaufzeit · Alle Preise zzgl. MwSt.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Häufige Fragen</div>
+          <h2 class="section-title">Bevor Sie sich entscheiden</h2>
+          <p class="section-intro">Die Fragen hier kommen fast immer vor dem ersten Gespräch. Deshalb beantworte ich sie lieber klar auf der Seite, statt Sie in ein unnötiges Sales-Gespräch zu ziehen.</p>
+        </div>
+        <div class="accordion" data-accordion>
+          <article class="accordion-item">
+            <button class="accordion-trigger" type="button" aria-expanded="false">
+              <span>Was bekomme ich in der kostenlosen Analyse?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel__inner">
+                <p>Sie erhalten eine konkrete Einschätzung Ihrer aktuellen Sichtbarkeit bei Google, 2–3 klare Probleme Ihrer Website und erste Handlungsempfehlungen. Kein Verkaufsgespräch, sondern eine echte Analyse, mit der Sie sofort etwas anfangen können.</p>
+              </div>
+            </div>
+          </article>
+          <article class="accordion-item">
+            <button class="accordion-trigger" type="button" aria-expanded="false">
+              <span>Wie schnell sieht man SEO-Ergebnisse?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel__inner">
+                <p>Erste Verbesserungen bei technischen Fixes oft innerhalb von Wochen. Für nachhaltige Ranking-Verbesserungen durch Content sollten Sie mit 3–6 Monaten rechnen. SEO ist kein Sprint, aber die Ergebnisse sind dauerhaft.</p>
+              </div>
+            </div>
+          </article>
+          <article class="accordion-item">
+            <button class="accordion-trigger" type="button" aria-expanded="false">
+              <span>Kann ich auch nur ein Audit ohne laufende Betreuung buchen?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel__inner">
+                <p>Ja. Viele Kunden starten mit einem einmaligen Audit und entscheiden danach, ob laufende Betreuung Sinn ergibt. Es gibt keinen Druck zur Verlängerung.</p>
+              </div>
+            </div>
+          </article>
+          <article class="accordion-item">
+            <button class="accordion-trigger" type="button" aria-expanded="false">
+              <span>Gibt es Mindestlaufzeiten?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel__inner">
+                <p>Nein. Ich empfehle mindestens 3 Monate, damit Maßnahmen greifen können — aber es gibt keine Knebelverträge. Die Qualität der Arbeit soll Sie überzeugen, nicht eine Vertragslaufzeit.</p>
+              </div>
+            </div>
+          </article>
+          <article class="accordion-item">
+            <button class="accordion-trigger" type="button" aria-expanded="false">
+              <span>Machst du auch Umsetzung oder nur Beratung?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel__inner">
+                <p>Beides. Ich liefere fertig optimierte Texte, setze technische Änderungen um und kümmere mich um Ihr Google Business Profil. Sie müssen nichts selbst implementieren, wenn Sie das nicht wollen.</p>
+              </div>
+            </div>
+          </article>
+          <article class="accordion-item">
+            <button class="accordion-trigger" type="button" aria-expanded="false">
+              <span>Was unterscheidet dich von einer Agentur?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel__inner">
+                <p>Kein Overhead, kein Junior-Mitarbeiter, der Ihre Texte schreibt. Sie arbeiten direkt mit mir. Ich bin schneller, transparenter und fokussierter als eine Agentur — und günstiger bei gleicher oder besserer Qualität.</p>
+              </div>
+            </div>
+          </article>
+          <article class="accordion-item">
+            <button class="accordion-trigger" type="button" aria-expanded="false">
+              <span>Arbeitest du nur mit lokalen Unternehmen?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel__inner">
+                <p>Mein Schwerpunkt liegt auf lokalen Dienstleistern (Beauty, Wellness, Gesundheit, Handwerk). Aber die SEO-Prinzipien funktionieren branchenübergreifend — sprechen Sie mich gerne an.</p>
+              </div>
+            </div>
+          </article>
+          <article class="accordion-item">
+            <button class="accordion-trigger" type="button" aria-expanded="false">
+              <span>Brauche ich schon bestehende Inhalte?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel__inner">
+                <p>Nein. Viele meiner Kunden starten bei null. Ich erstelle den Content von Grund auf — basierend auf einer Keyword-Analyse, die zeigt, was Ihre Kunden wirklich suchen.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-final" id="kontakt">
+      <div class="container contact-grid">
+        <div class="contact-meta">
+          <div class="section-head">
+            <div class="section-kicker">Jetzt starten</div>
+            <h2 class="section-title">Kostenlose Erstanalyse Ihrer Website</h2>
+            <p class="section-intro">Ich prüfe Ihre Website und zeige Ihnen in 48 Stunden konkret, wo Sie bei Google Sichtbarkeit verschenken — und was Sie dagegen tun können.</p>
+          </div>
+          <ul class="contact-checks">
+            <li><span>✔</span><span>Keine Verpflichtung</span></li>
+            <li><span>✔</span><span>Keine versteckten Kosten</span></li>
+            <li><span>✔</span><span>Klare Analyse statt Verkaufsgespräch</span></li>
+          </ul>
+          <p class="contact-note">Die meisten meiner Kunden wussten vorher nicht, wie viel Potenzial ihre Website wirklich hat.</p>
+        </div>
+        <form class="contact-form" action="https://formspree.io/f/mqenpryl" method="POST">
+          <input type="hidden" name="_subject" value="Neue Potenzialanalyse-Anfrage">
+          <input type="hidden" name="_next" value="https://maxcontentseo.de/danke.html">
+          <h3>Analyse anfordern</h3>
+          <p class="muted">Kostenlos und unverbindlich</p>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="name">Name *</label>
+              <input id="name" name="name" type="text" placeholder="Ihr Name" required>
+            </div>
+            <div class="form-field">
+              <label for="website">Website</label>
+              <input id="website" name="website" type="text" inputmode="url" data-url-normalize="1" placeholder="z. B. www.ihr-studio.de">
+            </div>
+            <div class="form-field">
+              <label for="email">E-Mail *</label>
+              <input id="email" name="email" type="email" placeholder="ihre@email.de" required>
+            </div>
+            <div class="form-field">
+              <label for="phone">Telefon <span class="optional">(optional)</span></label>
+              <input id="phone" name="phone" type="tel" placeholder="+49 ...">
+            </div>
+            <div class="form-field">
+              <label for="goal">Welches Ziel möchten Sie erreichen? <span class="optional">(optional)</span></label>
+              <textarea id="goal" name="goal" placeholder="z. B. mehr qualifizierte Anfragen über Google, bessere lokale Sichtbarkeit oder klare Keyword-Prioritäten"></textarea>
+            </div>
+            <button class="button-primary" type="submit">Kostenlose SEO-Erstanalyse anfordern</button>
+          </div>
+          <p class="form-hint">Antwort innerhalb von 48 Stunden. Keine Verpflichtung.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__links">
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+        <a href="/branchen/kosmetikstudios.html">SEO für Kosmetikstudios</a>
+        <a href="mailto:georg@maxcontentseo.de">georg@maxcontentseo.de</a>
+      </div>
+      <p>© 2026 MaxContentSEO — Georg Stopfer</p>
+    </div>
+  </footer>
+
+<script>
+document.querySelectorAll('form').forEach(function(f){
+  f.addEventListener('submit', function(){
+    f.querySelectorAll('input[data-url-normalize]').forEach(function(u){
+      if (u.value && !/^https?:\/\//i.test(u.value)) {
+        u.value = 'https://' + u.value.trim();
+      }
+    });
+  });
+});
+</script>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const href = link.getAttribute('href');
+    const target = href ? document.querySelector(href) : null;
+    if (!target) return;
+    event.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+document.querySelectorAll('[data-accordion] .accordion-item').forEach((item) => {
+  const trigger = item.querySelector('.accordion-trigger');
+  if (!trigger) return;
+  trigger.addEventListener('click', () => {
+    const isOpen = item.classList.contains('is-open');
+    document.querySelectorAll('[data-accordion] .accordion-item').forEach((entry) => {
+      entry.classList.remove('is-open');
+      const button = entry.querySelector('.accordion-trigger');
+      if (button) button.setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('is-open');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+</script>
+<script>
+(function () {
+  var nav = document.querySelector('[data-mobile-nav]');
+  if (!nav) return;
+
+  var toggle = nav.querySelector('.nav-toggle');
+  var links = nav.querySelector('.nav-links');
+  if (!toggle || !links) return;
+
+  function setOpen(open) {
+    nav.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+  }
+
+  toggle.addEventListener('click', function (event) {
+    event.stopPropagation();
+    setOpen(!nav.classList.contains('is-open'));
+  });
+
+  links.addEventListener('click', function (event) {
+    if (event.target.closest('a')) setOpen(false);
+  });
+
+  document.addEventListener('click', function (event) {
+    if (nav.classList.contains('is-open') && !nav.contains(event.target)) {
+      setOpen(false);
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') setOpen(false);
+  });
+})();
+</script>
+</body>
+</html>
