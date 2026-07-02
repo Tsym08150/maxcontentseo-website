@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KI-Sichtbarkeits-Check (GEO) + SEO — Muster-Report | MaxContentSEO</title>
+<link rel="canonical" href="https://maxcontentseo.de/audit-beispiel-kombi.html">
+<meta name="description" content="Muster-Report eines automatisierten Einstiegs-Audits: klassische Google-Sichtbarkeit (SEO) und Sichtbarkeit in KI-Antworten (GEO, ChatGPT + Gemini) für ein lokales TCM-/Head-Spa-Studio in München.">
+<style>
+:root {
+  --bg: #FAFAF8;
+  --bg-alt: #F2F1ED;
+  --text: #141414;
+  --text-muted: #6B6B6B;
+  --accent: #1B6B4A;
+  --accent-light: #E8F5EE;
+  --accent-dark: #134D35;
+  --border: #E2E0DA;
+  --white: #FFFFFF;
+  --blue: #1B4F72;
+  --orange: #E67E22;
+  --red: #C0392B;
+  --navy: #142235;
+  --serif: Georgia, 'Times New Roman', serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --max-w: 1100px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+  --shadow-soft: 0 18px 48px rgba(20, 20, 20, 0.06);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+button, input { font: inherit; }
+
+.container {
+  width: min(calc(100% - (var(--space-sm) * 2)), var(--max-w));
+  margin: 0 auto;
+}
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid rgba(226, 224, 218, 0.85);
+  background: rgba(250, 250, 248, 0.88);
+  backdrop-filter: blur(14px);
+}
+
+.site-nav__inner {
+  min-height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.brand {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.brand span { color: var(--accent); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links a:not(.nav-cta) {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+.nav-links a:not(.nav-cta):hover { color: var(--accent); }
+
+.nav-cta,
+.button-primary,
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.85rem;
+  padding-inline: 1.2rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-size: 0.96rem;
+  font-weight: 600;
+  background: var(--accent);
+  color: #fff !important;
+  border: 1px solid var(--accent);
+}
+
+.nav-cta:hover,
+.button-primary:hover,
+.btn-primary:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+.hero {
+  padding-block: clamp(6rem, 12vw, 8rem) clamp(var(--space-lg), 8vw, 5.5rem);
+}
+
+.hero__copy {
+  display: grid;
+  gap: 1.2rem;
+  max-width: 820px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2.35rem, 6vw, 4.7rem);
+  line-height: 0.98;
+  font-weight: 400;
+}
+
+.hero p {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--text-muted);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+}
+
+.section {
+  padding-block: clamp(var(--space-lg), 8vw, var(--space-xl));
+}
+
+.section-alt { background: var(--bg-alt); }
+
+.section-head {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: clamp(var(--space-md), 5vw, var(--space-lg));
+}
+
+.section-title {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  font-weight: 400;
+}
+
+.section-intro {
+  margin: 0;
+  max-width: 66ch;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+.audit-page {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.audit-header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: 1rem 1.2rem;
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.audit-body {
+  padding: clamp(1.2rem, 4vw, 2rem);
+}
+
+.client-info {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border);
+}
+
+.client-info h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 4vw, 2.65rem);
+  line-height: 1.08;
+  font-weight: 400;
+}
+
+.client-info p { margin: 0; color: var(--text-muted); }
+
+.finding-grid {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.finding-card {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.metric-box {
+  display: grid;
+  align-content: center;
+  min-height: 7.5rem;
+  padding: 1rem;
+  border-radius: var(--radius);
+  color: #fff;
+}
+
+.metric-box strong {
+  display: block;
+  font-size: clamp(1.65rem, 4vw, 2.2rem);
+  line-height: 1;
+}
+
+.metric-box span {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.metric-box--blue { background: var(--blue); }
+.metric-box--orange { background: var(--orange); }
+.metric-box--red { background: var(--red); }
+
+.finding-copy h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.08rem;
+  line-height: 1.3;
+}
+
+.finding-copy p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.audit-note {
+  margin: var(--space-md) 0 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.cta-mid {
+  display: grid;
+  gap: 0.6rem;
+  justify-items: start;
+  margin-top: var(--space-md);
+}
+
+.cta-sub {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: var(--space-md);
+}
+
+.stat-item {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.stat-item strong {
+  display: block;
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.stat-item span {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.chapter-list,
+.check-list,
+.source-table {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.chapter-row,
+.check-row,
+.source-row {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.chapter-row strong,
+.source-row strong { color: var(--accent-dark); }
+
+.check-row {
+  grid-template-columns: auto 1fr;
+  align-items: start;
+}
+
+.check-row strong { color: var(--accent); }
+
+.source-row {
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+}
+
+.lead-section {
+  padding-block: clamp(var(--space-lg), 8vw, var(--space-xl));
+}
+
+.lead-box {
+  display: grid;
+  gap: var(--space-md);
+  padding: clamp(1.35rem, 4vw, 2rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+}
+
+.lead-box h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.08;
+  font-weight: 400;
+}
+
+.lead-box p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.form-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.form-field label,
+.checkbox-field {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.form-field input {
+  min-height: 3rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding-inline: 0.95rem;
+  background: var(--bg);
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-weight: 500;
+}
+
+.checkbox-field input { margin-top: 0.28rem; }
+.checkbox-field a { color: var(--accent); }
+
+.site-footer {
+  padding-block: var(--space-md);
+  border-top: 1px solid var(--border);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--text-muted);
+  font-size: 0.94rem;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1rem;
+}
+
+.site-footer a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.site-footer a:hover { color: var(--accent); }
+.site-footer p { margin: 0; }
+
+@media (min-width: 720px) {
+  .finding-card {
+    grid-template-columns: minmax(11rem, 0.36fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .stat-strip {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .lead-box {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    align-items: start;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-nav__inner,
+  .nav-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links { padding-bottom: 1rem; }
+  .audit-header { flex-direction: column; }
+  .source-row { grid-template-columns: 1fr; }
+}
+
+.nav-toggle {
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--border, #E2E0DA);
+  border-radius: var(--radius, 10px);
+  background: var(--white, #fff);
+  color: var(--text, #141414);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 1.25rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.site-nav.is-open .nav-toggle span:first-child { transform: translateY(7px) rotate(45deg); }
+.site-nav.is-open .nav-toggle span:nth-child(2) { opacity: 0; }
+.site-nav.is-open .nav-toggle span:last-child { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 767px) {
+  .site-nav__inner {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+    max-height: 0;
+    padding: 0 0.85rem;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transform: translateY(-0.35rem);
+    border: 1px solid transparent;
+    border-radius: var(--radius, 10px);
+    background: rgba(250, 250, 248, 0.98);
+    box-shadow: 0 18px 50px rgba(20, 20, 20, 0.12);
+    transition: max-height 200ms ease, opacity 160ms ease, transform 160ms ease, padding 160ms ease;
+  }
+
+  .site-nav.is-open .nav-links {
+    max-height: 22rem;
+    padding: 0.85rem;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateY(0);
+    border-color: var(--border, #E2E0DA);
+  }
+
+  .site-nav.is-open .nav-links a {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .site-nav.is-open .nav-links .nav-cta,
+  .site-nav.is-open .nav-links .button-primary {
+    justify-content: center;
+  }
+}
+
+/* --- Report-spezifische Ergänzungen (V5-Muster) — tokenkonform --- */
+.report-block { display: grid; gap: 1.15rem; }
+.report-prose { display: grid; gap: 1rem; max-width: 72ch; }
+.report-prose p { margin: 0; }
+.report-subhead {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  line-height: 1.15;
+}
+.section-kicker {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.report-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--white);
+  font-size: 0.95rem;
+}
+.report-table th,
+.report-table td {
+  padding: 0.75rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  text-align: left;
+}
+.report-table thead th {
+  background: var(--bg-alt);
+  color: var(--accent-dark);
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.01em;
+}
+.report-table tbody tr:last-child td { border-bottom: 0; }
+.report-table td:first-child { font-weight: 600; color: var(--text); }
+.report-note {
+  margin: 0;
+  padding: 1rem 1.15rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-light);
+  border-radius: var(--radius);
+  color: var(--text);
+}
+.report-note strong { color: var(--accent-dark); }
+.report-note--plain {
+  border-left-color: var(--border);
+  background: var(--bg-alt);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+.report-quote {
+  margin: 0;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--navy);
+  background: var(--white);
+  border-radius: var(--radius);
+  color: var(--text);
+  display: grid;
+  gap: 0.7rem;
+}
+.report-quote em { color: var(--navy); }
+.report-quote .quote-src { color: var(--text-muted); font-size: 0.9rem; }
+.score-card {
+  display: grid;
+  gap: 0.4rem;
+  padding: 1.4rem 1.6rem;
+  border-radius: var(--radius-lg);
+  background: var(--navy);
+  color: #fff;
+}
+.score-card .tag {
+  justify-self: start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+}
+.score-card strong {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2rem, 5vw, 2.9rem);
+  line-height: 1;
+}
+.score-card span:not(.tag) { color: rgba(255, 255, 255, 0.82); font-size: 0.94rem; }
+.report-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.55rem;
+  color: var(--text-muted);
+  max-width: 72ch;
+}
+.report-list li { padding-left: 0.25rem; }
+.cta-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.5rem;
+  color: var(--text-muted);
+}
+.lead-box .cta-eyebrow {
+  margin: 0 0 0.4rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.price-line { font-weight: 600; color: var(--text) !important; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://maxcontentseo.de/audit-beispiel-kombi.html#service",
+      "name": "KI-Sichtbarkeits-Check (GEO) + SEO — Einstiegs-Audit",
+      "description": "Automatisiertes Einstiegs-Audit für lokale Studios: klassische Google-Sichtbarkeit (SEO, Kartenbereich und organische Position) und Sichtbarkeit in KI-Antworten (GEO) auf ChatGPT und Gemini, mit GEO-Score nach 74-Punkte-Raster und priorisierter Maßnahmenliste.",
+      "serviceType": "GEO- und SEO-Audit",
+      "provider": {"@id": "https://maxcontentseo.de/#organization"},
+      "areaServed": {"@type": "Country", "name": "DE"},
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Kosmetikstudios, Wellness-Studios, TCM-Praxen"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "499",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://maxcontentseo.de/audit-beispiel-kombi.html",
+        "category": "GEO- und SEO-Audit",
+        "description": "Automatisiertes Einstiegs-Audit, komplett per E-Mail. Innerhalb von 60 Tagen voll auf eine anschließende Beratung anrechenbar."
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://maxcontentseo.de/#organization",
+      "name": "MaxContentSEO",
+      "url": "https://maxcontentseo.de/"
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/assets/tap-targets.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Hauptnavigation" data-mobile-nav>
+    <div class="container site-nav__inner">
+      <a class="brand" href="/">Max<span>ContentSEO</span></a>
+      <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="primary-navigation">
+        <a href="/cases/">Referenzen</a>
+        <a href="/blog/">Blog</a>
+        <a href="/audit-beispiel-kombi.html" aria-current="page">Kombi-Audit Muster</a>
+        <a class="nav-cta" href="/#kontakt">Kostenlose Potenzialanalyse</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__copy">
+        <p class="section-kicker">MaxContentSEO — Beratung für KI-Sichtbarkeit im Online-Marketing</p>
+        <h1>KI-Sichtbarkeits-Check (GEO) + SEO — Muster-Report</h1>
+        <p><strong>Beispiel: Lokales TCM-/Head-Spa-Studio in München.</strong> Dies ist ein Muster. Es zeigt, was ein automatisiertes Audit aus klassischer Google-Sichtbarkeit (SEO) <em>und</em> Sichtbarkeit in KI-Antworten (GEO) macht. Wettbewerber sind anonymisiert. Veröffentlichung mit Einverständnis des Studios.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container audit-page">
+        <div class="audit-header">
+          <span>KI-Sichtbarkeits-Check (GEO) + SEO · Muster-Report</span>
+          <span>MaxContentSEO · georg@maxcontentseo.de</span>
+        </div>
+        <div class="audit-body">
+          <div class="client-info">
+            <h2>Lokales TCM-/Head-Spa-Studio in München</h2>
+            <p><strong>Untersuchte Website:</strong> lingqi-tcm.com &nbsp;·&nbsp; <strong>Erstellt am:</strong> 30.06.2026 &nbsp;·&nbsp; <strong>Report-Typ:</strong> Automatisiertes Einstiegs-Audit (Referenzbeispiel)</p>
+          </div>
+          <p class="report-note"><strong>Wie ich messe:</strong> Ich frage die beiden führenden KI-Assistenten — ChatGPT und Gemini — mit zehn Fragen, die echte Kunden stellen, von der ersten Recherche bis zur Buchung. Geprüft wird, was die KI <strong>heute live</strong> antwortet, nicht was sie irgendwann einmal gelernt hat — und welche Quelle sie dabei nennt. So sehen Sie, ob Ihr Studio bei einer realen Kundenanfrage tatsächlich empfohlen wird oder nicht. Belegte Empfehlung statt Bauchgefühl.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container report-block">
+        <div class="section-head">
+          <h2 class="section-title">Zwei Kanäle, eine Frage</h2>
+        </div>
+        <div class="report-prose">
+          <p>Sie kennen <strong>Google-Rankings</strong> — die vertraute Welt der Suchmaschinen. Daneben ist ein zweiter Kanal entstanden: <strong>KI-Assistenten</strong> wie ChatGPT oder Gemini beantworten <em>„Welches Head Spa in München empfiehlst du?"</em> mit konkreten Anbietern. Sichtbarkeit dort heißt <strong>GEO</strong> — Generative Engine Optimization.</p>
+          <p>Dieses Audit betrachtet <strong>beide Kanäle gleichwertig</strong> — denn bei diesem Studio laufen sie überraschend auseinander.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container report-block">
+        <div class="section-head">
+          <p class="section-kicker">Teil 1</p>
+          <h2 class="section-title">Sichtbarkeit heute</h2>
+        </div>
+
+        <h3 class="report-subhead">Das Bekannte: Google (SEO)</h3>
+        <div class="report-prose">
+          <p>Bei Google lohnt es sich, <strong>zwei Dinge getrennt</strong> zu betrachten: die Sichtbarkeit im <strong>Kartenbereich</strong> (der Block mit den Studios und der Karte ganz oben) und die <strong>organischen Treffer</strong> darunter (die klassischen blauen Links).</p>
+        </div>
+        <div class="report-table-wrap">
+          <table class="report-table">
+            <thead>
+              <tr>
+                <th>Suchbegriff</th>
+                <th>Sichtbarkeit im Google-Kartenbereich</th>
+                <th>Organische Position (neutral gemessen)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>„TCM Kopfmassage München"</td>
+                <td>im Kartenbereich gelistet, aber nicht in den vorderen Plätzen</td>
+                <td><strong>nicht in den Top 10</strong> — eine Buchungsplattform-Seite rankt davor</td>
+              </tr>
+              <tr>
+                <td>„Head Spa München"</td>
+                <td>im Kartenbereich nicht in den vorderen Plätzen</td>
+                <td><strong>nicht in den Top 10</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="report-note report-note--plain"><strong>Hinweis zur Messung:</strong> Die organische Position ist <strong>neutral und nicht personalisiert</strong> erhoben. In Ihrer eigenen Ansicht — eingeloggt und direkt am Standort — kann das Studio durch Standort-Nähe und den Kartenbereich deutlich <strong>höher</strong> erscheinen. Beide Sichten sind echt; sie zeigen nur unterschiedliche Betrachter. Was hier zählt, ist die Sicht eines <strong>neuen Interessenten</strong>, der das Studio noch nicht kennt.</p>
+        <div class="report-prose">
+          <p>Technisch ist die Seite <strong>schnell, mobil und sauber indexiert</strong>, das Bewertungsprofil ist mit <strong>5,0</strong> ausgezeichnet. Auffällig ist ein anderer Punkt: In den neutralen organischen Treffern rankt für „TCM Kopfmassage München" sogar eine <strong>Buchungsplattform-Seite vor der eigenen Website</strong>. Die klassische Sichtbarkeit wird also an einen <strong>Mittler</strong> abgegeben — Anfragen, die über die eigene Seite kommen könnten, laufen über die Plattform.</p>
+        </div>
+
+        <h3 class="report-subhead">Das Neue: KI-Antworten (GEO)</h3>
+        <div class="report-prose">
+          <p>Getestet habe ich zehn reale Kundenfragen auf beiden Assistenten — <strong>ChatGPT und Gemini</strong> —, von der allgemeinen Recherche bis zur konkreten Buchung. Das Bild ist klar: <strong>Sobald eine Frage konkret genug ist, ist das Studio auf beiden Assistenten gleich stark präsent.</strong> Die Lücke liegt nicht zwischen den Assistenten, sondern zwischen den Phasen der Kundenreise.</p>
+        </div>
+        <div class="report-table-wrap">
+          <table class="report-table">
+            <thead>
+              <tr>
+                <th>Zitierte Quelle in den KI-Antworten</th>
+                <th>Nennungen</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>eigene Website des Studios</td><td><strong>12 — mit Abstand am häufigsten</strong></td></tr>
+              <tr><td>Wettbewerber-Studio (am häufigsten genannt)</td><td>4</td></tr>
+              <tr><td>Buchungsplattform</td><td>3</td></tr>
+              <tr><td>weitere Wettbewerber-Studios (je)</td><td>2–3</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="report-prose">
+          <p>Die eigene Website ist die <strong>meistzitierte Quelle im gesamten Umfeld</strong> — deutlich häufiger als jeder einzelne Wettbewerber und häufiger als die Buchungsplattform.</p>
+          <p>So verteilt sich die Sichtbarkeit über die Customer Journey:</p>
+        </div>
+        <div class="report-table-wrap">
+          <table class="report-table">
+            <thead>
+              <tr>
+                <th>Phase der Customer Journey</th>
+                <th>ChatGPT</th>
+                <th>Gemini</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Allgemeine Einstiegsfrage (z. B. „Was hilft bei Stress?", „Welche Wellness-Angebote gibt es in München?")</td>
+                <td><strong>nicht genannt</strong></td>
+                <td><strong>nicht genannt</strong></td>
+              </tr>
+              <tr>
+                <td>Konkrete Recherche &amp; Vergleich (z. B. „Welche Studios bieten TCM an?", „Vergleich mit Wettbewerber X")</td>
+                <td><strong>genannt, oft an erster Stelle</strong></td>
+                <td><strong>genannt, oft an erster Stelle</strong></td>
+              </tr>
+              <tr>
+                <td>Bewertung &amp; Entscheidung (Erfahrungen, Seriosität, Buchung)</td>
+                <td><strong>genannt</strong> — mit Kundenzitaten, Bewertung, Buchungsweg</td>
+                <td><strong>genannt</strong> — mit Kundenzitaten, Bewertung, Buchungsweg</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="report-note"><strong>Der Befund in einem Satz:</strong> Bei den drei allgemeinen Einstiegsfragen, mit denen die Kundenreise beginnt, fällt der Name des Studios in <strong>keiner einzigen</strong> der getesteten Antworten — auf keinem der beiden Assistenten. Sobald die Frage konkreter wird (Vergleich, Erfahrung, Buchung), wird das Studio <strong>durchgehend</strong> genannt, häufig zuerst.</p>
+        <div class="report-quote">
+          <p><strong>So ist jeder Befund belegt:</strong> Hinter jeder Nennung steht der <strong>wörtliche Antworttext</strong> des jeweiligen Assistenten zu genau dieser Frage — plus die <strong>Liste der Quellen</strong>, die die KI dabei zitiert. Ein echter Auszug aus der ChatGPT-Antwort auf die Frage nach Kundinnen-Erfahrungen:</p>
+          <p><em>„Eine Kundin beschreibt den Besuch als ‚eine Auszeit für Körper und Seele' und hebt hervor, dass sie sich nach der Behandlung ‚leichter, entspannter und richtig gut geerdet' fühlte."</em></p>
+          <p class="quote-src">— zitierte Quelle: die eigene Website des Studios.</p>
+          <p>Sie sehen also nicht nur das Ergebnis, sondern die Original-Antwort dahinter — inklusive echter Kundenstimmen, die die KI direkt wiedergibt.</p>
+        </div>
+
+        <h3 class="report-subhead">Die direkte Gegenüberstellung</h3>
+        <div class="report-table-wrap">
+          <table class="report-table">
+            <thead>
+              <tr>
+                <th>Kundenfrage</th>
+                <th>Bei Google</th>
+                <th>In der KI-Antwort</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Konkrete Vergleichs-/Bewertungsfrage</td>
+                <td>eigene Website nicht in Top 10 (Plattform rankt davor)</td>
+                <td><strong>Erstempfehlung auf beiden Assistenten</strong> — eigene Website meistzitierte Quelle</td>
+              </tr>
+              <tr>
+                <td>Allgemeine Einstiegsfrage</td>
+                <td>nicht in Top 10</td>
+                <td><strong>nicht genannt — auf keinem Assistenten</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="report-note"><strong>Der zentrale Befund:</strong> Bei <strong>konkreten</strong> Fragen ist dieses Studio in der KI-Antwort bereits <strong>vorn — auf beiden Assistenten gleichermaßen</strong>, und die eigene Website ist die mit Abstand am häufigsten zitierte Quelle. Hier ist GEO dem klassischen Google-Ranking <strong>voraus</strong>. <br><br><strong>Aber:</strong> Bei den <strong>allgemeinen Einstiegsfragen</strong>, mit denen die meisten Kundinnen ihre Recherche überhaupt erst beginnen, ist das Studio auf <strong>beiden</strong> Assistenten unsichtbar. Das ist keine Schwäche eines einzelnen Assistenten, sondern eine durchgängige Lücke in der frühen Phase der Kundenreise — und genau das ist der größte Hebel: Wer hier sichtbar wird, gewinnt Kundinnen, bevor diese überhaupt nach dem Studionamen suchen.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container report-block">
+        <div class="section-head">
+          <p class="section-kicker">Teil 2</p>
+          <h2 class="section-title">Warum das so ist</h2>
+        </div>
+
+        <h3 class="report-subhead">Bei Google</h3>
+        <ul class="report-list">
+          <li>Die eigene Website rankt für die Kern-Begriffe nicht in den Top 10 — die Sichtbarkeit wird an eine <strong>Buchungsplattform</strong> abgegeben.</li>
+          <li>Standort-Daten (Adresse, Öffnungszeiten) sind noch nicht als strukturierte Daten auf der Website hinterlegt.</li>
+          <li>Auf der Startseite fehlt eine klare Hauptüberschrift; das Umfeld ist stark umkämpft.</li>
+        </ul>
+
+        <h3 class="report-subhead">In KI-Antworten — die 4 Bausteine</h3>
+        <div class="score-card">
+          <span class="tag">GEO-Score</span>
+          <strong>66 / 100 — Note C</strong>
+          <span>Gesamtbewertung der KI-Sichtbarkeit, aus 74 Prüfpunkten in vier Dimensionen.</span>
+        </div>
+        <div class="report-prose">
+          <p>Der GEO-Score fasst zusammen, wie gut ein Studio für KI-Antworten aufgestellt ist. Er entsteht aus einer Bewertung nach einem <strong>Raster aus 74 Prüfpunkten</strong>, gruppiert in die vier folgenden Dimensionen — von der technischen Lesbarkeit der Seite bis zu den Markensignalen im Netz:</p>
+        </div>
+        <div class="report-table-wrap">
+          <table class="report-table">
+            <thead>
+              <tr>
+                <th>Baustein</th>
+                <th>Score</th>
+                <th>Bedeutung</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Technische Auffindbarkeit</td><td>93/100</td><td>KI kann die Seite gut lesen — <strong>Stärke</strong></td></tr>
+              <tr><td>Inhaltliche Zitierbarkeit</td><td>70/100</td><td>gute Fachtiefe; es fehlen Frage-Antwort-Blöcke</td></tr>
+              <tr><td>Strukturierte Daten</td><td>65/100</td><td>kein vollständiges Lokal-Profil, kein FAQ-Baustein</td></tr>
+              <tr><td>Marken- &amp; Bekanntheitssignale</td><td>40/100</td><td>wenig Verknüpfung der eigenen Profile — <strong>größter Hebel</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="report-prose">
+          <p>Technisch ist das Studio <strong>nicht</strong> das Problem — deshalb ist seine Website die meistzitierte Quelle im Umfeld. Die Lücke in der Einstiegsphase kommt aus <strong>Markenbreite</strong> und <strong>fehlenden Inhalten für allgemeine Themen</strong>, nicht aus der Technik: Die Website beantwortet bereits hervorragend konkrete Fragen über das Studio selbst, aber noch keine allgemeinen Themenfragen, mit denen Kundinnen ihre Recherche beginnen.</p>
+        </div>
+
+        <h3 class="report-subhead">Wer das Studio in der Einstiegsphase verdrängt</h3>
+        <div class="report-prose">
+          <p>In den allgemeinen Einstiegsfragen nennen die Assistenten andere Anbieter — meist breiter aufgestellte Wellness- und Naturheilpraxen, die zum gesuchten Thema (Stress, Erschöpfung) bereits Inhalte veröffentlicht haben, ohne TCM-spezifisch zu sein. Das ist kein Wettbewerb auf Augenhöhe in der Nische, sondern zeigt eine <strong>Content-Lücke</strong>: Sobald die Frage allgemein bleibt, gibt es noch keine Seite des Studios, die als Antwort darauf zitiert werden könnte.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container report-block">
+        <div class="section-head">
+          <p class="section-kicker">Teil 3</p>
+          <h2 class="section-title">Was zu tun ist</h2>
+          <p class="section-intro">Eine gemeinsame Liste für beide Kanäle. <strong>G</strong> = wirkt auf Google, <strong>KI</strong> = wirkt auf KI-Sichtbarkeit.</p>
+        </div>
+        <div class="report-table-wrap">
+          <table class="report-table">
+            <thead>
+              <tr>
+                <th>Priorität</th>
+                <th>Wirkt auf</th>
+                <th>Maßnahme</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>1 — Kritisch</strong></td><td>G + KI</td><td>Vollständiges <strong>Lokal-Profil</strong> als strukturierte Daten (Adresse, Öffnungszeiten, Preisrahmen, Bewertungen).</td></tr>
+              <tr><td><strong>2 — Kritisch</strong></td><td>KI</td><td>Inhalte für die <strong>allgemeine Einstiegsphase</strong> (z. B. „Was hilft bei Stress und Kopfschmerzen?") — genau die Lücke, die beide Assistenten zeigen.</td></tr>
+              <tr><td><strong>3 — Hoch</strong></td><td>G + KI</td><td><strong>FAQ-Bereich</strong> mit klaren Frage-Antwort-Blöcken. Bringt auffälligere Google-Treffer <em>und</em> fertige KI-Antwortbausteine.</td></tr>
+              <tr><td><strong>4 — Hoch</strong></td><td>KI</td><td>Eigene Profile (Social, Buchung, Karten) verknüpfen + Eintrag in offenen Wissensdatenbanken.</td></tr>
+              <tr><td><strong>5 — Hoch</strong></td><td>G</td><td>Eigene organische Sichtbarkeit aufbauen, um die Plattform-Abhängigkeit zu verringern.</td></tr>
+              <tr><td><strong>6 — Mittel</strong></td><td>G + KI</td><td>Klare Hauptüberschrift auf der Startseite.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="report-note"><strong>Der Vorteil:</strong> Die Maßnahmen 1, 2 und 3 zahlen <strong>gleichzeitig auf beide Kanäle</strong> ein — der höchste Hebel pro Aufwand. Anders als beim vorherigen Stand braucht es hier <strong>keine</strong> engine-spezifische Maßnahme mehr — beide Assistenten zeigen dieselbe Lücke, also schließt eine Maßnahme sie auf beiden zugleich.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container report-block">
+        <div class="section-head">
+          <h2 class="section-title">Was dieses Muster zeigt</h2>
+        </div>
+        <div class="report-prose">
+          <p>Ein strukturierter Audit-Prozess macht sichtbar, wo ein Studio in <strong>beiden</strong> Welten steht — der vertrauten (Google) und der neuen (KI) — und liefert eine kombinierte, priorisierte Maßnahmenliste. Es ersetzt keine individuelle Strategie- oder Förderberatung, schafft aber die faktische Grundlage dafür.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="lead-section">
+      <div class="container lead-box">
+        <div>
+          <h2>Möchten Sie Ihren eigenen KI-Sichtbarkeits-Check?</h2>
+          <p style="margin-top: 0.9rem;">Sie erfahren, ob ChatGPT und Gemini Ihr Studio bei echten Kundenanfragen empfehlen — oder Ihren Wettbewerber.</p>
+        </div>
+        <div>
+          <p class="cta-eyebrow">Das erhalten Sie:</p>
+          <ul class="cta-list">
+            <li>KI-Check auf <strong>ChatGPT und Gemini</strong> mit zehn live getesteten Kundenfragen — von der ersten Recherche bis zur Buchung</li>
+            <li>Zu jeder Frage den <strong>wörtlichen Antwortauszug</strong> beider Assistenten und die <strong>Liste der Quellen</strong>, die die KI nennt</li>
+            <li><strong>GEO-Score</strong> nach dem 74-Punkte-Raster, mit den stärksten Hebeln</li>
+            <li>Direkter Google-Vergleich: Kartenbereich, organische Position, Wettbewerber</li>
+            <li>Bewertungs- und Wettbewerbsvergleich in Ihrer Nische</li>
+            <li>Priorisierte Maßnahmenliste — was zuerst wirkt, auf beide Kanäle</li>
+          </ul>
+          <p class="price-line" style="margin-top: 1.2rem;">Automatisiertes Einstiegs-Audit: 499 € (einmalig, komplett per E-Mail, kein Termin nötig).</p>
+          <p style="margin-top: 0.5rem;">Der Betrag ist innerhalb von 60 Tagen <strong>voll auf eine anschließende Beratung anrechenbar</strong>. Schon wenige zusätzliche Anfragen über das Jahr übersteigen diesen Betrag deutlich — das Audit zeigt Ihnen, wo genau diese Anfragen aktuell verloren gehen.</p>
+          <div class="cta-mid">
+            <a class="btn-primary" href="mailto:georg@maxcontentseo.de?subject=KI-Sichtbarkeits-Check%20Anfrage">Audit per E-Mail anfragen</a>
+            <p class="cta-sub">→ Anfrage per E-Mail an <strong>georg@maxcontentseo.de</strong> genügt. Sie erhalten Ihr Audit innerhalb weniger Tage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <p class="report-note report-note--plain">Hinweis: Aussagen zu Wohlbefinden und Entspannung sind im Sinne der Selbstfürsorge zu verstehen; es werden keine Heilversprechen gemacht. Dieses Muster dient ausschließlich der Veranschaulichung des Audit-Produkts.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__links">
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+        <a href="/branchen/kosmetikstudios.html">SEO für Kosmetikstudios</a>
+        <a href="mailto:georg@maxcontentseo.de">georg@maxcontentseo.de</a>
+      </div>
+      <p>© 2026 MaxContentSEO — Georg Stopfer</p>
+    </div>
+  </footer>
+<script>
+(function () {
+  var nav = document.querySelector('[data-mobile-nav]');
+  if (!nav) return;
+
+  var toggle = nav.querySelector('.nav-toggle');
+  var links = nav.querySelector('.nav-links');
+  if (!toggle || !links) return;
+
+  function setOpen(open) {
+    nav.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+  }
+
+  toggle.addEventListener('click', function (event) {
+    event.stopPropagation();
+    setOpen(!nav.classList.contains('is-open'));
+  });
+
+  links.addEventListener('click', function (event) {
+    if (event.target.closest('a')) setOpen(false);
+  });
+
+  document.addEventListener('click', function (event) {
+    if (nav.classList.contains('is-open') && !nav.contains(event.target)) {
+      setOpen(false);
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') setOpen(false);
+  });
+})();
+</script>
+</body>
+</html>
