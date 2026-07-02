@@ -401,7 +401,7 @@ nav[data-mobile-nav].is-open .nav-toggle span:last-child { transform: translateY
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ProfessionalService",
+      "@type": ["Organization", "ProfessionalService"],
       "@id": "https://maxcontentseo.de/#organization",
       "name": "MaxContentSEO",
       "description": "SEO-Beratung für Kosmetik- und Wellnessstudios in Deutschland",
@@ -415,12 +415,7 @@ nav[data-mobile-nav].is-open .nav-toggle span:last-child { transform: translateY
         "addressCountry": "DE"
       },
       "founder": {"@id": "https://maxcontentseo.de/#georg"},
-      "areaServed": [
-        {"@type": "City", "name": "München"},
-        {"@type": "City", "name": "Hamburg"},
-        {"@type": "City", "name": "Frankfurt"},
-        {"@type": "City", "name": "Berlin"}
-      ],
+      "areaServed": "Deutschland",
       "knowsAbout": [
         "Local SEO",
         "Suchmaschinenoptimierung für Beauty-Studios",

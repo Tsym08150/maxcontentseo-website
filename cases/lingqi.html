@@ -425,9 +425,8 @@ tr:last-child td { border-bottom: 0; }
       "author": {"@id": "https://maxcontentseo.de/#georg"},
       "publisher": {"@id": "https://maxcontentseo.de/#organization"},
       "about": {
-        "@type": "ProfessionalService",
-        "name": "LingQi TCM Head Spa München",
-        "areaServed": {"@type": "City", "name": "München"}
+        "@type": "Organization",
+        "name": "LingQi TCM Head Spa München"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -436,10 +435,19 @@ tr:last-child td { border-bottom: 0; }
       "inLanguage": "de"
     },
     {
-      "@type": "ProfessionalService",
+      "@type": ["Organization", "ProfessionalService"],
       "@id": "https://maxcontentseo.de/#organization",
       "name": "MaxContentSEO",
-      "url": "https://maxcontentseo.de/"
+      "url": "https://maxcontentseo.de/",
+      "email": "georg@maxcontentseo.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hauptstr. 29",
+        "postalCode": "85551",
+        "addressLocality": "Kirchheim b. München",
+        "addressCountry": "DE"
+      },
+      "areaServed": "Deutschland"
     },
     {
       "@type": "Person",

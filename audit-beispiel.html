@@ -561,7 +561,7 @@ button, input { font: inherit; }
       "description": "Umfassender SEO-Audit speziell für lokale Kosmetik-, Wellness- und TCM-Studios. 15-seitiges PDF mit 24 priorisierten Maßnahmen, Keyword-Analyse, Wettbewerbsanalyse und Strategie-Einschätzung.",
       "serviceType": "SEO-Audit",
       "provider": {"@id": "https://maxcontentseo.de/#organization"},
-      "areaServed": {"@type": "Country", "name": "DE"},
+      "areaServed": "Deutschland",
       "audience": {
         "@type": "BusinessAudience",
         "audienceType": "Kosmetikstudios, Wellness-Studios, TCM-Praxen"
@@ -577,10 +577,19 @@ button, input { font: inherit; }
       }
     },
     {
-      "@type": "ProfessionalService",
+      "@type": ["Organization", "ProfessionalService"],
       "@id": "https://maxcontentseo.de/#organization",
       "name": "MaxContentSEO",
-      "url": "https://maxcontentseo.de/"
+      "url": "https://maxcontentseo.de/",
+      "email": "georg@maxcontentseo.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hauptstr. 29",
+        "postalCode": "85551",
+        "addressLocality": "Kirchheim b. München",
+        "addressCountry": "DE"
+      },
+      "areaServed": "Deutschland"
     }
   ]
 }
