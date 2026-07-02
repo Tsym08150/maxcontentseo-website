@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /index-backup-20260515.html
 Sitemap: https://maxcontentseo.de/sitemap.xml

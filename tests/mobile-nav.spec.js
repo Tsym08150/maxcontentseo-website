@@ -18,7 +18,7 @@ const pages = [
 const expectedLinks = [
   'Referenzen',
   'Blog',
-  'Premium-Audit Muster',
+  'Muster-Report',
   'Kostenlose Potenzialanalyse',
 ];
 

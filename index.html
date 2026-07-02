@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico">
 <title>SEO für Kosmetik- & Wellnessstudios | MaxContentSEO</title>
 <link rel="canonical" href="https://maxcontentseo.de/" />
+<meta property="og:image" content="https://maxcontentseo.de/assets/kosmetikstudio-muenchen.webp">
 <meta name="description" content="Mehr qualifizierte Anfragen aus Google für Kosmetik- und Wellnessstudios. Kostenlose Potenzialanalyse — kein Agentur-Vertrag.">
 <style>
 :root {
@@ -1267,13 +1269,13 @@ textarea {
     transform: translateY(-0.35rem);
     border: 1px solid transparent;
     border-radius: var(--radius);
-    background: rgba(250, 250, 248, 0.98);
+    background: var(--white);
     box-shadow: 0 18px 50px rgba(20, 20, 20, 0.12);
     transition: max-height 200ms ease, opacity 160ms ease, transform 160ms ease, padding 160ms ease;
   }
 
   .site-nav.is-open .nav-links {
-    max-height: 22rem;
+    max-height: 32rem;
     padding: 0.85rem;
     opacity: 1;
     pointer-events: auto;
@@ -1351,13 +1353,12 @@ textarea {
       </button>
       <div class="nav-links" id="primary-navigation">
         <a href="/leistungen/">Leistungen</a>
-        <a href="/seo-muenchen/">SEO München</a>
+        <a href="/ki-sichtbarkeits-check/">Kostenloser KI-Check</a>
         <a href="/ki-sichtbarkeit/">KI-Sichtbarkeit</a>
-        <a href="cases/">Referenzen</a>
+        <a href="/cases/">Referenzen</a>
         <a href="/blog/">Blog</a>
         <a href="/audit-beispiel.html">Muster-Report</a>
-        <a href="/ai-analyse-firmen.html">AI-Analyse</a>
-        <a class="nav-cta" href="#kontakt">Kostenlose Potenzialanalyse</a>
+        <a class="button-primary nav-cta" href="/#kontakt">Kostenlose Potenzialanalyse</a>
       </div>
     </div>
   </nav>
@@ -1372,7 +1373,6 @@ textarea {
           <div class="hero__actions">
             <a class="button-primary" href="#kontakt">Kostenlose Potenzialanalyse</a>
             <a class="text-link" href="/leistungen/">Leistungen ansehen</a>
-            <a class="text-link" href="/seo-muenchen/">SEO München</a>
           </div>
           <div class="hero__proof-points" aria-label="Kurzvorteile">
             <span class="hero__proof-point"><span class="hero__proof-icon" aria-hidden="true">◷</span>48h Ersteinschätzung</span>
@@ -1427,7 +1427,7 @@ textarea {
             <p class="section-intro">KI-Antwortsysteme wie ChatGPT, Gemini und Perplexity beantworten Fragen — und nennen dabei Anbieter, für die sie klare, vertrauenswürdige und auslesbare Informationen finden.</p>
             <p class="section-intro">Ich analysiere, ob Ihr Studio in solchen Antworten auftaucht, warum es möglicherweise fehlt und welche konkreten Maßnahmen sinnvoll sind. Das umfasst Website-Inhalte, technische Struktur, lokale Auffindbarkeit und die Aufbereitung Ihrer Leistungen für KI-Systeme.</p>
             <p class="section-intro">Kein Agentur-Overhead. Keine Theorie. Klare Analyse und priorisierte nächste Schritte.</p>
-            <a class="button-primary" href="#kontakt">Kostenlose Potenzialanalyse anfragen</a>
+            <a class="button-primary" href="/ki-sichtbarkeits-check/">Kostenlosen KI-Check starten</a>
           </div>
         </div>
       </div>
@@ -1788,7 +1788,7 @@ textarea {
             </article>
             <article class="card pricing-card">
               <div>
-                <h3>SEO+GEO-Kombi-Audit</h3>
+                <h3>Kombi-Audit: SEO + KI-Sichtbarkeit</h3>
                 <div class="pricing-card__price">
                   <strong>499€</strong>
                   <span>einmalig</span>
@@ -1890,18 +1890,18 @@ textarea {
           </article>
           <article class="accordion-item">
             <button class="accordion-trigger" type="button" aria-expanded="false">
-              <span>Was unterscheidet dich von einer Agentur?</span>
+              <span>Was unterscheidet Sie von einer Agentur?</span>
               <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-panel">
               <div class="accordion-panel__inner">
-                <p>Kein Overhead, kein Junior-Mitarbeiter, der Ihre Texte schreibt. Sie arbeiten direkt mit mir. Ich bin schneller, transparenter und fokussierter als eine Agentur — und günstiger bei gleicher oder besserer Qualität.</p>
+                <p>Sie arbeiten direkt mit mir, ohne Account-Manager, Junior-Team oder Agentur-Overhead. Die Analyse ist fokussiert, transparent und auf konkrete nächste Schritte ausgerichtet.</p>
               </div>
             </div>
           </article>
           <article class="accordion-item">
             <button class="accordion-trigger" type="button" aria-expanded="false">
-              <span>Arbeitest du nur mit lokalen Unternehmen?</span>
+              <span>Arbeiten Sie nur mit lokalen Unternehmen?</span>
               <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-panel">
@@ -1966,7 +1966,11 @@ textarea {
               <label for="goal">Welches Ziel möchten Sie erreichen? <span class="optional">(optional)</span></label>
               <textarea id="goal" name="goal" placeholder="z. B. mehr qualifizierte Anfragen über Google, bessere lokale Sichtbarkeit oder klare Keyword-Prioritäten"></textarea>
             </div>
-            <button class="button-primary" type="submit">Kostenlose SEO-Erstanalyse anfordern</button>
+            <label class="consent" for="consent">
+              <input id="consent" name="dsgvo_consent" type="checkbox" value="ja" required>
+              <span>Ich stimme zu, dass meine Angaben zur Bearbeitung der Anfrage verarbeitet werden. Hinweise stehen in der <a href="/datenschutz.html">Datenschutzerklärung</a>.</span>
+            </label>
+            <button class="button-primary" type="submit">Kostenlose Potenzialanalyse anfordern</button>
           </div>
           <p class="form-hint">Antwort innerhalb von 48 Stunden. Keine Verpflichtung.</p>
         </form>
