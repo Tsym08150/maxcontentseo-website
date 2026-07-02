@@ -24,14 +24,14 @@ const expectedLinks = [
   'Cases',
   'Blog',
   'Report',
-  'Kostenlose Potenzialanalyse',
+  'Kostenlose Erstanalyse',
 ];
 
 const legacyExpectedLinks = [
   'Referenzen',
   'Blog',
   'Muster-Report',
-  'Kostenlose Potenzialanalyse',
+  'Kostenlose Erstanalyse',
 ];
 
 const legacyPages = new Set([
