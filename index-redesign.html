@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico">
+<title>SEO & KI-Sichtbarkeit für Beauty-, Wellness- & TCM-Studios | MaxContentSEO</title>
+<!-- REDESIGN-PREVIEW (Phase 2): noindex + canonical auf /, solange die Datei parallel zur Live-index.html liegt.
+     TODO beim Livegang (Umbenennen zu index.html): noindex-Zeile entfernen. -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://maxcontentseo.de/" />
+<meta property="og:title" content="SEO &amp; KI-Sichtbarkeit für Beauty-, Wellness- &amp; TCM-Studios | MaxContentSEO">
+<meta property="og:image" content="https://maxcontentseo.de/assets/kosmetikstudio-muenchen.webp">
+<meta name="description" content="Damit Ihr Studio bei Google und ChatGPT gefunden wird. SEO- und KI-Sichtbarkeit für Beauty-, Wellness- und TCM-Studios — kostenlose Erstanalyse, kein Agentur-Vertrag.">
+
+<link rel="preload" href="/assets/fonts/fraunces-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/karla-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/design-system.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://maxcontentseo.de/#organization",
+      "name": "MaxContentSEO",
+      "description": "SEO-Beratung für Kosmetik- und Wellnessstudios in Deutschland",
+      "url": "https://maxcontentseo.de/",
+      "email": "georg@maxcontentseo.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hauptstr. 29",
+        "postalCode": "85551",
+        "addressLocality": "Kirchheim b. München",
+        "addressCountry": "DE"
+      },
+      "founder": {"@id": "https://maxcontentseo.de/#georg"},
+      "areaServed": "Deutschland",
+      "knowsAbout": [
+        "Local SEO",
+        "Suchmaschinenoptimierung für Beauty-Studios",
+        "Suchmaschinenoptimierung für Wellness-Studios",
+        "Suchmaschinenoptimierung für TCM-Praxen"
+      ],
+      "priceRange": "€€"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://maxcontentseo.de/#georg",
+      "name": "Georg Stopfer",
+      "url": "https://maxcontentseo.de/",
+      "jobTitle": "SEO-Berater",
+      "worksFor": {"@id": "https://maxcontentseo.de/#organization"}
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wie lange dauert es, bis erste Ergebnisse sichtbar sind?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Erste Bewegung zeigt sich oft nach vier bis acht Wochen — etwa bei lokalen Suchbegriffen oder der Klickrate. Belastbare Ergebnisse brauchen drei bis sechs Monate. Ich arbeite mit laufendem Reporting, damit Sie jede Veränderung nachvollziehen können."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist KI-Sichtbarkeit — und warum betrifft sie mein Studio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Immer mehr Menschen fragen ChatGPT oder Gemini statt Google: „Welches Studio in meiner Nähe ist empfehlenswert?“ KI-Sichtbarkeit heißt: Ihr Studio taucht in diesen Antworten auf. Ich messe das mit zehn typischen Kundenfragen, live gestellt an ChatGPT und Gemini — und optimiere Ihre Website so, dass KI-Systeme sie verstehen und nennen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Muss meine Website dafür neu gebaut werden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In den meisten Fällen nein. Oft reichen gezielte Anpassungen an Struktur, Inhalten und Technik. Ob mehr sinnvoll ist, zeigt die kostenlose Erstanalyse — unverbindlich und ohne Verkaufsgespräch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was darf ich als Studio rechtlich online bewerben?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vieles — aber nicht alles. Für Angebote rund um Gesundheit und Pflege gelten Grenzen, zum Beispiel aus dem Heilmittelwerbegesetz. Ich achte bei allen Texten darauf, dass Sichtbarkeit nicht auf Kosten der Rechtssicherheit geht. Das ersetzt keine Rechtsberatung — bei Detailfragen hilft eine Fachanwältin."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ==================================================================
+     Header — kanonisches Snippet (global identisch auf allen Seiten).
+     Bei Änderung: per Sync-Schritt in alle Seiten übernehmen (§15 P.6).
+     ================================================================== -->
+<header class="site-header" data-header>
+  <div class="container site-header__inner">
+    <a class="brand" href="/">MaxContentSEO</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menü öffnen" data-nav-toggle>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+    <a class="btn" href="/#kontakt"><span class="btn__long">Kostenlose Erstanalyse</span><span class="btn__short">Erstanalyse</span></a>
+    <nav class="site-nav" aria-label="Hauptnavigation" data-nav>
+      <details class="nav-dropdown" data-dropdown>
+        <summary aria-haspopup="true">Leistungen</summary>
+        <div class="nav-dropdown__menu">
+          <a href="/leistungen/">Alle Leistungen</a>
+          <a href="/seo-muenchen/">SEO &amp; Lokale Sichtbarkeit</a>
+          <a href="/ki-sichtbarkeit/">KI-Sichtbarkeit</a>
+          <a href="/#preise">Preise</a>
+        </div>
+      </details>
+      <a href="/cases/">Referenzen</a>
+      <a href="/#ueber-mich">Über mich</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============================== Hero ============================== -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <p class="eyebrow">SEO &amp; KI-Sichtbarkeit</p>
+        <h1>Damit Ihr Studio bei Google und ChatGPT gefunden wird.</h1>
+        <p class="hero__sub">SEO- und KI-Sichtbarkeit für Beauty-, Wellness-, Spa- und TCM-Studios im DACH-Raum. Sie arbeiten direkt mit mir — ohne Agentur-Vertrag.</p>
+        <a class="btn" href="#kontakt">Kostenlose Erstanalyse</a>
+        <p class="hero__platforms">Sichtbar dort, wo Ihre Kundinnen suchen: Google&nbsp;· ChatGPT&nbsp;· Perplexity&nbsp;· Gemini</p>
+      </div>
+      <div class="hero__portrait">
+        <div class="arch arch--framed">
+          <img src="/assets/georg.webp" alt="Georg Stopfer, Inhaber von MaxContentSEO" width="480" height="600" fetchpriority="high">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ Trust-Leiste ============================ -->
+  <!-- TODO: Testimonial-Freigabe Qiong — Zitat-Slot vorbereitet, erst nach schriftlicher Einwilligung befüllen (Konzept §5.3, offene Fragen 2/3). -->
+  <div class="trust">
+    <div class="container trust__items">
+      <span>Referenz: <strong>LingQi TCM Head Spa, München</strong></span>
+      <span>Audit-Einstieg <strong>499&nbsp;€</strong> — ohne Vertrag</span>
+      <span>Antwort innerhalb von <strong>48 Stunden</strong></span>
+    </div>
+  </div>
+
+  <!-- =========================== Empathie / Problem =========================== -->
+  <section class="section">
+    <div class="container empathy reveal">
+      <p class="empathy__lead">Ihre Kundinnen suchen online — finden aber die Konkurrenz.</p>
+      <div class="empathy__points">
+        <p>Vielleicht kennen Sie das: Das Studio läuft gut mit Stammkundinnen, aber online kommt kaum eine neue Anfrage an.</p>
+        <p>Bei Google taucht Ihr Studio erst weit unten auf — und wenn jemand ChatGPT fragt, gar nicht.</p>
+        <p>Genau da setze ich an: dass man Sie findet, wenn man nach dem sucht, was Sie anbieten.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= Leistungen (Bento-Grid) ========================= -->
+  <section class="section section--leinen" id="leistungen">
+    <div class="container">
+      <p class="eyebrow">Leistungen</p>
+      <h2 class="section-title">Drei Wege zu mehr Sichtbarkeit</h2>
+      <p class="section-intro">Jede Kachel führt zur ausführlichen Leistungsseite — mit Ablauf, Beispielen und Preisen.</p>
+
+      <div class="bento">
+        <!-- Signature: KI-Chat-Simulation (Variante A, LingQi namentlich — Georg-GO §15 P.4).
+             TODO Qiong-Freigabe: Chat-Mockup ist Teil des Freigabe-Pakets (Zahlen + Mockup + Foto,
+             vertraglicher Freigabeprozess 10 Werktage) — VOR Livegang versenden. Domain: lingqi-tcm.com (nicht .de). -->
+        <article class="bento__tile bento__tile--signature reveal">
+          <h3>KI-Sichtbarkeit (GEO)</h3>
+          <div class="chat" data-chat>
+            <div class="chat__row chat__row--user">
+              <div class="bubble bubble--user">Ich suche ein TCM Head Spa in München. Welches ist das beste?</div>
+            </div>
+            <div class="chat__row chat__ai-wrap">
+              <div class="chat__typing" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="bubble bubble--ai">Ein häufig empfohlenes Studio ist <strong>LingQi TCM Head Spa</strong> in München. Es ist auf Kopfhaut- und Haarpflege nach traditioneller chinesischer Medizin spezialisiert. Mehr Informationen: lingqi-tcm.com</div>
+            </div>
+            <p class="chat__caption">Beispielhafte Darstellung einer KI-Antwort — genau dafür arbeite ich: dass Ihr Studio die Antwort ist.</p>
+          </div>
+          <p class="chat__measure"><strong>Das messe ich — statt es zu schätzen:</strong> 10 typische Kundenfragen, live gestellt an ChatGPT und Gemini, ausgewertet als Score.</p>
+          <a class="text-link" href="/ki-sichtbarkeit/">Mehr zur KI-Sichtbarkeit</a>
+        </article>
+
+        <article class="bento__tile reveal">
+          <h3>Lokale Sichtbarkeit</h3>
+          <svg class="minimap" viewBox="0 0 240 140" role="img" aria-label="Stilisierte Karte mit Standort-Markierung auf Position 1">
+            <rect width="240" height="140" rx="10" fill="#E7EDE4"/>
+            <path d="M0 45 H240 M0 95 H240 M60 0 V140 M150 0 V140" stroke="#FAF7F2" stroke-width="7"/>
+            <path d="M105 0 L120 140" stroke="#FAF7F2" stroke-width="4"/>
+            <circle cx="150" cy="45" r="16" fill="#5C7160"/>
+            <text x="150" y="50" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#FFFFFF">1</text>
+          </svg>
+          <p>Wer im Kartenbereich fehlt, verliert Buchungen an das Studio nebenan. Ich bringe Ihren Eintrag und Ihre lokalen Seiten dorthin, wo gesucht wird.</p>
+          <a class="text-link" href="/seo-muenchen/">Mehr zur lokalen Sichtbarkeit</a>
+        </article>
+
+        <article class="bento__tile reveal">
+          <h3>Website &amp; Technik</h3>
+          <div class="phone" role="img" aria-label="Stilisiertes Smartphone mit schlanker, schnell ladender Seite"><i></i><i></i><i></i><i></i></div>
+          <p>Schnelle Ladezeiten, die Google und Ihre Kundinnen lieben — und eine Struktur, die auch KI-Systeme verstehen.</p>
+          <a class="text-link" href="/leistungen/">Mehr zu Website &amp; Technik</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== Prozess ============================== -->
+  <section class="section">
+    <div class="container reveal">
+      <p class="eyebrow">Ablauf</p>
+      <h2 class="section-title">So läuft ein Projekt</h2>
+      <div class="process">
+        <div class="process__step">
+          <h3>Erstanalyse</h3>
+          <p>Ich prüfe Ihre Website, Ihren Google-Eintrag und Ihre KI-Sichtbarkeit. Sie bekommen drei konkrete Befunde — kostenlos und unverbindlich.</p>
+        </div>
+        <div class="process__step">
+          <h3>Fundament</h3>
+          <p>Die wichtigsten Baustellen zuerst: Technik, lokale Einträge, Inhalte. Priorisiert nach Wirkung, nicht nach Aufwand.</p>
+        </div>
+        <div class="process__step">
+          <h3>Wachstum</h3>
+          <p>Ihre Sichtbarkeit wächst — bei Google und in KI-Antworten. Schritt für Schritt, nachvollziehbar dokumentiert.</p>
+        </div>
+      </div>
+      <p class="process__note">Dazu laufendes Reporting — und Sie haben immer mich als direkten Ansprechpartner.</p>
+    </div>
+  </section>
+
+  <!-- ============================== Über mich ============================== -->
+  <section class="section section--leinen" id="ueber-mich">
+    <div class="container about reveal">
+      <div class="about__portrait">
+        <div class="arch arch--framed">
+          <img src="/assets/georg.webp" alt="Georg Stopfer" width="480" height="600" loading="lazy">
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Über mich</p>
+        <h2 class="section-title">Sie sprechen direkt mit der Person, die Ihre Analyse durchführt.</h2>
+        <p class="section-intro">Ich bin Georg Stopfer, Inhaber von MaxContentSEO. Kein Junior, kein Projektmanager dazwischen: Jede Analyse und jede Umsetzung mache ich selbst. Spezialisiert habe ich mich auf Beauty-, Wellness- und TCM-Studios — eine Branche, deren Kundinnen längst nicht mehr nur googeln, sondern auch ChatGPT fragen.</p>
+        <a class="text-link" href="#kontakt">Lernen Sie mich kennen — mit einer kostenlosen Erstanalyse</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== Ergebnisse / Case =========================== -->
+  <!-- TODO Qiong-Freigabe (vertraglich, 10 Werktage): ALLE LingQi-Zahlen + Studio-Foto + Chat-Mockup
+       als EIN Freigabe-Paket versenden, BEVOR diese Seite live geht (§15.2). Zahlenbasis: GSC-Vergleich
+       28 Tage vor/nach Projektstart 05.06. — bewusst als „erste Tendenz“ geframt (§15.2 Frage 3).
+       TODO Testimonial: Chat-Bubble-Zitat-Slot folgt erst nach schriftlicher Einwilligung — bis dahin KEIN Zitat rendern. -->
+  <section class="section" id="ergebnisse">
+    <div class="container reveal">
+      <p class="eyebrow">Referenz</p>
+      <h2 class="section-title">LingQi — TCM Head Spa, München</h2>
+      <div class="case-card">
+        <div>
+          <dl class="case-facts">
+            <dt>Ausgangslage</dt>
+            <dd>Ein spezialisiertes Head-Spa-Studio mit begeisterten Kundinnen — online aber kaum sichtbar: wichtige Suchbegriffe auf Seite 2, keine Präsenz in KI-Antworten.</dd>
+            <dt>Vorgehen</dt>
+            <dd>SEO+GEO-Kombi-Audit, dann gezielte Umsetzung: lokale Suchbegriffe, technische Basis, Inhalte, die auch KI-Systeme verstehen und nennen können.</dd>
+          </dl>
+          <div class="case-stats">
+            <div><strong>4,6&nbsp;→&nbsp;5,4&nbsp;%</strong><span>Klickrate in der Google-Suche</span></div>
+            <div><strong>+214&nbsp;%</strong><span>Impressionen der Marken-Suche „lingqi“ (Position 5,9&nbsp;→&nbsp;3,2)</span></div>
+            <div><strong>Seite 2&nbsp;→&nbsp;1</strong><span>„tcm head spa“: Position 17,1&nbsp;→&nbsp;7,5</span></div>
+          </div>
+          <p class="caption">Erste Tendenz nach vier Wochen (Vergleich 28 Tage vor/nach Projektstart) — u.&nbsp;a. verbesserte sich auch „head spa“ von Position 6,0 auf 3,9. Die vollständige Auswertung folgt mit dem Abschlussbericht.</p>
+          <p><a class="text-link" href="/cases/lingqi.html">Vollständige Fallstudie lesen</a></p>
+        </div>
+        <div class="case-card__media">
+          <img src="/assets/lingqi-foto.webp" alt="Studio-Raum des LingQi TCM Head Spa in München" width="600" height="750" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== Preise ============================== -->
+  <section class="section section--leinen" id="preise">
+    <div class="container reveal">
+      <p class="eyebrow">Preise</p>
+      <h2 class="section-title">Ein klarer Einstieg, danach entscheiden Sie</h2>
+      <p class="section-intro">Sie starten mit einem einmaligen Audit. Zusätzliche Unterstützung ist auf Nachfrage möglich, aber kein Standardbestandteil.</p>
+
+      <div class="pricing">
+        <div class="price-card">
+          <h3>Kostenlose Erstanalyse</h3>
+          <div class="price-card__price">0&nbsp;€</div>
+          <div class="price-card__meta">unverbindlich · 48&nbsp;h Lieferzeit</div>
+          <ul>
+            <li>3 konkrete Befunde</li>
+            <li>inkl. KI-Kurz-Check: Kann ChatGPT Ihre Website überhaupt lesen?</li>
+            <li>Kein Verkaufsgespräch</li>
+            <li>Per E-Mail</li>
+          </ul>
+          <a class="btn--ghost btn" href="#kontakt">Erstanalyse anfordern</a>
+        </div>
+
+        <div class="price-card">
+          <h3>SEO+GEO-Kombi-Audit</h3>
+          <div class="price-card__price">499&nbsp;€</div>
+          <div class="price-card__meta">einmalig · wird bei Beauftragung der Umsetzung vollständig angerechnet</div>
+          <ul>
+            <li>Automatisiertes Einstiegs-Audit</li>
+            <li>Priorisierte Maßnahmen</li>
+            <li>Kein Agentur-Vertrag</li>
+          </ul>
+          <a class="btn--ghost btn" href="/audit-beispiel-kombi.html">Muster ansehen</a>
+        </div>
+
+        <div class="price-card price-card--featured">
+          <span class="price-card__badge">Empfohlen</span>
+          <h3>Premium-Audit</h3>
+          <div class="price-card__price">1.299&nbsp;€</div>
+          <div class="price-card__meta">einmalig</div>
+          <ul>
+            <li>15-seitiges PDF</li>
+            <li>24 Maßnahmen · 11 Kapitel</li>
+            <li>3 Wettbewerber</li>
+            <li>Strategie-Einschätzung per E-Mail</li>
+          </ul>
+          <a class="btn" href="/audit-beispiel.html">Muster ansehen</a>
+        </div>
+      </div>
+
+      <div class="pricing-note">
+        <p>Quick Fix (Umsetzung) für 699&nbsp;€ und laufende Begleitung — beides nur auf Nachfrage.</p>
+        <p>Jede Analyse mache ich persönlich — deshalb starte ich pro Monat nur zwei neue Projekte.</p>
+        <p class="caption">Alle Preise sind Endpreise (§19 UStG – keine Umsatzsteuer ausgewiesen).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ FAQ ================================ -->
+  <section class="section">
+    <div class="container reveal">
+      <p class="eyebrow">Häufige Fragen</p>
+      <h2 class="section-title">Bevor Sie sich entscheiden</h2>
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Wie lange dauert es, bis erste Ergebnisse sichtbar sind?</summary>
+          <p>Erste Bewegung zeigt sich oft nach vier bis acht Wochen — etwa bei lokalen Suchbegriffen oder der Klickrate. Belastbare Ergebnisse brauchen drei bis sechs Monate. Ich arbeite mit laufendem Reporting, damit Sie jede Veränderung nachvollziehen können.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Was ist KI-Sichtbarkeit — und warum betrifft sie mein Studio?</summary>
+          <p>Immer mehr Menschen fragen ChatGPT oder Gemini statt Google: „Welches Studio in meiner Nähe ist empfehlenswert?“ KI-Sichtbarkeit heißt: Ihr Studio taucht in diesen Antworten auf. Ich messe das mit zehn typischen Kundenfragen, live gestellt an ChatGPT und Gemini — und optimiere Ihre Website so, dass KI-Systeme sie verstehen und nennen.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Muss meine Website dafür neu gebaut werden?</summary>
+          <p>In den meisten Fällen nein. Oft reichen gezielte Anpassungen an Struktur, Inhalten und Technik. Ob mehr sinnvoll ist, zeigt die kostenlose Erstanalyse — unverbindlich und ohne Verkaufsgespräch.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Was darf ich als Studio rechtlich online bewerben?</summary>
+          <p>Vieles — aber nicht alles. Für Angebote rund um Gesundheit und Pflege gelten Grenzen, zum Beispiel aus dem Heilmittelwerbegesetz. Ich achte bei allen Texten darauf, dass Sichtbarkeit nicht auf Kosten der Rechtssicherheit geht. Das ersetzt keine Rechtsberatung — bei Detailfragen hilft eine Fachanwältin.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== Kontakt ============================== -->
+  <section class="section section--leinen" id="kontakt">
+    <div class="container contact-grid reveal">
+      <div>
+        <p class="eyebrow">Jetzt starten</p>
+        <h2 class="section-title">Kostenlose Erstanalyse Ihrer Website</h2>
+        <p class="section-intro">Ich prüfe Ihre Website und zeige Ihnen in 48 Stunden konkret, wo Sie Sichtbarkeit verschenken — bei Google und in KI-Antworten. Inklusive KI-Kurz-Check: Kann ChatGPT Ihre Website überhaupt lesen?</p>
+        <ul class="contact-checks">
+          <li><span>✔</span><span>Keine Verpflichtung</span></li>
+          <li><span>✔</span><span>Keine versteckten Kosten</span></li>
+          <li><span>✔</span><span>Klare Analyse statt Verkaufsgespräch</span></li>
+        </ul>
+      </div>
+      <form class="contact-form" action="https://formspree.io/f/mqenpryl" method="POST">
+        <input type="hidden" name="_subject" value="Neue Erstanalyse-Anfrage">
+        <input type="hidden" name="_next" value="https://maxcontentseo.de/danke.html">
+        <h3>Analyse anfordern</h3>
+        <p class="muted">Kostenlos und unverbindlich</p>
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="name">Name *</label>
+            <input id="name" name="name" type="text" placeholder="Ihr Name" required>
+          </div>
+          <div class="form-field">
+            <label for="website">Website</label>
+            <input id="website" name="website" type="text" inputmode="url" placeholder="z. B. www.ihr-studio.de">
+          </div>
+          <div class="form-field">
+            <label for="email">E-Mail *</label>
+            <input id="email" name="email" type="email" placeholder="ihre@email.de" required>
+          </div>
+          <div class="form-field">
+            <label for="phone">Telefon <span class="optional">(optional)</span></label>
+            <input id="phone" name="phone" type="tel" placeholder="+49 ...">
+          </div>
+          <div class="form-field">
+            <label for="goal">Welches Ziel möchten Sie erreichen? <span class="optional">(optional)</span></label>
+            <textarea id="goal" name="goal" placeholder="z. B. mehr qualifizierte Anfragen über Google, bessere lokale Sichtbarkeit oder klare Keyword-Prioritäten"></textarea>
+          </div>
+          <label class="consent" for="consent">
+            <input id="consent" name="dsgvo_consent" type="checkbox" value="ja" required>
+            <span>Ich stimme zu, dass meine Angaben zur Bearbeitung der Anfrage verarbeitet werden. Hinweise stehen in der <a href="/datenschutz.html">Datenschutzerklärung</a>.</span>
+          </label>
+          <button class="btn" type="submit">Kostenlose Erstanalyse anfordern</button>
+        </div>
+        <p class="form-hint">Antwort innerhalb von 48 Stunden. Keine Verpflichtung.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================================================================
+     Footer — kanonisches Snippet (global identisch auf allen Seiten).
+     ================================================================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cta">
+      <h2>Bereit, gefunden zu werden?</h2>
+      <p><a class="btn" href="/#kontakt">Kostenlose Erstanalyse anfordern</a></p>
+    </div>
+    <div class="footer-grid">
+      <div>
+        <h3>MaxContentSEO</h3>
+        <address>
+          Georg Stopfer<br>
+          Hauptstr. 29, 85551 Kirchheim b. München<br>
+          <a href="mailto:georg@maxcontentseo.de">georg@maxcontentseo.de</a>
+        </address>
+      </div>
+      <div>
+        <h3>Branchen &amp; Wissen</h3>
+        <a href="/branchen/kosmetikstudios.html">SEO für Kosmetikstudios</a>
+        <a href="/branchen/tcm-praxen.html">SEO für TCM-Praxen</a>
+        <a href="/branchen/wellness-spa.html">SEO für Wellness &amp; Spa</a>
+        <a href="/was-kostet-seo-kosmetikstudio/">Was kostet SEO?</a>
+        <a href="/blog/">Blog</a>
+      </div>
+      <div>
+        <h3>Service</h3>
+        <a href="/#preise">Preise</a>
+        <a href="/cases/">Referenzen</a>
+        <a href="/ki-sichtbarkeits-check/">KI-Sichtbarkeits-Check</a>
+        <a href="/seo-anbieter-finden.html">SEO-Anbieter finden</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>© 2026 MaxContentSEO — Georg Stopfer</span>
+      <span><a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Klebender Mobile-CTA: erscheint nach dem Hero, verschwindet bei #kontakt (kein Telefon — Formular). -->
+<a class="btn sticky-cta" href="#kontakt" data-sticky-cta>Erstanalyse</a>
+
+<script>
+(function () {
+  'use strict';
+
+  /* Header: Scroll-Zustand (transparent → Porzellan + Hairline) */
+  var header = document.querySelector('[data-header]');
+  function onScroll() { header.classList.toggle('is-scrolled', window.scrollY > 40); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* Mobile-Nav (Burger) */
+  var toggle = document.querySelector('[data-nav-toggle]');
+  var nav = document.querySelector('[data-nav]');
+  toggle.addEventListener('click', function () {
+    var open = header.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target.closest('a')) header.classList.remove('nav-open');
+  });
+
+  /* Dropdown: schließt bei Klick außerhalb und bei Escape (tastatur-bedienbar via <details>) */
+  var dropdown = document.querySelector('[data-dropdown]');
+  document.addEventListener('click', function (e) {
+    if (dropdown.open && !dropdown.contains(e.target)) dropdown.open = false;
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { dropdown.open = false; header.classList.remove('nav-open'); }
+  });
+
+  /* Ein IntersectionObserver für alles: Reveals + Chat-Tippen (einmalig) */
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add(entry.target.hasAttribute('data-chat') ? 'is-played' : 'is-visible');
+      io.unobserve(entry.target);
+    });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.reveal, [data-chat]').forEach(function (el) {
+    if (reduced) { el.classList.add('is-visible', 'is-played'); return; }
+    if (el.hasAttribute('data-chat')) el.classList.add('is-armed');
+    io.observe(el);
+  });
+
+  /* Klebender Mobile-CTA: sichtbar nach dem Hero, ausgeblendet am Kontaktbereich */
+  var cta = document.querySelector('[data-sticky-cta]');
+  var hero = document.querySelector('.hero');
+  var kontakt = document.getElementById('kontakt');
+  var pastHero = false, atKontakt = false;
+  function updateCta() { cta.classList.toggle('is-visible', pastHero && !atKontakt); }
+  new IntersectionObserver(function (entries) {
+    pastHero = !entries[0].isIntersecting; updateCta();
+  }).observe(hero);
+  new IntersectionObserver(function (entries) {
+    atKontakt = entries[0].isIntersecting; updateCta();
+  }, { threshold: 0.15 }).observe(kontakt);
+})();
+</script>
+
+</body>
+</html>
