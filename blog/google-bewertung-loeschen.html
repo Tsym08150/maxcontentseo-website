@@ -67,28 +67,109 @@
 <style>
 :root{--bg:#FAFAF8;--text:#141414;--muted:#6B6B6B;--accent:#1B6B4A;--border:#E2E0DA;--white:#fff;--max:980px;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--serif:Georgia,"Times New Roman",serif}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.7}a{color:var(--accent)}img{max-width:100%;height:auto}.wp-site-blocks{min-height:100vh}.wp-block-template-part{border-bottom:1px solid var(--border);background:var(--white)}.wp-block-template-part>.wp-block-group{max-width:var(--max);margin:0 auto;padding:1rem}.wp-block-site-title{margin:0;font-size:1rem}.wp-block-site-title a{text-decoration:none;color:var(--text);font-weight:800}.wp-block-navigation__container,.wp-block-page-list{display:flex;gap:1rem;align-items:center;list-style:none;margin:0;padding:0;flex-wrap:wrap}.wp-block-navigation-item__content{text-decoration:none;color:var(--muted);font-weight:700}.wp-block-navigation-item__content:hover{color:var(--accent)}main{max-width:var(--max);margin:0 auto;padding:clamp(2rem,5vw,4rem) 1rem}.wp-block-post-title,.wp-block-post-title a,h1,h2,h3{font-family:var(--serif);line-height:1.15;color:var(--text)}.wp-block-post-title{font-size:clamp(2rem,5vw,3.4rem);margin:0 0 1rem}.wp-block-post-date{color:var(--muted);margin-bottom:2rem}.wp-block-group{max-width:100%}.toc-sticky{border:1px solid var(--border);background:var(--white);border-radius:10px;padding:1rem;margin:2rem 0}.has-background,.wp-block-group[style*="background"]{border-radius:10px}.wp-block-separator{border:0;border-top:1px solid var(--border);margin:2rem 0}.wp-block-post-content p{font-size:1.05rem}.skip-link{position:absolute;left:-999px}.skip-link:focus{left:1rem;top:1rem;background:#fff;padding:.5rem;z-index:1000}.site-nav{position:sticky;top:0;z-index:40;border-bottom:1px solid rgba(226,224,218,.85);background:rgba(250,250,248,.92);backdrop-filter:blur(14px)}.site-nav__inner{max-width:var(--max);min-height:4.4rem;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand{text-decoration:none;color:var(--text);font-weight:800}.brand span{color:var(--accent)}.nav-links{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}.nav-links a{color:var(--muted);text-decoration:none;font-weight:700}.nav-links a:hover{color:var(--accent)}.nav-cta{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:0 .95rem;border-radius:10px;background:var(--accent);color:#fff!important}.nav-toggle{display:none;width:2.75rem;height:2.75rem;border:1px solid var(--border);border-radius:10px;background:#fff}.nav-toggle span{display:block;width:1.15rem;height:2px;margin:.22rem auto;background:var(--text);transition:.2s}.site-nav.is-open .nav-toggle span:first-child{transform:translateY(7px) rotate(45deg)}.site-nav.is-open .nav-toggle span:nth-child(2){opacity:0}.site-nav.is-open .nav-toggle span:last-child{transform:translateY(-7px) rotate(-45deg)}@media(max-width:760px){.site-nav__inner{position:relative}.nav-toggle{display:block}.nav-links{position:absolute;top:calc(100% + 1px);left:1rem;right:1rem;display:flex;max-height:0;overflow:hidden;flex-direction:column;align-items:stretch;padding:0 .85rem;opacity:0;visibility:hidden;pointer-events:none;border:1px solid transparent;border-radius:10px;background:#fff;box-shadow:0 18px 44px rgba(20,20,20,.12);transition:max-height .24s ease,opacity .18s ease,visibility .18s ease,padding .18s ease}.site-nav.is-open .nav-links{max-height:32rem;padding:.85rem;opacity:1;visibility:visible;pointer-events:auto;border-color:var(--border)}.site-nav.is-open .nav-links a{display:flex;width:100%;justify-content:flex-start}.site-nav.is-open .nav-links .nav-cta{justify-content:center}}@media(max-width:760px){.wp-block-navigation__container,.wp-block-page-list{flex-direction:column;align-items:flex-start}.wp-block-template-part>.wp-block-group{padding:.85rem 1rem}}
 </style><link rel="stylesheet" href="/assets/tap-targets.css">
+<link rel="preload" href="/assets/fonts/lora-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Variante-B NUR fuer Nav + Footer (scoped). design-system.css bewusst NICHT global
+   eingebunden (dessen body{}-Regel wuerde den Artikel-Body umfaerben). Artikel-<style>,
+   wp-Klassen und Tool-JS bleiben unveraendert. */
+@font-face{font-family:'Figtree';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/figtree-latin-400.woff2') format('woff2');}
+@font-face{font-family:'Figtree';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/figtree-latin-500.woff2') format('woff2');}
+@font-face{font-family:'Figtree';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/figtree-latin-600.woff2') format('woff2');}
+@font-face{font-family:'Geist Mono';font-style:normal;font-weight:400 500;font-display:swap;src:url('/assets/fonts/geist-mono-latin-var.woff2') format('woff2');}
+[data-menu-panel]{opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s ease,transform .18s ease,visibility .18s;}
+[data-menu]:hover>[data-menu-panel],[data-menu]:focus-within>[data-menu-panel],[data-menu][data-open="true"]>[data-menu-panel]{opacity:1;visibility:visible;transform:translateY(0);}
+[data-burger]{display:none;}
+[data-mobile-panel]{display:none;}
+nav[data-mobile-open="true"] [data-mobile-panel]{display:block;}
+[data-mobile-panel] summary::-webkit-details-marker{display:none;}
+@media (max-width:950px){[data-nav-desktop]{display:none !important;}[data-burger]{display:inline-flex !important;}}
+@media (min-width:950.02px){[data-mobile-panel]{display:none !important;}}
+.h0:hover{color:#FAF7F2;}
+.h1:hover{color:#FAF7F2;background:rgba(250,247,242,0.06);}
+.h2:hover{background:#A94F30;}
+.h3:hover{border-color:#FAF7F2;}
+.f0:focus{outline:none;border-color:#C4633F;}
+</style>
 </head>
 <body class="wp-singular post-template-default single single-post postid-48 single-format-standard wp-embed-responsive wp-theme-extendable">
 
-<a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target">Zum Inhalt springen</a><div class="wp-site-blocks"><nav class="site-nav" aria-label="Hauptnavigation" data-mobile-nav>
-  <div class="site-nav__inner">
-    <a class="brand" href="/">Max<span>ContentSEO</span></a>
-    <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="primary-navigation">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="nav-links" id="primary-navigation">
-      <a href="/leistungen/">Leistungen</a>
-      <a href="/branchen/kosmetikstudios.html">Kosmetik</a>
-      <a href="/branchen/tcm-praxen.html">TCM</a>
-      <a href="/branchen/wellness-spa.html">Wellness</a>
-      <a href="/was-kostet-seo-kosmetikstudio/">Preise</a>
-      <a href="/seo-anbieter-finden.html">Anbieterwahl</a>
-      <a href="/ki-sichtbarkeits-check/">KI-Check</a>
-      <a href="/cases/">Cases</a>
-      <a href="/blog/">Blog</a>
-      <a href="/audit-beispiel.html">Report</a>
-      <a class="nav-cta" href="/#kontakt">Kostenlose Erstanalyse</a>
+<a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target">Zum Inhalt springen</a><div class="wp-site-blocks"><nav data-mobile-open="false" style="position:sticky; top:0; z-index:100; background:rgba(38,36,31,0.88); backdrop-filter:blur(12px); border-bottom:1px solid rgba(250,247,242,0.1);">
+  <div style="max-width:1140px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:0.9rem clamp(1.25rem,5vw,2rem);">
+    <a href="/#top" style="font-weight:700; font-size:1.05rem; letter-spacing:-0.02em; color:#FAF7F2; text-decoration:none;">MaxContent <span style="color:#C4633F;">SEO</span></a>
+    <div data-nav-desktop="true" style="display:flex; align-items:center; gap:0.15rem;">
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Leistungen<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/leistungen/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Leistungsübersicht</a></li>
+          <li><a class="h1" href="/ki-sichtbarkeit/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">KI-Sichtbarkeit (GEO)</a></li>
+          <li><a class="h1" href="/ki-sichtbarkeits-check/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Kostenloser KI-Check</a></li>
+        </ul>
+      </div>
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Branchen<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/branchen/kosmetikstudios.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Kosmetikstudios</a></li>
+          <li><a class="h1" href="/branchen/tcm-praxen.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">TCM-Praxen</a></li>
+          <li><a class="h1" href="/branchen/wellness-spa.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Wellness &amp; Spa</a></li>
+          <li><a class="h1" href="/seo-muenchen/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">SEO München</a></li>
+        </ul>
+      </div>
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Ergebnisse<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/cases/lingqi.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Referenz LingQi</a></li>
+          <li><a class="h1" href="/audit-beispiel.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Audit-Muster (SEO)</a></li>
+          <li><a class="h1" href="/audit-beispiel-kombi.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Audit-Muster (SEO+GEO)</a></li>
+        </ul>
+      </div>
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Wissen<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/blog/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Blog</a></li>
+          <li><a class="h1" href="/seo-anbieter-finden.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">SEO-Anbieter erkennen</a></li>
+        </ul>
+      </div>
+      <a class="h0" href="/#preise" style="font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); text-decoration:none; padding:0.5rem 0.7rem;">Preise</a>
+      <a class="h2" href="/#kontakt" style="background:#C4633F; color:#FAF7F2; padding:0.5rem 1.2rem; border-radius:8px; text-decoration:none; font-size:0.86rem; font-weight:600; margin-left:0.75rem;">Kostenlose Erstanalyse</a>
     </div>
+    <button class="h3" data-burger="true" type="button" aria-expanded="false" aria-controls="mobilmenu" style="align-items:center; background:none; border:1px solid rgba(250,247,242,0.25); border-radius:8px; cursor:pointer; font-family:'Geist Mono', monospace; font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:#FAF7F2; padding:0.45rem 0.9rem;">Menü</button>
+  </div>
+  <div data-mobile-panel="true" id="mobilmenu" style="border-top:1px solid rgba(250,247,242,0.1); padding:0.5rem clamp(1.25rem,5vw,2rem) 1.25rem; max-height:calc(100vh - 64px); overflow:auto;">
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Leistungen<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/leistungen/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Leistungsübersicht</a>
+        <a class="h0" href="/ki-sichtbarkeit/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">KI-Sichtbarkeit (GEO)</a>
+        <a class="h0" href="/ki-sichtbarkeits-check/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Kostenloser KI-Check</a>
+      </div>
+    </details>
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Branchen<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/branchen/kosmetikstudios.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Kosmetikstudios</a>
+        <a class="h0" href="/branchen/tcm-praxen.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">TCM-Praxen</a>
+        <a class="h0" href="/branchen/wellness-spa.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Wellness &amp; Spa</a>
+        <a class="h0" href="/seo-muenchen/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">SEO München</a>
+      </div>
+    </details>
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Ergebnisse<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/cases/lingqi.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Referenz LingQi</a>
+        <a class="h0" href="/audit-beispiel.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Audit-Muster (SEO)</a>
+        <a class="h0" href="/audit-beispiel-kombi.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Audit-Muster (SEO+GEO)</a>
+      </div>
+    </details>
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Wissen<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/blog/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Blog</a>
+        <a class="h0" href="/seo-anbieter-finden.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">SEO-Anbieter erkennen</a>
+      </div>
+    </details>
+    <a href="/#preise" style="display:block; padding:0.85rem 0; font-size:0.95rem; font-weight:500; color:#FAF7F2; text-decoration:none; border-bottom:1px solid rgba(250,247,242,0.08);">Preise</a>
+    <a class="h2" href="/#kontakt" style="display:block; text-align:center; margin-top:1rem; background:#C4633F; color:#FAF7F2; padding:0.8rem 1.2rem; border-radius:8px; text-decoration:none; font-size:0.92rem; font-weight:600;">Kostenlose Erstanalyse</a>
   </div>
 </nav>
 
@@ -628,22 +709,16 @@
 
 
 
-<footer class="wp-block-template-part">
-<div class="wp-block-group alignfull is-style-ext-preset--group--natural-1--footer-1 has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:0;padding-bottom:0">
-<div class="wp-block-group alignwide is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-cb46ffcb wp-block-group-is-layout-flex">
-<div class="wp-block-group ext-animate--on is-nowrap is-layout-flex wp-container-core-group-is-layout-97614de5 wp-block-group-is-layout-flex" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)">
-
-
-<div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow"><h2 class="wp-block-site-title has-medium-font-size"><a href="/" target="_self" rel="home">MaxContentSEO</a></h2></div>
-</div>
-
-
-
-<div class="wp-block-group ext-animate--on is-nowrap is-layout-flex wp-container-core-group-is-layout-f8ce51fb wp-block-group-is-layout-flex" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)">
-<p><a href="/impressum.html" data-type="page" data-id="9">Impressum</a> | <a href="/datenschutz.html" data-type="page" data-id="3">Datenschutzerklärung</a></p>
-</div>
-</div>
-</div>
+<footer style="background:#1B1916; color:rgba(250,247,242,0.5); padding:2.5rem clamp(1.25rem,5vw,2rem); text-align:center; font-size:0.85rem; font-weight:500;">
+  <div style="max-width:1140px; margin:0 auto;">
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem 2rem; margin-bottom:0.75rem; font-family:'Geist Mono', monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">
+      <a class="h0" href="/was-kostet-seo-kosmetikstudio/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Preise im Detail</a>
+      <a class="h0" href="/impressum.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Impressum</a>
+      <a class="h0" href="/datenschutz.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Datenschutz</a>
+      <a class="h0" href="mailto:georg@maxcontentseo.de" style="color:rgba(250,247,242,0.7); text-decoration:none;">E-Mail</a>
+    </div>
+    <p style="margin:0;">© 2026 MaxContentSEO · Georg Stopfer</p>
+  </div>
 </footer></div>
 <script id="wp-block-template-skip-link-js-after">
 	( function() {
@@ -713,4 +788,5 @@ var ExtendableNavData = {"logoUrl":"","siteTitle":"MaxContentSEO"};
 })();
 </script>
 
+<script src="/assets/js/redesign.js" defer></script>
 </body></html>
