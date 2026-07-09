@@ -91,6 +91,146 @@ nav[data-mobile-open="true"] [data-mobile-panel]{display:block;}
 .h3:hover{border-color:#FAF7F2;}
 .f0:focus{outline:none;border-color:#C4633F;}
 </style>
+<style>
+/* Artikel-Design-Schicht (Variante-B Dokument-Blatt). Das WP-Theme-CSS fuer die
+   gb-article-Klassen (hero, page-wrap, callout, steps, ...) kam beim Export nie mit;
+   Body-HTML und Tool-JS bleiben unveraendert, nur Styles ergaenzt. */
+@font-face{font-family:'Lora';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/lora-latin-500.woff2') format('woff2');}
+@font-face{font-family:'Lora';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/lora-latin-600.woff2') format('woff2');}
+
+:root{
+  --bg:#FAF7F2; --text:#26241F; --muted:#6B655C; --accent:#A9502F; --accent-btn:#C4633F;
+  --border:#E7E1D6; --card:#FFFDF9; --ink:#26241F; --paper-soft:#F1EBE1;
+  --serif:'Lora',Georgia,serif; --sans:'Figtree',system-ui,-apple-system,sans-serif; --max:1140px;
+}
+body{font-family:var(--sans);}
+a{color:var(--accent);}
+main.wp-block-group{max-width:none;padding:0 0 3rem;margin:0 auto;}
+
+/* Kopfzeile: WP-Titel + Datum als schlanke Meta-Zeile ueber dem Hero */
+.wp-block-post-title{font-family:var(--sans);font-size:0.85rem;font-weight:500;margin:0;line-height:1.5;}
+.wp-block-post-title a{color:var(--muted);text-decoration:none;}
+.wp-block-post-title a:hover{color:var(--accent);}
+.wp-block-post-date{color:var(--muted);font-size:0.85rem;margin:0 0 1.25rem;}
+main.wp-block-group>div:first-child{max-width:var(--max);margin:1.5rem auto 0;padding:0 clamp(1.25rem,5vw,2rem);}
+main.wp-block-group>div:first-child .wp-block-group{display:flex;gap:0.6rem;align-items:baseline;flex-wrap:wrap;}
+
+/* Hero */
+.gb-article .hero{max-width:var(--max);margin:0.75rem auto 0;padding:0 clamp(1.25rem,5vw,2rem);}
+.gb-article .hero-inner{background:var(--ink);border-radius:16px;padding:clamp(1.75rem,4vw,3rem);display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:center;}
+.hero-meta{font-family:'Geist Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#D98B63;margin-bottom:1rem;}
+.gb-article .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(1.6rem,3.2vw,2.35rem);line-height:1.2;color:#FAF7F2;margin:0 0 1.5rem;}
+.gb-article .hero h1 em{font-style:normal;color:#D98B63;}
+.hero-byline{display:flex;align-items:center;gap:0.85rem;}
+.hero-avatar{width:2.6rem;height:2.6rem;border-radius:50%;background:var(--accent-btn);color:#FAF7F2;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:0.9rem;flex-shrink:0;}
+.hero-byline-text{font-size:0.85rem;color:rgba(250,247,242,0.65);line-height:1.5;}
+.hero-byline-name{font-weight:600;color:#FAF7F2;}
+.hero-mockup{min-width:0;}
+
+/* Grundgeruest: Sidebar-TOC + Artikelspalte */
+.page-wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(1.25rem,5vw,2rem);display:grid;grid-template-columns:264px minmax(0,1fr);gap:clamp(2rem,4vw,3.5rem);}
+.article-header{grid-column:1 / -1;}
+.sidebar{grid-row:2;}
+.article-body{grid-row:2;min-width:0;max-width:70ch;}
+.toc-sticky{position:sticky;top:5.5rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.2rem;margin:0;}
+.toc-title{font-family:'Geist Mono',monospace;font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;}
+.toc-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0.15rem;}
+.toc-list a{display:flex;gap:0.5rem;padding:0.3rem 0.4rem;border-radius:6px;font-size:0.85rem;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;}
+.toc-list a:hover{color:var(--text);background:var(--paper-soft);}
+.toc-num{font-family:'Geist Mono',monospace;font-size:0.72rem;color:var(--accent);min-width:1.4rem;}
+
+/* Typografie Artikelspalte */
+.article-body h2{font-family:var(--serif);font-weight:600;font-size:1.45rem;line-height:1.25;margin:2.75rem 0 1rem;scroll-margin-top:6rem;}
+.article-body h3{font-family:var(--serif);font-weight:600;font-size:1.12rem;margin:2rem 0 0.75rem;scroll-margin-top:6rem;}
+.article-body p{font-size:1rem;line-height:1.75;margin:0 0 1.1rem;}
+.article-body ul{padding-left:1.25rem;margin:0 0 1.25rem;}
+.article-body ul li{margin-bottom:0.45rem;line-height:1.65;font-size:0.98rem;}
+.intro-text{font-size:1.12rem !important;line-height:1.75;color:#3D3931;}
+
+/* Was-Sie-lesen-Box */
+.reading-box{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--accent-btn);border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin:0 0 1.75rem;}
+.reading-box-title{font-family:'Geist Mono',monospace;font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:0.7rem;}
+.reading-box ul{margin:0;}
+
+/* Tabellen */
+.article-body table{width:100%;border-collapse:collapse;margin:1.25rem 0 1.75rem;font-size:0.93rem;background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+.article-body th{background:var(--paper-soft);font-family:var(--sans);font-weight:600;font-size:0.85rem;text-align:left;padding:0.7rem 0.9rem;border-bottom:1px solid var(--border);}
+.article-body td{padding:0.65rem 0.9rem;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.55;}
+.article-body tr:last-child td{border-bottom:none;}
+.check{color:#3E7C4F;font-weight:700;margin-right:0.3rem;}
+.cross{color:#B4462F;font-weight:700;margin-right:0.3rem;}
+
+/* Entscheidungsbaum-Widget */
+#db-wrap{background:var(--ink);border-radius:14px;padding:1.5rem 1.75rem 1.75rem;margin:1.25rem 0 2rem;}
+#db-wrap h3{font-family:'Geist Mono',monospace;font-size:0.7rem;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:#D98B63;margin:0 0 1rem;}
+.db-question{font-family:var(--serif);font-weight:500;font-size:1.1rem;line-height:1.5;color:#FAF7F2;margin-bottom:1.15rem;}
+.db-btns{display:flex;gap:0.75rem;flex-wrap:wrap;}
+.db-btn{background:var(--accent-btn);color:#FAF7F2;border:none;border-radius:8px;padding:0.65rem 1.2rem;font-family:var(--sans);font-size:0.9rem;font-weight:600;cursor:pointer;}
+.db-btn:hover{background:#A94F30;}
+.db-result{border-radius:10px;padding:1rem 1.2rem;font-size:0.95rem;line-height:1.65;background:rgba(250,247,242,0.08);color:rgba(250,247,242,0.85);border-left:3px solid var(--accent-btn);}
+.db-result.positive{border-left-color:#7FA86B;}
+.db-result.maybe{border-left-color:#D9A94A;}
+.db-result.negative{border-left-color:#B4462F;}
+.db-result strong{color:#FAF7F2;}
+.db-reset{margin-top:1rem;background:none;border:1px solid rgba(250,247,242,0.3);border-radius:8px;color:#FAF7F2;padding:0.5rem 1rem;font-family:var(--sans);font-size:0.85rem;cursor:pointer;}
+.db-reset:hover{border-color:#FAF7F2;}
+
+/* Callouts */
+.callout{border-radius:0 10px 10px 0;padding:1rem 1.3rem;margin:1.4rem 0;font-size:0.95rem;line-height:1.65;border-left:3px solid var(--border);background:var(--card);}
+.callout-label{font-family:'Geist Mono',monospace;font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:0.45rem;}
+.callout-idee{background:#F7EBE2;border-left-color:var(--accent-btn);}
+.callout-idee .callout-label{color:#A9502F;}
+.callout-regel{background:var(--paper-soft);border-left-color:#8A8375;}
+.callout-praxis{background:#EDF0E8;border-left-color:#5C6653;}
+.callout-praxis .callout-label{color:#4C5544;}
+.callout-warning{background:#F8EFDF;border-left-color:#B98A2E;}
+.callout-warning .callout-label{color:#8F6A20;}
+
+/* Schritt-fuer-Schritt */
+.steps{margin:1.5rem 0 2rem;display:flex;flex-direction:column;gap:1.4rem;}
+.step{display:grid;grid-template-columns:2.4rem 1fr;gap:1.1rem;}
+.step-num{width:2.4rem;height:2.4rem;border-radius:50%;background:var(--ink);color:#FAF7F2;font-family:var(--serif);font-weight:600;display:flex;align-items:center;justify-content:center;}
+.step-content h4{font-family:var(--serif);font-weight:600;font-size:1.05rem;margin:0.35rem 0 0.5rem;}
+.step-content p{font-size:0.95rem;margin-bottom:0.5rem;}
+
+/* Zitat, Musterantworten, CTAs */
+.pullquote{font-family:var(--serif);font-weight:500;font-style:normal;font-size:1.2rem;line-height:1.55;color:#4A453C;border-left:3px solid var(--accent-btn);margin:1.75rem 0;padding:0.35rem 0 0.35rem 1.4rem;}
+.muster-box{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.3rem;margin:1rem 0;font-size:0.95rem;line-height:1.65;color:#3D3931;}
+.muster-label{font-family:'Geist Mono',monospace;font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.5rem;}
+.cta-box{background:var(--ink);border-radius:14px;padding:1.75rem 2rem;margin:2rem 0;color:rgba(250,247,242,0.75);}
+.cta-box h3{font-family:var(--serif);font-weight:600;font-size:1.25rem;color:#FAF7F2;margin:0 0 0.6rem;}
+.cta-box p{font-size:0.95rem;line-height:1.65;}
+.cta-btn{display:inline-block;background:var(--accent-btn);color:#FAF7F2 !important;text-decoration:none;font-weight:600;font-size:0.92rem;padding:0.7rem 1.3rem;border-radius:8px;margin-top:0.35rem;}
+.cta-btn:hover{background:#A94F30;}
+
+/* FAQ */
+.faq-section{margin:1rem 0 2rem;border-top:1px solid var(--border);}
+.faq-section details{border-bottom:1px solid var(--border);}
+.faq-section summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:0.95rem 0;font-weight:600;font-size:0.98rem;line-height:1.45;}
+.faq-section summary::-webkit-details-marker{display:none;}
+.faq-section summary::after{content:"+";font-family:'Geist Mono',monospace;color:var(--accent);flex-shrink:0;}
+.faq-section details[open] summary::after{content:"–";}
+.faq-answer{padding:0 0 1.1rem;font-size:0.95rem;line-height:1.7;color:#4A453C;}
+
+/* Autor-Fusszeile + Quellen */
+.wp-block-post-author{color:var(--muted);font-size:0.85rem;}
+main.wp-block-group>div:last-child{max-width:var(--max);margin:0 auto;padding:0 clamp(1.25rem,5vw,2rem);}
+
+/* Responsive */
+@media (max-width:900px){
+  .gb-article .hero-inner{grid-template-columns:1fr;}
+  .hero-mockup{max-width:420px;}
+  .page-wrap{grid-template-columns:1fr;gap:1.5rem;}
+  .sidebar{grid-row:auto;}
+  .article-body{grid-row:auto;max-width:none;}
+  .toc-sticky{position:static;}
+}
+@media (max-width:480px){
+  .article-body table{display:block;overflow-x:auto;}
+  .cta-box{padding:1.4rem 1.3rem;}
+  #db-wrap{padding:1.25rem 1.2rem 1.4rem;}
+}
+</style>
 </head>
 <body class="wp-singular post-template-default single single-post postid-48 single-format-standard wp-embed-responsive wp-theme-extendable">
 
