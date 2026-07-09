@@ -9,7 +9,98 @@
 <link rel="canonical" href="https://maxcontentseo.de/branchen/wellness-spa.html">
 <meta property="og:title" content="SEO für Wellness &amp; Spa — Eigene Anfragen statt Portal-Provision | MaxContentSEO">
 <meta property="og:image" content="https://maxcontentseo.de/assets/og-logo.png">
-<link rel="stylesheet" href="/assets/content-pages.css">
+<link rel="preload" href="/assets/fonts/lora-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/design-system.css">
+<style>
+/* Variante-B-System (Unterseite): Basis/Fonts/Nav-Verhalten aus /assets/css/design-system.css
+   + /assets/js/redesign.js. Hier nur seitenspezifische Content-Komponenten auf B-Tokens gemappt
+   (Lora Headlines · Figtree Text · Geist Mono Labels · #26241F Basis · #C4633F Terracotta). */
+.container{max-width:1140px;margin:0 auto;padding:0 clamp(1.25rem,5vw,2rem);}
+img{display:block;max-width:100%;}
+.section{padding:clamp(4rem,8vw,7rem) 0;}
+.section-alt{background:#FAF7F2;color:#26241F;}
+.section p{color:rgba(250,247,242,0.72);}
+.section-alt p{color:#6E675C;}
+main a{color:#C4633F;}
+main a:hover{color:#A94F30;}
+.eyebrow,.hero__eyebrow{display:inline-block;font-family:'Geist Mono',monospace;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:#C4633F;font-weight:500;margin:0 0 0.9rem;padding:0;background:none;}
+.section-title{font-family:'Lora',Georgia,serif;font-size:clamp(1.9rem,3.5vw,2.7rem);line-height:1.15;font-weight:600;letter-spacing:-0.02em;margin:0 0 1.25rem;}
+h2,h3{font-family:'Lora',Georgia,serif;font-weight:600;letter-spacing:-0.01em;}
+h3{font-size:1.05rem;}
+.hero h1{font-family:'Lora',Georgia,serif;font-size:clamp(2.6rem,6vw,4.2rem);line-height:1.06;font-weight:600;letter-spacing:-0.03em;margin:0 0 1.5rem;}
+.lead{font-size:1.15rem;font-weight:500;color:rgba(250,247,242,0.7);max-width:640px;margin:0 0 1.25rem;}
+.hero{padding:clamp(8rem,14vw,10.5rem) 0 clamp(3.5rem,6vw,5rem);position:relative;overflow:hidden;}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 30% 0%,rgba(92,113,96,0.16),transparent 70%);pointer-events:none;}
+.hero>.container{position:relative;}
+.hero p{color:rgba(250,247,242,0.7);max-width:680px;}
+.hero .button{margin-top:1rem;}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:0.4rem;background:#C4633F;color:#FAF7F2 !important;padding:0.85rem 1.7rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:1rem;border:1px solid #C4633F;transition:all 0.25s;min-height:44px;}
+.button:hover{background:#A94F30;border-color:#A94F30;transform:translateY(-1px);box-shadow:0 4px 20px rgba(196,99,63,0.35);}
+.text-link{font-weight:600;color:#C4633F !important;text-decoration:none;}
+.text-link:hover{color:#A94F30 !important;}
+.content-flow{max-width:820px;}
+.content-flow > * + *{margin-top:1.05rem;}
+.content-flow .section-title{margin-bottom:1.25rem;}
+.list{padding-left:1.25rem;margin:0.4rem 0;}
+.list li{margin:0.55rem 0;}
+.note{font-size:0.9rem;line-height:1.6;color:rgba(250,247,242,0.55);margin-top:1rem;}
+.section-alt .note{color:#8A8175;}
+.keyword-line{font-family:'Geist Mono',monospace;font-size:0.9rem;line-height:1.9;letter-spacing:0.01em;color:rgba(250,247,242,0.85);}
+.section-alt .keyword-line{color:#4A443C;}
+.grid{display:grid;gap:1.1rem;}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr));}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr));}
+.grid.four{grid-template-columns:repeat(4,minmax(0,1fr));}
+.card{border:1px solid rgba(250,247,242,0.1);border-radius:14px;background:#2E332B;color:#FAF7F2;padding:1.6rem;transition:border-color 0.25s;}
+.card:hover{border-color:#C4633F;}
+.card h2,.card h3{margin-top:0;font-size:1.05rem;}
+.card p{color:rgba(250,247,242,0.65);}
+.section-alt .card{background:#FFFFFF;border-color:#E3DCCE;color:#26241F;}
+.section-alt .card p{color:#6E675C;}
+.card .number{display:inline-block;font-family:'Geist Mono',monospace;font-size:0.85rem;font-weight:500;letter-spacing:0.05em;color:#C4633F;margin-bottom:0.6rem;}
+.price-list{display:grid;gap:0.85rem;margin:0.5rem 0 0;}
+.price-item{border:1px solid rgba(250,247,242,0.1);border-radius:12px;background:#2E332B;color:#FAF7F2;padding:1.15rem 1.35rem;}
+.price-item h3{margin:0 0 0.35rem;font-size:1rem;}
+.price-item p{margin:0;color:rgba(250,247,242,0.65);font-size:0.95rem;}
+.section-alt .price-item{background:#FFFFFF;border-color:#E3DCCE;color:#26241F;}
+.section-alt .price-item p{color:#6E675C;}
+.branch-links{margin-top:1.75rem;padding-top:1.25rem;border-top:1px solid rgba(250,247,242,0.14);}
+.section-alt .branch-links{border-top-color:#E3DCCE;}
+.link-row{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:0.7rem;}
+.link-row a{border:1px solid rgba(250,247,242,0.22);border-radius:999px;padding:0.5rem 1rem;text-decoration:none;font-family:'Geist Mono',monospace;font-size:0.78rem;letter-spacing:0.03em;color:rgba(250,247,242,0.8) !important;}
+.link-row a:hover{border-color:#C4633F;color:#FAF7F2 !important;}
+.section-alt .link-row a{border-color:#D9CFBE;color:#4A443C !important;}
+.section-alt .link-row a:hover{border-color:#C4633F;color:#26241F !important;}
+.answer{border-left:3px solid #C4633F;border-radius:0 12px 12px 0;padding:1.1rem 1.25rem;margin:1rem 0;background:rgba(196,99,63,0.13);color:rgba(250,247,242,0.9);}
+.section-alt .answer{background:#F3E7E0;color:#3A2F2A;}
+.check-list{padding-left:1.2rem;margin:0.5rem 0;}
+.check-list li{margin:0.45rem 0;}
+.table-wrap{overflow-x:auto;}
+.compare{width:100%;border-collapse:collapse;background:#2E332B;border:1px solid rgba(250,247,242,0.12);border-radius:12px;overflow:hidden;font-size:0.92rem;}
+.section-alt .compare{background:#FFFFFF;border-color:#E3DCCE;}
+.compare th,.compare td{border-bottom:1px solid rgba(250,247,242,0.1);padding:0.8rem 0.95rem;text-align:left;vertical-align:top;}
+.section-alt .compare th,.section-alt .compare td{border-color:#E3DCCE;}
+.compare th{background:rgba(196,99,63,0.14);font-family:'Geist Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:#C4633F;font-weight:500;}
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.6rem;margin-top:2rem;}
+.trust span,.pill{display:inline-block;border:1px solid rgba(250,247,242,0.18);border-radius:999px;padding:0.55rem 0.85rem;font-family:'Geist Mono',monospace;font-weight:500;font-size:0.72rem;letter-spacing:0.03em;color:rgba(250,247,242,0.72);text-align:center;}
+.section-alt .pill{border-color:#D9CFBE;color:#6E675C;}
+.cta{background:#C4633F;color:#FAF7F2;}
+.cta .section-title,.cta h2{color:#FAF7F2;}
+.cta p{color:rgba(250,247,242,0.92) !important;margin:0.6rem 0;}
+.cta .button{background:#26241F;color:#FAF7F2 !important;border-color:#26241F;margin-top:1rem;}
+.cta .button:hover{background:#1B1916;border-color:#1B1916;}
+.cta a:not(.button){color:#FAF7F2 !important;text-decoration:underline;}
+.faq details{border-bottom:1px solid rgba(250,247,242,0.12);padding:1.15rem 0;}
+.section-alt .faq details{border-bottom-color:#E3DCCE;}
+.faq summary{font-family:'Lora',Georgia,serif;font-weight:600;font-size:1rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:'+';font-family:'Geist Mono',monospace;color:#C4633F;font-size:1.2rem;line-height:1;flex-shrink:0;}
+.faq details[open] summary::after{content:'\2212';}
+.faq p{margin:0.75rem 0 0;}
+[aria-current="page"]{color:#C4633F !important;}
+@media (max-width:900px){.hero-grid,.grid.two,.grid.three,.grid.four{grid-template-columns:1fr;}}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -86,25 +177,82 @@
 <link rel="stylesheet" href="/assets/tap-targets.css">
 </head>
 <body>
-<nav class="site-nav" aria-label="Hauptnavigation" data-mobile-nav>
-  <div class="container site-nav__inner">
-    <a class="brand" href="/">Max<span>ContentSEO</span></a>
-    <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="primary-navigation">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="nav-links" id="primary-navigation">
-      <a href="/leistungen/">Leistungen</a>
-      <a href="/branchen/kosmetikstudios.html">Kosmetik</a>
-      <a href="/branchen/tcm-praxen.html">TCM</a>
-      <a href="/branchen/wellness-spa.html">Wellness</a>
-      <a href="/was-kostet-seo-kosmetikstudio/">Preise</a>
-      <a href="/seo-anbieter-finden.html">Anbieterwahl</a>
-      <a href="/ki-sichtbarkeits-check/">KI-Check</a>
-      <a href="/cases/">Cases</a>
-      <a href="/blog/">Blog</a>
-      <a href="/audit-beispiel.html">Report</a>
-      <a class="nav-cta" href="/#kontakt">Kostenlose Erstanalyse</a>
+<nav data-mobile-open="false" style="position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(38,36,31,0.88); backdrop-filter:blur(12px); border-bottom:1px solid rgba(250,247,242,0.1);">
+  <div style="max-width:1140px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:0.9rem clamp(1.25rem,5vw,2rem);">
+    <a href="/#top" style="font-weight:700; font-size:1.05rem; letter-spacing:-0.02em; color:#FAF7F2; text-decoration:none;">MaxContent <span style="color:#C4633F;">SEO</span></a>
+    <div data-nav-desktop="true" style="display:flex; align-items:center; gap:0.15rem;">
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Leistungen<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/leistungen/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Leistungsübersicht</a></li>
+          <li><a class="h1" href="/ki-sichtbarkeit/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">KI-Sichtbarkeit (GEO)</a></li>
+          <li><a class="h1" href="/ki-sichtbarkeits-check/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Kostenloser KI-Check</a></li>
+        </ul>
+      </div>
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Branchen<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/branchen/kosmetikstudios.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Kosmetikstudios</a></li>
+          <li><a class="h1" href="/branchen/tcm-praxen.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">TCM-Praxen</a></li>
+          <li><a class="h1" aria-current="page" href="/branchen/wellness-spa.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Wellness &amp; Spa</a></li>
+          <li><a class="h1" href="/seo-muenchen/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">SEO München</a></li>
+        </ul>
+      </div>
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Ergebnisse<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/cases/lingqi.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Referenz LingQi</a></li>
+          <li><a class="h1" href="/audit-beispiel.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Audit-Muster (SEO)</a></li>
+          <li><a class="h1" href="/audit-beispiel-kombi.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Audit-Muster (SEO+GEO)</a></li>
+        </ul>
+      </div>
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Wissen<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/blog/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Blog</a></li>
+          <li><a class="h1" href="/seo-anbieter-finden.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">SEO-Anbieter erkennen</a></li>
+        </ul>
+      </div>
+      <a class="h0" href="/#preise" style="font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); text-decoration:none; padding:0.5rem 0.7rem;">Preise</a>
+      <a class="h2" href="/#kontakt" style="background:#C4633F; color:#FAF7F2; padding:0.5rem 1.2rem; border-radius:8px; text-decoration:none; font-size:0.86rem; font-weight:600; margin-left:0.75rem;">Kostenlose Erstanalyse</a>
     </div>
+    <button class="h3" data-burger="true" type="button" aria-expanded="false" aria-controls="mobilmenu" style="align-items:center; background:none; border:1px solid rgba(250,247,242,0.25); border-radius:8px; cursor:pointer; font-family:'Geist Mono', monospace; font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:#FAF7F2; padding:0.45rem 0.9rem;">Menü</button>
+  </div>
+  <div data-mobile-panel="true" id="mobilmenu" style="border-top:1px solid rgba(250,247,242,0.1); padding:0.5rem clamp(1.25rem,5vw,2rem) 1.25rem; max-height:calc(100vh - 64px); overflow:auto;">
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Leistungen<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/leistungen/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Leistungsübersicht</a>
+        <a class="h0" href="/ki-sichtbarkeit/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">KI-Sichtbarkeit (GEO)</a>
+        <a class="h0" href="/ki-sichtbarkeits-check/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Kostenloser KI-Check</a>
+      </div>
+    </details>
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Branchen<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/branchen/kosmetikstudios.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Kosmetikstudios</a>
+        <a class="h0" href="/branchen/tcm-praxen.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">TCM-Praxen</a>
+        <a class="h0" aria-current="page" href="/branchen/wellness-spa.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Wellness &amp; Spa</a>
+        <a class="h0" href="/seo-muenchen/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">SEO München</a>
+      </div>
+    </details>
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Ergebnisse<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/cases/lingqi.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Referenz LingQi</a>
+        <a class="h0" href="/audit-beispiel.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Audit-Muster (SEO)</a>
+        <a class="h0" href="/audit-beispiel-kombi.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Audit-Muster (SEO+GEO)</a>
+      </div>
+    </details>
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Wissen<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/blog/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Blog</a>
+        <a class="h0" href="/seo-anbieter-finden.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">SEO-Anbieter erkennen</a>
+      </div>
+    </details>
+    <a href="/#preise" style="display:block; padding:0.85rem 0; font-size:0.95rem; font-weight:500; color:#FAF7F2; text-decoration:none; border-bottom:1px solid rgba(250,247,242,0.08);">Preise</a>
+    <a class="h2" href="/#kontakt" style="display:block; text-align:center; margin-top:1rem; background:#C4633F; color:#FAF7F2; padding:0.8rem 1.2rem; border-radius:8px; text-decoration:none; font-size:0.92rem; font-weight:600;">Kostenlose Erstanalyse</a>
   </div>
 </nav>
 <main>
@@ -122,47 +270,17 @@
   <section class="section"><div class="container content-flow"><h2 class="section-title">Ein Beispiel aus der Praxis: LingQi — TCM Head Spa München</h2><p>LingQi ist eine spezialisierte Praxis in München-Haidhausen für TCM-basierte Kopfhautbehandlungen und Head Spa — ein Angebot an der Schnittstelle von Wellness und TCM. Die Ausgangslage vor der Zusammenarbeit: 267 Klicks, 5.866 Impressionen, durchschnittliche Position 8,2.</p><p>Für Wellness-Betriebe ist interessant: Ein Teil der umgesetzten Maßnahmen betraf genau das Plattform-Thema. Öffnungszeiten und Firmendaten wurden über Website, Google Maps und Buchungsplattform vereinheitlicht, eine fehlende Buchungsseite für das Einstiegsangebot wurde angelegt.</p><p>Die Nachmessung erfolgt im September 2026 über die Google Search Console und wird in der Fallstudie veröffentlicht. Vorher verspreche ich keine Zahlen.</p><p><a href="/cases/lingqi.html">Zur vollständigen Fallstudie</a></p><div class="branch-links"><strong>Falsche Branche?</strong><div class="link-row"><a href="/branchen/kosmetikstudios.html">SEO für Kosmetikstudios</a><a href="/branchen/tcm-praxen.html">SEO für TCM-Praxen</a></div></div></div></section>
   <section class="section cta"><div class="container"><h2 class="section-title">Kostenlose Erstanalyse für Ihren Wellness-Betrieb</h2><p>Ich zeige Ihnen konkret, wo Gäste Sie nicht finden — oder nur über ein Portal, das mitverdient. Innerhalb von 48 Stunden, per E-Mail, ohne Verkaufsgespräch.</p><a class="button" href="/#kontakt">Jetzt Erstanalyse anfordern</a></div></section>
 </main>
-<footer class="site-footer">
-  <div class="container site-footer__inner">
-    <div class="site-footer__links">
-      <a href="/branchen/kosmetikstudios.html">SEO für Kosmetikstudios</a>
-      <a href="/branchen/tcm-praxen.html">SEO für TCM-Praxen</a>
-      <a href="/branchen/wellness-spa.html">SEO für Wellness & Spa</a>
-      <a href="/was-kostet-seo-kosmetikstudio/">SEO-Kosten</a>
-      <a href="/seo-anbieter-finden.html">SEO-Anbieter finden</a>
-      <a href="/impressum.html">Impressum</a>
-      <a href="/datenschutz.html">Datenschutz</a>
-      <a href="mailto:georg@maxcontentseo.de">georg@maxcontentseo.de</a>
+<footer style="background:#1B1916; color:rgba(250,247,242,0.5); padding:2.5rem clamp(1.25rem,5vw,2rem); text-align:center; font-size:0.85rem; font-weight:500;">
+  <div style="max-width:1140px; margin:0 auto;">
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem 2rem; margin-bottom:0.75rem; font-family:'Geist Mono', monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">
+      <a class="h0" href="/was-kostet-seo-kosmetikstudio/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Preise im Detail</a>
+      <a class="h0" href="/impressum.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Impressum</a>
+      <a class="h0" href="/datenschutz.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Datenschutz</a>
+      <a class="h0" href="mailto:georg@maxcontentseo.de" style="color:rgba(250,247,242,0.7); text-decoration:none;">E-Mail</a>
     </div>
-    <p>© 2026 MaxContentSEO — Georg Stopfer</p>
+    <p style="margin:0;">© 2026 Max Content SEO · Georg Stopfer</p>
   </div>
 </footer>
-<script>
-(function () {
-  var nav = document.querySelector('[data-mobile-nav]');
-  if (!nav) return;
-  var toggle = nav.querySelector('.nav-toggle');
-  var links = nav.querySelector('.nav-links');
-  if (!toggle || !links) return;
-  function setOpen(open) {
-    nav.classList.toggle('is-open', open);
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
-  }
-  toggle.addEventListener('click', function (event) {
-    event.stopPropagation();
-    setOpen(!nav.classList.contains('is-open'));
-  });
-  links.addEventListener('click', function (event) {
-    if (event.target.closest('a')) setOpen(false);
-  });
-  document.addEventListener('click', function (event) {
-    if (nav.classList.contains('is-open') && !nav.contains(event.target)) setOpen(false);
-  });
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') setOpen(false);
-  });
-})();
-</script>
+<script src="/assets/js/redesign.js" defer></script>
 </body>
 </html>
