@@ -36,7 +36,19 @@
     padding:22px 20px 24px; box-shadow:0 1px 2px rgba(58,46,38,.04);
   }
   h1{font-size:20px;margin:0 0 6px;font-weight:600}
-  .lead{color:var(--muted);font-size:15px;margin:0 0 20px}
+  .lead{color:var(--muted);font-size:15px;margin:0 0 16px}
+  .tabs{display:flex;gap:8px;margin:0 0 18px}
+  .tab{
+    flex:1;padding:10px 8px;border:1px solid var(--line);border-radius:10px;
+    background:transparent;color:var(--muted);font-size:14px;font-weight:600;cursor:pointer;
+    -webkit-tap-highlight-color:transparent;transition:background .15s,color .15s;
+  }
+  .tab.active{background:var(--terra);border-color:var(--terra);color:#fff}
+  #textMsg{
+    width:100%;min-height:140px;padding:12px;border:1px solid var(--line);border-radius:10px;
+    background:#fff;color:var(--ink);font:inherit;resize:vertical;
+  }
+  #textMsg:focus{outline:2px solid var(--terra);outline-offset:1px}
   .rec-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;margin:8px 0 18px}
   .rec-btn{
     width:96px;height:96px;border-radius:50%;border:0;cursor:pointer;
@@ -79,26 +91,38 @@
 <body>
   <div class="wrap">
     <div class="card">
-      <h1>Sprachnachricht an uns</h1>
-      <p class="lead">Sprechen Sie Ihr Anliegen einfach auf. Wir hören es uns an und melden uns schriftlich zurück.</p>
+      <h1>Ihre Nachricht an uns</h1>
+      <p class="lead">Sprechen Sie Ihr Anliegen einfach auf, oder schreiben Sie es. Wir melden uns schriftlich zurück.</p>
 
-      <div class="rec-wrap">
-        <button id="recBtn" class="rec-btn" type="button" aria-label="Aufnahme starten">Aufnehmen</button>
-        <div id="timer" class="timer" aria-live="polite">0:00</div>
-        <p id="hint" class="hint">Tippen Sie zum Starten, nochmal tippen zum Stoppen. Maximal 60 Sekunden.</p>
+      <div class="tabs" role="tablist">
+        <button id="tabAudio" class="tab active" type="button" role="tab" aria-selected="true">Sprechen</button>
+        <button id="tabText" class="tab" type="button" role="tab" aria-selected="false">Schreiben</button>
       </div>
 
-      <div id="preview" class="preview" hidden>
-        <audio id="player" controls></audio>
-        <button id="resetBtn" class="reset" type="button">Neu aufnehmen</button>
+      <div id="modeAudio">
+        <div class="rec-wrap">
+          <button id="recBtn" class="rec-btn" type="button" aria-label="Aufnahme starten">Aufnehmen</button>
+          <div id="timer" class="timer" aria-live="polite">0:00</div>
+          <p id="hint" class="hint">Tippen Sie zum Starten, nochmal tippen zum Stoppen. Maximal 60 Sekunden.</p>
+        </div>
+
+        <div id="preview" class="preview" hidden>
+          <audio id="player" controls></audio>
+          <button id="resetBtn" class="reset" type="button">Neu aufnehmen</button>
+        </div>
+      </div>
+
+      <div id="modeText" hidden>
+        <textarea id="textMsg" maxlength="4000" placeholder="Schreiben Sie hier Ihr Anliegen…" aria-label="Ihre Nachricht"></textarea>
+        <p id="dictHint" class="hint" style="text-align:left;margin-top:8px"></p>
       </div>
 
       <div class="consent">
         <input id="consent" type="checkbox">
         <label for="consent">
-          Ich willige ein, dass meine Sprachnachricht verarbeitet wird, um mein Anliegen zu beantworten.
-          Die Aufnahme wird bis zu 7 Tage gespeichert und dann gelöscht. Details in der
-          <a href="#datenschutz">Datenschutzerklärung</a>.
+          Ich willige ein, dass meine Nachricht (Sprachaufnahme oder Text) verarbeitet wird, um mein Anliegen zu beantworten.
+          Sie wird bis zu 7 Tage gespeichert und dann gelöscht. Details in der
+          <a href="/datenschutz.html" target="_top">Datenschutzerklärung</a>.
         </label>
       </div>
 
@@ -110,7 +134,7 @@
       <button id="submitBtn" class="submit" type="button" disabled>Absenden</button>
       <div id="status" class="status" role="status" aria-live="polite"></div>
 
-      <p class="small">Es werden keine Cookies gesetzt und kein Tracking eingesetzt. Pflichtfeld: Aufnahme und Einwilligung.</p>
+      <p class="small">Es werden keine Cookies gesetzt und kein Tracking eingesetzt. Pflicht: Aufnahme oder Text sowie Einwilligung.</p>
     </div>
   </div>
 
@@ -134,6 +158,43 @@
   var hpField   = document.getElementById("hpField");
   var submitBtn = document.getElementById("submitBtn");
   var statusEl  = document.getElementById("status");
+  var tabAudio  = document.getElementById("tabAudio");
+  var tabText   = document.getElementById("tabText");
+  var modeAudioEl = document.getElementById("modeAudio");
+  var modeTextEl  = document.getElementById("modeText");
+  var textMsg   = document.getElementById("textMsg");
+  var dictHint  = document.getElementById("dictHint");
+
+  // ── Modus (Sprechen | Schreiben) ────────────────────────────────────────
+  var mode = "audio";
+  function switchMode(m){
+    mode = m;
+    var audioActive = (m === "audio");
+    modeAudioEl.hidden = !audioActive;
+    modeTextEl.hidden = audioActive;
+    tabAudio.classList.toggle("active", audioActive);
+    tabText.classList.toggle("active", !audioActive);
+    tabAudio.setAttribute("aria-selected", audioActive ? "true" : "false");
+    tabText.setAttribute("aria-selected", audioActive ? "false" : "true");
+    setStatus("", "");
+    updateSubmit();
+  }
+  tabAudio.addEventListener("click", function(){ switchMode("audio"); });
+  tabText.addEventListener("click", function(){ switchMode("text"); });
+
+  // Diktier-Hinweis je Geraetetyp: Handy-Tastatur hat ein Mikrofon-Symbol,
+  // am Desktop gibt es die Betriebssystem-Diktierfunktion per Tastenkuerzel.
+  (function(){
+    var touch = (navigator.maxTouchPoints || 0) > 0 || ("ontouchstart" in window);
+    var ua = navigator.userAgent || "";
+    if (touch) {
+      dictHint.textContent = "Tipp: Mit dem Mikrofon-Symbol auf Ihrer Tastatur können Sie diktieren statt tippen.";
+    } else if (ua.indexOf("Mac") > -1) {
+      dictHint.textContent = "Tipp: Am Mac können Sie diktieren, indem Sie zweimal die Fn-Taste drücken.";
+    } else {
+      dictHint.textContent = "Tipp: Unter Windows können Sie mit Windows-Taste + H diktieren statt tippen.";
+    }
+  })();
 
   // ── Kampagnen-Tag aus ?k= (nur Kampagnen-Ebene, keine Per-Lead-URLs) ────
   var kampagne = "";
@@ -163,9 +224,11 @@
   }
 
   function updateSubmit(){
-    submitBtn.disabled = !(blob && consent.checked);
+    var hasContent = (mode === "audio") ? !!blob : (textMsg.value.trim() !== "");
+    submitBtn.disabled = !(hasContent && consent.checked);
   }
   consent.addEventListener("change", updateSubmit);
+  textMsg.addEventListener("input", updateSubmit);
 
   function pickMime(){
     var candidates = ["audio/webm;codecs=opus","audio/webm","audio/ogg;codecs=opus","audio/mp4"];
@@ -272,7 +335,10 @@
   }
 
   submitBtn.addEventListener("click", function(){
-    if (!blob || !consent.checked){ return; }
+    if (!consent.checked){ return; }
+    if (mode === "audio" && !blob){ return; }
+    var textVal = textMsg.value.trim();
+    if (mode === "text" && textVal === ""){ return; }
     // Honeypot: ausgefuellt => Bot. Still tun als waere alles ok, aber NICHT senden.
     if (hpField.value && hpField.value.trim() !== ""){
       setStatus("Vielen Dank. Ihre Nachricht wurde gesendet.", "ok");
@@ -280,12 +346,16 @@
       return;
     }
     var submissionId = makeSubmissionId();
-    var ext = (blob.type.indexOf("webm")>-1) ? "webm" : (blob.type.indexOf("ogg")>-1 ? "ogg" : "m4a");
     var fd = new FormData();
-    fd.append("audio", blob, "voice." + ext);
+    if (mode === "audio"){
+      var ext = (blob.type.indexOf("webm")>-1) ? "webm" : (blob.type.indexOf("ogg")>-1 ? "ogg" : "m4a");
+      fd.append("audio", blob, "voice." + ext);
+      fd.append("dauer", String(dauer));
+    } else {
+      fd.append("text", textVal);
+    }
     fd.append("submission_id", submissionId);
     fd.append("kampagne", kampagne);
-    fd.append("dauer", String(dauer));
     fd.append("timestamp", new Date().toISOString());
 
     submitBtn.disabled = true;
@@ -297,14 +367,15 @@
         if (resp.ok){ return resp.text().then(function(){ return {ok:true}; }); }
         // 409 = Idempotenz-Treffer (submission_id bereits vorhanden)
         if (resp.status === 409){ return {ok:true, dup:true}; }
-        if (resp.status === 413){ return {ok:false, msg:"Aufnahme zu lang. Bitte kürzer aufnehmen."}; }
+        if (resp.status === 413){ return {ok:false, msg: (mode==="audio" ? "Aufnahme zu lang. Bitte kürzer aufnehmen." : "Nachricht zu lang. Bitte kürzen.")}; }
         return {ok:false, msg:"Senden fehlgeschlagen (" + resp.status + "). Bitte erneut versuchen."};
       })
       .then(function(r){
         if (r.ok){
-          setStatus("Vielen Dank. Ihre Sprachnachricht ist angekommen.", "ok");
+          setStatus(mode==="audio" ? "Vielen Dank. Ihre Sprachnachricht ist angekommen." : "Vielen Dank. Ihre Nachricht ist angekommen.", "ok");
           previewEl.hidden = true;
           player.src = "";
+          textMsg.value = "";
           consent.checked = false;
           updateSubmit();
         } else {
