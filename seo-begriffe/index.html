@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico">
+<title>SEO-Begriffe einfach erklärt | MaxContentSEO</title>
+<meta name="description" content="SEO-Fachbegriffe verständlich erklärt: von Keyword über LCP bis Local Pack. Für Inhaberinnen von Kosmetik-, Wellness- und TCM-Studios, jeder Begriff mit Beispiel.">
+<link rel="canonical" href="https://maxcontentseo.de/seo-begriffe/">
+<meta property="og:title" content="SEO-Begriffe einfach erklärt | MaxContentSEO">
+<meta property="og:image" content="https://maxcontentseo.de/assets/og-logo.png">
+<link rel="preload" href="/assets/fonts/lora-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/design-system.css">
+<style>
+.container{max-width:1140px;margin:0 auto;padding:0 clamp(1.25rem,5vw,2rem);}
+img{display:block;max-width:100%;}
+.section{padding:clamp(4rem,8vw,7rem) 0;}
+.section-alt{background:#FAF7F2;color:#26241F;}
+.section p{color:rgba(250,247,242,0.72);}
+.section-alt p{color:#6E675C;}
+main a{color:#C4633F;}
+main a:hover{color:#A94F30;}
+.eyebrow,.hero__eyebrow{display:inline-block;font-family:'Geist Mono',monospace;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:#C4633F;font-weight:500;margin:0 0 0.9rem;padding:0;background:none;}
+.section-title{font-family:'Lora',Georgia,serif;font-size:clamp(1.9rem,3.5vw,2.7rem);line-height:1.15;font-weight:600;letter-spacing:-0.02em;margin:0 0 1.25rem;}
+h2,h3{font-family:'Lora',Georgia,serif;font-weight:600;letter-spacing:-0.01em;}
+.hero h1{font-family:'Lora',Georgia,serif;font-size:clamp(2.6rem,6vw,4.2rem);line-height:1.06;font-weight:600;letter-spacing:-0.03em;margin:0 0 1.5rem;}
+.lead{font-size:1.15rem;font-weight:500;color:rgba(250,247,242,0.7);max-width:640px;margin:0 0 1.25rem;}
+.hero{padding:clamp(8rem,14vw,10.5rem) 0 clamp(3.5rem,6vw,5rem);position:relative;overflow:hidden;}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 30% 0%,rgba(92,113,96,0.16),transparent 70%);pointer-events:none;}
+.hero>.container{position:relative;}
+.hero p{color:rgba(250,247,242,0.7);max-width:680px;}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:0.4rem;background:#C4633F;color:#FAF7F2 !important;padding:0.85rem 1.7rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:1rem;border:1px solid #C4633F;transition:all 0.25s;min-height:44px;}
+.button:hover{background:#A94F30;border-color:#A94F30;transform:translateY(-1px);box-shadow:0 4px 20px rgba(196,99,63,0.35);}
+.note{font-size:0.9rem;line-height:1.6;color:rgba(250,247,242,0.55);margin-top:1rem;}
+.section-alt .note{color:#8A8175;}
+.intro-wrap{max-width:38rem;}
+.jumpnav{display:flex;flex-wrap:wrap;gap:0.5rem;margin:1.4rem 0 0;}
+.jumpnav a{border:1px solid #D9CFBE;border-radius:999px;padding:0.4rem 0.8rem;text-decoration:none;font-family:'Geist Mono',monospace;font-size:0.72rem;letter-spacing:0.02em;color:#4A443C !important;}
+.jumpnav a:hover{border-color:#C4633F;color:#26241F !important;}
+.glossary{margin-top:2.5rem;}
+.term{max-width:38rem;padding:1.5rem 0;border-bottom:1px solid #E3DCCE;scroll-margin-top:5.5rem;}
+.term:last-child{border-bottom:none;}
+.section-alt .term__name{font-family:'Lora',Georgia,serif;font-size:1.18rem;font-weight:600;letter-spacing:-0.01em;margin:0 0 0.55rem;color:#26241F;}
+.section-alt .term__def{margin:0;color:#4A443C;line-height:1.7;}
+.section-alt .term__example{margin:0.75rem 0 0;font-size:0.92rem;line-height:1.6;color:#6E675C;border-left:2px solid #C4633F;padding-left:0.85rem;}
+.cta{background:#C4633F;color:#FAF7F2;}
+.cta .section-title,.cta h2{color:#FAF7F2;}
+.cta p{color:rgba(250,247,242,0.92) !important;margin:0.6rem 0;max-width:38rem;}
+.cta .button{background:#26241F;color:#FAF7F2 !important;border-color:#26241F;margin-top:1rem;}
+.cta .button:hover{background:#1B1916;border-color:#1B1916;}
+[aria-current="page"]{color:#C4633F !important;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://maxcontentseo.de/#organization",
+      "name": "MaxContentSEO",
+      "url": "https://maxcontentseo.de/",
+      "email": "georg@maxcontentseo.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hauptstr. 29",
+        "postalCode": "85551",
+        "addressLocality": "Kirchheim b. München",
+        "addressCountry": "DE"
+      },
+      "areaServed": "Deutschland",
+      "founder": {
+        "@type": "Person",
+        "name": "Georg Stopfer"
+      },
+      "priceRange": "€€"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://maxcontentseo.de/seo-begriffe/#webpage",
+      "url": "https://maxcontentseo.de/seo-begriffe/",
+      "name": "SEO-Begriffe einfach erklärt | MaxContentSEO",
+      "description": "Glossar der wichtigsten SEO-Fachbegriffe, verständlich erklärt für Inhaberinnen von Kosmetik-, Wellness- und TCM-Studios, jeweils mit einem Beispiel aus der Praxis.",
+      "publisher": {
+        "@id": "https://maxcontentseo.de/#organization"
+      },
+      "inLanguage": "de-DE"
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://maxcontentseo.de/seo-begriffe/#glossar",
+      "name": "SEO-Begriffe einfach erklärt",
+      "url": "https://maxcontentseo.de/seo-begriffe/",
+      "inLanguage": "de-DE",
+      "hasDefinedTerm": [
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#traffic",
+          "name": "Traffic (Website-Besucher)",
+          "description": "Traffic ist die Anzahl der Menschen, die Ihre Website besuchen. In einem Bericht steht meist auch, über welchen Weg diese Besucher kommen, etwa über die Google-Suche, über Google Maps oder über einen direkten Link. Mehr passender Traffic bedeutet mehr Menschen, die Ihr Angebot überhaupt zu sehen bekommen.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#traffic",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#keyword",
+          "name": "Keyword (Suchbegriff)",
+          "description": "Ein Keyword ist der Suchbegriff, den ein Mensch bei Google eingibt. Für Ihr Studio sind das die Wörter, mit denen Kundinnen nach Ihren Behandlungen suchen. Ihre Seiten werden nur dann gut gefunden, wenn die Texte zu diesen Suchbegriffen passen.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#keyword",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#nap",
+          "name": "NAP – Name, Address, Phone (einheitliche Firmenkontaktdaten)",
+          "description": "NAP steht für Name, Address, Phone, also Ihren Firmennamen, Ihre Adresse und Ihre Telefonnummer. Suchmaschinen vertrauen einem Eintrag mehr, wenn diese Angaben überall exakt gleich geschrieben sind, auf Ihrer Website, in Google Maps und in Branchenverzeichnissen. Schon kleine Abweichungen wie eine alte Adresse oder eine zweite Schreibweise können die lokale Sichtbarkeit schwächen.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#nap",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#gbp",
+          "name": "GBP – Google Business Profile (Google-Unternehmensprofil)",
+          "description": "Das Google-Unternehmensprofil, früher Google My Business, ist Ihr kostenloser Eintrag bei Google. Er zeigt Ihren Standort auf der Karte, Öffnungszeiten, Fotos und Bewertungen. Für lokale Studios ist er oft der erste Kontaktpunkt, noch bevor jemand Ihre Website öffnet.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#gbp",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#ki-sichtbarkeit",
+          "name": "GEO / AEO – KI-Sichtbarkeit (Auffindbarkeit in KI-Antworten)",
+          "description": "KI-Sichtbarkeit, auch GEO oder AEO genannt, beschreibt, ob Ihr Studio in den Antworten von KI-Systemen wie ChatGPT oder der Google-KI vorkommt. Immer mehr Menschen fragen solche Systeme direkt nach einer Empfehlung, statt eine klassische Trefferliste zu lesen. Wer dort nicht genannt wird, fehlt in einer wachsenden Zahl von Empfehlungen.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#ki-sichtbarkeit",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#ranking",
+          "name": "Ranking (Platzierung in den Suchergebnissen)",
+          "description": "Das Ranking ist die Position, auf der Ihre Website in den Suchergebnissen erscheint. Die Plätze 1 bis 3 bekommen fast alle Klicks, ab Seite 2 sieht Sie kaum noch jemand. Ein Ranking bezieht sich immer auf ein bestimmtes Keyword, nicht auf die Website als Ganzes.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#ranking",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#crawling",
+          "name": "Crawling (automatisches Durchsuchen durch Suchmaschinen)",
+          "description": "Crawling ist der Vorgang, bei dem ein Suchmaschinen-Bot Ihre Seiten automatisch abruft und liest. Nur was gecrawlt wird, kann Google später überhaupt anzeigen. Technische Hürden wie eine fehlerhafte Verlinkung können verhindern, dass wichtige Seiten gefunden werden.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#crawling",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#serp",
+          "name": "SERP – Search Engine Results Page (Google-Suchergebnisseite)",
+          "description": "SERP steht für Search Engine Results Page, also die Ergebnisseite, die Google nach einer Suche anzeigt. Sie enthält neben den klassischen Links auch den Kartenbereich, Anzeigen und oft direkte Antwortfelder. Wo genau Ihr Studio auf dieser Seite auftaucht, entscheidet über Ihre Klicks.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#serp",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#lcp",
+          "name": "LCP – Largest Contentful Paint (Ladezeit des größten sichtbaren Elements)",
+          "description": "LCP steht für Largest Contentful Paint und misst, wie lange es dauert, bis der größte sichtbare Inhalt einer Seite geladen ist, meist ein Bild oder die Überschrift. Google wertet einen schnellen LCP als Zeichen für eine gute Nutzererfahrung. Werte über etwa 2,5 Sekunden gelten als zu langsam.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#lcp",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#ueberschriften",
+          "name": "H1 / Überschriftenstruktur (Hierarchie der Seitenüberschriften)",
+          "description": "Die Überschriftenstruktur ordnet den Text einer Seite in Ebenen, von der Hauptüberschrift H1 bis zu Unterüberschriften wie H2 und H3. Jede Seite sollte genau eine H1 haben, die klar sagt, worum es geht. Eine saubere Struktur hilft sowohl Leserinnen als auch Suchmaschinen, den Inhalt schnell zu erfassen.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#ueberschriften",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#indexierung",
+          "name": "Indexierung (Aufnahme einer Seite in den Google-Suchindex)",
+          "description": "Indexierung bedeutet, dass Google eine Seite in seinen Suchindex aufgenommen hat und sie grundsätzlich anzeigen kann. Eine Seite kann existieren und trotzdem nicht indexiert sein, dann erscheint sie in keinem Suchergebnis. Erst nach der Indexierung ist eine Platzierung überhaupt möglich.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#indexierung",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#cls",
+          "name": "CLS – Cumulative Layout Shift (visuelle Stabilität beim Laden)",
+          "description": "CLS steht für Cumulative Layout Shift und misst, wie stark Elemente einer Seite während des Ladens noch verrutschen. Springt der Inhalt herum, während Bilder nachladen, wirkt die Seite unruhig und man tippt leicht auf das Falsche. Ein niedriger CLS steht für ein ruhiges, stabiles Layout.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#cls",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#backlink",
+          "name": "Backlink (Verweis einer anderen Website auf Ihre)",
+          "description": "Ein Backlink ist ein Link, der von einer anderen Website auf Ihre zeigt. Google wertet einen solchen Verweis als eine Art Empfehlung, besonders wenn er von einer thematisch passenden, seriösen Seite kommt. Wenige gute Backlinks wiegen dabei mehr als viele wahllos gekaufte.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#backlink",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#schema",
+          "name": "Schema / strukturierte Daten (maschinenlesbare Auszeichnung der Inhalte)",
+          "description": "Strukturierte Daten, auch Schema genannt, sind unsichtbare Zusatzangaben im Quelltext, die Suchmaschinen und KI Ihre Inhalte eindeutig erklären. Sie sagen einem System zum Beispiel klar, dass eine Angabe eine Öffnungszeit, eine Bewertung oder eine Leistung ist. Das erhöht die Chance auf hervorgehobene Darstellungen im Suchergebnis.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#schema",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#meta-description",
+          "name": "Meta-Description (Beschreibungstext einer Seite im Suchergebnis)",
+          "description": "Die Meta-Description ist der kurze Beschreibungstext, der unter dem Titel Ihrer Seite im Suchergebnis steht. Sie beeinflusst kein Ranking direkt, entscheidet aber mit, ob jemand auf Ihren Treffer klickt. Ein klarer, einladender Satz mit dem passenden Suchbegriff wirkt hier am besten.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#meta-description",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#fehler-404",
+          "name": "404 (Fehlerseite für nicht gefundene Adressen)",
+          "description": "404 ist die Fehlermeldung, die erscheint, wenn eine aufgerufene Seite nicht existiert, etwa nach einem Tippfehler oder einer gelöschten Seite. Viele tote Links schaden der Nutzererfahrung und kosten unnötig Crawling. Wichtige alte Adressen sollten deshalb auf eine passende neue Seite weiterleiten.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#fehler-404",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#title-tag",
+          "name": "Title-Tag / Meta-Title (Seitentitel im Browser-Tab und Suchergebnis)",
+          "description": "Der Title-Tag ist der Titel einer Seite, den Google als anklickbare Überschrift im Suchergebnis anzeigt und den der Browser im Tab zeigt. Er ist eines der wichtigsten Felder für die Platzierung und sollte den zentralen Suchbegriff und Ihren Ort enthalten. Jede Seite braucht einen eigenen, eindeutigen Titel.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#title-tag",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#pagespeed",
+          "name": "PageSpeed / Ladezeit (Ladegeschwindigkeit der Website)",
+          "description": "PageSpeed beschreibt, wie schnell Ihre Website lädt. Langsame Seiten führen dazu, dass Besucher abspringen, bevor der Inhalt überhaupt sichtbar ist, gerade am Handy. Google bezieht die Ladezeit in die Bewertung mit ein, weil sie ein Teil der Nutzererfahrung ist.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#pagespeed",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#local-pack",
+          "name": "Local Pack (Kartenbereich mit lokalen Treffern in der Google-Suche)",
+          "description": "Das Local Pack ist der Kartenbereich mit meist drei lokalen Treffern, der bei Suchen mit örtlichem Bezug ganz oben erscheint. Es zieht einen großen Teil der Klicks auf sich, weil es vor den normalen Ergebnissen steht. Die Sichtbarkeit dort hängt stark vom Google-Unternehmensprofil und einheitlichen Kontaktdaten ab.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#local-pack",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#cta",
+          "name": "CTA – Call-to-Action (Handlungsaufforderung, z. B. ein Buchungs-Button)",
+          "description": "Ein Call-to-Action, kurz CTA, ist eine klare Handlungsaufforderung auf Ihrer Seite, etwa ein Button zum Termin anfragen. Er sagt der Besucherin, was der nächste Schritt ist, und sollte gut sichtbar und eindeutig sein. Fehlt ein klarer CTA, wissen Interessenten oft nicht, wie sie Kontakt aufnehmen sollen.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#cta",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#https-ssl",
+          "name": "HTTPS / SSL (verschlüsselte, sichere Website-Verbindung)",
+          "description": "HTTPS ist die verschlüsselte, sichere Verbindung zwischen dem Browser einer Besucherin und Ihrer Website, erkennbar am Schloss-Symbol in der Adresszeile. Ohne diese Verschlüsselung, technisch über ein SSL-Zertifikat, warnen Browser sichtbar vor der Seite. Eine sichere Verbindung ist heute Grundvoraussetzung und ein einfaches Vertrauenssignal.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#https-ssl",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#above-the-fold",
+          "name": "Above the Fold (der ohne Scrollen sichtbare obere Seitenbereich)",
+          "description": "Above the Fold bezeichnet den Bereich einer Seite, der ohne Scrollen sofort sichtbar ist. Was hier steht, entscheidet in den ersten Sekunden, ob jemand bleibt oder weiterklickt. Die wichtigsten Angaben wie Leistung, Ort und ein Kontaktweg gehören deshalb nach oben.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#above-the-fold",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#llms-txt",
+          "name": "llms.txt (Datei, die Website-Inhalte für KI-Systeme aufbereitet)",
+          "description": "Die Datei llms.txt ist ein neuer Standard, der Website-Inhalte gebündelt für KI-Systeme aufbereitet. Sie liegt im Hintergrund Ihrer Website und hilft Systemen wie ChatGPT, Ihre wichtigsten Informationen sauber zu erfassen. Sie ist ein Baustein, um in KI-Antworten korrekt genannt zu werden.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#llms-txt",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#organische-sichtbarkeit",
+          "name": "Organische Sichtbarkeit (unbezahlte Reichweite in den Suchergebnissen)",
+          "description": "Organische Sichtbarkeit ist Ihre Reichweite in den unbezahlten Suchergebnissen, also allem außer Anzeigen. Sie wächst langsam über gute Inhalte und saubere Technik, hält dafür aber an, ohne dass Sie pro Klick zahlen. Sie ist das Gegenstück zur bezahlten Sichtbarkeit über Google Ads.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#organische-sichtbarkeit",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#canonical",
+          "name": "Canonical (Kennzeichnung der bevorzugten URL bei doppelten Inhalten)",
+          "description": "Ein Canonical ist ein Hinweis im Quelltext, der Google die bevorzugte Adresse einer Seite nennt, wenn es sehr ähnliche oder doppelte Versionen gibt. So bündeln Sie die Bewertung auf einer Adresse, statt sie auf mehrere zu verteilen. Das verhindert, dass sich Ihre eigenen Seiten gegenseitig Konkurrenz machen.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#canonical",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#robots-txt",
+          "name": "robots.txt (Steuerdatei, die Bots das Crawlen erlaubt oder verbietet)",
+          "description": "Die robots.txt ist eine kleine Steuerdatei im Hintergrund Ihrer Website, die Suchmaschinen-Bots sagt, welche Bereiche sie abrufen dürfen und welche nicht. Ein Fehler in dieser Datei kann versehentlich ganze Teile Ihrer Website vom Crawling ausschließen. Richtig eingesetzt hält sie unwichtige Bereiche aus der Suche heraus.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#robots-txt",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#noindex",
+          "name": "noindex (Anweisung, eine Seite nicht in den Index aufzunehmen)",
+          "description": "Ein noindex ist eine Anweisung, eine bestimmte Seite nicht in den Google-Index aufzunehmen. Das ist manchmal gewollt, etwa bei einer Dankeseite nach einer Anfrage. Steht der noindex aus Versehen auf einer wichtigen Seite, verschwindet diese komplett aus der Suche.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#noindex",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#google-search-console",
+          "name": "Google Search Console (kostenloses Google-Tool zur Suchleistungsanalyse)",
+          "description": "Die Google Search Console ist ein kostenloses Werkzeug von Google, das zeigt, mit welchen Suchbegriffen Menschen auf Ihre Website kommen und wie oft Sie erscheinen. Sie ist die verlässlichste Datenquelle für echte Suchleistung, weil die Zahlen direkt von Google stammen. Seriöse Vorher-Nachher-Vergleiche stützen sich auf diese Daten.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#google-search-console",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#open-graph",
+          "name": "Open Graph / OG (Meta-Angaben für die Vorschau beim Teilen in sozialen Medien)",
+          "description": "Open Graph, kurz OG, sind Angaben im Quelltext, die bestimmen, wie ein Link aussieht, wenn Sie ihn in sozialen Medien oder einem Messenger teilen. Sie legen das Vorschaubild, den Titel und die Beschreibung fest. Ohne sie wirkt ein geteilter Link oft leer oder unpassend.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#open-graph",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#interne-verlinkung",
+          "name": "Interne Verlinkung (Links zwischen Seiten derselben Website)",
+          "description": "Interne Verlinkung sind Links zwischen den Seiten Ihrer eigenen Website. Sie helfen Besuchern, weiterzufinden, und zeigen Google, welche Seiten zusammengehören und wichtig sind. Gut gesetzte interne Links verteilen Aufmerksamkeit gezielt auf Ihre wichtigsten Angebote.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#interne-verlinkung",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://maxcontentseo.de/seo-begriffe/#meta-tag",
+          "name": "Meta-Tag (Metainformationen im Seitenkopf für Suchmaschinen)",
+          "description": "Meta-Tags sind unsichtbare Angaben im Kopf einer Seite, die Suchmaschinen und Browsern Informationen über die Seite geben. Dazu zählen zum Beispiel der Titel und die Beschreibung für das Suchergebnis. Sie erscheinen nicht im sichtbaren Text, beeinflussen aber, wie Ihre Seite außen dargestellt wird.",
+          "url": "https://maxcontentseo.de/seo-begriffe/#meta-tag",
+          "inDefinedTermSet": {
+            "@id": "https://maxcontentseo.de/seo-begriffe/#glossar"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/assets/tap-targets.css">
+</head>
+<body>
+<nav data-mobile-open="false" style="position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(38,36,31,0.88); backdrop-filter:blur(12px); border-bottom:1px solid rgba(250,247,242,0.1);">
+  <div style="max-width:1140px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:0.9rem clamp(1.25rem,5vw,2rem);">
+    <a href="/#top" style="font-weight:700; font-size:1.05rem; letter-spacing:-0.02em; color:#FAF7F2; text-decoration:none;">MaxContent <span style="color:#C4633F;">SEO</span></a>
+    <div data-nav-desktop="true" style="display:flex; align-items:center; gap:0.15rem;">
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Leistungen<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/leistungen/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Leistungsübersicht</a></li>
+          <li><a class="h1" href="/ki-sichtbarkeit/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">KI-Sichtbarkeit (GEO)</a></li>
+          <li><a class="h1" href="/ki-sichtbarkeits-check/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Kostenloser KI-Check</a></li>
+        </ul>
+      </div>
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Branchen<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/branchen/kosmetikstudios.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Kosmetikstudios</a></li>
+          <li><a class="h1" href="/branchen/tcm-praxen.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">TCM-Praxen</a></li>
+          <li><a class="h1" href="/branchen/wellness-spa.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Wellness &amp; Spa</a></li>
+          <li><a class="h1" href="/seo-muenchen/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">SEO München</a></li>
+        </ul>
+      </div>
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Ergebnisse<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/cases/lingqi.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Referenz LingQi</a></li>
+          <li><a class="h1" href="/audit-beispiel.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Audit-Muster (SEO)</a></li>
+          <li><a class="h1" href="/audit-beispiel-kombi.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Audit-Muster (SEO+GEO)</a></li>
+        </ul>
+      </div>
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Wissen<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/blog/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Blog</a></li>
+          <li><a class="h1" href="/seo-anbieter-finden.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">SEO-Anbieter erkennen</a></li>
+          <li><a class="h1" aria-current="page" href="/seo-begriffe/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">SEO-Begriffe</a></li>
+        </ul>
+      </div>
+      <a class="h0" href="/#preise" style="font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); text-decoration:none; padding:0.5rem 0.7rem;">Preise</a>
+      <a class="h2" href="/#kontakt" style="background:#C4633F; color:#FAF7F2; padding:0.5rem 1.2rem; border-radius:8px; text-decoration:none; font-size:0.86rem; font-weight:600; margin-left:0.75rem;">Kostenlose Erstanalyse</a>
+    </div>
+    <button class="h3" data-burger="true" type="button" aria-expanded="false" aria-controls="mobilmenu" style="align-items:center; background:none; border:1px solid rgba(250,247,242,0.25); border-radius:8px; cursor:pointer; font-family:'Geist Mono', monospace; font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:#FAF7F2; padding:0.45rem 0.9rem;">Menü</button>
+  </div>
+  <div data-mobile-panel="true" id="mobilmenu" style="border-top:1px solid rgba(250,247,242,0.1); padding:0.5rem clamp(1.25rem,5vw,2rem) 1.25rem; max-height:calc(100vh - 64px); overflow:auto;">
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Leistungen<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/leistungen/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Leistungsübersicht</a>
+        <a class="h0" href="/ki-sichtbarkeit/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">KI-Sichtbarkeit (GEO)</a>
+        <a class="h0" href="/ki-sichtbarkeits-check/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Kostenloser KI-Check</a>
+      </div>
+    </details>
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Branchen<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/branchen/kosmetikstudios.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Kosmetikstudios</a>
+        <a class="h0" href="/branchen/tcm-praxen.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">TCM-Praxen</a>
+        <a class="h0" href="/branchen/wellness-spa.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Wellness &amp; Spa</a>
+        <a class="h0" href="/seo-muenchen/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">SEO München</a>
+      </div>
+    </details>
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Ergebnisse<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/cases/lingqi.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Referenz LingQi</a>
+        <a class="h0" href="/audit-beispiel.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Audit-Muster (SEO)</a>
+        <a class="h0" href="/audit-beispiel-kombi.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Audit-Muster (SEO+GEO)</a>
+      </div>
+    </details>
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Wissen<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/blog/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Blog</a>
+        <a class="h0" href="/seo-anbieter-finden.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">SEO-Anbieter erkennen</a>
+        <a class="h0" aria-current="page" href="/seo-begriffe/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">SEO-Begriffe</a>
+      </div>
+    </details>
+    <a href="/#preise" style="display:block; padding:0.85rem 0; font-size:0.95rem; font-weight:500; color:#FAF7F2; text-decoration:none; border-bottom:1px solid rgba(250,247,242,0.08);">Preise</a>
+    <a class="h2" href="/#kontakt" style="display:block; text-align:center; margin-top:1rem; background:#C4633F; color:#FAF7F2; padding:0.8rem 1.2rem; border-radius:8px; text-decoration:none; font-size:0.92rem; font-weight:600;">Kostenlose Erstanalyse</a>
+  </div>
+</nav>
+<main>
+  <section class="hero"><div class="container"><span class="hero__eyebrow">Glossar</span><h1>SEO-Begriffe einfach erklärt</h1><p class="lead">In meinen Analysen fallen zwangsläufig Fachbegriffe. Damit kein Befund für Sie nach Fachchinesisch klingt, erkläre ich hier die wichtigsten davon in einfachem Deutsch.</p><p>Jeder Eintrag hat ein Beispiel aus der Welt von Kosmetik, Wellness und TCM. Sortiert sind die Begriffe danach, wie oft sie in meinen Audits und Mails vorkommen, die häufigsten zuerst.</p></div></section>
+  <section class="section section-alt"><div class="container">
+    <div class="intro-wrap">
+      <p class="note">Direkt zu einem Begriff springen:</p>
+      <nav class="jumpnav" aria-label="Begriffe">
+        <a href="#traffic">Traffic</a>
+        <a href="#keyword">Keyword</a>
+        <a href="#nap">NAP</a>
+        <a href="#gbp">GBP</a>
+        <a href="#ki-sichtbarkeit">GEO / AEO</a>
+        <a href="#ranking">Ranking</a>
+        <a href="#crawling">Crawling</a>
+        <a href="#serp">SERP</a>
+        <a href="#lcp">LCP</a>
+        <a href="#ueberschriften">H1 / Überschriftenstruktur</a>
+        <a href="#indexierung">Indexierung</a>
+        <a href="#cls">CLS</a>
+        <a href="#backlink">Backlink</a>
+        <a href="#schema">Schema / strukturierte Daten</a>
+        <a href="#meta-description">Meta-Description</a>
+        <a href="#fehler-404">404</a>
+        <a href="#title-tag">Title-Tag / Meta-Title</a>
+        <a href="#pagespeed">PageSpeed / Ladezeit</a>
+        <a href="#local-pack">Local Pack</a>
+        <a href="#cta">CTA</a>
+        <a href="#https-ssl">HTTPS / SSL</a>
+        <a href="#above-the-fold">Above the Fold</a>
+        <a href="#llms-txt">llms.txt</a>
+        <a href="#organische-sichtbarkeit">Organische Sichtbarkeit</a>
+        <a href="#canonical">Canonical</a>
+        <a href="#robots-txt">robots.txt</a>
+        <a href="#noindex">noindex</a>
+        <a href="#google-search-console">Google Search Console</a>
+        <a href="#open-graph">Open Graph / OG</a>
+        <a href="#interne-verlinkung">Interne Verlinkung</a>
+        <a href="#meta-tag">Meta-Tag</a>
+      </nav>
+    </div>
+    <div class="glossary">
+      <article class="term" id="traffic">
+        <h2 class="term__name">Traffic (Website-Besucher)</h2>
+        <p class="term__def">Traffic ist die Anzahl der Menschen, die Ihre Website besuchen. In einem Bericht steht meist auch, über welchen Weg diese Besucher kommen, etwa über die Google-Suche, über Google Maps oder über einen direkten Link. Mehr passender Traffic bedeutet mehr Menschen, die Ihr Angebot überhaupt zu sehen bekommen.</p>
+        <p class="term__example">Beispiel: Sucht jemand nach einem Kosmetikstudio in Ihrer Stadt und landet auf Ihrer Startseite, zählt dieser Besuch als organischer Traffic.</p>
+      </article>
+      <article class="term" id="keyword">
+        <h2 class="term__name">Keyword (Suchbegriff)</h2>
+        <p class="term__def">Ein Keyword ist der Suchbegriff, den ein Mensch bei Google eingibt. Für Ihr Studio sind das die Wörter, mit denen Kundinnen nach Ihren Behandlungen suchen. Ihre Seiten werden nur dann gut gefunden, wenn die Texte zu diesen Suchbegriffen passen.</p>
+        <p class="term__example">Beispiel: Wörter wie „Hydrafacial in Ihrer Stadt“ oder „Fußpflege in der Nähe“ sind typische Keywords für ein Kosmetikstudio.</p>
+      </article>
+      <article class="term" id="nap">
+        <h2 class="term__name">NAP – Name, Address, Phone (einheitliche Firmenkontaktdaten)</h2>
+        <p class="term__def">NAP steht für Name, Address, Phone, also Ihren Firmennamen, Ihre Adresse und Ihre Telefonnummer. Suchmaschinen vertrauen einem Eintrag mehr, wenn diese Angaben überall exakt gleich geschrieben sind, auf Ihrer Website, in Google Maps und in Branchenverzeichnissen. Schon kleine Abweichungen wie eine alte Adresse oder eine zweite Schreibweise können die lokale Sichtbarkeit schwächen.</p>
+        <p class="term__example">Beispiel: Steht auf Ihrer Website die Abkürzung „Str.“ und in Google Maps das ausgeschriebene „Straße“, ist das für Google bereits eine Unstimmigkeit.</p>
+      </article>
+      <article class="term" id="gbp">
+        <h2 class="term__name">GBP – Google Business Profile (Google-Unternehmensprofil)</h2>
+        <p class="term__def">Das Google-Unternehmensprofil, früher Google My Business, ist Ihr kostenloser Eintrag bei Google. Er zeigt Ihren Standort auf der Karte, Öffnungszeiten, Fotos und Bewertungen. Für lokale Studios ist er oft der erste Kontaktpunkt, noch bevor jemand Ihre Website öffnet.</p>
+        <p class="term__example">Beispiel: Wenn jemand „Massage in Ihrer Stadt“ sucht, entscheidet das Profil mit darüber, ob Ihr Studio im Kartenbereich auftaucht.</p>
+      </article>
+      <article class="term" id="ki-sichtbarkeit">
+        <h2 class="term__name">GEO / AEO – KI-Sichtbarkeit (Auffindbarkeit in KI-Antworten)</h2>
+        <p class="term__def">KI-Sichtbarkeit, auch GEO oder AEO genannt, beschreibt, ob Ihr Studio in den Antworten von KI-Systemen wie ChatGPT oder der Google-KI vorkommt. Immer mehr Menschen fragen solche Systeme direkt nach einer Empfehlung, statt eine klassische Trefferliste zu lesen. Wer dort nicht genannt wird, fehlt in einer wachsenden Zahl von Empfehlungen.</p>
+        <p class="term__example">Beispiel: Fragt jemand ChatGPT nach einem TCM-Studio in Ihrer Region, sollte Ihr Name idealerweise Teil der Antwort sein.</p>
+      </article>
+      <article class="term" id="ranking">
+        <h2 class="term__name">Ranking (Platzierung in den Suchergebnissen)</h2>
+        <p class="term__def">Das Ranking ist die Position, auf der Ihre Website in den Suchergebnissen erscheint. Die Plätze 1 bis 3 bekommen fast alle Klicks, ab Seite 2 sieht Sie kaum noch jemand. Ein Ranking bezieht sich immer auf ein bestimmtes Keyword, nicht auf die Website als Ganzes.</p>
+        <p class="term__example">Beispiel: Ihre Seite kann für „Wimpernverlängerung“ auf Platz 2 stehen und für „Maniküre“ gar nicht auftauchen.</p>
+      </article>
+      <article class="term" id="crawling">
+        <h2 class="term__name">Crawling (automatisches Durchsuchen durch Suchmaschinen)</h2>
+        <p class="term__def">Crawling ist der Vorgang, bei dem ein Suchmaschinen-Bot Ihre Seiten automatisch abruft und liest. Nur was gecrawlt wird, kann Google später überhaupt anzeigen. Technische Hürden wie eine fehlerhafte Verlinkung können verhindern, dass wichtige Seiten gefunden werden.</p>
+        <p class="term__example">Beispiel: Ist Ihre Preisliste nur als Bild eingebunden, kann der Bot den Text darauf nicht lesen.</p>
+      </article>
+      <article class="term" id="serp">
+        <h2 class="term__name">SERP – Search Engine Results Page (Google-Suchergebnisseite)</h2>
+        <p class="term__def">SERP steht für Search Engine Results Page, also die Ergebnisseite, die Google nach einer Suche anzeigt. Sie enthält neben den klassischen Links auch den Kartenbereich, Anzeigen und oft direkte Antwortfelder. Wo genau Ihr Studio auf dieser Seite auftaucht, entscheidet über Ihre Klicks.</p>
+        <p class="term__example">Beispiel: Für „Kosmetikstudio in Ihrer Stadt“ zeigt die SERP meist zuerst die Karte mit drei Studios, erst darunter die normalen Treffer.</p>
+      </article>
+      <article class="term" id="lcp">
+        <h2 class="term__name">LCP – Largest Contentful Paint (Ladezeit des größten sichtbaren Elements)</h2>
+        <p class="term__def">LCP steht für Largest Contentful Paint und misst, wie lange es dauert, bis der größte sichtbare Inhalt einer Seite geladen ist, meist ein Bild oder die Überschrift. Google wertet einen schnellen LCP als Zeichen für eine gute Nutzererfahrung. Werte über etwa 2,5 Sekunden gelten als zu langsam.</p>
+        <p class="term__example">Beispiel: Lädt das große Titelbild Ihrer Startseite erst nach vier Sekunden, ist Ihr LCP zu hoch.</p>
+      </article>
+      <article class="term" id="ueberschriften">
+        <h2 class="term__name">H1 / Überschriftenstruktur (Hierarchie der Seitenüberschriften)</h2>
+        <p class="term__def">Die Überschriftenstruktur ordnet den Text einer Seite in Ebenen, von der Hauptüberschrift H1 bis zu Unterüberschriften wie H2 und H3. Jede Seite sollte genau eine H1 haben, die klar sagt, worum es geht. Eine saubere Struktur hilft sowohl Leserinnen als auch Suchmaschinen, den Inhalt schnell zu erfassen.</p>
+        <p class="term__example">Beispiel: Die H1 Ihrer Behandlungsseite könnte „Klassische Gesichtsbehandlung in Ihrer Stadt“ lauten.</p>
+      </article>
+      <article class="term" id="indexierung">
+        <h2 class="term__name">Indexierung (Aufnahme einer Seite in den Google-Suchindex)</h2>
+        <p class="term__def">Indexierung bedeutet, dass Google eine Seite in seinen Suchindex aufgenommen hat und sie grundsätzlich anzeigen kann. Eine Seite kann existieren und trotzdem nicht indexiert sein, dann erscheint sie in keinem Suchergebnis. Erst nach der Indexierung ist eine Platzierung überhaupt möglich.</p>
+        <p class="term__example">Beispiel: Eine neue Seite über eine zusätzliche Behandlung bringt erst Besucher, wenn Google sie indexiert hat.</p>
+      </article>
+      <article class="term" id="cls">
+        <h2 class="term__name">CLS – Cumulative Layout Shift (visuelle Stabilität beim Laden)</h2>
+        <p class="term__def">CLS steht für Cumulative Layout Shift und misst, wie stark Elemente einer Seite während des Ladens noch verrutschen. Springt der Inhalt herum, während Bilder nachladen, wirkt die Seite unruhig und man tippt leicht auf das Falsche. Ein niedriger CLS steht für ein ruhiges, stabiles Layout.</p>
+        <p class="term__example">Beispiel: Rutscht Ihr Buchungs-Button nach unten, weil darüber verspätet ein Bild erscheint, verschlechtert das Ihren CLS.</p>
+      </article>
+      <article class="term" id="backlink">
+        <h2 class="term__name">Backlink (Verweis einer anderen Website auf Ihre)</h2>
+        <p class="term__def">Ein Backlink ist ein Link, der von einer anderen Website auf Ihre zeigt. Google wertet einen solchen Verweis als eine Art Empfehlung, besonders wenn er von einer thematisch passenden, seriösen Seite kommt. Wenige gute Backlinks wiegen dabei mehr als viele wahllos gekaufte.</p>
+        <p class="term__example">Beispiel: Verlinkt der Blog eines lokalen Hochzeitsplaners auf Ihr Kosmetikstudio, ist das ein wertvoller Backlink.</p>
+      </article>
+      <article class="term" id="schema">
+        <h2 class="term__name">Schema / strukturierte Daten (maschinenlesbare Auszeichnung der Inhalte)</h2>
+        <p class="term__def">Strukturierte Daten, auch Schema genannt, sind unsichtbare Zusatzangaben im Quelltext, die Suchmaschinen und KI Ihre Inhalte eindeutig erklären. Sie sagen einem System zum Beispiel klar, dass eine Angabe eine Öffnungszeit, eine Bewertung oder eine Leistung ist. Das erhöht die Chance auf hervorgehobene Darstellungen im Suchergebnis.</p>
+        <p class="term__example">Beispiel: Mit passenden strukturierten Daten kann Google Ihre Bewertungssterne direkt in der Trefferliste anzeigen.</p>
+      </article>
+      <article class="term" id="meta-description">
+        <h2 class="term__name">Meta-Description (Beschreibungstext einer Seite im Suchergebnis)</h2>
+        <p class="term__def">Die Meta-Description ist der kurze Beschreibungstext, der unter dem Titel Ihrer Seite im Suchergebnis steht. Sie beeinflusst kein Ranking direkt, entscheidet aber mit, ob jemand auf Ihren Treffer klickt. Ein klarer, einladender Satz mit dem passenden Suchbegriff wirkt hier am besten.</p>
+        <p class="term__example">Beispiel: Ein Satz wie „Kosmetikstudio in Ihrer Stadt mit Gesichtsbehandlungen, Wimpern und Fußpflege, jetzt Termin anfragen“ wäre eine gute Meta-Description.</p>
+      </article>
+      <article class="term" id="fehler-404">
+        <h2 class="term__name">404 (Fehlerseite für nicht gefundene Adressen)</h2>
+        <p class="term__def">404 ist die Fehlermeldung, die erscheint, wenn eine aufgerufene Seite nicht existiert, etwa nach einem Tippfehler oder einer gelöschten Seite. Viele tote Links schaden der Nutzererfahrung und kosten unnötig Crawling. Wichtige alte Adressen sollten deshalb auf eine passende neue Seite weiterleiten.</p>
+        <p class="term__example">Beispiel: Haben Sie die Adresse zu einer gelöschten Behandlung entfernt, sollte sie nicht ins Leere laufen, sondern auf Ihre aktuelle Leistungsseite führen.</p>
+      </article>
+      <article class="term" id="title-tag">
+        <h2 class="term__name">Title-Tag / Meta-Title (Seitentitel im Browser-Tab und Suchergebnis)</h2>
+        <p class="term__def">Der Title-Tag ist der Titel einer Seite, den Google als anklickbare Überschrift im Suchergebnis anzeigt und den der Browser im Tab zeigt. Er ist eines der wichtigsten Felder für die Platzierung und sollte den zentralen Suchbegriff und Ihren Ort enthalten. Jede Seite braucht einen eigenen, eindeutigen Titel.</p>
+        <p class="term__example">Beispiel: Ein Titel wie „Fußpflege in Ihrer Stadt“ mit Ihrem Studionamen ist ein klarer Title-Tag für Ihre Fußpflege-Seite.</p>
+      </article>
+      <article class="term" id="pagespeed">
+        <h2 class="term__name">PageSpeed / Ladezeit (Ladegeschwindigkeit der Website)</h2>
+        <p class="term__def">PageSpeed beschreibt, wie schnell Ihre Website lädt. Langsame Seiten führen dazu, dass Besucher abspringen, bevor der Inhalt überhaupt sichtbar ist, gerade am Handy. Google bezieht die Ladezeit in die Bewertung mit ein, weil sie ein Teil der Nutzererfahrung ist.</p>
+        <p class="term__example">Beispiel: Große, unkomprimierte Fotos Ihrer Behandlungen sind der häufigste Grund für eine langsame Studio-Website.</p>
+      </article>
+      <article class="term" id="local-pack">
+        <h2 class="term__name">Local Pack (Kartenbereich mit lokalen Treffern in der Google-Suche)</h2>
+        <p class="term__def">Das Local Pack ist der Kartenbereich mit meist drei lokalen Treffern, der bei Suchen mit örtlichem Bezug ganz oben erscheint. Es zieht einen großen Teil der Klicks auf sich, weil es vor den normalen Ergebnissen steht. Die Sichtbarkeit dort hängt stark vom Google-Unternehmensprofil und einheitlichen Kontaktdaten ab.</p>
+        <p class="term__example">Beispiel: Wer „Nagelstudio in der Nähe“ sucht, sieht zuerst die drei Studios im Local Pack.</p>
+      </article>
+      <article class="term" id="cta">
+        <h2 class="term__name">CTA – Call-to-Action (Handlungsaufforderung, z. B. ein Buchungs-Button)</h2>
+        <p class="term__def">Ein Call-to-Action, kurz CTA, ist eine klare Handlungsaufforderung auf Ihrer Seite, etwa ein Button zum Termin anfragen. Er sagt der Besucherin, was der nächste Schritt ist, und sollte gut sichtbar und eindeutig sein. Fehlt ein klarer CTA, wissen Interessenten oft nicht, wie sie Kontakt aufnehmen sollen.</p>
+        <p class="term__example">Beispiel: Ein gut sichtbarer Button mit der Aufschrift „Termin anfragen“ oben auf Ihrer Startseite ist ein starker CTA.</p>
+      </article>
+      <article class="term" id="https-ssl">
+        <h2 class="term__name">HTTPS / SSL (verschlüsselte, sichere Website-Verbindung)</h2>
+        <p class="term__def">HTTPS ist die verschlüsselte, sichere Verbindung zwischen dem Browser einer Besucherin und Ihrer Website, erkennbar am Schloss-Symbol in der Adresszeile. Ohne diese Verschlüsselung, technisch über ein SSL-Zertifikat, warnen Browser sichtbar vor der Seite. Eine sichere Verbindung ist heute Grundvoraussetzung und ein einfaches Vertrauenssignal.</p>
+        <p class="term__example">Beispiel: Zeigt der Browser bei Ihrer Buchungsseite den Hinweis „nicht sicher“, schreckt das Kundinnen ab, bevor sie ihre Daten eingeben.</p>
+      </article>
+      <article class="term" id="above-the-fold">
+        <h2 class="term__name">Above the Fold (der ohne Scrollen sichtbare obere Seitenbereich)</h2>
+        <p class="term__def">Above the Fold bezeichnet den Bereich einer Seite, der ohne Scrollen sofort sichtbar ist. Was hier steht, entscheidet in den ersten Sekunden, ob jemand bleibt oder weiterklickt. Die wichtigsten Angaben wie Leistung, Ort und ein Kontaktweg gehören deshalb nach oben.</p>
+        <p class="term__example">Beispiel: Sieht man oben auf Ihrer Seite sofort Ihr Angebot, Ihren Ort und einen Kontakt-Button, ist das Wichtigste above the fold.</p>
+      </article>
+      <article class="term" id="llms-txt">
+        <h2 class="term__name">llms.txt (Datei, die Website-Inhalte für KI-Systeme aufbereitet)</h2>
+        <p class="term__def">Die Datei llms.txt ist ein neuer Standard, der Website-Inhalte gebündelt für KI-Systeme aufbereitet. Sie liegt im Hintergrund Ihrer Website und hilft Systemen wie ChatGPT, Ihre wichtigsten Informationen sauber zu erfassen. Sie ist ein Baustein, um in KI-Antworten korrekt genannt zu werden.</p>
+        <p class="term__example">Beispiel: In einer llms.txt können Ihre Leistungen und Ihr Standort so hinterlegt sein, dass eine KI sie eindeutig Ihrem Studio zuordnet.</p>
+      </article>
+      <article class="term" id="organische-sichtbarkeit">
+        <h2 class="term__name">Organische Sichtbarkeit (unbezahlte Reichweite in den Suchergebnissen)</h2>
+        <p class="term__def">Organische Sichtbarkeit ist Ihre Reichweite in den unbezahlten Suchergebnissen, also allem außer Anzeigen. Sie wächst langsam über gute Inhalte und saubere Technik, hält dafür aber an, ohne dass Sie pro Klick zahlen. Sie ist das Gegenstück zur bezahlten Sichtbarkeit über Google Ads.</p>
+        <p class="term__example">Beispiel: Steht Ihre Seite zur Wimpernverlängerung ohne Anzeige auf Seite 1, ist das organische Sichtbarkeit.</p>
+      </article>
+      <article class="term" id="canonical">
+        <h2 class="term__name">Canonical (Kennzeichnung der bevorzugten URL bei doppelten Inhalten)</h2>
+        <p class="term__def">Ein Canonical ist ein Hinweis im Quelltext, der Google die bevorzugte Adresse einer Seite nennt, wenn es sehr ähnliche oder doppelte Versionen gibt. So bündeln Sie die Bewertung auf einer Adresse, statt sie auf mehrere zu verteilen. Das verhindert, dass sich Ihre eigenen Seiten gegenseitig Konkurrenz machen.</p>
+        <p class="term__example">Beispiel: Ist Ihre Startseite über mehrere Adressen erreichbar, legt der Canonical fest, welche davon die offizielle ist.</p>
+      </article>
+      <article class="term" id="robots-txt">
+        <h2 class="term__name">robots.txt (Steuerdatei, die Bots das Crawlen erlaubt oder verbietet)</h2>
+        <p class="term__def">Die robots.txt ist eine kleine Steuerdatei im Hintergrund Ihrer Website, die Suchmaschinen-Bots sagt, welche Bereiche sie abrufen dürfen und welche nicht. Ein Fehler in dieser Datei kann versehentlich ganze Teile Ihrer Website vom Crawling ausschließen. Richtig eingesetzt hält sie unwichtige Bereiche aus der Suche heraus.</p>
+        <p class="term__example">Beispiel: Ein interner Terminkalender kann per robots.txt vom Crawling ausgenommen werden, Ihre Leistungsseiten dagegen nicht.</p>
+      </article>
+      <article class="term" id="noindex">
+        <h2 class="term__name">noindex (Anweisung, eine Seite nicht in den Index aufzunehmen)</h2>
+        <p class="term__def">Ein noindex ist eine Anweisung, eine bestimmte Seite nicht in den Google-Index aufzunehmen. Das ist manchmal gewollt, etwa bei einer Dankeseite nach einer Anfrage. Steht der noindex aus Versehen auf einer wichtigen Seite, verschwindet diese komplett aus der Suche.</p>
+        <p class="term__example">Beispiel: Steht versehentlich ein noindex auf Ihrer Leistungsseite, findet niemand sie mehr über Google.</p>
+      </article>
+      <article class="term" id="google-search-console">
+        <h2 class="term__name">Google Search Console (kostenloses Google-Tool zur Suchleistungsanalyse)</h2>
+        <p class="term__def">Die Google Search Console ist ein kostenloses Werkzeug von Google, das zeigt, mit welchen Suchbegriffen Menschen auf Ihre Website kommen und wie oft Sie erscheinen. Sie ist die verlässlichste Datenquelle für echte Suchleistung, weil die Zahlen direkt von Google stammen. Seriöse Vorher-Nachher-Vergleiche stützen sich auf diese Daten.</p>
+        <p class="term__example">Beispiel: Über die Search Console sehen Sie, dass Ihre Seite für einen Suchbegriff oft erscheint, aber selten angeklickt wird.</p>
+      </article>
+      <article class="term" id="open-graph">
+        <h2 class="term__name">Open Graph / OG (Meta-Angaben für die Vorschau beim Teilen in sozialen Medien)</h2>
+        <p class="term__def">Open Graph, kurz OG, sind Angaben im Quelltext, die bestimmen, wie ein Link aussieht, wenn Sie ihn in sozialen Medien oder einem Messenger teilen. Sie legen das Vorschaubild, den Titel und die Beschreibung fest. Ohne sie wirkt ein geteilter Link oft leer oder unpassend.</p>
+        <p class="term__example">Beispiel: Teilen Sie Ihre Studio-Seite auf Instagram, sorgt Open Graph dafür, dass ein schönes Bild statt einer nackten Adresse erscheint.</p>
+      </article>
+      <article class="term" id="interne-verlinkung">
+        <h2 class="term__name">Interne Verlinkung (Links zwischen Seiten derselben Website)</h2>
+        <p class="term__def">Interne Verlinkung sind Links zwischen den Seiten Ihrer eigenen Website. Sie helfen Besuchern, weiterzufinden, und zeigen Google, welche Seiten zusammengehören und wichtig sind. Gut gesetzte interne Links verteilen Aufmerksamkeit gezielt auf Ihre wichtigsten Angebote.</p>
+        <p class="term__example">Beispiel: Von Ihrer Startseite direkt auf die einzelnen Behandlungsseiten zu verlinken, ist eine sinnvolle interne Verlinkung.</p>
+      </article>
+      <article class="term" id="meta-tag">
+        <h2 class="term__name">Meta-Tag (Metainformationen im Seitenkopf für Suchmaschinen)</h2>
+        <p class="term__def">Meta-Tags sind unsichtbare Angaben im Kopf einer Seite, die Suchmaschinen und Browsern Informationen über die Seite geben. Dazu zählen zum Beispiel der Titel und die Beschreibung für das Suchergebnis. Sie erscheinen nicht im sichtbaren Text, beeinflussen aber, wie Ihre Seite außen dargestellt wird.</p>
+        <p class="term__example">Beispiel: Der Titel und die Beschreibung, die Google zu Ihrer Seite anzeigt, stammen aus Meta-Tags.</p>
+      </article>
+    </div>
+  </div></section>
+  <section class="section cta"><div class="container">
+    <h2 class="section-title">Einen dieser Punkte lieber an Ihrer eigenen Seite sehen?</h2>
+    <p>In der kostenlosen Erstanalyse schaue ich mir Ihre Website an und nenne Ihnen 2 bis 3 konkrete Punkte, in klarer Sprache und ohne Fachjargon.</p>
+    <a class="button" href="/#kontakt">Kostenlose Erstanalyse anfordern</a>
+  </div></section>
+</main>
+<footer style="background:#1B1916; color:rgba(250,247,242,0.5); padding:2.5rem clamp(1.25rem,5vw,2rem); text-align:center; font-size:0.85rem; font-weight:500;">
+  <div style="max-width:1140px; margin:0 auto;">
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem 2rem; margin-bottom:0.75rem; font-family:'Geist Mono', monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">
+      <a class="h0" href="/was-kostet-seo-kosmetikstudio/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Preise im Detail</a>
+      <a class="h0" href="/impressum.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Impressum</a>
+      <a class="h0" href="/datenschutz.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Datenschutz</a>
+      <a class="h0" href="mailto:georg@maxcontentseo.de" style="color:rgba(250,247,242,0.7); text-decoration:none;">E-Mail</a>
+    </div>
+    <p style="margin:0;">© 2026 MaxContentSEO · Georg Stopfer</p>
+  </div>
+</footer>
+<script src="/assets/js/redesign.js" defer></script>
+</body>
+</html>
