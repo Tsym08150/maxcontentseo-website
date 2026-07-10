@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sprachnachricht an MaxContentSEO</title>
+<!--
+  Voice-Reply-Widget (AP1 Phase 1.1) — mobile-first, kein Framework, kein Tracking.
+  Sendet Audio + Metadaten per POST an den Cloudflare-Worker (siehe WORKER_URL unten).
+  Der Worker speichert nur in KV (TTL 7 Tage); Transkription erfolgt lokal per Pull-Skript.
+  KEIN Login, KEIN Cookie, KEIN Tracking-Pixel. Kampagnen-Tag ausschliesslich via ?k=<tag>.
+-->
+<style>
+  :root{
+    --bg:#f7f1e8;          /* warmes Beige, Seite */
+    --card:#fffdf9;        /* Karte */
+    --ink:#3a2e26;         /* warmes Dunkelbraun, Text */
+    --muted:#7a6a5a;       /* gedimmter Text */
+    --line:#e2d5c3;        /* Rahmen */
+    --terra:#b5623a;       /* Terrakotta, Aktion */
+    --terra-h:#9e5330;     /* Terrakotta hover */
+    --ok:#3f7d52;          /* Erfolg */
+    --err:#a23b2a;         /* Fehler */
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:480px;margin:0 auto;padding:20px 16px 48px}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:22px 20px 24px; box-shadow:0 1px 2px rgba(58,46,38,.04);
+  }
+  h1{font-size:20px;margin:0 0 6px;font-weight:600}
+  .lead{color:var(--muted);font-size:15px;margin:0 0 20px}
+  .rec-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;margin:8px 0 18px}
+  .rec-btn{
+    width:96px;height:96px;border-radius:50%;border:0;cursor:pointer;
+    background:var(--terra);color:#fff;font-size:15px;font-weight:600;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    box-shadow:0 2px 6px rgba(181,98,58,.30);transition:background .15s,transform .05s;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .rec-btn:hover{background:var(--terra-h)}
+  .rec-btn:active{transform:scale(.97)}
+  .rec-btn:disabled{background:var(--line);color:var(--muted);cursor:not-allowed;box-shadow:none}
+  .rec-btn.recording{background:var(--err);animation:pulse 1.1s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(162,59,42,.45)}70%{box-shadow:0 0 0 18px rgba(162,59,42,0)}100%{box-shadow:0 0 0 0 rgba(162,59,42,0)}}
+  .timer{font-variant-numeric:tabular-nums;font-size:18px;font-weight:600;color:var(--ink)}
+  .timer.max{color:var(--err)}
+  .hint{color:var(--muted);font-size:13px;text-align:center;margin:0}
+  .preview{width:100%;margin-top:4px}
+  .preview audio{width:100%}
+  .reset{background:transparent;border:0;color:var(--terra);cursor:pointer;text-decoration:underline;font-size:14px;padding:6px}
+  .consent{display:flex;gap:10px;align-items:flex-start;margin:18px 0 8px;font-size:14px;color:var(--ink)}
+  .consent input{margin-top:3px;flex:0 0 auto}
+  .consent label{display:block}
+  .consent a{color:var(--terra)}
+  .submit{
+    width:100%;padding:14px;border:0;border-radius:10px;cursor:pointer;
+    background:var(--terra);color:#fff;font-size:16px;font-weight:600;transition:background .15s;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .submit:hover{background:var(--terra-h)}
+  .submit:disabled{background:var(--line);color:var(--muted);cursor:not-allowed}
+  .status{margin-top:14px;font-size:14px;min-height:20px}
+  .status.ok{color:var(--ok)}
+  .status.err{color:var(--err)}
+  .status.busy{color:var(--muted)}
+  /* Honeypot: fuer echte Nutzer unsichtbar, fuer Bots sichtbar */
+  .hp{position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden}
+  .small{color:var(--muted);font-size:12px;margin:14px 0 0}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Sprachnachricht an uns</h1>
+      <p class="lead">Sprechen Sie Ihr Anliegen einfach auf. Wir hören es uns an und melden uns schriftlich zurück.</p>
+
+      <div class="rec-wrap">
+        <button id="recBtn" class="rec-btn" type="button" aria-label="Aufnahme starten">Aufnehmen</button>
+        <div id="timer" class="timer" aria-live="polite">0:00</div>
+        <p id="hint" class="hint">Tippen Sie zum Starten, nochmal tippen zum Stoppen. Maximal 60 Sekunden.</p>
+      </div>
+
+      <div id="preview" class="preview" hidden>
+        <audio id="player" controls></audio>
+        <button id="resetBtn" class="reset" type="button">Neu aufnehmen</button>
+      </div>
+
+      <div class="consent">
+        <input id="consent" type="checkbox">
+        <label for="consent">
+          Ich willige ein, dass meine Sprachnachricht verarbeitet wird, um mein Anliegen zu beantworten.
+          Die Aufnahme wird bis zu 7 Tage gespeichert und dann gelöscht. Details in der
+          <a href="#datenschutz">Datenschutzerklärung</a>.
+        </label>
+      </div>
+
+      <!-- Honeypot: Bots fuellen dieses Feld; echte Nutzer sehen es nicht. -->
+      <div class="hp" aria-hidden="true">
+        <label>Bitte leer lassen: <input name="website" id="hpField" tabindex="-1" autocomplete="off"></label>
+      </div>
+
+      <button id="submitBtn" class="submit" type="button" disabled>Absenden</button>
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+
+      <p class="small">Es werden keine Cookies gesetzt und kein Tracking eingesetzt. Pflichtfeld: Aufnahme und Einwilligung.</p>
+    </div>
+  </div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ── Konfiguration ───────────────────────────────────────────────────────
+  // Nach dem Deploy (wrangler) hier die echte Worker-URL eintragen.
+  var WORKER_URL = "https://voice-reply.maxcontentseo.workers.dev";
+  var MAX_SECONDS = 60;
+
+  // ── DOM ─────────────────────────────────────────────────────────────────
+  var recBtn    = document.getElementById("recBtn");
+  var timerEl   = document.getElementById("timer");
+  var hintEl    = document.getElementById("hint");
+  var previewEl = document.getElementById("preview");
+  var player    = document.getElementById("player");
+  var resetBtn  = document.getElementById("resetBtn");
+  var consent   = document.getElementById("consent");
+  var hpField   = document.getElementById("hpField");
+  var submitBtn = document.getElementById("submitBtn");
+  var statusEl  = document.getElementById("status");
+
+  // ── Kampagnen-Tag aus ?k= (nur Kampagnen-Ebene, keine Per-Lead-URLs) ────
+  var kampagne = "";
+  try {
+    var p = new URLSearchParams(window.location.search);
+    kampagne = (p.get("k") || "").trim().slice(0, 64);
+  } catch(e){ /* Search-Parser-Fehler: leerer Tag ist valide */ }
+
+  // ── State ───────────────────────────────────────────────────────────────
+  var mediaRecorder = null;
+  var chunks = [];
+  var blob = null;
+  var startTs = 0;
+  var dauer = 0;          // Ganzzahl Sekunden
+  var tickHandle = null;
+  var stopTimeout = null;
+  var stream = null;
+
+  function setStatus(msg, kind){
+    statusEl.textContent = msg || "";
+    statusEl.className = "status" + (kind ? " " + kind : "");
+  }
+
+  function fmt(s){
+    var m = Math.floor(s/60), r = s%60;
+    return m + ":" + (r<10?"0":"") + r;
+  }
+
+  function updateSubmit(){
+    submitBtn.disabled = !(blob && consent.checked);
+  }
+  consent.addEventListener("change", updateSubmit);
+
+  function pickMime(){
+    var candidates = ["audio/webm;codecs=opus","audio/webm","audio/ogg;codecs=opus","audio/mp4"];
+    if (typeof MediaRecorder === "undefined") return "";
+    for (var i=0;i<candidates.length;i++){
+      if (MediaRecorder.isTypeSupported(candidates[i])) return candidates[i];
+    }
+    return "";
+  }
+
+  function startRecording(){
+    if (typeof MediaRecorder === "undefined" || !navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){
+      setStatus("Ihr Browser unterstützt keine Audioaufnahme. Bitte nutzen Sie einen aktuellen Browser.", "err");
+      return;
+    }
+    var mime = pickMime();
+    navigator.mediaDevices.getUserMedia({audio:true, video:false}).then(function(s){
+      stream = s;
+      var opts = mime ? {mimeType: mime} : {};
+      try { mediaRecorder = new MediaRecorder(stream, opts); }
+      catch(e){ mediaRecorder = new MediaRecorder(stream); }
+      chunks = [];
+      blob = null;
+      previewEl.hidden = true;
+      mediaRecorder.ondataavailable = function(ev){ if (ev.data && ev.data.size>0) chunks.push(ev.data); };
+      mediaRecorder.onstop = onStop;
+      mediaRecorder.start();
+      startTs = Date.now();
+      dauer = 0;
+      recBtn.classList.add("recording");
+      recBtn.textContent = "Stop";
+      recBtn.setAttribute("aria-label","Aufnahme stoppen");
+      hintEl.textContent = "Tippen Sie zum Stoppen.";
+      tickHandle = setInterval(tick, 250);
+      stopTimeout = setTimeout(forceStop, MAX_SECONDS*1000);
+      setStatus("", "");
+    }).catch(function(err){
+      var msg = "Mikrofon nicht verfügbar.";
+      if (err && (err.name==="NotAllowedError" || err.name==="SecurityError")){
+        msg = "Keine Erlaubnis für das Mikrofon. Bitte erlauben Sie den Zugriff und versuchen es erneut.";
+      } else if (err && err.name==="NotFoundError"){
+        msg = "Kein Mikrofon gefunden.";
+      }
+      setStatus(msg, "err");
+    });
+  }
+
+  function tick(){
+    dauer = Math.floor((Date.now()-startTs)/1000);
+    if (dauer >= MAX_SECONDS){ timerEl.textContent = fmt(MAX_SECONDS); timerEl.classList.add("max"); return; }
+    timerEl.textContent = fmt(dauer);
+  }
+
+  function forceStop(){
+    if (mediaRecorder && mediaRecorder.state !== "inactive"){
+      setStatus("Maximale Dauer erreicht, Aufnahme wurde gestoppt.", "busy");
+      stopRecording();
+    }
+  }
+
+  function stopRecording(){
+    if (stopTimeout){ clearTimeout(stopTimeout); stopTimeout = null; }
+    if (tickHandle){ clearInterval(tickHandle); tickHandle = null; }
+    if (mediaRecorder && mediaRecorder.state !== "inactive"){ mediaRecorder.stop(); }
+    recBtn.classList.remove("recording");
+    recBtn.textContent = "Aufnehmen";
+    recBtn.setAttribute("aria-label","Aufnahme starten");
+  }
+
+  function onStop(){
+    if (stream){ stream.getTracks().forEach(function(t){ t.stop(); }); stream = null; }
+    dauer = Math.min(MAX_SECONDS, Math.max(1, Math.floor((Date.now()-startTs)/1000)));
+    timerEl.textContent = fmt(dauer);
+    if (!chunks.length){
+      setStatus("Aufnahme war leer. Bitte erneut versuchen.", "err");
+      hintEl.textContent = "Tippen Sie zum Starten, nochmal tippen zum Stoppen. Maximal 60 Sekunden.";
+      return;
+    }
+    var type = (mediaRecorder && mediaRecorder.mimeType) || "audio/webm";
+    blob = new Blob(chunks, {type: type});
+    player.src = URL.createObjectURL(blob);
+    previewEl.hidden = false;
+    hintEl.textContent = "Anhören vor dem Absenden. Mit „Neu aufnehmen“ wiederholen.";
+    updateSubmit();
+  }
+
+  recBtn.addEventListener("click", function(){
+    if (mediaRecorder && mediaRecorder.state === "recording"){ stopRecording(); }
+    else { startRecording(); }
+  });
+
+  resetBtn.addEventListener("click", function(){
+    blob = null; chunks = [];
+    player.src = ""; previewEl.hidden = true;
+    timerEl.textContent = "0:00"; timerEl.classList.remove("max");
+    hintEl.textContent = "Tippen Sie zum Starten, nochmal tippen zum Stoppen. Maximal 60 Sekunden.";
+    updateSubmit();
+  });
+
+  // ── Submit ──────────────────────────────────────────────────────────────
+  function makeSubmissionId(){
+    try { if (crypto && crypto.randomUUID) return crypto.randomUUID(); } catch(e){}
+    return "ts_" + Date.now() + "_" + Math.random().toString(36).slice(2,10);
+  }
+
+  submitBtn.addEventListener("click", function(){
+    if (!blob || !consent.checked){ return; }
+    // Honeypot: ausgefuellt => Bot. Still tun als waere alles ok, aber NICHT senden.
+    if (hpField.value && hpField.value.trim() !== ""){
+      setStatus("Vielen Dank. Ihre Nachricht wurde gesendet.", "ok");
+      submitBtn.disabled = true; recBtn.disabled = true;
+      return;
+    }
+    var submissionId = makeSubmissionId();
+    var ext = (blob.type.indexOf("webm")>-1) ? "webm" : (blob.type.indexOf("ogg")>-1 ? "ogg" : "m4a");
+    var fd = new FormData();
+    fd.append("audio", blob, "voice." + ext);
+    fd.append("submission_id", submissionId);
+    fd.append("kampagne", kampagne);
+    fd.append("dauer", String(dauer));
+    fd.append("timestamp", new Date().toISOString());
+
+    submitBtn.disabled = true;
+    recBtn.disabled = true;
+    setStatus("Sende…", "busy");
+
+    fetch(WORKER_URL, {method:"POST", body:fd, mode:"cors"})
+      .then(function(resp){
+        if (resp.ok){ return resp.text().then(function(){ return {ok:true}; }); }
+        // 409 = Idempotenz-Treffer (submission_id bereits vorhanden)
+        if (resp.status === 409){ return {ok:true, dup:true}; }
+        if (resp.status === 413){ return {ok:false, msg:"Aufnahme zu lang. Bitte kürzer aufnehmen."}; }
+        return {ok:false, msg:"Senden fehlgeschlagen (" + resp.status + "). Bitte erneut versuchen."};
+      })
+      .then(function(r){
+        if (r.ok){
+          setStatus("Vielen Dank. Ihre Sprachnachricht ist angekommen.", "ok");
+          previewEl.hidden = true;
+          player.src = "";
+          consent.checked = false;
+          updateSubmit();
+        } else {
+          setStatus(r.msg || "Senden fehlgeschlagen. Bitte erneut versuchen.", "err");
+          submitBtn.disabled = false;
+          recBtn.disabled = false;
+        }
+      })
+      .catch(function(){
+        setStatus("Netzwerkfehler. Bitte Verbindung prüfen und erneut versuchen.", "err");
+        submitBtn.disabled = false;
+        recBtn.disabled = false;
+      });
+  });
+})();
+</script>
+</body>
+</html>

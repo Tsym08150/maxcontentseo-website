@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stimme hinterlassen - MaxContentSEO</title>
+<meta name="description" content="Stellen Sie Ihre Frage als Sprachnachricht. Ein Klick, kein Anruf, keine App.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://maxcontentseo.de/stimme/">
+<style>
+  :root {
+    --bg: #f7f1e8;
+    --terra: #b5623a;
+    --terra-h: #9e5330;
+    --ink: #3a2e26;
+    --muted: #6b5d52;
+    --card: #fffdf9;
+    --line: #e7dccd;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 28px 18px 48px; }
+
+  header.eyebrow {
+    text-align: center;
+    color: var(--terra);
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    line-height: 1.25;
+    margin: 0 0 12px;
+    text-align: center;
+  }
+  .lede {
+    text-align: center;
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin: 0 auto 28px;
+    max-width: 560px;
+  }
+
+  .benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 0 0 28px;
+  }
+  @media (min-width: 600px) {
+    .benefits { grid-template-columns: repeat(3, 1fr); }
+  }
+  .benefit {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .benefit h2 { font-size: 1rem; margin: 0 0 6px; color: var(--terra-h); }
+  .benefit p { margin: 0; font-size: 0.92rem; color: var(--muted); }
+
+  .steps {
+    margin: 0 0 28px;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .steps ol { margin: 0; padding-left: 20px; }
+  .steps li { margin-bottom: 6px; }
+  .steps li strong { color: var(--ink); }
+
+  .recorder-frame {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 0 0 24px;
+  }
+  .recorder-frame iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+    min-height: 420px;
+  }
+
+  .trust {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+  .trust strong { color: var(--ink); }
+  .trust a { color: var(--terra-h); }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 28px;
+  }
+  footer a { color: var(--terra-h); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">MaxContentSEO</div>
+    <h1>Fragen? Sprechen Sie sie einfach aus.</h1>
+    <p class="lede">
+      Manchmal ist eine gesprochene Frage schneller und klarer als ein langes Formular.
+      Hier können Sie mir Ihre Frage als Sprachnachricht hinterlassen.
+    </p>
+
+    <div class="benefits">
+      <div class="benefit">
+        <h2>Schneller als tippen</h2>
+        <p>Bis zu 60 Sekunden Sprache sagen oft mehr als ein halber Bildschirm Text.</p>
+      </div>
+      <div class="benefit">
+        <h2>Kein Anruf, keine App</h2>
+        <p>Sie brauchen weder zu telefonieren noch etwas zu installieren. Ein Klick genügt.</p>
+      </div>
+      <div class="benefit">
+        <h2>Nuancen bleiben</h2>
+        <p>Im Tonfall kommt oft rüber, was in Schrift untergeht. Das hilft mir bei der Antwort.</p>
+      </div>
+    </div>
+
+    <div class="steps">
+      <ol>
+        <li><strong>Aufnahme starten</strong> und Ihre Frage einsprechen (maximal 60 Sekunden).</li>
+        <li><strong>Anhören</strong> und bei Bedarf neu aufnehmen.</li>
+        <li><strong>Senden</strong> mit einem Klick. Ich höre mir die Nachricht an und melde mich.</li>
+      </ol>
+    </div>
+
+    <div class="recorder-frame">
+      <iframe id="recorderFrame" src="./aufnahme.html" title="Sprachnachricht aufnehmen" allow="microphone"></iframe>
+    </div>
+    <script>
+      // Kampagnen-Tag (?k=...) an das Aufnahme-iframe durchreichen
+      (function () {
+        if (window.location.search) {
+          document.getElementById("recorderFrame").src = "./aufnahme.html" + window.location.search;
+        }
+      })();
+    </script>
+
+    <div class="trust">
+      <strong>Was mit Ihrer Sprachnachricht passiert:</strong>
+      Die Audiodatei wird über eine verschlüsselte Verbindung bei einem europäischen
+      Cloud-Dienstleister (Cloudflare) zwischengespeichert und spätestens nach 7 Tagen
+      automatisch gelöscht. Ich transkribiere die Nachricht lokal, um Ihre Frage zu
+      beantworten. Eine Weitergabe an Dritte erfolgt nicht. Mit dem Absenden stimmen Sie
+      der Verarbeitung zu. Details finden Sie in der
+      <a href="/datenschutz.html">Datenschutzerklärung</a>.
+      Sie können Ihre Einwilligung jederzeit widerrufen.
+    </div>
+
+    <footer>
+      MaxContentSEO &middot; Georg Stopfer &middot;
+      <a href="/datenschutz.html">Datenschutz</a> &middot;
+      <a href="/impressum.html">Impressum</a>
+    </footer>
+  </div>
+</body>
+</html>
