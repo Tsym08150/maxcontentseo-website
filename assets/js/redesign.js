@@ -145,4 +145,35 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
+
+  // Kontaktformular: AJAX-Versand mit Weiterleitung auf /danke.html.
+  // Formspree leitet ohne bezahlten Plan nicht per _next weiter (landet sonst auf
+  // formspree.io/thanks); ohne JS bleibt der native POST als Fallback erhalten.
+  function initForm() {
+    var form = document.querySelector('form[data-kontakt-form]');
+    if (!form || !window.fetch) return;
+    function onSubmit(e) {
+      e.preventDefault();
+      var btn = form.querySelector('button');
+      var label = btn ? btn.textContent : '';
+      if (btn) { btn.disabled = true; btn.textContent = 'Wird gesendet …'; }
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (res) {
+        if (res.ok) { window.location.href = '/danke.html'; return; }
+        throw new Error('HTTP ' + res.status);
+      }).catch(function () {
+        // Fallback: nativer POST (Formspree-eigene Bestätigungsseite)
+        if (btn) { btn.disabled = false; btn.textContent = label; }
+        form.removeEventListener('submit', onSubmit);
+        form.submit();
+      });
+    }
+    form.addEventListener('submit', onSubmit);
+    window.__mcsFormHandler = true;
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initForm);
+  else initForm();
 })();
