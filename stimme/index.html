@@ -26,7 +26,7 @@
     line-height: 1.6;
     -webkit-text-size-adjust: 100%;
   }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 28px 18px 48px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 16px 18px 40px; }
 
   header.eyebrow {
     text-align: center;
@@ -38,24 +38,24 @@
     margin-bottom: 10px;
   }
   h1 {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     line-height: 1.25;
-    margin: 0 0 12px;
+    margin: 0 0 8px;
     text-align: center;
   }
   .lede {
     text-align: center;
     color: var(--muted);
-    font-size: 1.05rem;
-    margin: 0 auto 28px;
+    font-size: 0.95rem;
+    margin: 0 auto 16px;
     max-width: 560px;
   }
 
   .benefits {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 14px;
-    margin: 0 0 28px;
+    gap: 10px;
+    margin: 0 0 16px;
   }
   @media (min-width: 600px) {
     .benefits { grid-template-columns: repeat(3, 1fr); }
@@ -64,18 +64,18 @@
     background: var(--card);
     border: 1px solid var(--line);
     border-radius: 12px;
-    padding: 16px;
+    padding: 10px 12px;
   }
-  .benefit h2 { font-size: 1rem; margin: 0 0 6px; color: var(--terra-h); }
-  .benefit p { margin: 0; font-size: 0.92rem; color: var(--muted); }
+  .benefit h2 { font-size: 0.9rem; margin: 0 0 4px; color: var(--terra-h); }
+  .benefit p { margin: 0; font-size: 0.82rem; color: var(--muted); }
 
   .steps {
-    margin: 0 0 28px;
+    margin: 0 0 16px;
     color: var(--muted);
-    font-size: 0.95rem;
+    font-size: 0.88rem;
   }
   .steps ol { margin: 0; padding-left: 20px; }
-  .steps li { margin-bottom: 6px; }
+  .steps li { margin-bottom: 4px; }
   .steps li strong { color: var(--ink); }
 
   .recorder-frame {
@@ -89,15 +89,18 @@
     display: block;
     width: 100%;
     border: 0;
-    min-height: 420px;
+    min-height: 900px;
+  }
+  @media (min-width: 600px) {
+    .recorder-frame iframe { min-height: 860px; }
   }
 
   .trust {
     background: var(--card);
     border: 1px solid var(--line);
     border-radius: 12px;
-    padding: 16px;
-    font-size: 0.88rem;
+    padding: 12px;
+    font-size: 0.78rem;
     color: var(--muted);
   }
   .trust strong { color: var(--ink); }
@@ -139,9 +142,10 @@
 
     <div class="steps">
       <ol>
-        <li><strong>Aufnahme starten</strong> und Ihre Frage einsprechen (maximal 60 Sekunden).</li>
+        <li><strong>Name, E-Mail und Website angeben</strong>, damit ich weiß, wer mir schreibt.</li>
+        <li><strong>Aufnahme starten</strong> und Ihre Frage einsprechen (maximal 60 Sekunden), oder im Reiter „Schreiben" tippen bzw. diktieren.</li>
         <li><strong>Anhören</strong> und bei Bedarf neu aufnehmen.</li>
-        <li><strong>Senden</strong> mit einem Klick. Ich höre mir die Nachricht an und melde mich.</li>
+        <li><strong>Senden</strong> mit einem Klick. Ich melde mich schriftlich zurück.</li>
       </ol>
     </div>
 
@@ -158,10 +162,10 @@
     </script>
 
     <div class="trust">
-      <strong>Was mit Ihrer Sprachnachricht passiert:</strong>
-      Die Audiodatei wird über eine verschlüsselte Verbindung bei einem europäischen
-      Cloud-Dienstleister (Cloudflare) zwischengespeichert und spätestens nach 7 Tagen
-      automatisch gelöscht. Ich transkribiere die Nachricht lokal, um Ihre Frage zu
+      <strong>Was mit Ihrer Nachricht passiert:</strong>
+      Die Audiodatei beziehungsweise der Text wird zusammen mit Ihren Kontaktangaben über eine
+      verschlüsselte Verbindung bei einem europäischen Cloud-Dienstleister (Cloudflare)
+      zwischengespeichert und spätestens nach 7 Tagen automatisch gelöscht. Ich transkribiere die Nachricht lokal, um Ihre Frage zu
       beantworten. Eine Weitergabe an Dritte erfolgt nicht. Mit dem Absenden stimmen Sie
       der Verarbeitung zu. Details finden Sie in der
       <a href="/datenschutz.html">Datenschutzerklärung</a>.

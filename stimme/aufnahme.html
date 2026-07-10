@@ -37,6 +37,13 @@
   }
   h1{font-size:20px;margin:0 0 6px;font-weight:600}
   .lead{color:var(--muted);font-size:15px;margin:0 0 16px}
+  .fields{display:flex;flex-direction:column;gap:10px;margin:0 0 16px}
+  .fields label{font-size:13px;color:var(--muted);display:block}
+  .fields input{
+    width:100%;margin-top:3px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;
+    background:#fff;color:var(--ink);font:inherit;font-size:15px;
+  }
+  .fields input:focus{outline:2px solid var(--terra);outline-offset:1px}
   .tabs{display:flex;gap:8px;margin:0 0 18px}
   .tab{
     flex:1;padding:10px 8px;border:1px solid var(--line);border-radius:10px;
@@ -94,6 +101,18 @@
       <h1>Ihre Nachricht an uns</h1>
       <p class="lead">Sprechen Sie Ihr Anliegen einfach auf, oder schreiben Sie es. Wir melden uns schriftlich zurück.</p>
 
+      <div class="fields">
+        <label>Ihr Name*
+          <input id="fName" type="text" maxlength="120" autocomplete="name" placeholder="Vorname Nachname">
+        </label>
+        <label>Ihre E-Mail-Adresse*
+          <input id="fEmail" type="email" maxlength="200" autocomplete="email" placeholder="name@beispiel.de">
+        </label>
+        <label>Ihre Website*
+          <input id="fWebsite" type="text" maxlength="200" autocomplete="url" inputmode="url" placeholder="www.ihr-studio.de">
+        </label>
+      </div>
+
       <div class="tabs" role="tablist">
         <button id="tabAudio" class="tab active" type="button" role="tab" aria-selected="true">Sprechen</button>
         <button id="tabText" class="tab" type="button" role="tab" aria-selected="false">Schreiben</button>
@@ -120,8 +139,9 @@
       <div class="consent">
         <input id="consent" type="checkbox">
         <label for="consent">
-          Ich willige ein, dass meine Nachricht (Sprachaufnahme oder Text) verarbeitet wird, um mein Anliegen zu beantworten.
-          Sie wird bis zu 7 Tage gespeichert und dann gelöscht. Details in der
+          Ich willige ein, dass meine Nachricht (Sprachaufnahme oder Text) und meine Kontaktangaben
+          (Name, E-Mail-Adresse, Website) verarbeitet werden, um mein Anliegen zu beantworten.
+          Sie werden bis zu 7 Tage gespeichert und dann gelöscht. Details in der
           <a href="/datenschutz.html" target="_top">Datenschutzerklärung</a>.
         </label>
       </div>
@@ -134,7 +154,7 @@
       <button id="submitBtn" class="submit" type="button" disabled>Absenden</button>
       <div id="status" class="status" role="status" aria-live="polite"></div>
 
-      <p class="small">Es werden keine Cookies gesetzt und kein Tracking eingesetzt. Pflicht: Aufnahme oder Text sowie Einwilligung.</p>
+      <p class="small">Es werden keine Cookies gesetzt und kein Tracking eingesetzt. Pflicht: Name, E-Mail, Website, Ihre Nachricht (Aufnahme oder Text) sowie die Einwilligung.</p>
     </div>
   </div>
 
@@ -158,6 +178,9 @@
   var hpField   = document.getElementById("hpField");
   var submitBtn = document.getElementById("submitBtn");
   var statusEl  = document.getElementById("status");
+  var fName     = document.getElementById("fName");
+  var fEmail    = document.getElementById("fEmail");
+  var fWebsite  = document.getElementById("fWebsite");
   var tabAudio  = document.getElementById("tabAudio");
   var tabText   = document.getElementById("tabText");
   var modeAudioEl = document.getElementById("modeAudio");
@@ -223,12 +246,20 @@
     return m + ":" + (r<10?"0":"") + r;
   }
 
+  function contactOk(){
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(fEmail.value.trim());
+    return fName.value.trim() !== "" && emailOk && fWebsite.value.trim() !== "";
+  }
+
   function updateSubmit(){
     var hasContent = (mode === "audio") ? !!blob : (textMsg.value.trim() !== "");
-    submitBtn.disabled = !(hasContent && consent.checked);
+    submitBtn.disabled = !(hasContent && consent.checked && contactOk());
   }
   consent.addEventListener("change", updateSubmit);
   textMsg.addEventListener("input", updateSubmit);
+  fName.addEventListener("input", updateSubmit);
+  fEmail.addEventListener("input", updateSubmit);
+  fWebsite.addEventListener("input", updateSubmit);
 
   function pickMime(){
     var candidates = ["audio/webm;codecs=opus","audio/webm","audio/ogg;codecs=opus","audio/mp4"];
@@ -335,7 +366,7 @@
   }
 
   submitBtn.addEventListener("click", function(){
-    if (!consent.checked){ return; }
+    if (!consent.checked || !contactOk()){ return; }
     if (mode === "audio" && !blob){ return; }
     var textVal = textMsg.value.trim();
     if (mode === "text" && textVal === ""){ return; }
@@ -356,6 +387,10 @@
     }
     fd.append("submission_id", submissionId);
     fd.append("kampagne", kampagne);
+    // Pflicht-Kontaktangaben; "website_url", weil "website" der Honeypot ist.
+    fd.append("name", fName.value.trim());
+    fd.append("email", fEmail.value.trim());
+    fd.append("website_url", fWebsite.value.trim());
     fd.append("timestamp", new Date().toISOString());
 
     submitBtn.disabled = true;
