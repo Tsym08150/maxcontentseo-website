@@ -413,6 +413,10 @@
           textMsg.value = "";
           consent.checked = false;
           updateSubmit();
+          // Nach kurzem Erfolgs-Moment zur Danke-Seite (raus aus dem iframe, gleiche Origin).
+          setTimeout(function(){
+            try { window.top.location.href = "/danke.html"; } catch(e){}
+          }, 2500);
         } else {
           setStatus(r.msg || "Senden fehlgeschlagen. Bitte erneut versuchen.", "err");
           submitBtn.disabled = false;
