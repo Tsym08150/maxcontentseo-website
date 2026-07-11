@@ -333,6 +333,35 @@ h3{font-size:1.05rem;}
             <a class="button-primary" href="assets/audit-beispiel.pdf" download="Muster-Premium-Audit-Kosmetikstudio.pdf" style="width:100%; box-sizing:border-box; text-align:center;">Audit-Muster als PDF herunterladen</a>
           </div>
         </div>
+        <div style="margin:1.25rem auto 0; max-width:520px; border:1px solid rgba(250,247,242,0.14); border-radius:14px; background:#2E332B; padding:1.6rem 1.75rem; text-align:left;">
+          <p style="font-family:'Geist Mono',monospace; font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; color:#C4633F; margin:0 0 0.6rem;">Eine kurze Frage noch</p>
+          <form id="almostForm">
+            <label for="almostField" style="display:block; margin:0 0 0.9rem; color:rgba(250,247,242,0.72);">Was hätte Sie fast davon abgehalten, anzufragen? Ihre ehrliche Antwort hilft mir, es anderen leichter zu machen.</label>
+            <textarea id="almostField" name="message" rows="3" maxlength="1000" style="width:100%; box-sizing:border-box; border:1px solid rgba(250,247,242,0.2); border-radius:8px; background:#26241F; color:#FAF7F2; padding:0.7rem 0.8rem; font:inherit; resize:vertical;"></textarea>
+            <input type="hidden" name="anfrage_typ" value="Danke-Seite: Was haette Sie fast abgehalten?">
+            <input type="hidden" name="_subject" value="Danke-Seiten-Antwort: fast abgehalten">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            <button class="button-primary" type="submit" style="width:100%; box-sizing:border-box; margin-top:0.75rem;">Antwort senden</button>
+          </form>
+          <p id="almostThanks" hidden style="margin:0; color:rgba(250,247,242,0.85);">Danke, das hilft wirklich weiter.</p>
+        </div>
+        <script>
+          (function () {
+            var form = document.getElementById("almostForm");
+            form.addEventListener("submit", function (ev) {
+              ev.preventDefault();
+              var msg = document.getElementById("almostField").value.trim();
+              if (msg === "") { return; }
+              fetch("https://formspree.io/f/mqenpryl", {
+                method: "POST",
+                headers: { "Accept": "application/json" },
+                body: new FormData(form)
+              }).catch(function () { /* still: Antwort ist optional, kein Fehler-UI noetig */ });
+              form.hidden = true;
+              document.getElementById("almostThanks").hidden = false;
+            });
+          })();
+        </script>
       </div>
     </section>
   </main>
