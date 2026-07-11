@@ -150,13 +150,15 @@
     </div>
 
     <div class="recorder-frame">
-      <iframe id="recorderFrame" src="./aufnahme.html" title="Sprachnachricht aufnehmen" allow="microphone"></iframe>
+      <!-- ?v= = Cache-Buster: bei jeder aufnahme.html-Aenderung hochzaehlen (GitHub Pages cached 10 min) -->
+      <iframe id="recorderFrame" src="./aufnahme.html?v=20260711b" title="Sprachnachricht aufnehmen" allow="microphone"></iframe>
     </div>
     <script>
-      // Kampagnen-Tag (?k=...) an das Aufnahme-iframe durchreichen
+      // Kampagnen-Tag (?k=...) an das Aufnahme-iframe durchreichen (Cache-Buster beibehalten)
       (function () {
         if (window.location.search) {
-          document.getElementById("recorderFrame").src = "./aufnahme.html" + window.location.search;
+          var extra = window.location.search.slice(1);
+          document.getElementById("recorderFrame").src = "./aufnahme.html?v=20260711b&" + extra;
         }
       })();
     </script>
