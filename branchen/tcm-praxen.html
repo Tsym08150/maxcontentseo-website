@@ -8,6 +8,7 @@
 <meta name="description" content="Lokale SEO-Beratung für TCM-Praxen: gefunden werden bei Google und in KI-Antworten, ohne riskante Wirkversprechen. Einmaliges Audit ab 499 €, keine Agentur-Verträge.">
 <link rel="canonical" href="https://maxcontentseo.de/branchen/tcm-praxen.html">
 <meta property="og:title" content="SEO für TCM-Praxen: Sichtbar ohne rechtliche Risiken | MaxContentSEO">
+<meta property="og:description" content="Lokale SEO-Beratung für TCM-Praxen: gefunden werden bei Google und in KI-Antworten, ohne riskante Wirkversprechen. Einmaliges Audit ab 499 €, keine Agentur-Verträge.">
 <meta property="og:image" content="https://maxcontentseo.de/assets/og-logo.png">
 <link rel="preload" href="/assets/fonts/lora-latin-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/figtree-latin-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -106,7 +107,10 @@ h3{font-size:1.05rem;}
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Organization", "ProfessionalService"],
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://maxcontentseo.de/#organization",
       "name": "MaxContentSEO",
       "url": "https://maxcontentseo.de/",
@@ -119,8 +123,18 @@ h3{font-size:1.05rem;}
         "addressCountry": "DE"
       },
       "areaServed": "Deutschland",
-      "founder": {"@type": "Person", "name": "Georg Stopfer"},
-      "priceRange": "€€"
+      "founder": {
+        "@type": "Person",
+        "name": "Georg Stopfer"
+      },
+      "priceRange": "€€",
+      "logo": "https://maxcontentseo.de/assets/og-logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "georg@maxcontentseo.de",
+        "url": "https://maxcontentseo.de/#kontakt"
+      }
     },
     {
       "@type": "WebPage",
@@ -128,7 +142,9 @@ h3{font-size:1.05rem;}
       "url": "https://maxcontentseo.de/branchen/tcm-praxen.html",
       "name": "SEO für TCM-Praxen: Sichtbar ohne rechtliche Risiken | MaxContentSEO",
       "description": "Lokale SEO-Beratung für TCM-Praxen: gefunden werden bei Google und in KI-Antworten, ohne riskante Wirkversprechen. Einmaliges Audit ab 499 €, keine Agentur-Verträge.",
-      "publisher": {"@id": "https://maxcontentseo.de/#organization"},
+      "publisher": {
+        "@id": "https://maxcontentseo.de/#organization"
+      },
       "inLanguage": "de-DE"
     },
     {
@@ -136,40 +152,70 @@ h3{font-size:1.05rem;}
       "@id": "https://maxcontentseo.de/branchen/tcm-praxen.html#service",
       "name": "SEO+GEO-Kombi-Audit",
       "serviceType": "Lokale SEO- und GEO-Beratung",
-      "provider": {"@id": "https://maxcontentseo.de/#organization"},
+      "provider": {
+        "@id": "https://maxcontentseo.de/#organization"
+      },
       "areaServed": "Deutschland",
-      "audience": {"@type": "Audience", "audienceType": "Inhaberinnen und Inhaber von TCM-Praxen"},
-      "offers": {"@type": "Offer", "price": "499", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://maxcontentseo.de/branchen/tcm-praxen.html"}
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Inhaberinnen und Inhaber von TCM-Praxen"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "499",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://maxcontentseo.de/branchen/tcm-praxen.html"
+      }
     },
     {
-          "@type": "FAQPage",
-          "@id": "https://maxcontentseo.de/branchen/tcm-praxen.html#faq",
-          "mainEntity": [
-                {
-                      "@type": "Question",
-                      "name": "Darf ich mit Akupunktur und TCM überhaupt werben?",
-                      "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Ja, Behandlungsnamen, Ablauf, Qualifikation und Ausstattung dürfen Sie nennen und sichtbar machen. Rechtlich problematisch sind Versprechen über Ergebnisse."
-                      }
-                },
-                {
-                      "@type": "Question",
-                      "name": "Meine Patienten kommen über Empfehlungen, brauche ich Google überhaupt?",
-                      "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Empfehlungen bleiben Ihr stärkster Kanal. Aber Google und KI-Antworten sind die Empfehlung für alle, die noch niemanden kennen."
-                      }
-                },
-                {
-                      "@type": "Question",
-                      "name": "Was kostet das?",
-                      "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Ein einmaliger SEO+GEO-Kombi-Audit kostet 499 €, das Premium-Audit 1.299 €. Umsetzung und laufende Begleitung sind auf Nachfrage möglich. Die ausführliche Antwort: Was kostet SEO?"
-                      }
-                }
-          ]
+      "@type": "FAQPage",
+      "@id": "https://maxcontentseo.de/branchen/tcm-praxen.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Darf ich mit Akupunktur und TCM überhaupt werben?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, Behandlungsnamen, Ablauf, Qualifikation und Ausstattung dürfen Sie nennen und sichtbar machen. Rechtlich problematisch sind Versprechen über Ergebnisse."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Meine Patienten kommen über Empfehlungen, brauche ich Google überhaupt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Empfehlungen bleiben Ihr stärkster Kanal. Aber Google und KI-Antworten sind die Empfehlung für alle, die noch niemanden kennen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was kostet das?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ein einmaliger SEO+GEO-Kombi-Audit kostet 499 €, das Premium-Audit 1.299 €. Umsetzung und laufende Begleitung sind auf Nachfrage möglich. Die ausführliche Antwort: Was kostet SEO?"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Start",
+      "item": "https://maxcontentseo.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "SEO für TCM-Praxen"
     }
   ]
 }

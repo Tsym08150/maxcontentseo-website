@@ -212,15 +212,126 @@ h3{font-size:1.05rem;}
 [aria-current="page"]{color:#C4633F !important;}
 @media (max-width:900px){.hero-grid,.grid.two,.grid.three,.grid.four,.case-grid,.hero__grid,.card-grid,.summary-grid,.detail-grid,.detail-grid--two,.grid-3{grid-template-columns:1fr;}.download-box{flex-direction:column;align-items:flex-start;}}
 </style>
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
-    {"@type":["Organization","ProfessionalService"],"@id":"https://maxcontentseo.de/#organization","name":"MaxContentSEO","url":"https://maxcontentseo.de/","email":"georg@maxcontentseo.de","founder":{"@type":"Person","name":"Georg Stopfer"},"address":{"@type":"PostalAddress","streetAddress":"Hauptstr. 29","postalCode":"85551","addressLocality":"Kirchheim b. München","addressCountry":"DE"},"areaServed":"Deutschland","serviceType":"Local SEO und GEO-Sichtbarkeit"},
-    {"@type":"WebPage","@id":"https://maxcontentseo.de/ki-sichtbarkeits-check/#webpage","url":"https://maxcontentseo.de/ki-sichtbarkeits-check/","name":"KI-Sichtbarkeits-Check für Studios | MaxContentSEO","description":"Kostenloser Check: Wird Ihr Beauty-, Wellness- oder TCM-Studio in ChatGPT, Gemini & Google-KI-Antworten genannt? Ehrliche Einschätzung + nächste Schritte.","inLanguage":"de-DE","about":{"@id":"https://maxcontentseo.de/ki-sichtbarkeits-check/#service"},"publisher":{"@id":"https://maxcontentseo.de/#organization"}},
-    {"@type":"Service","@id":"https://maxcontentseo.de/ki-sichtbarkeits-check/#service","name":"Kostenloser KI-Sichtbarkeits-Check für lokale Studios","serviceType":"GEO-Sichtbarkeits-Check","provider":{"@id":"https://maxcontentseo.de/#organization"},"areaServed":"Deutschland","audience":{"@type":"Audience","audienceType":"Beauty-, Wellness-, TCM- und Medical-Beauty-Studios"},"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR","availability":"https://schema.org/InStock"}},
-    {"@type":"FAQPage","@id":"https://maxcontentseo.de/ki-sichtbarkeits-check/#faq","mainEntity":[{"@type":"Question","name":"Was prüft der KI-Sichtbarkeits-Check?","acceptedAnswer":{"@type":"Answer","text":"Ich prüfe 5 bis 10 typische KI-Empfehlungsfragen für Ihre Stadt und Leistung in ChatGPT, Google Gemini und Googles KI-Antworten."}},{"@type":"Question","name":"Was bekomme ich nach dem Check?","acceptedAnswer":{"@type":"Answer","text":"Sie erhalten eine kurze Einschätzung mit den wichtigsten Sichtbarkeitslücken und 3 priorisierten nächsten Schritten."}},{"@type":"Question","name":"Garantiert der Check mehr Anfragen?","acceptedAnswer":{"@type":"Answer","text":"Nein. Der Check ist eine ehrliche Standortbestimmung, keine Erfolgsgarantie und kein Buchungsversprechen."}}]}
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://maxcontentseo.de/#organization",
+      "name": "MaxContentSEO",
+      "url": "https://maxcontentseo.de/",
+      "email": "georg@maxcontentseo.de",
+      "founder": {
+        "@type": "Person",
+        "name": "Georg Stopfer"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hauptstr. 29",
+        "postalCode": "85551",
+        "addressLocality": "Kirchheim b. München",
+        "addressCountry": "DE"
+      },
+      "areaServed": "Deutschland",
+      "serviceType": "Local SEO und GEO-Sichtbarkeit",
+      "logo": "https://maxcontentseo.de/assets/og-logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "georg@maxcontentseo.de",
+        "url": "https://maxcontentseo.de/#kontakt"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://maxcontentseo.de/ki-sichtbarkeits-check/#webpage",
+      "url": "https://maxcontentseo.de/ki-sichtbarkeits-check/",
+      "name": "KI-Sichtbarkeits-Check für Studios | MaxContentSEO",
+      "description": "Kostenloser Check: Wird Ihr Beauty-, Wellness- oder TCM-Studio in ChatGPT, Gemini & Google-KI-Antworten genannt? Ehrliche Einschätzung + nächste Schritte.",
+      "inLanguage": "de-DE",
+      "about": {
+        "@id": "https://maxcontentseo.de/ki-sichtbarkeits-check/#service"
+      },
+      "publisher": {
+        "@id": "https://maxcontentseo.de/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://maxcontentseo.de/ki-sichtbarkeits-check/#service",
+      "name": "Kostenloser KI-Sichtbarkeits-Check für lokale Studios",
+      "serviceType": "GEO-Sichtbarkeits-Check",
+      "provider": {
+        "@id": "https://maxcontentseo.de/#organization"
+      },
+      "areaServed": "Deutschland",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Beauty-, Wellness-, TCM- und Medical-Beauty-Studios"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://maxcontentseo.de/ki-sichtbarkeits-check/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was prüft der KI-Sichtbarkeits-Check?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ich prüfe 5 bis 10 typische KI-Empfehlungsfragen für Ihre Stadt und Leistung in ChatGPT, Google Gemini und Googles KI-Antworten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was bekomme ich nach dem Check?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sie erhalten eine kurze Einschätzung mit den wichtigsten Sichtbarkeitslücken und 3 priorisierten nächsten Schritten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Garantiert der Check mehr Anfragen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Der Check ist eine ehrliche Standortbestimmung, keine Erfolgsgarantie und kein Buchungsversprechen."
+          }
+        }
+      ]
+    }
   ]
-}</script>
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Start",
+      "item": "https://maxcontentseo.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "KI-Sichtbarkeits-Check"
+    }
+  ]
+}
+</script>
 <link rel="stylesheet" href="/assets/tap-targets.css">
 </head>
 <body>

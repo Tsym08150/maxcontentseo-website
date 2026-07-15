@@ -8,6 +8,7 @@
 <meta name="description" content="Referenzen von MaxContentSEO: belegte SEO-Arbeit für lokale Beauty-, Wellness- und TCM-Studios in Deutschland.">
 <link rel="canonical" href="https://maxcontentseo.de/cases/" />
 <meta property="og:title" content="Referenzen | MaxContentSEO">
+<meta property="og:description" content="Referenzen von MaxContentSEO: belegte SEO-Arbeit für lokale Beauty-, Wellness- und TCM-Studios in Deutschland.">
 <meta property="og:image" content="https://maxcontentseo.de/assets/og-logo.png">
 <link rel="preload" href="/assets/fonts/lora-latin-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/figtree-latin-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -131,7 +132,10 @@ h3{font-size:1.05rem;}
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Organization", "ProfessionalService"],
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://maxcontentseo.de/#organization",
       "name": "MaxContentSEO",
       "description": "SEO-Beratung für Kosmetik- und Wellnessstudios in Deutschland",
@@ -144,7 +148,9 @@ h3{font-size:1.05rem;}
         "addressLocality": "Kirchheim b. München",
         "addressCountry": "DE"
       },
-      "founder": {"@id": "https://maxcontentseo.de/#georg"},
+      "founder": {
+        "@id": "https://maxcontentseo.de/#georg"
+      },
       "areaServed": "Deutschland",
       "knowsAbout": [
         "Local SEO",
@@ -152,7 +158,14 @@ h3{font-size:1.05rem;}
         "Suchmaschinenoptimierung für Wellness-Studios",
         "Suchmaschinenoptimierung für TCM-Praxen"
       ],
-      "priceRange": "€€"
+      "priceRange": "€€",
+      "logo": "https://maxcontentseo.de/assets/og-logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "georg@maxcontentseo.de",
+        "url": "https://maxcontentseo.de/#kontakt"
+      }
     },
     {
       "@type": "Person",
@@ -160,7 +173,28 @@ h3{font-size:1.05rem;}
       "name": "Georg Stopfer",
       "url": "https://maxcontentseo.de/",
       "jobTitle": "SEO-Berater",
-      "worksFor": {"@id": "https://maxcontentseo.de/#organization"}
+      "worksFor": {
+        "@id": "https://maxcontentseo.de/#organization"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Start",
+      "item": "https://maxcontentseo.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Referenzen"
     }
   ]
 }

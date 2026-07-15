@@ -8,6 +8,7 @@
 <meta name="description" content="Lokale SEO-Beratung für Kosmetikstudios, Wellnesszentren und TCM-Praxen in München. Georg Stopfer, Kirchheim b. München. SEO+GEO-Kombi-Audit · 499 €.">
 <link rel="canonical" href="https://maxcontentseo.de/leistungen/">
 <meta property="og:title" content="SEO Beratung München für Kosmetik &amp; Wellness">
+<meta property="og:description" content="Lokale SEO-Beratung für Kosmetikstudios, Wellnesszentren und TCM-Praxen in München. Georg Stopfer, Kirchheim b. München. SEO+GEO-Kombi-Audit · 499 €.">
 <meta property="og:image" content="https://maxcontentseo.de/assets/og-logo.png">
 <link rel="preload" href="/assets/fonts/lora-latin-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/figtree-latin-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -87,12 +88,17 @@ h3{font-size:1.05rem;}
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Organization", "ProfessionalService"],
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://maxcontentseo.de/#organization",
       "name": "MaxContentSEO",
       "url": "https://maxcontentseo.de/",
       "description": "SEO-Beratung für Kosmetikstudios, Wellnesszentren und TCM-Praxen in München und im DACH-Raum.",
-      "founder": { "@id": "https://maxcontentseo.de/#georg-stopfer" },
+      "founder": {
+        "@id": "https://maxcontentseo.de/#georg-stopfer"
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Hauptstr. 29",
@@ -103,7 +109,14 @@ h3{font-size:1.05rem;}
       },
       "areaServed": "Deutschland",
       "priceRange": "€€",
-      "email": "georg@maxcontentseo.de"
+      "email": "georg@maxcontentseo.de",
+      "logo": "https://maxcontentseo.de/assets/og-logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "georg@maxcontentseo.de",
+        "url": "https://maxcontentseo.de/#kontakt"
+      }
     },
     {
       "@type": "Person",
@@ -111,7 +124,9 @@ h3{font-size:1.05rem;}
       "name": "Georg Stopfer",
       "jobTitle": "SEO-Berater",
       "description": "SEO-Berater für Beauty-, Wellness- und TCM-Studios im DACH-Raum. Inhaber von MaxContentSEO, ansässig in Kirchheim b. München.",
-      "worksFor": { "@id": "https://maxcontentseo.de/#organization" },
+      "worksFor": {
+        "@id": "https://maxcontentseo.de/#organization"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Kirchheim b. München",
@@ -131,7 +146,9 @@ h3{font-size:1.05rem;}
       "@id": "https://maxcontentseo.de/leistungen/#service-kombi-audit",
       "name": "SEO+GEO-Kombi-Audit",
       "serviceType": "Lokale SEO-Beratung, GEO und SEO-Audit",
-      "provider": { "@id": "https://maxcontentseo.de/#organization" },
+      "provider": {
+        "@id": "https://maxcontentseo.de/#organization"
+      },
       "areaServed": "Deutschland",
       "audience": {
         "@type": "Audience",
@@ -144,6 +161,25 @@ h3{font-size:1.05rem;}
         "availability": "https://schema.org/InStock",
         "description": "Automatisiertes Einstiegs-Audit mit SEO- und GEO-Prüfung, priorisierten Maßnahmen und schriftlichem Befundbericht. Einmalig, kein Folgeauftrag."
       }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Start",
+      "item": "https://maxcontentseo.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "SEO Beratung München"
     }
   ]
 }

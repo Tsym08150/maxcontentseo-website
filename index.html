@@ -8,6 +8,7 @@
 <!-- Startseite: Variante B, live seit 2026-07-09 (Design-Quelle: claude.ai/design „Maxcontentseo Redesign") -->
 <link rel="canonical" href="https://maxcontentseo.de/" />
 <meta property="og:title" content="Gefunden bei Google. Empfohlen von der KI. | MaxContentSEO">
+<meta property="og:description" content="SEO + GEO für Beauty-, Wellness- und TCM-Studios: Ich mache Ihre Website les- und zitierbar für Suchmaschinen und KI-Assistenten. Kostenlose Erstanalyse in 48 Stunden.">
 <meta property="og:image" content="https://maxcontentseo.de/assets/og-logo.png">
 <meta name="description" content="SEO + GEO für Beauty-, Wellness- und TCM-Studios: Ich mache Ihre Website les- und zitierbar für Suchmaschinen und KI-Assistenten. Kostenlose Erstanalyse in 48 Stunden.">
 
@@ -20,7 +21,10 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Organization", "ProfessionalService"],
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://maxcontentseo.de/#organization",
       "name": "MaxContentSEO",
       "description": "SEO-Beratung für Kosmetik- und Wellnessstudios in Deutschland",
@@ -33,7 +37,9 @@
         "addressLocality": "Kirchheim b. München",
         "addressCountry": "DE"
       },
-      "founder": {"@id": "https://maxcontentseo.de/#georg"},
+      "founder": {
+        "@id": "https://maxcontentseo.de/#georg"
+      },
       "areaServed": "Deutschland",
       "knowsAbout": [
         "Local SEO",
@@ -41,7 +47,14 @@
         "Suchmaschinenoptimierung für Wellness-Studios",
         "Suchmaschinenoptimierung für TCM-Praxen"
       ],
-      "priceRange": "€€"
+      "priceRange": "€€",
+      "logo": "https://maxcontentseo.de/assets/og-logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "georg@maxcontentseo.de",
+        "url": "https://maxcontentseo.de/#kontakt"
+      }
     },
     {
       "@type": "Person",
@@ -49,7 +62,18 @@
       "name": "Georg Stopfer",
       "url": "https://maxcontentseo.de/",
       "jobTitle": "SEO-Berater",
-      "worksFor": {"@id": "https://maxcontentseo.de/#organization"}
+      "worksFor": {
+        "@id": "https://maxcontentseo.de/#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://maxcontentseo.de/#website",
+      "url": "https://maxcontentseo.de/",
+      "name": "MaxContentSEO",
+      "publisher": {
+        "@id": "https://maxcontentseo.de/#organization"
+      }
     }
   ]
 }
@@ -131,7 +155,13 @@
         "text": "Nein. Viele meiner Kunden starten bei null. Ich erstelle die Inhalte von Grund auf, basierend auf einer Suchbegriff-Analyse, die zeigt, was Ihre Kunden wirklich suchen."
       }
     }
-  ]
+  ],
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1"
+    ]
+  }
 }
 </script>
 </head>
