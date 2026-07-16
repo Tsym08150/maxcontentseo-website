@@ -39,7 +39,8 @@ html { scroll-behavior: smooth; }
 .h3:hover{border-color:#FAF7F2;}
 .h4:hover{background:#A94F30; border-color:#A94F30; transform:translateY(-1px); box-shadow:0 4px 20px rgba(196,99,63,0.35);}
 .h5:hover{border-color:#C4633F;}
-.h6:hover{background:#FFFFFF;}
+.h6:hover{background:#FFFFFF; box-shadow:inset 0 0 0 1px #C4633F;}
+.h6:focus-visible{outline:2px solid #C4633F; outline-offset:-2px;}
 .h7:hover{transform:translateY(-1px); box-shadow:0 4px 20px rgba(38,36,31,0.35);}
 .h8:hover{background:#A94F30; transform:translateY(-1px); box-shadow:0 4px 16px rgba(196,99,63,0.3);}
 .f0:focus{outline:none; border-color:#C4633F;}
