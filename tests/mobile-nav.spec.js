@@ -102,7 +102,7 @@ for (const relativePath of pages) {
     await page.addInitScript(() => {
       const originalSetTimeout = window.setTimeout;
       window.setTimeout = (callback, delay, ...args) => {
-        if (String(callback).includes('audit-beispiel.pdf')) return 0;
+        if (String(callback).includes('muster-premium-audit.pdf')) return 0;
         return originalSetTimeout(callback, delay, ...args);
       };
     });
