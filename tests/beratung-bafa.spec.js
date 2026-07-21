@@ -38,10 +38,10 @@ function faqFromJsonLd(html) {
   }));
 }
 
-test('BAFA draft remains unpublished and compliant', () => {
+test('BAFA page is indexable, discoverable, and compliant', () => {
   const html = fs.readFileSync(pagePath, 'utf8');
 
-  expect(html).toContain('<meta name="robots" content="noindex,nofollow">');
+  expect(html).not.toMatch(/<meta name="robots" content="[^"]*noindex/i);
   expect(html).toContain('Beim BAFA als Beratungsunternehmen gelistet · Berater-ID 229676');
   expect(html).toContain('href="#kontakt"');
   expect(html).toContain('id="kontakt"');
@@ -60,12 +60,15 @@ test('BAFA draft remains unpublished and compliant', () => {
   for (const claim of forbiddenClaims) expect(html).not.toContain(claim);
 
   const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
-  expect(sitemap).not.toContain('beratung-bafa');
+  expect(sitemap).toContain('<loc>https://maxcontentseo.de/beratung-bafa/</loc>');
 
-  const incomingLinks = findHtmlFiles(root)
+  const navigationPages = findHtmlFiles(root)
     .filter((file) => file !== pagePath)
-    .filter((file) => fs.readFileSync(file, 'utf8').includes('/beratung-bafa'));
-  expect(incomingLinks).toEqual([]);
+    .filter((file) => fs.readFileSync(file, 'utf8').includes('>Leistungsübersicht</a>'));
+  expect(navigationPages.length).toBeGreaterThan(0);
+  for (const file of navigationPages) {
+    expect(fs.readFileSync(file, 'utf8'), `${file} should link to the BAFA page`).toContain('/beratung-bafa/');
+  }
 });
 
 test('visible FAQ and FAQPage JSON-LD stay exactly synchronized', () => {

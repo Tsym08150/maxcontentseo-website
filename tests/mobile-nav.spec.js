@@ -21,22 +21,10 @@ const pages = [
 ];
 
 const expectedLinks = [
-  'Cases',
-  'Blog',
-  'Report',
+  'Leistungsübersicht',
+  'BAFA-Beratung',
   'Kostenlose Erstanalyse',
 ];
-
-const legacyExpectedLinks = [
-  'Referenzen',
-  'Blog',
-  'Muster-Report',
-  'Kostenlose Erstanalyse',
-];
-
-const legacyPages = new Set([
-  'blog/lingqi-haarausfall.html',
-]);
 
 let server;
 let baseUrl;
@@ -96,9 +84,6 @@ test.afterAll(async () => {
 
 for (const relativePath of pages) {
   test(`mobile nav works on ${relativePath}`, async ({ page }) => {
-    const linksToCheck = legacyPages.has(relativePath) ? legacyExpectedLinks : expectedLinks;
-    const destinationLabel = legacyPages.has(relativePath) ? 'Referenzen' : 'Cases';
-
     await page.addInitScript(() => {
       const originalSetTimeout = window.setTimeout;
       window.setTimeout = (callback, delay, ...args) => {
@@ -109,8 +94,8 @@ for (const relativePath of pages) {
 
     await page.goto(pageUrl(relativePath));
 
-    const toggle = page.locator('.nav-toggle');
-    const nav = page.locator('#primary-navigation');
+    const toggle = page.locator('[data-burger]');
+    const nav = page.locator('[data-mobile-panel]');
 
     await expect(toggle, 'Hamburger button should be visible').toBeVisible();
     await expect(nav, 'Primary navigation should be closed initially').toBeHidden();
@@ -118,22 +103,23 @@ for (const relativePath of pages) {
     await toggle.click();
     await expect(nav, 'Primary navigation should open after tapping hamburger').toBeVisible();
     await expect(toggle, 'aria-expanded should reflect open state').toHaveAttribute('aria-expanded', 'true');
+    await nav.locator('summary').filter({ hasText: 'Leistungen' }).click();
 
-    for (const label of linksToCheck) {
+    for (const label of expectedLinks) {
       const link = nav.getByRole('link', { name: label, exact: true });
       await expect(link, `${label} should be visible in the opened menu`).toBeVisible();
       await link.click({ trial: true });
     }
 
-    await page.locator('body').dispatchEvent('click');
-    await expect(nav, 'Primary navigation should close after outside click').toBeHidden();
+    await toggle.click();
+    await expect(nav, 'Primary navigation should close after tapping the hamburger again').toBeHidden();
     await expect(toggle, 'aria-expanded should reflect closed state').toHaveAttribute('aria-expanded', 'false');
 
     await toggle.click();
     await expect(nav).toBeVisible();
 
     const beforeUrl = page.url();
-    await nav.getByRole('link', { name: destinationLabel, exact: true }).click();
+    await nav.getByRole('link', { name: 'BAFA-Beratung', exact: true }).click();
 
     await expect
       .poll(async () => {
