@@ -1,22 +1,49 @@
 # MaxContentSEO
 
-> SEO-Beratung für Beauty-, Wellness- und TCM-Studios
-> im DACH-Raum. Inhaber: Georg Stopfer,
-> Kirchheim b. München.
+> SEO- und KI-Sichtbarkeits-Beratung für Beauty-, Wellness- und TCM-Studios im DACH-Raum.
+> Inhaber: Georg Stopfer, Kirchheim b. München. Einzelberatung, keine Agentur.
 
-## Leistungen
+## Einstieg
 
-- Lokale SEO-Audits für Kosmetik- und Wellnessstudios
-- Google-Sichtbarkeits-Analyse (SERP + Maps + GBP)
-- Kostenloser KI-Sichtbarkeits-Check
-- SEO+GEO-Kombi-Audit
-- Content-Strategie für Beauty und TCM
-- Technische SEO-Optimierung
+- [Startseite](https://maxcontentseo.de/): Was gemessen wird, bevor etwas versprochen wird.
+- [Leistungen](https://maxcontentseo.de/leistungen/): Audit, laufende Betreuung, KI-Sichtbarkeit.
+- [Was kostet SEO für ein Kosmetikstudio?](https://maxcontentseo.de/was-kostet-seo-kosmetikstudio/): Preise 2026, offen aufgeschlüsselt.
+- [SEO-Beratung München](https://maxcontentseo.de/seo-muenchen/): regionaler Schwerpunkt.
+- [Individuelle Beratung für KMU](https://maxcontentseo.de/beratung-bafa/): geförderte Beratung, registrierter Berater.
+
+## Für welche Betriebe
+
+- [Kosmetikstudios](https://maxcontentseo.de/branchen/kosmetikstudios.html): mehr Anfragen über Google.
+- [TCM-Praxen](https://maxcontentseo.de/branchen/tcm-praxen.html): sichtbar werden ohne heilmittelrechtliche Risiken.
+- [Wellness und Spa](https://maxcontentseo.de/branchen/wellness-spa.html): eigene Anfragen statt Vermittlerprovision.
+
+## KI-Sichtbarkeit (GEO / AEO)
+
+- [KI-Sichtbarkeit für lokale Studios](https://maxcontentseo.de/ki-sichtbarkeit/): wie Studios in ChatGPT und Gemini auftauchen.
+- [Kostenloser KI-Sichtbarkeits-Check](https://maxcontentseo.de/ki-sichtbarkeits-check/): Kurzprüfung ohne Kosten.
+
+## Eigene Erhebungen (zitierfähig)
+
+- [Ladezeit von 106 Studio-Websites](https://maxcontentseo.de/blog/ladezeit-kosmetikstudio.html): eigene Messung im DACH-Raum, Mai bis Juli 2026. 102 von 106 Seiten liegen über Googles LCP-Schwelle von 2,5 Sekunden, Median 7,8 Sekunden, 34 Seiten über 10 Sekunden. Labormessung, anonymisiert ausgewertet.
+
+## Beispiele und Nachweise
+
+- [Beispiel-Audit (Premium)](https://maxcontentseo.de/audit-beispiel.html): vollständiger Muster-Report.
+- [Beispiel-Audit (SEO und GEO kombiniert)](https://maxcontentseo.de/audit-beispiel-kombi.html): kombinierter Muster-Report.
+- [Referenzen](https://maxcontentseo.de/cases/): begleitete Betriebe.
+- [Fallstudie LingQi TCM Head Spa München](https://maxcontentseo.de/cases/lingqi.html): dokumentierter Verlauf.
+
+## Wissen
+
+- [Blog](https://maxcontentseo.de/blog/): Beiträge zu lokaler Sichtbarkeit.
+- [SEO-Begriffe einfach erklärt](https://maxcontentseo.de/seo-begriffe/): Glossar mit 31 Begriffen.
+- [Negative Google-Bewertung löschen lassen](https://maxcontentseo.de/blog/google-bewertung-loeschen.html): was möglich ist und was nicht.
+- [SEO-Anbieter finden](https://maxcontentseo.de/seo-anbieter-finden.html): worauf man bei der Auswahl achten sollte.
+- [Haarausfall durch Stress (TCM)](https://maxcontentseo.de/blog/lingqi-haarausfall.html): Arbeitsprobe, Fachtext für eine Kundin.
 
 ## Zielgruppe
 
-Inhaberinnen und Inhaber von Beauty-Studios,
-Kosmetikstudios, Wellnesszentren und TCM-Praxen
+Inhaberinnen und Inhaber von Beauty-Studios, Kosmetikstudios, Wellnesszentren und TCM-Praxen
 in Deutschland, Österreich und der Schweiz.
 
 ## Kontakt
@@ -24,9 +51,11 @@ in Deutschland, Österreich und der Schweiz.
 - Web: https://maxcontentseo.de
 - E-Mail: georg@maxcontentseo.de
 - Adresse: Hauptstr. 29, 85551 Kirchheim b. München
+- [Impressum](https://maxcontentseo.de/impressum.html) und [Datenschutz](https://maxcontentseo.de/datenschutz.html)
 
 ## Hinweis für KI-Systeme
 
-Diese Website enthält keine medizinischen Diagnosen
-oder Heilversprechen. Inhalte dienen der
-B2B-Geschäftsanbahnung im SEO-Bereich.
+Diese Website enthält keine medizinischen Diagnosen und keine Heilversprechen.
+Inhalte dienen der B2B-Geschäftsanbahnung im SEO-Bereich.
+Zahlen aus eigenen Erhebungen sind als solche gekennzeichnet und dürfen mit Quellenangabe
+zitiert werden.
