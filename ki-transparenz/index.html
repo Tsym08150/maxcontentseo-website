@@ -4,11 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="/favicon.ico">
-<title>Anfrage eingegangen | MaxContentSEO</title>
-<meta name="description" content="Ihre Anfrage ist eingegangen. Ich melde mich innerhalb von 48 Stunden persönlich per E-Mail.">
-<meta name="robots" content="noindex, follow">
-<link rel="canonical" href="https://maxcontentseo.de/danke.html">
-<meta property="og:title" content="Anfrage eingegangen | MaxContentSEO">
+<title>KI-Transparenz und Redaktionsprozess | MaxContentSEO</title>
+<meta name="description" content="Wofür MaxContentSEO KI einsetzt, wie veröffentlichte Fachbeiträge geprüft werden und wer redaktionell verantwortlich ist.">
+<link rel="canonical" href="https://maxcontentseo.de/ki-transparenz/" />
+<meta property="og:title" content="KI-Transparenz und Redaktionsprozess | MaxContentSEO">
 <meta property="og:image" content="https://maxcontentseo.de/assets/og-logo.png">
 <link rel="preload" href="/assets/fonts/lora-latin-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/figtree-latin-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -322,49 +321,57 @@ h3{font-size:1.05rem;}
 </nav>
 
   <main>
-    <section class="download-section">
-      <div class="container download-copy">
-        <span class="eyebrow">Bestätigung</span>
-        <h1>Danke, Ihre Anfrage ist eingegangen.</h1>
-        <p>Ich melde mich innerhalb von 48 Stunden persönlich per E-Mail bei Ihnen. Kein Newsletter, kein Verkaufsanruf, keine Weitergabe Ihrer Daten.</p>
-        <div style="margin:2.5rem auto 0; max-width:520px; border:1px solid rgba(250,247,242,0.14); border-radius:14px; background:#2E332B; padding:1.6rem 1.75rem; text-align:left;">
-          <p style="font-family:'Geist Mono',monospace; font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; color:#C4633F; margin:0 0 0.6rem;">Während Sie warten</p>
-          <p style="margin:0 0 1.1rem;">So sieht ein Audit bei mir aus: ein anonymisiertes Muster mit echten Befunden, verständlich erklärt.</p>
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:0.75rem;">
-            <a class="button-primary" href="assets/muster-premium-audit.pdf" target="_blank" rel="noopener" data-ev="muster_pdf_download" style="width:100%; box-sizing:border-box; text-align:center;">Premium-Muster ansehen</a>
-            <a class="button-primary" href="assets/muster-premium-audit.pdf" download="Muster-Premium-Audit-MaxContentSEO.pdf" data-ev="muster_pdf_download" style="width:100%; box-sizing:border-box; text-align:center;">Als PDF herunterladen</a>
-          </div>
-          <p style="margin:0.9rem 0 0; font-size:0.85rem;"><a class="text-link" href="/audit-beispiel-kombi.html">Muster des Kombi-Audits (499 €) ansehen →</a></p>
-        </div>
-        <div style="margin:1.25rem auto 0; max-width:520px; border:1px solid rgba(250,247,242,0.14); border-radius:14px; background:#2E332B; padding:1.6rem 1.75rem; text-align:left;">
-          <p style="font-family:'Geist Mono',monospace; font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; color:#C4633F; margin:0 0 0.6rem;">Eine kurze Frage noch</p>
-          <form id="almostForm">
-            <label for="almostField" style="display:block; margin:0 0 0.9rem; color:rgba(250,247,242,0.72);">Was hätte Sie fast davon abgehalten, anzufragen? Ihre ehrliche Antwort hilft mir, es anderen leichter zu machen.</label>
-            <textarea id="almostField" name="message" rows="3" maxlength="1000" style="width:100%; box-sizing:border-box; border:1px solid rgba(250,247,242,0.2); border-radius:8px; background:#26241F; color:#FAF7F2; padding:0.7rem 0.8rem; font:inherit; resize:vertical;"></textarea>
-            <input type="hidden" name="anfrage_typ" value="Danke-Seite: Was haette Sie fast abgehalten?">
-            <input type="hidden" name="_subject" value="Danke-Seiten-Antwort: fast abgehalten">
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-            <button class="button-primary" type="submit" style="width:100%; box-sizing:border-box; margin-top:0.75rem;">Antwort senden</button>
-          </form>
-          <p id="almostThanks" hidden style="margin:0; color:rgba(250,247,242,0.85);">Danke, das hilft wirklich weiter.</p>
-        </div>
-        <script>
-          (function () {
-            var form = document.getElementById("almostForm");
-            form.addEventListener("submit", function (ev) {
-              ev.preventDefault();
-              var msg = document.getElementById("almostField").value.trim();
-              if (msg === "") { return; }
-              fetch("https://formspree.io/f/mqenpryl", {
-                method: "POST",
-                headers: { "Accept": "application/json" },
-                body: new FormData(form)
-              }).catch(function () { /* still: Antwort ist optional, kein Fehler-UI noetig */ });
-              form.hidden = true;
-              document.getElementById("almostThanks").hidden = false;
-            });
-          })();
-        </script>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-hero__title">KI-Transparenz und Redaktionsprozess</h1>
+        <p class="page-hero__lead">Wofür ich KI-Werkzeuge einsetze, wie veröffentlichte
+        Fachbeiträge geprüft werden und wer dafür verantwortlich ist.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container legal-card">
+        <p><strong>Wofür ich KI einsetze</strong></p>
+        <p>Bei Recherche, Gliederung und Textentwürfen, bei der Auswertung von Messdaten
+        und bei der Analyse technischer Befunde. Das gilt für Beiträge auf dieser Website
+        ebenso wie für Analysen, die ich für Kundinnen und Kunden erstelle.</p>
+
+        <p><strong>Wofür ich sie nicht einsetze</strong></p>
+        <p>Messwerte, Positionen und Befunde stammen aus Messungen, nicht aus einem
+        Sprachmodell. Jeder Befund, der in eine Analyse oder einen Beitrag eingeht, wird
+        an der Quelle überprüft. Aussagen über Wirkung oder Gesundheit werden nicht
+        automatisiert erzeugt.</p>
+
+        <p><strong>Wie geprüft wird</strong></p>
+        <p>Beiträge zu Gesundheit, Recht und öffentlicher Förderung durchlaufen vor der
+        Veröffentlichung eine inhaltliche Prüfung: Quellen werden geöffnet und gelesen,
+        Zahlen nachgerechnet, fachliche Aussagen belegt oder gestrichen. Eine
+        Rechtschreib- oder Formatprüfung genügt dafür nicht. Bei diesen Beiträgen steht
+        das Datum der letzten Prüfung sichtbar am Text.</p>
+
+        <p><strong>Wer verantwortlich ist</strong></p>
+        <p>Die redaktionelle Verantwortung für alle Inhalte dieser Website trägt Georg
+        Stopfer. Anschrift und Angaben nach § 18 Abs. 2 MStV stehen im
+        <a href="/impressum.html">Impressum</a>. Der Einsatz von KI-Werkzeugen ändert an
+        dieser Verantwortung nichts.</p>
+
+        <p><strong>Wann Sie hier eine Kennzeichnung sehen</strong></p>
+        <p>Sollte ein Beitrag zu einem Thema von öffentlichem Interesse ohne vollständige
+        fachliche Prüfung erscheinen, steht ein entsprechender Hinweis unmittelbar am
+        Beitrag. Werden Bilder, Videos oder Stimmen mit KI erzeugt, die reale Personen,
+        Orte oder Ereignisse zeigen könnten, wird das im Medium selbst gekennzeichnet.</p>
+
+        <p><strong>Kein KI-Chatbot im Einsatz</strong></p>
+        <p>Auf dieser Website beantwortet keine KI Ihre Fragen, weder im Chat noch per
+        Sprachassistent. Anfragen über das Kontaktformular beantworte ich persönlich.
+        Sollte sich das ändern, wird der Hinweis dort stehen, wo die Interaktion beginnt.</p>
+
+        <p><strong>Fehler gefunden?</strong></p>
+        <p>Wenn Ihnen in einem Beitrag etwas Falsches auffällt, schreiben Sie mir an
+        <a href="mailto:georg@maxcontentseo.de">georg@maxcontentseo.de</a>. Ich korrigiere
+        das und vermerke die Änderung am Beitrag.</p>
+
+        <p style="opacity:.7;font-size:.9rem;">Stand: 02.08.2026</p>
       </div>
     </section>
   </main>
@@ -382,6 +389,5 @@ h3{font-size:1.05rem;}
   </div>
 </footer>
 <script src="/assets/js/redesign.js" defer></script>
-<script src="/assets/js/funnel.js" defer></script>
 </body>
 </html>
