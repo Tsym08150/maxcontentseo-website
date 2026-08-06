@@ -48,7 +48,10 @@ function pageUrl(relativePath) {
 test.use({ viewport: { width: 375, height: 667 } });
 
 test.beforeAll(async () => {
-  const root = process.cwd();
+  // Repo-Root aus der Testdatei ableiten, NICHT aus process.cwd() —
+  // sonst liefert der Test-Server 404 fuer jede Seite, sobald Playwright
+  // aus einem anderen Arbeitsverzeichnis gestartet wird (14/14 rot).
+  const root = path.resolve(__dirname, '..');
 
   server = http.createServer((request, response) => {
     const urlPath = decodeURIComponent(new URL(request.url, 'http://127.0.0.1').pathname);

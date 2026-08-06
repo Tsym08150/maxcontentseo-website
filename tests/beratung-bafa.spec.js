@@ -2,7 +2,10 @@ const { test, expect } = require('@playwright/test');
 const fs = require('fs');
 const path = require('path');
 
-const root = process.cwd();
+// Repo-Root aus der Testdatei ableiten, NICHT aus process.cwd() —
+// sonst schlaegt der Test fehl, sobald Playwright aus einem anderen
+// Arbeitsverzeichnis gestartet wird.
+const root = path.resolve(__dirname, '..');
 const pagePath = path.join(root, 'beratung-bafa', 'index.html');
 
 function findHtmlFiles(directory) {
@@ -42,10 +45,18 @@ test('BAFA page is indexable, discoverable, and compliant', () => {
   const html = fs.readFileSync(pagePath, 'utf8');
 
   expect(html).not.toMatch(/<meta name="robots" content="[^"]*noindex/i);
-  expect(html).toContain('Beim BAFA als Beratungsunternehmen gelistet · Berater-ID 229676');
+  // Aktuelle (vorsichtigere) Formulierung der Seite; frueher:
+  // 'Beim BAFA als Beratungsunternehmen gelistet · Berater-ID 229676'.
+  expect(html).toContain(
+    'Bei der BAFA-Beraterregistrierung registriert (Berater-ID 229676); den aktuellen Listungsstatus weise ich auf Anfrage nach.',
+  );
   expect(html).toContain('href="#kontakt"');
   expect(html).toContain('id="kontakt"');
-  expect(html).toContain('https://www.bafa.de/unb');
+  // 04.08.2026: bafa.de/unb leitet inzwischen auf die Langform-URL um — der Beleglink
+  // zeigt jetzt direkt aufs Ziel, damit der Nachweis ohne Umleitung traegt.
+  expect(html).toContain(
+    'https://www.bafa.de/DE/Wirtschaft/Beratung_Finanzierung/Unternehmensberatung/unternehmensberatung_node.html',
+  );
   expect(html).toContain('#134d35');
   expect(html).toContain('Rechtsanspruch besteht nicht');
 
@@ -76,6 +87,7 @@ test('visible FAQ and FAQPage JSON-LD stay exactly synchronized', () => {
   const visibleFaq = faqFromVisibleHtml(html);
   const schemaFaq = faqFromJsonLd(html);
 
-  expect(visibleFaq).toHaveLength(5);
+  // Seite hat inzwischen 6 sichtbare FAQ-Eintraege (6. = Kombi-Audit-Foerderfaehigkeit).
+  expect(visibleFaq).toHaveLength(6);
   expect(schemaFaq).toEqual(visibleFaq);
 });

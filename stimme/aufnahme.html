@@ -3,6 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Diese Seite ist der Inhalt des iframes auf /stimme/ und keine eigenstaendige Seite:
+     noindex, damit sie nicht getrennt von ihrer Rahmenseite in der Suche auftaucht
+     (04.08.2026, Website-Sweep). -->
+<meta name="robots" content="noindex, follow">
 <title>Sprachnachricht an MaxContentSEO</title>
 <!--
   Voice-Reply-Widget (AP1 Phase 1.1) — mobile-first, kein Framework, kein Tracking.
@@ -141,7 +145,10 @@
         <label for="consent">
           Ich willige ein, dass meine Nachricht (Sprachaufnahme oder Text) und meine Kontaktangaben
           (Name, E-Mail-Adresse, Website) verarbeitet werden, um mein Anliegen zu beantworten.
-          Sie werden bis zu 7 Tage gespeichert und dann gelöscht. Details in der
+          Sie werden bis zu 7 Tage gespeichert und dann gelöscht. Eine Sprachaufnahme wird dabei
+          von einer Spracherkennung in Text umgeschrieben, die ausschließlich auf dem Rechner
+          von Georg Stopfer läuft; die Aufnahme wird an keinen KI-Dienst weitergegeben.
+          Details in der
           <a href="/datenschutz.html" target="_top">Datenschutzerklärung</a>.
         </label>
       </div>
