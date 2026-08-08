@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="svgTitle svgDesc">
+  <title id="svgTitle">SEO und GEO im Vergleich: Liste zum Anklicken gegen fertige KI-Antwort</title>
+  <desc id="svgDesc">Zwei Spalten. Links die klassische Google-Suche: eine Suchleiste und vier Treffer untereinander, der Nutzer klickt einen davon an, auch Platz vier ist noch sichtbar. Rechts eine KI-Antwort: keine Liste, sondern ein Antworttext, in dem nur zwei Studios namentlich genannt werden; zwei weitere Studios stehen darunter als nicht genannt. Darunter der Satz: SEO kaempft darum, dass jemand auf Ihren Link klickt. GEO kaempft darum, dass Ihr Name in der fertigen KI-Antwort genannt wird. Abschliessender Hinweis: GEO ersetzt SEO nicht, es kommt dazu.</desc>
+
+  <style>
+    :root{
+      --bg:#FBF9F5; --bd:#E3DCCE;
+      --card:#FFFFFF; --card-bd:#E4E0D8;
+      --card2:#F4F8F5; --card2-bd:#CBDDD2;
+      --ink:#1F2A24; --mute:#5E6B63; --faint:#8A968E;
+      --green:#134d35; --acc:#1b6b4a; --acc-soft:#E2F0E8;
+      --terra:#A94F30; --terra-soft:#F7E9E2;
+      --bar:#F1EEE7; --bar-bd:#DED8CC;
+      --ghost:#EDEBE5; --ghost-bd:#DCD8CF;
+      --band:#F3F1EB;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#111815; --bd:#2C3A33;
+        --card:#18201C; --card-bd:#2E3A34;
+        --card2:#152220; --card2-bd:#2F4A3E;
+        --ink:#EDF2EF; --mute:#A9B7AF; --faint:#86958C;
+        --green:#7FD3AB; --acc:#5FC095; --acc-soft:#1D3A2C;
+        --terra:#E2916C; --terra-soft:#3A2419;
+        --bar:#1E2723; --bar-bd:#33403A;
+        --ghost:#1C2420; --ghost-bd:#333F39;
+        --band:#16201B;
+      }
+    }
+    text{font-family:system-ui,'Segoe UI',sans-serif;fill:var(--ink);}
+    .t-title{font-size:25px;font-weight:700;letter-spacing:-0.3px;}
+    .t-sub{font-size:14.5px;fill:var(--mute);}
+    .t-eyebrow{font-size:11.5px;font-weight:700;letter-spacing:1.6px;fill:var(--acc);}
+    .t-eyebrow-b{font-size:11.5px;font-weight:700;letter-spacing:1.6px;fill:var(--green);}
+    .t-head{font-size:19px;font-weight:700;}
+    .t-bar{font-size:14px;fill:var(--mute);}
+    .t-res{font-size:15px;font-weight:600;}
+    .t-url{font-size:12.5px;fill:var(--faint);}
+    .t-ans{font-size:15px;fill:var(--ink);}
+    .t-chip{font-size:15px;font-weight:700;fill:var(--green);}
+    .t-chip-off{font-size:15px;font-weight:600;fill:var(--faint);}
+    .t-note{font-size:13px;fill:var(--mute);}
+    .t-mini{font-size:11.5px;font-weight:700;letter-spacing:0.6px;fill:var(--terra);}
+    .t-quote{font-size:17px;}
+    .t-kicker{font-size:15px;font-weight:700;fill:var(--green);}
+    .t-kicker-sub{font-size:14px;fill:var(--mute);font-weight:400;}
+    .card{fill:var(--card);stroke:var(--card-bd);stroke-width:1;}
+    .card2{fill:var(--card2);stroke:var(--card2-bd);stroke-width:1;}
+    .bar{fill:var(--bar);stroke:var(--bar-bd);stroke-width:1;}
+    .ghost{fill:var(--ghost);stroke:var(--ghost-bd);stroke-width:1;}
+    .chip{fill:var(--acc-soft);stroke:var(--acc);stroke-width:1;}
+    .band{fill:var(--band);stroke:var(--bd);stroke-width:1;}
+    .hl{fill:var(--terra-soft);stroke:var(--terra);stroke-width:1;}
+    .rule{stroke:var(--bd);stroke-width:1;}
+    .icon{stroke:var(--faint);stroke-width:1.6;fill:none;stroke-linecap:round;}
+  </style>
+
+  <rect x="0.5" y="0.5" width="899" height="699" rx="20" fill="var(--bg)" stroke="var(--bd)"/>
+
+  <text class="t-title" x="32" y="52">Klassische Suche und KI-Antwort: zwei Wettbewerbe</text>
+  <text class="t-sub" x="32" y="80">Dieselbe Frage, zwei Wege: links entscheidet der Nutzer, rechts entscheidet die Antwort.</text>
+
+  <!-- ===================== LINKE SPALTE: SEO ===================== -->
+  <rect class="card" x="32.5" y="104.5" width="395" height="435" rx="14"/>
+
+  <text class="t-eyebrow-b" x="56" y="134">KLASSISCHE SUCHE &#183; SEO</text>
+  <text class="t-head" x="56" y="164">Google zeigt eine Liste</text>
+
+  <rect class="bar" x="56.5" y="180.5" width="347" height="34" rx="17"/>
+  <circle class="icon" cx="76" cy="196" r="5.5"/>
+  <line class="icon" x1="80" y1="200.5" x2="84" y2="204.5"/>
+  <text class="t-bar" x="94" y="202">kosmetikstudio m&#252;nchen</text>
+
+  <!-- Treffer 1 -->
+  <text class="t-res" x="56" y="246">Studio A: Kosmetik in M&#252;nchen</text>
+  <text class="t-url" x="56" y="264">www.studio-a.de</text>
+  <!-- Treffer 2 (angeklickt) -->
+  <rect class="hl" x="46.5" y="274.5" width="367" height="48" rx="9"/>
+  <text class="t-res" x="56" y="300">Studio B: Gesichtsbehandlung</text>
+  <text class="t-url" x="56" y="316">www.studio-b.de</text>
+  <path d="M 320 288 L 320 306 L 325 301 L 329 309 L 333 307 L 329 299 L 336 298 Z" fill="var(--terra)"/>
+  <text class="t-mini" x="342" y="302">KLICK</text>
+  <!-- Treffer 3 -->
+  <text class="t-res" x="56" y="354">Studio C: Kosmetikstudio Mitte</text>
+  <text class="t-url" x="56" y="372">www.studio-c.de</text>
+  <!-- Treffer 4 -->
+  <text class="t-res" x="56" y="408">Studio D: Beauty und Wellness</text>
+  <text class="t-url" x="56" y="426">www.studio-d.de</text>
+
+  <line class="rule" x1="56" y1="448" x2="403" y2="448"/>
+  <text class="t-note" x="56" y="472">Vier Treffer sind sichtbar. Der Nutzer vergleicht</text>
+  <text class="t-note" x="56" y="492">selbst und klickt. Auch Platz 4 hat eine Chance.</text>
+
+  <!-- ===================== RECHTE SPALTE: GEO ===================== -->
+  <rect class="card2" x="472.5" y="104.5" width="395" height="435" rx="14"/>
+
+  <text class="t-eyebrow" x="496" y="134">KI-ANTWORT &#183; GEO</text>
+  <text class="t-head" x="496" y="164">Die KI nennt zwei Namen</text>
+
+  <rect class="bar" x="496.5" y="180.5" width="347" height="34" rx="17"/>
+  <text class="t-bar" x="512" y="202">Welches Kosmetikstudio in M&#252;nchen ist gut?</text>
+
+  <rect class="card" x="496.5" y="228.5" width="347" height="152" rx="12"/>
+  <text class="t-ans" x="514" y="260">In M&#252;nchen werden vor allem</text>
+
+  <rect class="chip" x="513.5" y="276.5" width="92" height="26" rx="7"/>
+  <text class="t-chip" x="524" y="295">Studio A</text>
+  <text class="t-ans" x="615" y="295">und</text>
+  <rect class="chip" x="654.5" y="276.5" width="92" height="26" rx="7"/>
+  <text class="t-chip" x="665" y="295">Studio C</text>
+
+  <text class="t-ans" x="514" y="328">empfohlen. Beide liegen zentral und</text>
+  <text class="t-ans" x="514" y="352">haben viele gute Bewertungen.</text>
+
+  <text class="t-note" x="496" y="406">In dieser Antwort kommen nicht vor:</text>
+  <rect class="ghost" x="496.5" y="416.5" width="92" height="26" rx="7"/>
+  <text class="t-chip-off" x="507" y="435">Studio B</text>
+  <rect class="ghost" x="600.5" y="416.5" width="92" height="26" rx="7"/>
+  <text class="t-chip-off" x="611" y="435">Studio D</text>
+
+  <line class="rule" x1="496" y1="458" x2="843" y2="458"/>
+  <text class="t-note" x="496" y="480">Eine Antwort, zwei Namen. Wer nicht genannt wird,</text>
+  <text class="t-note" x="496" y="500">steht im Entscheidungsmoment nicht zur Auswahl.</text>
+
+  <!-- ===================== UNTERE BANDZEILE ===================== -->
+  <rect class="band" x="32.5" y="562.5" width="835" height="109" rx="14"/>
+  <rect x="32.5" y="562.5" width="5" height="109" rx="2.5" fill="var(--terra)"/>
+
+  <text class="t-quote" x="60" y="598"><tspan font-weight="700" fill="var(--ink)">SEO</tspan> k&#228;mpft darum, dass jemand auf Ihren Link klickt.</text>
+  <text class="t-quote" x="60" y="624"><tspan font-weight="700" fill="var(--green)">GEO</tspan> k&#228;mpft darum, dass Ihr Name in der fertigen KI-Antwort genannt wird.</text>
+  <text class="t-kicker" x="60" y="654">GEO ersetzt SEO nicht. Es kommt dazu. <tspan class="t-kicker-sub">Gute Rankings bleiben die Grundlage.</tspan></text>
+</svg>

@@ -1,3 +1,46 @@
+# robots.txt maxcontentseo.de
+# Grundregel: alles offen für klassische Suchmaschinen.
 User-agent: *
 Allow: /
+
+# --- KI-Crawler: bewusst freigegeben ---
+# Diese Freigaben prüfen wir im SEO+GEO-Kombi-Audit auch bei unseren Kunden.
+# Ohne Zugriff können KI-Systeme die Inhalte einer Website nicht vollständig auswerten.
+
+# OpenAI: Crawling
+User-agent: GPTBot
+Allow: /
+
+# OpenAI: Abruf für Suchergebnisse in ChatGPT
+User-agent: OAI-SearchBot
+Allow: /
+
+# OpenAI: Abruf auf Nutzeranfrage im Chat
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic: Crawling für Claude
+User-agent: ClaudeBot
+Allow: /
+
+# Anthropic: Abruf auf Nutzeranfrage im Chat
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Google: Gemini und AI Overviews (steuert nicht die Google-Suche selbst)
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft: Bing und Copilot
+User-agent: Bingbot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://maxcontentseo.de/sitemap.xml
