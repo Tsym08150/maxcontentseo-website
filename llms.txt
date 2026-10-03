@@ -24,6 +24,8 @@
 
 ## Eigene Erhebungen (zitierfähig)
 
+- [Google-Ranking und Nennung in KI-Antworten](https://maxcontentseo.de/blog/ranking-und-ki-nennung.html): eigene Messung an maxcontentseo.de, September 2026. Bei Google 2 Suchbegriffe auf Position 24 und 25 (Ubersuggest, 03.09.), in KI-Antworten mit Websuche in 4 von 6 Antworten genannt (ChatGPT und Gemini, 04.09.). Mit Vorbehalten und Selbsttest.
+- [Messung der KI-Sichtbarkeit prüfen](https://maxcontentseo.de/blog/ki-sichtbarkeit-messung-pruefen.html): sechs Angaben, die eine nachprüfbare Messung enthält, und fünf Fragen an Anbieter.
 - [Ladezeit von 106 Studio-Websites](https://maxcontentseo.de/blog/ladezeit-kosmetikstudio.html): eigene Messung im DACH-Raum, Mai bis Juli 2026. 102 von 106 Seiten liegen über Googles LCP-Schwelle von 2,5 Sekunden, Median 7,8 Sekunden, 34 Seiten über 10 Sekunden. Labormessung, anonymisiert ausgewertet.
 
 ## Beispiele und Nachweise
