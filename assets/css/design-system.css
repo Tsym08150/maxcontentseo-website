@@ -44,3 +44,22 @@ html { scroll-behavior: smooth; }
 .h7:hover{transform:translateY(-1px); box-shadow:0 4px 20px rgba(38,36,31,0.35);}
 .h8:hover{background:#8E4227; transform:translateY(-1px); box-shadow:0 4px 16px rgba(196,99,63,0.3);}
 .f0:focus{outline:none; border-color:#C4633F;}
+
+/* ---- Mobiler Erstanalyse-Knopf in der Kopfzeile (nur unter 950 px, 16.10.2026) ---- */
+[data-mobile-cta] { display: none; }
+@media (max-width: 950px) {
+  [data-mobile-cta] { display: inline-flex !important; align-items: center; margin-left: auto; background: #A94F30; color: #FAF7F2; padding: 0.45rem 0.8rem; border-radius: 8px; text-decoration: none; font-size: 0.8rem; font-weight: 600; white-space: nowrap; min-height: 36px; box-sizing: border-box; }
+}
+@media (max-width: 359px) {
+  [data-mobile-cta] { padding: 0.45rem 0.55rem; font-size: 0.74rem; }
+  nav > div:first-child > a:first-child { font-size: 0.95rem !important; }
+  [data-burger] { padding: 0.4rem 0.6rem !important; letter-spacing: 0.06em !important; }
+}
+
+/* ---- Textkontrast auf hellen Flächen (Codex 12, 16.10.2026): Terracotta/Grau abgedunkelt, >= 4,5:1 ---- */
+.section-alt a:not(.button) { color: #A94F30; }
+.section-alt .text-link { color: #A94F30 !important; }
+.section-alt .eyebrow { color: #A94F30; }
+.section-alt .compare th { color: #8E4227; }
+.section-alt .faq summary::after { color: #A94F30; }
+.section-alt .answer-kicker { color: #8E4227; }

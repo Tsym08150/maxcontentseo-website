@@ -1,6 +1,6 @@
 # MaxContentSEO
 
-> SEO- und KI-Sichtbarkeits-Beratung für Beauty-, Wellness- und TCM-Studios im DACH-Raum.
+> SEO- und KI-Sichtbarkeits-Beratung für Beauty-, Wellness- und TCM-Studios, vor Ort im Raum München und digital deutschlandweit.
 > Inhaber: Georg Stopfer, Kirchheim b. München. Einzelberatung, keine Agentur.
 
 ## Einstieg
@@ -10,29 +10,32 @@
 - [Was kostet SEO für ein Kosmetikstudio?](https://maxcontentseo.de/was-kostet-seo-kosmetikstudio/): Preise 2026, offen aufgeschlüsselt.
 - [SEO-Beratung München](https://maxcontentseo.de/seo-muenchen/): regionaler Schwerpunkt.
 - [Für Agenturen und Webdesigner](https://maxcontentseo.de/fuer-agenturen/): Sichtbarkeitsbericht mit dem Logo des Dienstleisters für dessen Kunden (White-Label).
+- [Über mich](https://maxcontentseo.de/ueber-mich/): wer hinter MaxContentSEO steht, Georg Stopfer.
 - [Individuelle Beratung für KMU](https://maxcontentseo.de/beratung-bafa/): Unternehmensberatung für KMU zu Abläufen und KI; BAFA-Zuschuss im Bewilligungsfall möglich, Berater registriert (ID 229676).
 
 ## Für welche Betriebe
 
 - [Kosmetikstudios](https://maxcontentseo.de/branchen/kosmetikstudios.html): mehr Anfragen über Google.
-- [TCM-Praxen](https://maxcontentseo.de/branchen/tcm-praxen.html): sichtbar werden ohne heilmittelrechtliche Risiken.
+- [TCM-Praxen](https://maxcontentseo.de/branchen/tcm-praxen.html): sichtbar werden ohne Wirkversprechen.
 - [Wellness und Spa](https://maxcontentseo.de/branchen/wellness-spa.html): eigene Anfragen statt Vermittlerprovision.
 
 ## KI-Sichtbarkeit (GEO / AEO)
 
 - [KI-Sichtbarkeit für lokale Studios](https://maxcontentseo.de/ki-sichtbarkeit/): wie Studios in ChatGPT und Gemini auftauchen.
 - [Kostenloser KI-Sichtbarkeits-Check](https://maxcontentseo.de/ki-sichtbarkeits-check/): Kurzprüfung ohne Kosten.
+- [KI-Transparenz](https://maxcontentseo.de/ki-transparenz/): wie KI bei MaxContentSEO eingesetzt und gegengeprüft wird.
 
 ## Eigene Erhebungen (zitierfähig)
 
 - [Google-Ranking und Nennung in KI-Antworten](https://maxcontentseo.de/blog/ranking-und-ki-nennung.html): eigene Messung an maxcontentseo.de, September 2026. Bei Google 2 Suchbegriffe auf Position 24 und 25 (Ubersuggest, 03.09.), in KI-Antworten mit Websuche in 4 von 6 Antworten genannt (ChatGPT und Gemini, 04.09.). Mit Vorbehalten und Selbsttest.
 - [Messung der KI-Sichtbarkeit prüfen](https://maxcontentseo.de/blog/ki-sichtbarkeit-messung-pruefen.html): sechs Angaben, die eine nachprüfbare Messung enthält, und fünf Fragen an Anbieter.
-- [Ladezeit von 106 Studio-Websites](https://maxcontentseo.de/blog/ladezeit-kosmetikstudio.html): eigene Messung im DACH-Raum, Mai bis Juli 2026. 102 von 106 Seiten liegen über Googles LCP-Schwelle von 2,5 Sekunden, Median 7,8 Sekunden, 34 Seiten über 10 Sekunden. Labormessung, anonymisiert ausgewertet.
+- [Ladezeit von 106 Studio-Websites](https://maxcontentseo.de/blog/ladezeit-kosmetikstudio.html): eigene Messung im deutschsprachigen Raum, Mai bis Juli 2026. 102 von 106 Seiten liegen über Googles LCP-Schwelle von 2,5 Sekunden, Median 7,8 Sekunden, 34 Seiten über 10 Sekunden. Labormessung, anonymisiert ausgewertet.
 
 ## Beispiele und Nachweise
 
 - [Beispiel-Audit (Premium)](https://maxcontentseo.de/audit-beispiel.html): vollständiger Muster-Report.
 - [Beispiel-Audit (SEO und GEO kombiniert)](https://maxcontentseo.de/audit-beispiel-kombi.html): kombinierter Muster-Report.
+- [Selbstaudit maxcontentseo.de](https://maxcontentseo.de/audit-beispiel-maxcontentseo.html): Beispiel-Audit, in dem ich meine eigene Website analysiere.
 - [Referenzen](https://maxcontentseo.de/cases/): begleitete Betriebe.
 - [Fallstudie LingQi TCM Head Spa München](https://maxcontentseo.de/cases/lingqi.html): dokumentierter Verlauf.
 
@@ -41,13 +44,16 @@
 - [Blog](https://maxcontentseo.de/blog/): Beiträge zu lokaler Sichtbarkeit.
 - [SEO-Begriffe einfach erklärt](https://maxcontentseo.de/seo-begriffe/): Glossar mit 31 Begriffen.
 - [Negative Google-Bewertung löschen lassen](https://maxcontentseo.de/blog/google-bewertung-loeschen.html): was möglich ist und was nicht.
+- [Checkliste Google-Bewertung für Kosmetikstudios (PDF)](https://maxcontentseo.de/assets/checkliste-google-bewertung-maxcontentseo.pdf): drei Seiten mit Prüffragen, Dokumentationsliste, Melde- und Einspruchspfad, Antwortvorlagen und Profil-Mini-Check, Stand Oktober 2026. Kostenloser Direktdownload, keine Rechtsberatung, kein Löschversprechen.
 - [SEO-Anbieter finden](https://maxcontentseo.de/seo-anbieter-finden.html): worauf man bei der Auswahl achten sollte.
-- [Haarausfall durch Stress (TCM)](https://maxcontentseo.de/blog/lingqi-haarausfall.html): Arbeitsprobe, Fachtext für eine Kundin.
+- [Haarausfall durch Stress: Ursachen, Haarzyklus und ärztliche Abklärung](https://maxcontentseo.de/blog/lingqi-haarausfall.html): Arbeitsprobe, Ratgebertext mit Quellen, geschrieben für eine Kundin, ohne Heil- oder Wirkversprechen.
+- [Frage als Sprachnachricht stellen](https://maxcontentseo.de/stimme/): Fragen aussprechen statt tippen; die Antwort kommt schriftlich.
 
 ## Zielgruppe
 
-Inhaberinnen und Inhaber von Beauty-Studios, Kosmetikstudios, Wellnesszentren und TCM-Praxen
-in Deutschland, Österreich und der Schweiz.
+Inhaberinnen und Inhaber von Beauty-Studios, Kosmetikstudios, Wellnesszentren und TCM-Praxen,
+vor Ort im Raum München und digital deutschlandweit. Außerdem Agenturen und Webdesigner
+(White-Label-Berichte) sowie kleine und mittlere Unternehmen (Einzelberatung).
 
 ## Kontakt
 

@@ -4,7 +4,7 @@ User-agent: *
 Allow: /
 
 # --- KI-Crawler: bewusst freigegeben ---
-# Diese Freigaben prüfen wir im SEO+GEO-Kombi-Audit auch bei unseren Kunden.
+# Diese Freigaben prüfe ich im SEO+GEO-Kombi-Audit auch bei meinen Kunden.
 # Ohne Zugriff können KI-Systeme die Inhalte einer Website nicht vollständig auswerten.
 
 # OpenAI: Crawling
@@ -31,7 +31,7 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-# Google: Gemini und AI Overviews (steuert nicht die Google-Suche selbst)
+# Google-Extended: Nutzung für Googles Gemini-KI (beeinflusst weder die Aufnahme in die Google-Suche noch in AI Overviews)
 User-agent: Google-Extended
 Allow: /
 
