@@ -87,7 +87,7 @@ test('visible FAQ and FAQPage JSON-LD stay exactly synchronized', () => {
   const visibleFaq = faqFromVisibleHtml(html);
   const schemaFaq = faqFromJsonLd(html);
 
-  // Seite hat inzwischen 6 sichtbare FAQ-Eintraege (6. = Kombi-Audit-Foerderfaehigkeit).
-  expect(visibleFaq).toHaveLength(6);
+  // Seite hat seit dem Entwurf 10.10.2026 8 sichtbare FAQ-Eintraege (8. = Kombi-Audit-Foerderfaehigkeit).
+  expect(visibleFaq).toHaveLength(8);
   expect(schemaFaq).toEqual(visibleFaq);
 });
