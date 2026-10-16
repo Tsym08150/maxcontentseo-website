@@ -63,3 +63,24 @@ html { scroll-behavior: smooth; }
 .section-alt .compare th { color: #8E4227; }
 .section-alt .faq summary::after { color: #A94F30; }
 .section-alt .answer-kicker { color: #8E4227; }
+
+/* ---- Terrakotta-Text auf dunklen Flächen (16.10.2026): #E08A66 statt #C4633F, >= 4,5:1 ----
+   Kontrast von #E08A66: auf #26241F 5,9:1, auf #2E332B 4,9:1, auf #3B2C23 5,1:1.
+   Auf etwas helleren dunklen Flächen (#433A2E Tabellenkopf, #3F3D38 Kopfzeile eines Blogartikels) --terra-on-dark-soft (#E8956F, 4,8 bzw. 4,6:1).
+   Helle Flächen (.section-alt, .about-box, .arbeitsprobe-box, .case-card) bleiben unberührt (dort gelten die Regeln oben bzw. #C4633F).
+   Linien, Rahmen und Hintergründe in #C4633F sind kein Text und bleiben. */
+:root { --terra-on-dark: #E08A66; --terra-on-dark-soft: #E8956F; }
+html body :is(
+  .eyebrow, .hero__eyebrow, .kicker, .answer-kicker, .text-link, .button-secondary, .blog-card__tag,
+  .card .number, .card a:not([class]), .download-box a, .links-row a, .legal-card a, .consent a,
+  .proof-list span:first-child, .summary-grid .card strong, .draft-header span,
+  .content-flow p a:not([class]), .hero-grid p a:not([class]), .faq p a:not([class]), main > section.section:not(.cta) > .container > p > a:not([class]),
+  [style^="color:#C4633F" i], [style*=" color:#C4633F" i], [style*=";color:#C4633F" i],
+  [style^="color: #C4633F" i], [style*=" color: #C4633F" i], [style*=";color: #C4633F" i],
+  [style^="color: rgb(196, 99, 63)" i], [style*=" color: rgb(196, 99, 63)" i], [style*=";color: rgb(196, 99, 63)" i],
+  nav a.h0[aria-current="page"], nav a.h1[aria-current="page"]
+):not(:is(.section-alt, .about-box, .arbeitsprobe-box, .case-card) *) { color: var(--terra-on-dark) !important; }
+html body summary:not(:is(.section-alt, .about-box, .arbeitsprobe-box, .case-card) *)::after { color: var(--terra-on-dark) !important; }
+html body :is(.compare th, .table-wrap th, .wrap thead th):not(:is(.section-alt, .about-box, .arbeitsprobe-box, .case-card) *) { color: var(--terra-on-dark-soft) !important; }
+/* Codex 16.10.: halbtransparente Kopfzeile liegt beim Scrollen auch über hellen Abschnitten; dort reicht #E08A66 nicht (4,05:1), #E8956F hält 4,5:1. */
+html body :is(header, nav) :is([style*="color:#C4633F" i], [style*="color: #C4633F" i], [style*="color:#E08A66" i], a.h0[aria-current="page"], a.h1[aria-current="page"]) { color: var(--terra-on-dark-soft) !important; }
