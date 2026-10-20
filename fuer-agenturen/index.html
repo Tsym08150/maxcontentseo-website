@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sichtbarkeitsbericht für Agenturen | MaxContentSEO</title>
-<meta name="description" content="Sichtbarkeitsbericht unter Ihrem Namen für SEO-Dienstleister und Agenturen mit lokalen Kunden. Kennenlernpreis 149 Euro je Bericht für Aufträge bis 31.10.2026, ab 01.11.2026 249 Euro. Dazu ein kostenloser Probebericht über Ihre eigene Website.">
+<meta name="description" content="Sichtbarkeitsbericht unter Ihrem Namen für Agenturen mit lokalen Kunden. Kennenlernpreis 149 Euro bis 31.10.2026, danach 249 Euro. Probebericht kostenlos.">
 <link rel="canonical" href="https://maxcontentseo.de/fuer-agenturen/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://maxcontentseo.de/fuer-agenturen/">
@@ -105,6 +105,8 @@ footer{background:#1B1916;color:rgba(250,247,242,.5);padding:2.5rem clamp(1.25re
 }
 </script>
 <link rel="stylesheet" href="/assets/tap-targets.css">
+<!-- K-2 (Vollaudit 2026-10): ohne JavaScript oeffnet der Menue-Link das mobile Menue ueber :target -->
+<noscript><style>[data-burger-fallback]{display:none;}@media (max-width:950px){[data-burger]{display:none !important;}[data-burger-fallback]{display:inline-flex;}#mobilmenu:target{display:block;}}</style></noscript>
 </head>
 <body>
 <a class="mcs-skip" href="#main">Zum Inhalt springen</a>
@@ -147,10 +149,11 @@ footer{background:#1B1916;color:rgba(250,247,242,.5);padding:2.5rem clamp(1.25re
         </ul>
       </div>
       <a class="h0" href="/#preise" style="font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); text-decoration:none; padding:0.5rem 0.7rem;">Preise</a>
-      <a class="h2" href="/#kontakt" style="background:#A94F30; color:#FAF7F2; padding:0.5rem 1.2rem; border-radius:8px; text-decoration:none; font-size:0.86rem; font-weight:600; margin-left:0.75rem;">Kostenlose Erstanalyse</a>
+      <a class="h2" href="#probebericht" style="background:#A94F30; color:#FAF7F2; padding:0.5rem 1.2rem; border-radius:8px; text-decoration:none; font-size:0.86rem; font-weight:600; margin-left:0.75rem;">Kostenloser Probebericht</a>
     </div>
-    <a class="h2" data-mobile-cta="true" href="/#kontakt">Erstanalyse</a>
+    <a class="h2" data-mobile-cta="true" href="#probebericht">Probebericht</a>
     <button class="h3" data-burger="true" type="button" aria-expanded="false" aria-controls="mobilmenu" style="align-items:center; background:none; border:1px solid rgba(250,247,242,0.25); border-radius:8px; cursor:pointer; font-family:'Geist Mono', monospace; font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:#FAF7F2; padding:0.45rem 0.9rem;">Menü</button>
+    <noscript><a class="h3" data-burger-fallback="true" href="#mobilmenu" style="align-items:center; background:none; border:1px solid rgba(250,247,242,0.25); border-radius:8px; cursor:pointer; font-family:'Geist Mono', monospace; font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:#FAF7F2; padding:0.45rem 0.9rem; text-decoration:none;">Menü</a></noscript>
   </div>
   <div data-mobile-panel="true" id="mobilmenu" style="border-top:1px solid rgba(250,247,242,0.1); padding:0.5rem clamp(1.25rem,5vw,2rem) 1.25rem; max-height:calc(100vh - 64px); overflow:auto;">
     <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
@@ -188,7 +191,7 @@ footer{background:#1B1916;color:rgba(250,247,242,.5);padding:2.5rem clamp(1.25re
       </div>
     </details>
     <a href="/#preise" style="display:block; padding:0.85rem 0; font-size:0.95rem; font-weight:500; color:#FAF7F2; text-decoration:none; border-bottom:1px solid rgba(250,247,242,0.08);">Preise</a>
-    <a class="h2" href="/#kontakt" style="display:block; text-align:center; margin-top:1rem; background:#A94F30; color:#FAF7F2; padding:0.8rem 1.2rem; border-radius:8px; text-decoration:none; font-size:0.92rem; font-weight:600;">Kostenlose Erstanalyse</a>
+    <a class="h2" href="#probebericht" style="display:block; text-align:center; margin-top:1rem; background:#A94F30; color:#FAF7F2; padding:0.8rem 1.2rem; border-radius:8px; text-decoration:none; font-size:0.92rem; font-weight:600;">Kostenloser Probebericht</a>
   </div>
 </nav>
 
@@ -265,7 +268,7 @@ footer{background:#1B1916;color:rgba(250,247,242,.5);padding:2.5rem clamp(1.25re
       <img alt="" width="1190" height="1684">
     </dialog>
 
-    <section class="block card" aria-labelledby="gratis-heading">
+    <section class="block card" id="probebericht" aria-labelledby="gratis-heading">
       <h2 id="gratis-heading">Vorab kostenlos: Probebericht über Ihre eigene Website</h2>
       <p>Damit Sie wissen, was Sie bekommen, erstelle ich einmalig einen kostenlosen Probebericht über Ihre eigene Website. Es ist derselbe Bericht wie der bezahlte, nur über Ihr eigenes Unternehmen statt über einen Kunden.</p>
       <ul class="list">

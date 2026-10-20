@@ -409,7 +409,7 @@ button, input { font: inherit; }
   font-weight: 500;
 }
 
-.checkbox-field input { margin-top: 0.28rem; }
+.checkbox-field input { margin: 0; width: 24px; height: 24px; flex-shrink: 0; } /* K-7 (Vollaudit 2026-10): Trefferflaeche 24 px */
 .checkbox-field a { color: var(--accent); }
 
 .site-footer {
@@ -664,6 +664,8 @@ nav[data-mobile-open="true"] [data-mobile-panel]{display:block;}
 body{background:#26241F !important;}
 main{background:#FFFFFF;max-width:1100px;margin:clamp(1.5rem,4vw,2.75rem) auto;border-radius:16px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,0.5);border:1px solid rgba(250,247,242,0.06);}
 </style>
+<!-- K-2 (Vollaudit 2026-10): ohne JavaScript oeffnet der Menue-Link das mobile Menue ueber :target -->
+<noscript><style>[data-burger-fallback]{display:none;}@media (max-width:950px){[data-burger]{display:none !important;}[data-burger-fallback]{display:inline-flex;}#mobilmenu:target{display:block;}}</style></noscript>
 </head>
 <body>
 <a class="mcs-skip" href="#main">Zum Inhalt springen</a>
@@ -710,6 +712,7 @@ main{background:#FFFFFF;max-width:1100px;margin:clamp(1.5rem,4vw,2.75rem) auto;b
     </div>
     <a class="h2" data-mobile-cta="true" href="/#kontakt">Erstanalyse</a>
     <button class="h3" data-burger="true" type="button" aria-expanded="false" aria-controls="mobilmenu" style="align-items:center; background:none; border:1px solid rgba(250,247,242,0.25); border-radius:8px; cursor:pointer; font-family:'Geist Mono', monospace; font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:#FAF7F2; padding:0.45rem 0.9rem;">Menü</button>
+    <noscript><a class="h3" data-burger-fallback="true" href="#mobilmenu" style="align-items:center; background:none; border:1px solid rgba(250,247,242,0.25); border-radius:8px; cursor:pointer; font-family:'Geist Mono', monospace; font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:#FAF7F2; padding:0.45rem 0.9rem; text-decoration:none;">Menü</a></noscript>
   </div>
   <div data-mobile-panel="true" id="mobilmenu" style="border-top:1px solid rgba(250,247,242,0.1); padding:0.5rem clamp(1.25rem,5vw,2rem) 1.25rem; max-height:calc(100vh - 64px); overflow:auto;">
     <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
@@ -909,7 +912,7 @@ main{background:#FFFFFF;max-width:1100px;margin:clamp(1.5rem,4vw,2.75rem) auto;b
           <h2>Vollständiges Premium-Audit als kostenloses Muster anfordern</h2>
         </div>
         <form id="audit-form" action="https://formspree.io/f/mqenpryl" method="POST">
-          <input type="hidden" name="anfrage_typ" value="Audit-Muster angefordert (audit-beispiel.html)"><input type="hidden" name="_subject" value="Neue Anfrage: Audit-Muster">
+          <input type="hidden" name="anfrage_typ" value="Audit-Muster angefordert (audit-beispiel.html)"><input type="hidden" name="_subject" value="Neue Anfrage: Audit-Muster"><input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <div class="form-grid">
             <div class="form-field">
               <label for="name">Name *</label>
@@ -924,6 +927,7 @@ main{background:#FFFFFF;max-width:1100px;margin:clamp(1.5rem,4vw,2.75rem) auto;b
               <span>Ich stimme zu, dass meine Angaben zur Bearbeitung der Anfrage verarbeitet werden. Hinweise stehen in der <a href="/datenschutz.html">Datenschutzerklärung</a>.</span>
             </label>
             <button class="button-primary" type="submit">Jetzt kostenlos herunterladen</button>
+            <p id="form-error" role="alert" hidden style="margin:0;color:#C0392B;font-size:0.92rem;font-weight:600;">Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.</p>
           </div>
         </form>
       </div>
@@ -944,9 +948,18 @@ main{background:#FFFFFF;max-width:1100px;margin:clamp(1.5rem,4vw,2.75rem) auto;b
   </div>
 </footer>
   <script>
+// K-8 (Vollaudit 2026-10): Fehlermeldung im Formular statt Browser-Hinweisfenster
 document.getElementById('audit-form').addEventListener('submit', function(e) {
   e.preventDefault();
   var form = e.target;
+  var err = document.getElementById('form-error');
+  var btn = form.querySelector('button[type="submit"]');
+  if (err) err.hidden = true;
+  if (btn) btn.disabled = true;
+  function zeigeFehler() {
+    if (btn) btn.disabled = false;
+    if (err) err.hidden = false;
+  }
   fetch('https://formspree.io/f/mqenpryl', {
     method: 'POST',
     body: new FormData(form),
@@ -955,11 +968,9 @@ document.getElementById('audit-form').addEventListener('submit', function(e) {
     if (response.ok) {
       window.location.href = '/danke-muster.html';
     } else {
-      alert('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.');
+      zeigeFehler();
     }
-  }).catch(function() {
-    alert('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.');
-  });
+  }).catch(zeigeFehler);
 });
 </script>
 <script>

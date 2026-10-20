@@ -235,6 +235,8 @@ h3{font-size:1.05rem;}
 @media (max-width:900px){.hero-grid,.grid.two,.grid.three,.grid.four,.case-grid,.hero__grid,.card-grid,.summary-grid,.detail-grid,.detail-grid--two,.grid-3,.blog-grid{grid-template-columns:1fr;}.download-box{flex-direction:column;align-items:flex-start;}}
 </style>
 <link rel="stylesheet" href="/assets/tap-targets.css">
+<!-- K-2 (Vollaudit 2026-10): ohne JavaScript oeffnet der Menue-Link das mobile Menue ueber :target -->
+<noscript><style>[data-burger-fallback]{display:none;}@media (max-width:950px){[data-burger]{display:none !important;}[data-burger-fallback]{display:inline-flex;}#mobilmenu:target{display:block;}}</style></noscript>
 </head>
 <body>
 <a class="mcs-skip" href="#main">Zum Inhalt springen</a>
@@ -281,6 +283,7 @@ h3{font-size:1.05rem;}
       <a class="h2" href="/#kontakt" style="background:#A94F30; color:#FAF7F2; padding:0.5rem 1.2rem; border-radius:8px; text-decoration:none; font-size:0.86rem; font-weight:600; margin-left:0.75rem;">Kostenlose Erstanalyse</a>
     </div>
     <button class="h3" data-burger="true" type="button" aria-expanded="false" aria-controls="mobilmenu" style="align-items:center; background:none; border:1px solid rgba(250,247,242,0.25); border-radius:8px; cursor:pointer; font-family:'Geist Mono', monospace; font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:#FAF7F2; padding:0.45rem 0.9rem;">Menü</button>
+    <noscript><a class="h3" data-burger-fallback="true" href="#mobilmenu" style="align-items:center; background:none; border:1px solid rgba(250,247,242,0.25); border-radius:8px; cursor:pointer; font-family:'Geist Mono', monospace; font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:#FAF7F2; padding:0.45rem 0.9rem; text-decoration:none;">Menü</a></noscript>
   </div>
   <div data-mobile-panel="true" id="mobilmenu" style="border-top:1px solid rgba(250,247,242,0.1); padding:0.5rem clamp(1.25rem,5vw,2rem) 1.25rem; max-height:calc(100vh - 64px); overflow:auto;">
     <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
