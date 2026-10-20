@@ -32,10 +32,12 @@
 <link rel="stylesheet" href="/assets/tap-targets.css">
 </head>
 <body>
+<a class="mcs-skip" href="#main">Zum Inhalt springen</a>
+
 <header class="nf-bar">
   <a class="nf-brand" href="/">MaxContent<span>SEO</span></a>
 </header>
-<main class="nf-main">
+<main id="main" tabindex="-1" class="nf-main">
   <p class="nf-eyebrow">Fehler 404</p>
   <h1>Diese Seite gibt es nicht (mehr).</h1>
   <p>Der Link ist vielleicht veraltet oder falsch geschrieben. Von hier aus kommen Sie weiter:</p>
@@ -45,12 +47,18 @@
     <a class="nf-btn nf-btn--primary" href="/#kontakt">Kostenlose Erstanalyse</a>
   </div>
 </main>
-<footer class="nf-foot">
-  <nav aria-label="Rechtliches">
-    <a href="/impressum.html">Impressum</a>
-    <a href="/datenschutz.html">Datenschutz</a>
-  </nav>
-  <p>© 2026 MaxContentSEO · Georg Stopfer</p>
+<footer class="mcs-footer" style="background:#1B1916; color:rgba(250,247,242,0.5); padding:2.5rem clamp(1.25rem,5vw,2rem); text-align:center; font-size:0.85rem; font-weight:500;">
+  <div style="max-width:1140px; margin:0 auto;">
+    <div class="mcs-footer__links" style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem 2rem; margin-bottom:0.75rem; font-family:'Geist Mono', monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">
+      <a class="h0" href="/was-kostet-seo-kosmetikstudio/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Preise im Detail</a>
+      <a class="h0" href="/fuer-agenturen/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Für Agenturen</a>
+      <a class="h0" href="/impressum.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Impressum</a>
+      <a class="h0" href="/datenschutz.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Datenschutz</a>
+      <a class="h0" href="/ki-transparenz/" style="color:rgba(250,247,242,0.7); text-decoration:none;">KI-Transparenz</a>
+      <a class="h0" href="mailto:georg@maxcontentseo.de" style="color:rgba(250,247,242,0.7); text-decoration:none;">E-Mail</a>
+    </div>
+    <p style="margin:0;">© 2026 MaxContentSEO · Georg Stopfer</p>
+  </div>
 </footer>
 </body>
 </html>

@@ -44,7 +44,17 @@
         if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
       }
     });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenus(); });
+    // K-1 (Vollaudit 2026-10): Escape schliesst auch das mobile Menue und gibt den Fokus an den Menue-Knopf zurueck.
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      closeMenus();
+      var mnav = document.querySelector('nav[data-mobile-open="true"]');
+      if (mnav) {
+        mnav.setAttribute('data-mobile-open', 'false');
+        var mb = mnav.querySelector('[data-burger]');
+        if (mb) { mb.setAttribute('aria-expanded', 'false'); mb.focus(); }
+      }
+    });
 
     // ---- FAQ +/- Marker ----
     document.querySelectorAll('details').forEach(function (d) {
@@ -158,7 +168,8 @@
   // formspree.io/thanks); ohne JS bleibt der native POST als Fallback erhalten.
   function initForm() {
     var form = document.querySelector('form[data-kontakt-form]');
-    if (!form || !window.fetch) return;
+    // Formulare mit eigenem Versandskript (z. B. /beratung-bafa/) nicht doppelt absenden.
+    if (!form || !window.fetch || form.hasAttribute('data-eigener-versand')) return;
     function onSubmit(e) {
       e.preventDefault();
       var btn = form.querySelector('button');

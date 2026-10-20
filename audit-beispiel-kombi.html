@@ -779,13 +779,15 @@ nav[data-mobile-open="true"] [data-mobile-panel]{display:block;}
 .h1:hover{color:#FAF7F2;background:rgba(250,247,242,0.06);}
 .h2:hover{background:#8E4227;}
 .h3:hover{border-color:#FAF7F2;}
-.f0:focus{outline:none;border-color:#C4633F;}
+.f0:focus{border-color:#C4633F;}
+.f0:focus-visible{outline:2px solid #C4633F; outline-offset:2px;} /* W-1: sichtbarer Tastaturfokus (Vollaudit 2026-10) */
 /* Rahmen: dunkler B-Grund + Report als helles Dokument-Blatt */
 body{background:#26241F !important;}
 main{background:#FFFFFF;max-width:1100px;margin:clamp(1.5rem,4vw,2.75rem) auto;border-radius:16px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,0.5);border:1px solid rgba(250,247,242,0.06);}
 </style>
 </head>
 <body>
+<a class="mcs-skip" href="#main">Zum Inhalt springen</a>
   <nav data-mobile-open="false" style="position:sticky; top:0; z-index:100; background:rgba(38,36,31,0.88); backdrop-filter:blur(12px); border-bottom:1px solid rgba(250,247,242,0.1);">
   <div style="max-width:1140px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:0.9rem clamp(1.25rem,5vw,2rem);">
     <a href="/#top" style="font-weight:700; font-size:1.05rem; letter-spacing:-0.02em; color:#FAF7F2; text-decoration:none;">MaxContent<span style="color:#E8956F;">SEO</span></a>
@@ -870,7 +872,7 @@ main{background:#FFFFFF;max-width:1100px;margin:clamp(1.5rem,4vw,2.75rem) auto;b
   </div>
 </nav>
 
-  <main>
+  <main id="main" tabindex="-1">
     <section class="hero">
       <div class="container hero__copy">
         <p class="section-kicker">MaxContentSEO · Beratung für KI-Sichtbarkeit im Online-Marketing</p>
@@ -918,7 +920,7 @@ main{background:#FFFFFF;max-width:1100px;margin:clamp(1.5rem,4vw,2.75rem) auto;b
         <div class="report-prose">
           <p>Bei Google lohnt es sich, <strong>zwei Dinge getrennt</strong> zu betrachten: die Sichtbarkeit im <strong>Kartenbereich</strong> (der Block mit den Studios und der Karte ganz oben) und die <strong>organischen Treffer</strong> darunter (die klassischen blauen Links).</p>
         </div>
-        <div class="report-table-wrap">
+        <div class="report-table-wrap" tabindex="0" role="region" aria-label="Tabelle: Das Bekannte: Google (SEO)">
           <table class="report-table">
             <thead>
               <tr>
@@ -950,7 +952,7 @@ main{background:#FFFFFF;max-width:1100px;margin:clamp(1.5rem,4vw,2.75rem) auto;b
         <div class="report-prose">
           <p>Getestet habe ich zehn reale Kundenfragen auf beiden Assistenten, <strong>ChatGPT und Gemini</strong>, von der allgemeinen Recherche bis zur konkreten Buchung. Das Bild ist klar: <strong>Sobald eine Frage konkret genug ist, ist das Studio auf beiden Assistenten gleich stark präsent.</strong> Die Lücke liegt nicht zwischen den Assistenten, sondern zwischen den Phasen der Kundenreise.</p>
         </div>
-        <div class="report-table-wrap">
+        <div class="report-table-wrap" tabindex="0" role="region" aria-label="Tabelle: Das Neue: KI-Antworten (GEO) (1 von 2)">
           <table class="report-table">
             <thead>
               <tr>
@@ -970,7 +972,7 @@ main{background:#FFFFFF;max-width:1100px;margin:clamp(1.5rem,4vw,2.75rem) auto;b
           <p>Die eigene Website ist die <strong>meistzitierte Quelle im gesamten Umfeld</strong>, deutlich häufiger als jeder einzelne Wettbewerber und häufiger als die Buchungsplattform.</p>
           <p>So verteilt sich die Sichtbarkeit über die Customer Journey:</p>
         </div>
-        <div class="report-table-wrap">
+        <div class="report-table-wrap" tabindex="0" role="region" aria-label="Tabelle: Das Neue: KI-Antworten (GEO) (2 von 2)">
           <table class="report-table">
             <thead>
               <tr>
@@ -1007,7 +1009,7 @@ main{background:#FFFFFF;max-width:1100px;margin:clamp(1.5rem,4vw,2.75rem) auto;b
         </div>
 
         <h3 class="report-subhead">Die direkte Gegenüberstellung</h3>
-        <div class="report-table-wrap">
+        <div class="report-table-wrap" tabindex="0" role="region" aria-label="Tabelle: Die direkte Gegenüberstellung">
           <table class="report-table">
             <thead>
               <tr>
@@ -1058,7 +1060,7 @@ main{background:#FFFFFF;max-width:1100px;margin:clamp(1.5rem,4vw,2.75rem) auto;b
         <div class="report-prose">
           <p>Der GEO-Score fasst zusammen, wie gut ein Studio für KI-Antworten aufgestellt ist. Er entsteht aus einer Bewertung nach einem <strong>Raster aus 74 Prüfpunkten</strong>, gruppiert in die vier folgenden Dimensionen, von der technischen Lesbarkeit der Seite bis zu den Markensignalen im Netz:</p>
         </div>
-        <div class="report-table-wrap">
+        <div class="report-table-wrap" tabindex="0" role="region" aria-label="Tabelle: In KI-Antworten: die 4 Bausteine">
           <table class="report-table">
             <thead>
               <tr>
@@ -1093,7 +1095,7 @@ main{background:#FFFFFF;max-width:1100px;margin:clamp(1.5rem,4vw,2.75rem) auto;b
           <h2 class="section-title">Was zu tun ist</h2>
           <p class="section-intro">Eine gemeinsame Liste für beide Kanäle. <strong>G</strong> = soll auf Google wirken, <strong>KI</strong> = soll auf KI-Sichtbarkeit wirken. Die Zuordnung ist eine Einschätzung, keine Wirkungszusage.</p>
         </div>
-        <div class="report-table-wrap">
+        <div class="report-table-wrap" tabindex="0" role="region" aria-label="Tabelle: Was zu tun ist">
           <table class="report-table">
             <thead>
               <tr>
@@ -1159,10 +1161,11 @@ main{background:#FFFFFF;max-width:1100px;margin:clamp(1.5rem,4vw,2.75rem) auto;b
     </section>
   </main>
 
-  <footer style="background:#1B1916; color:rgba(250,247,242,0.5); padding:2.5rem clamp(1.25rem,5vw,2rem); text-align:center; font-size:0.85rem; font-weight:500;">
+  <footer class="mcs-footer" style="background:#1B1916; color:rgba(250,247,242,0.5); padding:2.5rem clamp(1.25rem,5vw,2rem); text-align:center; font-size:0.85rem; font-weight:500;">
   <div style="max-width:1140px; margin:0 auto;">
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem 2rem; margin-bottom:0.75rem; font-family:'Geist Mono', monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">
+    <div class="mcs-footer__links" style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem 2rem; margin-bottom:0.75rem; font-family:'Geist Mono', monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">
       <a class="h0" href="/was-kostet-seo-kosmetikstudio/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Preise im Detail</a>
+      <a class="h0" href="/fuer-agenturen/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Für Agenturen</a>
       <a class="h0" href="/impressum.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Impressum</a>
       <a class="h0" href="/datenschutz.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Datenschutz</a>
       <a class="h0" href="/ki-transparenz/" style="color:rgba(250,247,242,0.7); text-decoration:none;">KI-Transparenz</a>

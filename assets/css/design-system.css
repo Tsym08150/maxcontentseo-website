@@ -43,7 +43,8 @@ html { scroll-behavior: smooth; }
 .h6:focus-visible{outline:2px solid #C4633F; outline-offset:-2px;}
 .h7:hover{transform:translateY(-1px); box-shadow:0 4px 20px rgba(38,36,31,0.35);}
 .h8:hover{background:#8E4227; transform:translateY(-1px); box-shadow:0 4px 16px rgba(196,99,63,0.3);}
-.f0:focus{outline:none; border-color:#C4633F;}
+.f0:focus{border-color:#C4633F;}
+.f0:focus-visible{outline:2px solid #C4633F; outline-offset:2px;} /* W-1: sichtbarer Tastaturfokus (Vollaudit 2026-10) */
 
 /* ---- Mobiler Erstanalyse-Knopf in der Kopfzeile (nur unter 950 px, 16.10.2026) ---- */
 [data-mobile-cta] { display: none; }

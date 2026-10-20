@@ -157,7 +157,7 @@ h3{font-size:1.05rem;}
 .stack{display:flex;flex-direction:column;gap:0.9rem;align-items:flex-start;}
 .table-wrap table{width:100%;border-collapse:collapse;background:#FFFFFF;border:1px solid #E3DCCE;border-radius:12px;overflow:hidden;font-size:0.95rem;color:#26241F;}
 .table-wrap th,.table-wrap td{border-bottom:1px solid #E3DCCE;padding:0.8rem 0.95rem;text-align:left;vertical-align:top;}
-.table-wrap th{background:rgba(196,99,63,0.12);font-family:'Geist Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:#C4633F;font-weight:500;}
+.table-wrap th{background:rgba(196,99,63,0.12);font-family:'Geist Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:#8E4227;font-weight:500;}
 .measurement-note{font-size:0.9rem;color:#6E675C;margin-top:1rem;}
 .cta-box{background:#A94F30;border-radius:16px;padding:clamp(2rem,4vw,3rem);text-align:center;}
 .cta-box .stack{align-items:center;text-align:center;}
@@ -240,6 +240,7 @@ h3{font-size:1.05rem;}
 <link rel="stylesheet" href="/assets/tap-targets.css">
 </head>
 <body>
+<a class="mcs-skip" href="#main">Zum Inhalt springen</a>
   <nav data-mobile-open="false" style="position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(38,36,31,0.88); backdrop-filter:blur(12px); border-bottom:1px solid rgba(250,247,242,0.1);">
   <div style="max-width:1140px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:0.9rem clamp(1.25rem,5vw,2rem);">
     <a href="/#top" style="font-weight:700; font-size:1.05rem; letter-spacing:-0.02em; color:#FAF7F2; text-decoration:none;">MaxContent<span style="color:#C4633F;">SEO</span></a>
@@ -324,7 +325,7 @@ h3{font-size:1.05rem;}
   </div>
 </nav>
 
-  <main>
+  <main id="main" tabindex="-1">
     <section class="page-hero">
       <div class="container">
         <h1 class="page-hero__title">KI-Transparenz und Redaktionsprozess</h1>
@@ -380,10 +381,11 @@ h3{font-size:1.05rem;}
     </section>
   </main>
 
-  <footer style="background:#1B1916; color:rgba(250,247,242,0.5); padding:2.5rem clamp(1.25rem,5vw,2rem); text-align:center; font-size:0.85rem; font-weight:500;">
+  <footer class="mcs-footer" style="background:#1B1916; color:rgba(250,247,242,0.5); padding:2.5rem clamp(1.25rem,5vw,2rem); text-align:center; font-size:0.85rem; font-weight:500;">
   <div style="max-width:1140px; margin:0 auto;">
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem 2rem; margin-bottom:0.75rem; font-family:'Geist Mono', monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">
+    <div class="mcs-footer__links" style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem 2rem; margin-bottom:0.75rem; font-family:'Geist Mono', monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">
       <a class="h0" href="/was-kostet-seo-kosmetikstudio/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Preise im Detail</a>
+      <a class="h0" href="/fuer-agenturen/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Für Agenturen</a>
       <a class="h0" href="/impressum.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Impressum</a>
       <a class="h0" href="/datenschutz.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Datenschutz</a>
       <a class="h0" href="/ki-transparenz/" style="color:rgba(250,247,242,0.7); text-decoration:none;">KI-Transparenz</a>

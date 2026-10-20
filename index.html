@@ -176,6 +176,7 @@
 <link rel="stylesheet" href="/assets/tap-targets.css">
 </head>
 <body>
+<a class="mcs-skip" href="#main">Zum Inhalt springen</a>
 
 <nav data-mobile-open="false" style="position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(38,36,31,0.88); backdrop-filter:blur(12px); border-bottom:1px solid rgba(250,247,242,0.1);">
   <div style="max-width:1140px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:0.9rem clamp(1.25rem,5vw,2rem);">
@@ -261,7 +262,7 @@
   </div>
 </nav>
 
-<main>
+<main id="main" tabindex="-1">
 
 <header id="top" style="padding:clamp(8rem,14vw,11rem) clamp(1.25rem,5vw,2rem) clamp(3.5rem,6vw,5.5rem); position:relative; overflow:hidden;">
   <div style="position:absolute; inset:0; background:radial-gradient(ellipse 70% 50% at 50% 0%, rgba(92,113,96,0.18), transparent 70%); pointer-events:none;"></div>
@@ -396,7 +397,7 @@
               <div style="height:8px; width:85%; background:#E3DCCE; border-radius:3px;"></div>
             </div>
           </div>
-          <div aria-hidden="true" style="text-align:center; font-family:'Geist Mono', monospace; font-size:0.8rem; color:#B5AE9E; letter-spacing:0.3em;">···</div>
+          <div aria-hidden="true" style="text-align:center; font-family:'Geist Mono', monospace; font-size:0.8rem; color:#7A7466; letter-spacing:0.3em;">···</div>
           <div style="display:flex; gap:1rem; align-items:center; border:1px dashed #C4633F; border-radius:10px; padding:0.9rem 1rem; background:rgba(196,99,63,0.05);">
             <span style="font-family:'Geist Mono', monospace; font-size:0.75rem; color:#A94F30;">38.</span>
             <div style="flex:1;">
@@ -725,9 +726,9 @@
 
 </main>
 
-<footer style="background:#1B1916; color:rgba(250,247,242,0.5); padding:2.5rem clamp(1.25rem,5vw,2rem); text-align:center; font-size:0.85rem; font-weight:500;">
+<footer class="mcs-footer" style="background:#1B1916; color:rgba(250,247,242,0.5); padding:2.5rem clamp(1.25rem,5vw,2rem); text-align:center; font-size:0.85rem; font-weight:500;">
   <div style="max-width:1140px; margin:0 auto;">
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem 2rem; margin-bottom:0.75rem; font-family:'Geist Mono', monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">
+    <div class="mcs-footer__links" style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem 2rem; margin-bottom:0.75rem; font-family:'Geist Mono', monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">
       <a class="h0" href="/was-kostet-seo-kosmetikstudio/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Preise im Detail</a>
       <a class="h0" href="/fuer-agenturen/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Für Agenturen</a>
       <a class="h0" href="/impressum.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Impressum</a>
@@ -739,7 +740,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/redesign.js?v=20260710" defer></script>
+<script src="/assets/js/redesign.js?v=20261020" defer></script>
 <script src="/assets/js/funnel.js" defer></script>
 </body>
 </html>

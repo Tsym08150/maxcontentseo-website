@@ -79,7 +79,8 @@ h3{font-size:1.05rem;}
 .section-alt .answer{background:#F3E7E0;color:#3A2F2A;}
 .check-list{padding-left:1.2rem;margin:0.5rem 0;}
 .check-list li{margin:0.45rem 0;}
-.table-wrap{overflow-x:auto;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+.stack > .table-wrap{align-self:stretch;min-width:0;}
 .compare{width:100%;border-collapse:collapse;background:#2E332B;border:1px solid rgba(250,247,242,0.12);border-radius:12px;overflow:hidden;font-size:0.92rem;}
 .section-alt .compare{background:#FFFFFF;border-color:#E3DCCE;}
 .compare th,.compare td{border-bottom:1px solid rgba(250,247,242,0.1);padding:0.8rem 0.95rem;text-align:left;vertical-align:top;}
@@ -268,6 +269,7 @@ h3{font-size:1.05rem;}
 <link rel="stylesheet" href="/assets/tap-targets.css">
 </head>
 <body>
+<a class="mcs-skip" href="#main">Zum Inhalt springen</a>
   <nav data-mobile-open="false" style="position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(38,36,31,0.88); backdrop-filter:blur(12px); border-bottom:1px solid rgba(250,247,242,0.1);">
   <div style="max-width:1140px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:0.9rem clamp(1.25rem,5vw,2rem);">
     <a href="/#top" style="font-weight:700; font-size:1.05rem; letter-spacing:-0.02em; color:#FAF7F2; text-decoration:none;">MaxContent<span style="color:#C4633F;">SEO</span></a>
@@ -352,7 +354,7 @@ h3{font-size:1.05rem;}
   </div>
 </nav>
 
-  <main>
+  <main id="main" tabindex="-1">
     <div class="container breadcrumb" aria-label="Breadcrumb">
       <a href="/">Startseite</a> / <a href="./">Referenzen</a> / LingQi
     </div>
@@ -519,7 +521,7 @@ h3{font-size:1.05rem;}
           <h2 class="section-title">Verbindlicher Messstandard</h2>
           <p class="section-intro">Alle Vorher/Nachher-Vergleiche basieren ausschließlich auf Google Search Console: Ø-Position impressionsgewichtet, Zeitfenster 3 Monate. Keine geschätzten Besucherzahlen, keine Tool-Momentaufnahmen als Vergleichsbasis.</p>
         </div>
-        <div class="table-wrap">
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Tabelle: Verbindlicher Messstandard">
           <table>
             <thead>
               <tr>
@@ -576,10 +578,11 @@ h3{font-size:1.05rem;}
     </section>
   </main>
 
-  <footer style="background:#1B1916; color:rgba(250,247,242,0.5); padding:2.5rem clamp(1.25rem,5vw,2rem); text-align:center; font-size:0.85rem; font-weight:500;">
+  <footer class="mcs-footer" style="background:#1B1916; color:rgba(250,247,242,0.5); padding:2.5rem clamp(1.25rem,5vw,2rem); text-align:center; font-size:0.85rem; font-weight:500;">
   <div style="max-width:1140px; margin:0 auto;">
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem 2rem; margin-bottom:0.75rem; font-family:'Geist Mono', monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">
+    <div class="mcs-footer__links" style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem 2rem; margin-bottom:0.75rem; font-family:'Geist Mono', monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">
       <a class="h0" href="/was-kostet-seo-kosmetikstudio/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Preise im Detail</a>
+      <a class="h0" href="/fuer-agenturen/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Für Agenturen</a>
       <a class="h0" href="/impressum.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Impressum</a>
       <a class="h0" href="/datenschutz.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Datenschutz</a>
       <a class="h0" href="/ki-transparenz/" style="color:rgba(250,247,242,0.7); text-decoration:none;">KI-Transparenz</a>

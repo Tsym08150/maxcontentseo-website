@@ -285,6 +285,8 @@ h3{font-size:1.05rem;}
 <link rel="stylesheet" href="/assets/tap-targets.css">
 </head>
 <body>
+<a class="mcs-skip" href="#main">Zum Inhalt springen</a>
+
 <nav data-mobile-open="false" style="position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(38,36,31,0.88); backdrop-filter:blur(12px); border-bottom:1px solid rgba(250,247,242,0.1);">
   <div style="max-width:1140px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:0.9rem clamp(1.25rem,5vw,2rem);">
     <a href="/#top" style="font-weight:700; font-size:1.05rem; letter-spacing:-0.02em; color:#FAF7F2; text-decoration:none;">MaxContent<span style="color:#C4633F;">SEO</span></a>
@@ -368,7 +370,7 @@ h3{font-size:1.05rem;}
     <a class="h2" href="/#kontakt" style="display:block; text-align:center; margin-top:1rem; background:#A94F30; color:#FAF7F2; padding:0.8rem 1.2rem; border-radius:8px; text-decoration:none; font-size:0.92rem; font-weight:600;">Kostenlose Erstanalyse</a>
   </div>
 </nav>
-<main>
+<main id="main" tabindex="-1">
   <section class="hero">
     <div class="container">
       <div>
@@ -473,9 +475,9 @@ h3{font-size:1.05rem;}
     <div class="container">
       <h2 class="section-title">Wie ergänzt GEO die klassische SEO-Prüfung?</h2>
       <div class="answer">Die SEO-Prüfung betrachtet klassische Google-Rankingfaktoren: Keywords, Technik, Inhalte und lokale Signale. Die GEO-Prüfung betrachtet, ob KI-Crawler Zugriff haben, ob Schema Markup und llms.txt vorhanden sind, und ob das Studio in KI-Antworten erscheint. Beides steckt im SEO+GEO-Kombi-Audit für 499 €.</div>
-      <div class="table-wrap">
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Tabelle: Wie ergänzt GEO die klassische SEO-Prüfung?">
         <table class="compare">
-          <thead><tr><th></th><th>SEO-Prüfung</th><th>GEO-Prüfung</th></tr></thead>
+          <thead><tr><th scope="col"><span class="mcs-sr">Merkmal</span></th><th>SEO-Prüfung</th><th>GEO-Prüfung</th></tr></thead>
           <tbody>
             <tr><td>Ziel</td><td>Google-Rankings</td><td>KI-Empfehlungen</td></tr>
             <tr><td>Prüft</td><td>Keywords, Technik, Inhalte</td><td>Crawler-Zugriff, Schema, GBP, Entity</td></tr>
@@ -553,10 +555,11 @@ h3{font-size:1.05rem;}
     </div>
   </section>
 </main>
-<footer style="background:#1B1916; color:rgba(250,247,242,0.5); padding:2.5rem clamp(1.25rem,5vw,2rem); text-align:center; font-size:0.85rem; font-weight:500;">
+<footer class="mcs-footer" style="background:#1B1916; color:rgba(250,247,242,0.5); padding:2.5rem clamp(1.25rem,5vw,2rem); text-align:center; font-size:0.85rem; font-weight:500;">
   <div style="max-width:1140px; margin:0 auto;">
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem 2rem; margin-bottom:0.75rem; font-family:'Geist Mono', monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">
+    <div class="mcs-footer__links" style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem 2rem; margin-bottom:0.75rem; font-family:'Geist Mono', monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">
       <a class="h0" href="/was-kostet-seo-kosmetikstudio/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Preise im Detail</a>
+      <a class="h0" href="/fuer-agenturen/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Für Agenturen</a>
       <a class="h0" href="/impressum.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Impressum</a>
       <a class="h0" href="/datenschutz.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Datenschutz</a>
       <a class="h0" href="/ki-transparenz/" style="color:rgba(250,247,242,0.7); text-decoration:none;">KI-Transparenz</a>
