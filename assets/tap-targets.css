@@ -68,8 +68,10 @@ main#main:focus { outline: none; }
 }
 /* W-4: scrollbare Tabellen per Tastatur erreichbar, Fokus sichtbar */
 .table-wrap[tabindex]:focus-visible,
-.report-table-wrap[tabindex]:focus-visible { outline: 2px solid #C4633F; outline-offset: 2px; }
-/* Fusszeile am Handy: Antippflaeche bleibt 44 px, Links zweispaltig, Abstaende gestrafft */
+.report-table-wrap[tabindex]:focus-visible,
+.article-body table[tabindex]:focus-visible { outline: 2px solid #C4633F; outline-offset: 2px; }
+/* Fusszeile: Antippflaeche bleibt 44 px (min-height), ohne zusaetzliches Innenpolster; am Handy zweispaltig */
+.mcs-footer__links a { padding-block: 0; }
 @media (max-width: 600px) {
   footer.mcs-footer { padding-top: 1.25rem !important; padding-bottom: 1.25rem !important; }
   .mcs-footer__links {
@@ -78,5 +80,5 @@ main#main:focus { outline: none; }
     gap: 0 0.75rem !important;
     margin-bottom: 0.35rem !important;
   }
-  .mcs-footer__links a { justify-content: center; padding-block: 0; }
+  .mcs-footer__links a { justify-content: center; }
 }
