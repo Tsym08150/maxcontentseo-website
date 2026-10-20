@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ENTWURF: nicht in Sitemap, Navigation oder Blog-Übersicht eintragen. noindex vor Veröffentlichung entfernen. -->
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico">
+<title>KI-Antworten über Monate: eine Messreihe | MaxContentSEO</title>
+<meta name="description" content="Dieselben zehn Fragen an ChatGPT und Gemini am 03.10., 03.11. und 03.12.2026: wie die Messreihe aufgebaut ist und warum eine Messung eine Momentaufnahme ist.">
+<link rel="canonical" href="https://maxcontentseo.de/blog/entwurf-messreihe-ki-sichtbarkeit.html">
+<meta property="og:title" content="KI-Antworten über Monate: eine Messreihe | MaxContentSEO">
+<meta property="og:description" content="Dieselben zehn Fragen an ChatGPT und Gemini am 03.10., 03.11. und 03.12.2026: wie die Messreihe aufgebaut ist und warum eine Messung eine Momentaufnahme ist.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://maxcontentseo.de/blog/entwurf-messreihe-ki-sichtbarkeit.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KI-Antworten über Monate: eine Messreihe | MaxContentSEO">
+<meta name="twitter:description" content="Dieselben zehn Fragen an ChatGPT und Gemini am 03.10., 03.11. und 03.12.2026: wie die Messreihe aufgebaut ist und warum eine Messung eine Momentaufnahme ist.">
+<meta property="og:image" content="https://maxcontentseo.de/assets/og-logo.png">
+<link rel="preload" href="/assets/fonts/lora-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/design-system.css">
+<style>
+/* Variante-B-System (Unterseite): Basis/Fonts/Nav-Verhalten aus /assets/css/design-system.css
+   + /assets/js/redesign.js. Hier nur seitenspezifische Content-Komponenten auf B-Tokens gemappt
+   (Lora Headlines · Figtree Text · Geist Mono Labels · #26241F Basis · #C4633F Terracotta). */
+.container{max-width:1140px;margin:0 auto;padding:0 clamp(1.25rem,5vw,2rem);}
+img{display:block;max-width:100%;}
+.section{padding:clamp(4rem,8vw,7rem) 0;}
+.section-alt{background:#FAF7F2;color:#26241F;}
+.section p{color:rgba(250,247,242,0.72);}
+.section-alt p{color:#6E675C;}
+main a{color:#C4633F;}
+main a:hover{color:#A94F30;}
+.eyebrow,.hero__eyebrow{display:inline-block;font-family:'Geist Mono',monospace;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:#C4633F;font-weight:500;margin:0 0 0.9rem;padding:0;background:none;}
+.section-title{font-family:'Lora',Georgia,serif;font-size:clamp(1.9rem,3.5vw,2.7rem);line-height:1.15;font-weight:600;letter-spacing:-0.02em;margin:0 0 1.25rem;}
+h2,h3{font-family:'Lora',Georgia,serif;font-weight:600;letter-spacing:-0.01em;}
+h3{font-size:1.05rem;}
+.hero h1{font-family:'Lora',Georgia,serif;font-size:clamp(2.6rem,6vw,4.2rem);line-height:1.06;font-weight:600;letter-spacing:-0.03em;margin:0 0 1.5rem;}
+.lead{font-size:1.15rem;font-weight:500;color:rgba(250,247,242,0.7);max-width:640px;margin:0 0 1.25rem;}
+.hero{padding:clamp(8rem,14vw,10.5rem) 0 clamp(3.5rem,6vw,5rem);position:relative;overflow:hidden;}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 30% 0%,rgba(92,113,96,0.16),transparent 70%);pointer-events:none;}
+.hero>.container{position:relative;}
+.hero p{color:rgba(250,247,242,0.7);max-width:680px;}
+.hero .button{margin-top:1rem;}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:0.4rem;background:#A94F30;color:#FAF7F2 !important;padding:0.85rem 1.7rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:1rem;border:1px solid #A94F30;transition:all 0.25s;min-height:44px;}
+.button:hover{background:#8E4227;border-color:#8E4227;transform:translateY(-1px);box-shadow:0 4px 20px rgba(196,99,63,0.35);}
+.text-link{font-weight:600;color:#C4633F !important;text-decoration:none;}
+.text-link:hover{color:#A94F30 !important;}
+.content-flow{max-width:820px;}
+.content-flow > * + *{margin-top:1.05rem;}
+.content-flow .section-title{margin-bottom:1.25rem;}
+.list{padding-left:1.25rem;margin:0.4rem 0;}
+.list li{margin:0.55rem 0;}
+.note{font-size:0.9rem;line-height:1.6;color:rgba(250,247,242,0.55);margin-top:1rem;}
+.section-alt .note{color:#8A8175;}
+.keyword-line{font-family:'Geist Mono',monospace;font-size:0.9rem;line-height:1.9;letter-spacing:0.01em;color:rgba(250,247,242,0.85);}
+.section-alt .keyword-line{color:#4A443C;}
+.grid{display:grid;gap:1.1rem;}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr));}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr));}
+.grid.four{grid-template-columns:repeat(4,minmax(0,1fr));}
+.card{border:1px solid rgba(250,247,242,0.1);border-radius:14px;background:#2E332B;color:#FAF7F2;padding:1.6rem;transition:border-color 0.25s;}
+.card:hover{border-color:#C4633F;}
+.card h2,.card h3{margin-top:0;font-size:1.05rem;}
+.card p{color:rgba(250,247,242,0.65);}
+.section-alt .card{background:#FFFFFF;border-color:#E3DCCE;color:#26241F;}
+.section-alt .card p{color:#6E675C;}
+.card .number{display:inline-block;font-family:'Geist Mono',monospace;font-size:0.85rem;font-weight:500;letter-spacing:0.05em;color:#C4633F;margin-bottom:0.6rem;}
+.price-list{display:grid;gap:0.85rem;margin:0.5rem 0 0;}
+.price-item{border:1px solid rgba(250,247,242,0.1);border-radius:12px;background:#2E332B;color:#FAF7F2;padding:1.15rem 1.35rem;}
+.price-item h3{margin:0 0 0.35rem;font-size:1rem;}
+.price-item p{margin:0;color:rgba(250,247,242,0.65);font-size:0.95rem;}
+.section-alt .price-item{background:#FFFFFF;border-color:#E3DCCE;color:#26241F;}
+.section-alt .price-item p{color:#6E675C;}
+.branch-links{margin-top:1.75rem;padding-top:1.25rem;border-top:1px solid rgba(250,247,242,0.14);}
+.section-alt .branch-links{border-top-color:#E3DCCE;}
+.link-row{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:0.7rem;}
+.link-row a{border:1px solid rgba(250,247,242,0.22);border-radius:999px;padding:0.5rem 1rem;text-decoration:none;font-family:'Geist Mono',monospace;font-size:0.78rem;letter-spacing:0.03em;color:rgba(250,247,242,0.8) !important;}
+.link-row a:hover{border-color:#C4633F;color:#FAF7F2 !important;}
+.section-alt .link-row a{border-color:#D9CFBE;color:#4A443C !important;}
+.section-alt .link-row a:hover{border-color:#C4633F;color:#26241F !important;}
+.answer{border-left:3px solid #C4633F;border-radius:0 12px 12px 0;padding:1.1rem 1.25rem;margin:1rem 0;background:rgba(196,99,63,0.13);color:rgba(250,247,242,0.9);}
+.section-alt .answer{background:#F3E7E0;color:#3A2F2A;}
+.check-list{padding-left:1.2rem;margin:0.5rem 0;}
+.check-list li{margin:0.45rem 0;}
+.table-wrap{overflow-x:auto;}
+.compare{width:100%;border-collapse:collapse;background:#2E332B;border:1px solid rgba(250,247,242,0.12);border-radius:12px;overflow:hidden;font-size:0.92rem;}
+.section-alt .compare{background:#FFFFFF;border-color:#E3DCCE;}
+.compare th,.compare td{border-bottom:1px solid rgba(250,247,242,0.1);padding:0.8rem 0.95rem;text-align:left;vertical-align:top;}
+.section-alt .compare th,.section-alt .compare td{border-color:#E3DCCE;}
+.compare th{background:rgba(196,99,63,0.14);font-family:'Geist Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:#C4633F;font-weight:500;}
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.6rem;margin-top:2rem;}
+.trust span,.pill{display:inline-block;border:1px solid rgba(250,247,242,0.18);border-radius:999px;padding:0.55rem 0.85rem;font-family:'Geist Mono',monospace;font-weight:500;font-size:0.72rem;letter-spacing:0.03em;color:rgba(250,247,242,0.72);text-align:center;}
+.section-alt .pill{border-color:#D9CFBE;color:#6E675C;}
+.cta{background:#A94F30;color:#FAF7F2;}
+.cta .section-title,.cta h2{color:#FAF7F2;}
+.cta p{color:rgba(250,247,242,0.92) !important;margin:0.6rem 0;}
+.cta .button{background:#26241F;color:#FAF7F2 !important;border-color:#26241F;margin-top:1rem;}
+.cta .button:hover{background:#1B1916;border-color:#1B1916;}
+.cta a:not(.button){color:#FAF7F2 !important;text-decoration:underline;}
+.faq details{border-bottom:1px solid rgba(250,247,242,0.12);padding:1.15rem 0;}
+.section-alt .faq details{border-bottom-color:#E3DCCE;}
+.faq summary{font-family:'Lora',Georgia,serif;font-weight:600;font-size:1rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:'+';font-family:'Geist Mono',monospace;color:#C4633F;font-size:1.2rem;line-height:1;flex-shrink:0;}
+.faq details[open] summary::after{content:'\2212';}
+.faq p{margin:0.75rem 0 0;}
+/* --- Cases (page-hero / case-card / section-head) --- */
+.page-hero{padding:clamp(8rem,13vw,10rem) 0 clamp(3rem,6vw,4.5rem);position:relative;overflow:hidden;}
+.page-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 30% 0%,rgba(92,113,96,0.16),transparent 70%);pointer-events:none;}
+.page-hero>.container{position:relative;}
+.page-hero__title{font-family:'Lora',Georgia,serif;font-size:clamp(2.4rem,5.5vw,3.8rem);line-height:1.07;font-weight:600;letter-spacing:-0.03em;margin:0 0 1.25rem;}
+.page-hero__lead{font-size:1.15rem;font-weight:500;color:rgba(250,247,242,0.7);max-width:660px;margin:0;}
+.section-head{margin:0 0 2rem;}
+.section-head .eyebrow,.section-head .pill{margin-bottom:0.9rem;}
+.section-intro{font-size:1.05rem;color:rgba(250,247,242,0.72);max-width:680px;margin:0.5rem 0 0;}
+.section-alt .section-intro{color:#6E675C;}
+.case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;}
+.case-card{display:flex;flex-direction:column;border:1px solid #E3DCCE;border-radius:16px;background:#FFFFFF;overflow:hidden;transition:border-color 0.25s,box-shadow 0.25s;}
+.case-card:hover{border-color:#C4633F;box-shadow:0 10px 30px rgba(38,36,31,0.1);}
+.case-card__media{aspect-ratio:16/9;background:#F2ECE1;overflow:hidden;}
+.case-card__media img{width:100%;height:100%;object-fit:cover;}
+.case-card__placeholder{width:100%;height:100%;background:repeating-linear-gradient(45deg,#F2ECE1,#F2ECE1 12px,#EAE2D3 12px,#EAE2D3 24px);}
+.case-card__body{padding:1.5rem;display:flex;flex-direction:column;gap:0.7rem;flex:1;}
+.case-card__meta{display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;}
+.case-card__meta span{font-family:'Geist Mono',monospace;font-size:0.72rem;letter-spacing:0.04em;color:#8A8175;}
+.case-card__title{font-family:'Lora',Georgia,serif;font-size:1.25rem;font-weight:600;margin:0;color:#26241F;}
+.case-card__body p{color:#6E675C;margin:0;flex:1;}
+.button-primary{display:inline-flex;align-items:center;justify-content:center;gap:0.4rem;background:#A94F30;color:#FAF7F2 !important;padding:0.8rem 1.6rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.95rem;border:1px solid #A94F30;transition:all 0.25s;min-height:44px;}
+.button-primary:hover{background:#8E4227;border-color:#8E4227;transform:translateY(-1px);box-shadow:0 4px 20px rgba(196,99,63,0.35);}
+.button-secondary{display:inline-flex;align-items:center;justify-content:center;gap:0.4rem;background:transparent;color:#C4633F !important;padding:0.8rem 1.6rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.95rem;border:1px solid #C4633F;transition:all 0.25s;min-height:44px;}
+.button-secondary:hover{background:#A94F30;color:#FAF7F2 !important;}
+/* --- Case-Detail (lingqi): breadcrumb / hero__grid / summary / detail / callout / table / cta-box --- */
+.breadcrumb{padding:clamp(6rem,10vw,7.5rem) 0 0;font-family:'Geist Mono',monospace;font-size:0.75rem;letter-spacing:0.04em;color:rgba(250,247,242,0.55);}
+.breadcrumb a{color:rgba(250,247,242,0.7) !important;text-decoration:none;}
+.breadcrumb a:hover{color:#C4633F !important;}
+.breadcrumb + .hero{padding-top:clamp(1.25rem,2.5vw,2rem);}
+.hero__grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,0.7fr);gap:clamp(2rem,5vw,4rem);align-items:center;}
+.hero__copy{min-width:0;}
+.hero__title{font-family:'Lora',Georgia,serif;font-size:clamp(2.4rem,5.5vw,3.8rem);line-height:1.07;font-weight:600;letter-spacing:-0.03em;margin:0.4rem 0 1.25rem;}
+.hero__lead{font-size:1.12rem;font-weight:500;color:rgba(250,247,242,0.72);max-width:640px;margin:0 0 1rem;}
+.hero__copy .button-primary,.hero__copy .button-secondary{margin:1rem 0.6rem 0 0;}
+.hero-card{border:1px solid rgba(250,247,242,0.12);border-radius:16px;background:#2E332B;padding:0.85rem;}
+.hero-card__image{border-radius:12px;width:100%;object-fit:cover;display:block;}
+.card-grid{display:grid;gap:1.25rem;grid-template-columns:repeat(3,minmax(0,1fr));}
+.summary-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+.summary-grid .card strong{display:block;font-family:'Lora',Georgia,serif;font-size:2.1rem;font-weight:600;line-height:1;letter-spacing:-0.02em;color:#C4633F;margin-bottom:0.35rem;}
+.summary-grid .card h3{font-family:'Geist Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#8A8175;margin:0 0 0.5rem;}
+.detail-grid{display:grid;gap:1.25rem;grid-template-columns:repeat(3,minmax(0,1fr));}
+.detail-grid--two{grid-template-columns:repeat(2,minmax(0,1fr));}
+.text-block{border:1px solid rgba(250,247,242,0.1);border-radius:14px;background:#2E332B;color:#FAF7F2;padding:1.5rem;}
+.section-alt .text-block{background:#FFFFFF;border-color:#E3DCCE;color:#26241F;}
+.text-block h3{margin:0 0 0.75rem;font-size:1.05rem;}
+.text-block p{color:rgba(250,247,242,0.68);margin:0;}
+.section-alt .text-block p{color:#6E675C;}
+.callout,.text-block.callout{border-left:3px solid #C4633F;background:rgba(196,99,63,0.13);}
+.section-alt .callout,.section-alt .text-block.callout{background:#F3E7E0;border-color:#C4633F;}
+.detail-list{margin:0;padding-left:1.2rem;}
+.detail-list li{margin:0.5rem 0;color:rgba(250,247,242,0.68);}
+.section-alt .detail-list li{color:#6E675C;}
+.stack{display:flex;flex-direction:column;gap:0.9rem;align-items:flex-start;}
+.table-wrap table{width:100%;border-collapse:collapse;background:#FFFFFF;border:1px solid #E3DCCE;border-radius:12px;overflow:hidden;font-size:0.95rem;color:#26241F;}
+.table-wrap th,.table-wrap td{border-bottom:1px solid #E3DCCE;padding:0.8rem 0.95rem;text-align:left;vertical-align:top;}
+.table-wrap th{background:rgba(196,99,63,0.12);font-family:'Geist Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:#C4633F;font-weight:500;}
+.measurement-note{font-size:0.9rem;color:#8A8175;margin-top:1rem;}
+.cta-box{background:#A94F30;border-radius:16px;padding:clamp(2rem,4vw,3rem);text-align:center;}
+.cta-box .stack{align-items:center;text-align:center;}
+.cta-box .section-title,.cta-box h2{color:#FAF7F2;}
+.cta-box .section-intro,.cta-box p{color:rgba(250,247,242,0.92);}
+.cta-box .button-primary{background:#26241F;border-color:#26241F;}
+.cta-box .button-primary:hover{background:#1B1916;border-color:#1B1916;}
+/* --- KI-Sichtbarkeits-Check (Formular-Seite) --- */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(330px,0.78fr);gap:clamp(2rem,4vw,3rem);align-items:start;}
+.hero .lead,.hero-grid .lead{color:rgba(250,247,242,0.72);}
+.proof-list{display:grid;gap:0.7rem;margin:1.6rem 0 0;padding:0;list-style:none;color:rgba(250,247,242,0.8);}
+.proof-list li{display:flex;gap:0.65rem;align-items:flex-start;}
+.proof-list span:first-child{color:#C4633F;font-weight:700;}
+.form-card{background:#FFFFFF;border:1px solid #E3DCCE;border-radius:14px;box-shadow:0 18px 50px rgba(20,18,15,0.28);padding:1.6rem;color:#26241F;}
+.form-card h2{font-family:'Lora',Georgia,serif;margin:0 0 0.4rem;font-size:1.4rem;line-height:1.2;color:#26241F;}
+.form-card .muted{color:#6E675C;margin:0 0 1.1rem;}
+.form-grid{display:grid;gap:0.9rem;}
+.field label{display:block;font-weight:600;font-size:0.85rem;margin-bottom:0.35rem;color:#26241F;}
+.field input,.field textarea{width:100%;border:1px solid #CBC7BD;border-radius:8px;padding:0.7rem 0.8rem;font:inherit;background:#fff;color:#26241F;}
+.field input:focus,.field textarea:focus{outline:none;border-color:#C4633F;box-shadow:0 0 0 3px rgba(196,99,63,0.15);}
+.field .muted{color:#8A8175;font-weight:400;}
+.consent{display:flex;gap:0.6rem;align-items:flex-start;font-size:0.82rem;color:#6E675C;}
+.consent input{margin-top:0.25rem;}
+.consent a{color:#C4633F;}
+.hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}
+.form-card .button-primary{width:100%;}
+.form-note{font-size:0.82rem;color:#8A8175;margin:0.8rem 0 0;}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.15rem;margin-top:1.5rem;}
+.info-card{background:#2E332B;border:1px solid rgba(250,247,242,0.1);border-radius:14px;padding:1.4rem;color:#FAF7F2;}
+.section-alt .info-card{background:#FFFFFF;border-color:#E3DCCE;color:#26241F;}
+.info-card h3{margin:0 0 0.6rem;font-size:1.1rem;}
+.info-card p{margin:0;color:rgba(250,247,242,0.68);}
+.section-alt .info-card p{color:#6E675C;}
+.check-list{list-style:none;padding:0;margin:1.4rem 0 0;display:grid;gap:0.7rem;}
+.check-list li{background:#2E332B;border:1px solid rgba(250,247,242,0.1);border-radius:12px;padding:0.9rem 1.1rem;color:rgba(250,247,242,0.85);margin:0;}
+.section-alt .check-list li{background:#FFFFFF;border-color:#E3DCCE;color:#26241F;}
+.about-box,.legal-box,.download-box{background:#2E332B;border:1px solid rgba(250,247,242,0.1);border-radius:14px;padding:1.6rem;color:#FAF7F2;}
+.section-alt .about-box,.section-alt .legal-box,.section-alt .download-box{background:#FFFFFF;border-color:#E3DCCE;color:#26241F;}
+.about-box p,.legal-box p,.legal-box li{color:rgba(250,247,242,0.75);}
+.section-alt .about-box p,.section-alt .legal-box p,.section-alt .legal-box li{color:#4A443C;}
+.download-box{display:flex;justify-content:space-between;align-items:center;gap:1.25rem;}
+.download-box h2{margin:0 0 0.4rem;}
+.download-box a{font-weight:600;color:#C4633F !important;white-space:nowrap;}
+.links-row{display:flex;gap:0.9rem;flex-wrap:wrap;margin-top:1.1rem;}
+.links-row a{font-weight:600;color:#C4633F !important;}
+.faq .answer{border:0;background:none;border-radius:0;padding:0.6rem 0 0;margin:0;color:rgba(250,247,242,0.68);}
+.section-alt .faq .answer{color:#6E675C;}
+/* --- Blog-Index (page-hero__content / blog-grid / blog-card) --- */
+.page-hero__content{max-width:760px;}
+.page-title{font-family:'Lora',Georgia,serif;font-size:clamp(2.4rem,5.5vw,3.8rem);line-height:1.07;font-weight:600;letter-spacing:-0.03em;margin:0 0 1.25rem;}
+.page-lead{font-size:1.15rem;font-weight:500;color:rgba(250,247,242,0.7);max-width:660px;margin:0;}
+.blog-grid{display:grid;grid-template-columns:repeat(2,minmax(0,480px));justify-content:center;gap:1.5rem;}
+.blog-card{display:flex;flex-direction:column;border:1px solid rgba(250,247,242,0.12);border-radius:16px;background:#2E332B;overflow:hidden;text-decoration:none;color:#FAF7F2;transition:border-color 0.25s,box-shadow 0.25s,transform 0.25s;}
+.blog-card:hover{border-color:#C4633F;transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,0.35);}
+.blog-card__media{aspect-ratio:16/9;background:#26241F;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.blog-card__media img{width:100%;height:100%;object-fit:cover;}
+.blog-card__media--contain img{object-fit:contain;padding:0.75rem;}
+.blog-card__body{padding:1.4rem;display:flex;flex-direction:column;gap:0.6rem;}
+.blog-card__tag{align-self:flex-start;font-family:'Geist Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:#C4633F;border:1px solid rgba(196,99,63,0.4);border-radius:999px;padding:0.3rem 0.7rem;}
+.blog-card__body h2{font-family:'Lora',Georgia,serif;font-size:1.25rem;font-weight:600;margin:0;color:#FAF7F2;}
+.blog-card__body p{margin:0;color:rgba(250,247,242,0.65);}
+[aria-current="page"]{color:#C4633F !important;}
+@media (max-width:900px){.hero-grid,.grid.two,.grid.three,.grid.four,.case-grid,.hero__grid,.card-grid,.summary-grid,.detail-grid,.detail-grid--two,.grid-3,.blog-grid{grid-template-columns:1fr;}.download-box{flex-direction:column;align-items:flex-start;}}
+</style>
+<link rel="stylesheet" href="/assets/tap-targets.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://maxcontentseo.de/blog/entwurf-messreihe-ki-sichtbarkeit.html#blogposting",
+  "headline": "Dieselben zehn Fragen, drei Termine: Wie sich KI-Antworten über Monate verändern",
+  "description": "Dieselben zehn Fragen an ChatGPT und Gemini am 03.10., 03.11. und 03.12.2026: wie die Messreihe aufgebaut ist und warum eine Messung eine Momentaufnahme ist.",
+  "image": "https://maxcontentseo.de/assets/og-logo.png",
+  "inLanguage": "de-DE",
+  "datePublished": "2026-10-20",
+  "dateModified": "2026-10-20",
+  "author": {
+    "@type": "Person",
+    "name": "Georg Stopfer",
+    "url": "https://maxcontentseo.de/",
+    "sameAs": [
+      "https://www.linkedin.com/in/georg-stopfer-7a0584421/"
+    ]
+  },
+  "publisher": {
+    "@type": [
+      "Organization",
+      "ProfessionalService"
+    ],
+    "@id": "https://maxcontentseo.de/#organization",
+    "name": "MaxContentSEO",
+    "url": "https://maxcontentseo.de/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://maxcontentseo.de/assets/og-logo.png"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/maxcontentseo"
+    ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://maxcontentseo.de/blog/entwurf-messreihe-ki-sichtbarkeit.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Start",
+      "item": "https://maxcontentseo.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://maxcontentseo.de/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Messreihe KI-Sichtbarkeit"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://maxcontentseo.de/blog/entwurf-messreihe-ki-sichtbarkeit.html#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Warum werden die Fragen nicht verbessert, wenn sie nicht perfekt sind?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Weil dann kein Vergleich mehr möglich wäre. Eine neue Frage ergibt eine neue Messung. Bessere Fragen kommen in eine eigene, neue Reihe mit eigenem Startwert."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist eine Nennung in einer Frage ohne Firmennamen viel oder wenig?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das lässt sich ohne Vergleichswerte nicht sagen. Deshalb gibt es die Nachmessungen: Sie zeigen, ob der Wert stabil bleibt, steigt oder fällt, statt ihn mit einem Wunschwert zu vergleichen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich so eine Messreihe für mein Studio bekommen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die KI-Sichtbarkeit ist Teil des SEO+GEO-Kombi-Audits für 499 €, gemessen mit denselben Werkzeugen wie im Beispielbericht. Einen ersten Eindruck gibt die kostenlose Erstanalyse. Eine tiefere Analyse gibt es auf Nachfrage."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <nav data-mobile-open="false" style="position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(38,36,31,0.88); backdrop-filter:blur(12px); border-bottom:1px solid rgba(250,247,242,0.1);">
+  <div style="max-width:1140px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:0.9rem clamp(1.25rem,5vw,2rem);">
+    <a href="/#top" style="font-weight:700; font-size:1.05rem; letter-spacing:-0.02em; color:#FAF7F2; text-decoration:none;">MaxContent<span style="color:#C4633F;">SEO</span></a>
+    <div data-nav-desktop="true" style="display:flex; align-items:center; gap:0.15rem;">
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Leistungen<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/leistungen/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Leistungsübersicht</a></li>
+          <li><a class="h1" href="/beratung-bafa/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">BAFA-Beratung</a></li>
+          <li><a class="h1" href="/ki-sichtbarkeit/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">KI-Sichtbarkeit (GEO)</a></li>
+          <li><a class="h1" href="/ki-sichtbarkeits-check/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">KI-Sichtbarkeits-Check</a></li>
+        </ul>
+      </div>
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Branchen<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/branchen/kosmetikstudios.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Kosmetikstudios</a></li>
+          <li><a class="h1" href="/branchen/tcm-praxen.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">TCM-Praxen</a></li>
+          <li><a class="h1" href="/branchen/wellness-spa.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Wellness &amp; Spa</a></li>
+          <li><a class="h1" href="/seo-muenchen/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">SEO München</a></li>
+        </ul>
+      </div>
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Ergebnisse<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/cases/lingqi.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Referenz LingQi</a></li>
+          <li><a class="h1" href="/audit-beispiel.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Muster: Premium-Audit</a></li>
+          <li><a class="h1" href="/audit-beispiel-kombi.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Muster: Kombi-Audit</a></li>
+        </ul>
+      </div>
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Wissen<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" aria-current="page" href="/blog/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Blog</a></li>
+          <li><a class="h1" href="/seo-anbieter-finden.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">SEO-Anbieter erkennen</a></li>
+          <li><a class="h1" href="/seo-begriffe/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">SEO-Begriffe</a></li>
+        </ul>
+      </div>
+      <a class="h0" href="/#preise" style="font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); text-decoration:none; padding:0.5rem 0.7rem;">Preise</a>
+      <a class="h2" href="/#kontakt" style="background:#A94F30; color:#FAF7F2; padding:0.5rem 1.2rem; border-radius:8px; text-decoration:none; font-size:0.86rem; font-weight:600; margin-left:0.75rem;">Kostenlose Erstanalyse</a>
+    </div>
+    <a class="h2" data-mobile-cta="true" href="/#kontakt">Erstanalyse</a>
+    <button class="h3" data-burger="true" type="button" aria-expanded="false" aria-controls="mobilmenu" style="align-items:center; background:none; border:1px solid rgba(250,247,242,0.25); border-radius:8px; cursor:pointer; font-family:'Geist Mono', monospace; font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:#FAF7F2; padding:0.45rem 0.9rem;">Menü</button>
+  </div>
+  <div data-mobile-panel="true" id="mobilmenu" style="border-top:1px solid rgba(250,247,242,0.1); padding:0.5rem clamp(1.25rem,5vw,2rem) 1.25rem; max-height:calc(100vh - 64px); overflow:auto;">
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Leistungen<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/leistungen/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Leistungsübersicht</a>
+        <a class="h0" href="/beratung-bafa/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">BAFA-Beratung</a>
+        <a class="h0" href="/ki-sichtbarkeit/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">KI-Sichtbarkeit (GEO)</a>
+        <a class="h0" href="/ki-sichtbarkeits-check/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">KI-Sichtbarkeits-Check</a>
+      </div>
+    </details>
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Branchen<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/branchen/kosmetikstudios.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Kosmetikstudios</a>
+        <a class="h0" href="/branchen/tcm-praxen.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">TCM-Praxen</a>
+        <a class="h0" href="/branchen/wellness-spa.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Wellness &amp; Spa</a>
+        <a class="h0" href="/seo-muenchen/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">SEO München</a>
+      </div>
+    </details>
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Ergebnisse<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/cases/lingqi.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Referenz LingQi</a>
+        <a class="h0" href="/audit-beispiel.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Muster: Premium-Audit</a>
+        <a class="h0" href="/audit-beispiel-kombi.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Muster: Kombi-Audit</a>
+      </div>
+    </details>
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Wissen<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" aria-current="page" href="/blog/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Blog</a>
+        <a class="h0" href="/seo-anbieter-finden.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">SEO-Anbieter erkennen</a>
+        <a class="h0" href="/seo-begriffe/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">SEO-Begriffe</a>
+      </div>
+    </details>
+    <a href="/#preise" style="display:block; padding:0.85rem 0; font-size:0.95rem; font-weight:500; color:#FAF7F2; text-decoration:none; border-bottom:1px solid rgba(250,247,242,0.08);">Preise</a>
+    <a class="h2" href="/#kontakt" style="display:block; text-align:center; margin-top:1rem; background:#A94F30; color:#FAF7F2; padding:0.8rem 1.2rem; border-radius:8px; text-decoration:none; font-size:0.92rem; font-weight:600;">Kostenlose Erstanalyse</a>
+  </div>
+</nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero__content">
+        <div class="eyebrow">Messreihe</div>
+        <h1 class="page-title">Dieselben zehn Fragen, drei Termine: Wie sich KI-Antworten über Monate verändern</h1>
+        <p class="page-lead">Am 03.10.2026 habe ich ChatGPT und Gemini zehn Fragen zu meinem eigenen Angebot gestellt. Am 03.11. und am 03.12.2026 stelle ich dieselben zehn Fragen noch einmal, wörtlich gleich. Hier steht, wie die Messung aufgebaut ist, was sie zeigen kann und was nicht. Die neuen Werte trage ich ein, sobald es sie gibt.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container content-flow">
+        <div class="answer">
+          <p><strong>Kurz gefasst:</strong> Eine einzelne Messung der KI-Sichtbarkeit ist eine Momentaufnahme. Erst wenn dieselben Fragen mehrmals gestellt werden, lässt sich erkennen, ob sich etwas verändert. Am 03.10.2026 nannten ChatGPT und Gemini meine Marke je in 4 von 10 Fragen. Bei den 7 Fragen ohne Firmennamen war es je 1 von 7.</p>
+        </div>
+
+        <h2>Warum dieselben Fragen und nicht neue</h2>
+        <p>Wer wissen will, ob sich etwas verändert, muss zweimal dasselbe messen. Klingt selbstverständlich, wird bei KI-Antworten aber oft vergessen. Eine leicht andere Formulierung kann eine ganz andere Antwort auslösen. Vergleicht man dann den Oktober mit dem November, vergleicht man in Wahrheit zwei verschiedene Fragen.</p>
+        <p>Deshalb bleiben die zehn Fragen bis Dezember unverändert, Wort für Wort. Sie stehen vollständig im <a class="text-link" href="/audit-beispiel-maxcontentseo.html">Beispielbericht zu maxcontentseo.de</a>. Es sind Testfragen entlang der Kundenreise, keine erhobenen Fragen echter Kundinnen und Kunden. Sie reichen von „Warum finden mich neue Kundinnen bei Google nicht?“ bis zu „Wie buche ich ein Erstgespräch bei MaxContentSEO?“.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container content-flow">
+        <h2>Der Ausgangswert und die zwei Nachmessungen</h2>
+        <p>Die Tabelle zeigt den Stand vom 03.10.2026 und lässt Platz für die beiden folgenden Termine. Jede Zahl ist an gespeicherten, wörtlichen Antworten gezählt, nicht geschätzt.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Kennzahl</th>
+                <th>03.10.2026</th>
+                <th>03.11.2026</th>
+                <th>03.12.2026</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ChatGPT: Fragen mit Nennung</td>
+                <td>4 von 10</td>
+                <td>[[ZAHL 03.11.]]</td>
+                <td>[[ZAHL 03.12.]]</td>
+              </tr>
+              <tr>
+                <td>Gemini: Fragen mit Nennung</td>
+                <td>4 von 10</td>
+                <td>[[ZAHL 03.11.]]</td>
+                <td>[[ZAHL 03.12.]]</td>
+              </tr>
+              <tr>
+                <td>ChatGPT: Nennung bei Fragen ohne Firmennamen</td>
+                <td>1 von 7</td>
+                <td>[[ZAHL 03.11.]]</td>
+                <td>[[ZAHL 03.12.]]</td>
+              </tr>
+              <tr>
+                <td>Gemini: Nennung bei Fragen ohne Firmennamen</td>
+                <td>1 von 7</td>
+                <td>[[ZAHL 03.11.]]</td>
+                <td>[[ZAHL 03.12.]]</td>
+              </tr>
+              <tr>
+                <td>Allgemeine Einstiegsfragen 1 bis 3, beide Systeme</td>
+                <td>keine Nennung in 6 Antworten</td>
+                <td>[[ZAHL 03.11.]]</td>
+                <td>[[ZAHL 03.12.]]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="measurement-note">Messung 03.10.2026: jede Frage einmal an ChatGPT (gpt-6-luna) und einmal an Gemini (gemini-3.5-flash), beide mit Websuche, zwischen 14:37 und 14:42 Uhr. Ändert sich bis zu einer Nachmessung das Modell hinter einem Assistenten, schreibe ich das in diese Zeile.</p>
+
+        <h2>Fragen mit und ohne Namen: warum ich sie getrennt zähle</h2>
+        <p>Drei der zehn Fragen enthalten den Namen MaxContentSEO schon in der Frage, zum Beispiel „Wie schneidet MaxContentSEO im Vergleich zu anderen SEO-Agenturen in München ab?“. Dass eine KI die Marke nennt, wenn man ausdrücklich nach ihr fragt, ist wenig überraschend. Es zeigt nur, dass sie das Angebot kennt und beschreiben kann.</p>
+        <p>Für ein Studio ist die andere Gruppe wichtiger: die sieben Fragen ohne Firmennamen. So fragt jemand, der noch keinen Anbieter kennt. Dort nannten beide Systeme meine Marke am 03.10.2026 in genau einer Frage, und zwar bei der Frage nach spezialisierten SEO-Beratern in München. In den drei allgemeinsten Einstiegsfragen kam die Marke in keiner der sechs Antworten vor.</p>
+        <p>Würde ich beide Gruppen zusammenzählen, stünde dort „4 von 10“. Das klingt besser, sagt aber weniger. Eine Messung, die Fragen mit und ohne Namen mischt, beschreibt vor allem, wie bekannt ein Name schon ist.</p>
+
+        <h2>Was als Nennung zählt</h2>
+        <p>Die Zählregel steht vor der Messung fest und ändert sich bis Dezember nicht: Eine Nennung liegt vor, wenn die Antwort über MaxContentSEO spricht, also den Markennamen, die Domain oder meinen Namen nennt. Wiederholt die Antwort nur die Frage, zählt das nicht. Eine Empfehlung zähle ich getrennt und nur dann, wenn die Antwort die Marke ohne Vorbehalt und ohne Bedingung als passende Wahl nennt.</p>
+        <p>Warum so streng? Eine frühere Fassung meines Beispielberichts nannte eine Nennung in 80 Prozent der Fragen. Diesen Wert hatte ein Analysemodell geschätzt, nicht gezählt. Ich habe das korrigiert und den Korrekturhinweis auf der Seite stehen lassen. Seitdem zähle ich nur an den gespeicherten Antworten.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container content-flow">
+        <h2>Warum Schwankung normal ist</h2>
+        <p>ChatGPT und Gemini erzeugen jede Antwort neu. Mit eingeschalteter Websuche rufen sie außerdem in dem Moment Seiten ab, und welche Seiten sie finden und auswählen, kann sich von Abfrage zu Abfrage unterscheiden. Dazu kommt, dass die Anbieter ihre Modelle weiterentwickeln.</p>
+        <p>An meiner eigenen Website habe ich das mehrfach gesehen. Frühere Stichproben fielen sehr unterschiedlich aus: einmal an erster Stelle genannt, ein anderes Mal gar nicht. In einer späteren Messung waren es <a class="text-link" href="/blog/ranking-und-ki-nennung.html">vier von sechs Antworten</a>, und auch das war das Ergebnis eines Tages, kein Dauerzustand.</p>
+        <p>Für die Nachmessungen heißt das: Ein Unterschied von einer Frage zwischen Oktober und November kann Zufall sein. Aussagekräftiger ist, ob sich über drei Termine eine Richtung zeigt, und ob sie bei beiden Systemen in dieselbe Richtung geht.</p>
+
+        <h2>Warum eine Messung eine Momentaufnahme ist</h2>
+        <p>Der Lauf vom 03.10.2026 hat jede Frage genau einmal je System gestellt, innerhalb von fünf Minuten. Das ist eine Stichprobe von einer Antwort je Frage und Assistent. Sie zeigt, was an diesem Nachmittag geantwortet wurde. Wie oft die Marke über einen ganzen Monat genannt würde, zeigt sie nicht.</p>
+        <p>Drei Dinge misst diese Reihe ausdrücklich nicht:</p>
+        <ul class="check-list">
+          <li><strong>Wie viele Menschen so fragen.</strong> Das veröffentlichen die Anbieter der Assistenten nicht, von außen ist es nicht messbar.</li>
+          <li><strong>Warum sich ein Wert ändert.</strong> Drei Termine können eine Veränderung zeigen. Ob eine Änderung an der Website die Ursache war, beweisen sie nicht, denn Antworten ändern sich auch aus anderen Gründen. Was ich zwischen den Terminen an der Website ändere, liste ich trotzdem auf, damit Sie es selbst einordnen können.</li>
+          <li><strong>Was bei Ihnen passieren würde.</strong> Gemessen wird eine einzige Website, meine eigene. Für Ihr Studio gelten andere Fragen, andere Mitbewerber und ein anderer Ort.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container content-flow">
+        <h2>Was Sie daraus für Ihr Studio mitnehmen können</h2>
+        <p>Sie brauchen keine Software, um das Prinzip selbst auszuprobieren. Schreiben Sie fünf Fragen auf, die eine neue Kundin stellen würde, ohne den Namen Ihres Studios. Notieren Sie das Datum und den Assistenten, stellen Sie die Fragen, speichern Sie die Antworten. Einen Monat später stellen Sie genau dieselben Fragen noch einmal. Dann sehen Sie keinen Zufallstreffer mehr, sondern einen Vergleich.</p>
+        <p>Welche Angaben eine Messung enthalten sollte, damit Sie sie nachprüfen können, steht im Artikel <a class="text-link" href="/blog/ki-sichtbarkeit-messung-pruefen.html">Sechs Angaben, an denen Sie eine Messung prüfen</a>. Wie ich selbst messe, beschreibt die Seite <a class="text-link" href="/ki-sichtbarkeit/">KI-Sichtbarkeit (GEO)</a>.</p>
+
+        <h2>Häufige Fragen</h2>
+        <div class="faq">
+          <details>
+            <summary>Warum werden die Fragen nicht verbessert, wenn sie nicht perfekt sind?</summary>
+            <p class="answer">Weil dann kein Vergleich mehr möglich wäre. Eine neue Frage ergibt eine neue Messung. Bessere Fragen kommen in eine eigene, neue Reihe mit eigenem Startwert.</p>
+          </details>
+          <details>
+            <summary>Ist eine Nennung in einer Frage ohne Firmennamen viel oder wenig?</summary>
+            <p class="answer">Das lässt sich ohne Vergleichswerte nicht sagen. Deshalb gibt es die Nachmessungen: Sie zeigen, ob der Wert stabil bleibt, steigt oder fällt, statt ihn mit einem Wunschwert zu vergleichen.</p>
+          </details>
+          <details>
+            <summary>Kann ich so eine Messreihe für mein Studio bekommen?</summary>
+            <p class="answer">Die KI-Sichtbarkeit ist Teil des <a class="text-link" href="/leistungen/">SEO+GEO-Kombi-Audits</a> für 499 €, gemessen mit denselben Werkzeugen wie im Beispielbericht. Einen ersten Eindruck gibt die kostenlose Erstanalyse. Eine tiefere Analyse gibt es auf Nachfrage.</p>
+          </details>
+        </div>
+
+        <h2>Quellen</h2>
+        <ul class="list">
+          <li>Alle Werte vom 03.10.2026, Fragen, Modelle, Uhrzeit und Zählregeln: eigener Messlauf an maxcontentseo.de, veröffentlicht im <a class="text-link" href="/audit-beispiel-maxcontentseo.html">Beispielbericht</a>.</li>
+          <li>Schwankende Nennung in früheren Stichproben und „vier von sechs“: <a class="text-link" href="/blog/ranking-und-ki-nennung.html">Ranking und KI-Nennung</a>.</li>
+          <li>Werte vom 03.11.2026 und 03.12.2026: werden nach dem jeweiligen Messtag eingetragen.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-box">
+          <div class="stack">
+            <h2 class="section-title">Sie möchten wissen, was ChatGPT und Gemini über Ihr Studio sagen?</h2>
+            <p class="section-intro">Dann schauen wir gemeinsam darauf, mit den Fragen im Wortlaut, dem Datum und den Antworten, nicht nur mit einem Ergebnis.</p>
+            <a class="button button-primary" href="/ki-sichtbarkeits-check/">Zum KI-Sichtbarkeits-Check</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="background:#1B1916; color:rgba(250,247,242,0.5); padding:2.5rem clamp(1.25rem,5vw,2rem); text-align:center; font-size:0.85rem; font-weight:500;">
+  <div style="max-width:1140px; margin:0 auto;">
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem 2rem; margin-bottom:0.75rem; font-family:'Geist Mono', monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">
+      <a class="h0" href="/was-kostet-seo-kosmetikstudio/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Preise im Detail</a>
+      <a class="h0" href="/impressum.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Impressum</a>
+      <a class="h0" href="/datenschutz.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Datenschutz</a>
+      <a class="h0" href="/ki-transparenz/" style="color:rgba(250,247,242,0.7); text-decoration:none;">KI-Transparenz</a>
+      <a class="h0" href="mailto:georg@maxcontentseo.de" style="color:rgba(250,247,242,0.7); text-decoration:none;">E-Mail</a>
+    </div>
+    <p style="margin:0;">© 2026 MaxContentSEO · Georg Stopfer</p>
+  </div>
+</footer>
+<script src="/assets/js/redesign.js" defer></script>
+<script src="/assets/js/funnel.js" defer></script>
+</body>
+</html>
