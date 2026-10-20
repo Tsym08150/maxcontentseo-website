@@ -12,6 +12,8 @@ exclude:
   - codex-handover/
   - codex_todo_v2.md
   - CONTEXT.md
+  - LADEZEIT-2026-10.md
+  - ladezeit-2026-10/
   - docs/
   - llm_visibility_check.py
   - llm_visibility_results.csv

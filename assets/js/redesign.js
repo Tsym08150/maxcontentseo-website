@@ -102,13 +102,20 @@
       m.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     });
 
-    var vh = window.innerHeight, below = [];
-    els.forEach(function (el) {
+    // Ladezeit 2026-10: alle Positionen ZUERST lesen, dann Stile schreiben. Vorher wechselten
+    // Lesen (getBoundingClientRect) und Schreiben (transform) je Element ab, und jedes Element
+    // erzwang ein eigenes Layout (Lighthouse „forced reflow"). +26 entspricht dem translateY,
+    // das die alte Reihenfolge beim Lesen schon enthielt; Entscheidung je Element unveraendert.
+    // innerHeight nur lesen, wenn es Reveal-Elemente gibt: das Lesen erzwingt sonst auf Seiten
+    // ohne Reveals (alle ausser der Startseite) ein vorgezogenes Layout im Skript.
+    var vh = els.length ? window.innerHeight : 0, below = [];
+    var tops = els.map(function (el) { return el.getBoundingClientRect().top + 26; });
+    els.forEach(function (el, i) {
       var d = el.getAttribute('data-delay') || '0';
       el.style.transition = 'opacity 0.9s ease ' + d + 'ms, transform 0.9s ease ' + d + 'ms';
       el.style.opacity = '0';
       el.style.transform = 'translateY(26px)';
-      if (el.getBoundingClientRect().top < vh * 0.92) { setTimeout(function () { showEl(el); }, 60); }
+      if (tops[i] < vh * 0.92) { setTimeout(function () { showEl(el); }, 60); }
       else below.push(el);
     });
     var io = new IntersectionObserver(function (entries) {
