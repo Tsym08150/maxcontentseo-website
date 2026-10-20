@@ -288,6 +288,10 @@ main.wp-block-group>div:first-child .wp-block-group{display:flex;gap:0.6rem;alig
 .article-body th{background:var(--paper-soft);font-family:var(--sans);font-weight:600;font-size:0.85rem;text-align:left;padding:0.7rem 0.9rem;border-bottom:1px solid var(--border);}
 .article-body td{padding:0.65rem 0.9rem;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.55;}
 .article-body tr:last-child td{border-bottom:none;}
+/* Astra R1 (Release 2026-10): scrollbarer, benannter Bereich um die Tabelle; die Tabelle behaelt ihre Rolle */
+.article-body .table-scroll{overflow-x:auto;margin:1.25rem 0 1.75rem;border-radius:10px;}
+.article-body .table-scroll > table{margin:0;}
+.article-body .table-scroll:focus-visible{outline:3px solid #C4633F;outline-offset:2px;}
 .check{color:#3E7C4F;font-weight:700;margin-right:0.3rem;}
 .cross{color:#B4462F;font-weight:700;margin-right:0.3rem;}
 
@@ -357,7 +361,6 @@ main.wp-block-group>div:last-child{max-width:var(--max);margin:0 auto;padding:0 
   .toc-sticky{position:static;}
 }
 @media (max-width:480px){
-  .article-body table{display:block;overflow-x:auto;}
   .cta-box{padding:1.4rem 1.3rem;}
   #db-wrap{padding:1.25rem 1.2rem 1.4rem;}
 }
@@ -528,7 +531,7 @@ main.wp-block-group>div:last-child{max-width:var(--max);margin:0 auto;padding:0 
   <div class="article-header" style="padding: 32px 0 0;"></div>
 
   <!-- SIDEBAR TOC -->
-  <aside class="sidebar">
+  <div class="sidebar">
     <nav class="toc-sticky" aria-label="Inhaltsverzeichnis">
       <div class="toc-title">Inhalt</div>
       <ul class="toc-list">
@@ -546,7 +549,7 @@ main.wp-block-group>div:last-child{max-width:var(--max);margin:0 auto;padding:0 
         <li><a href="#faq"><span class="toc-num">12.</span>FAQ</a></li>
       </ul>
     </nav>
-  </aside>
+  </div>
 
   <!-- ARTICLE BODY -->
   <article class="article-body">
@@ -645,7 +648,8 @@ main.wp-block-group>div:last-child{max-width:var(--max);margin:0 auto;padding:0 
     <!-- Section 1 -->
     <h2 id="ueberblick">Auf einen Blick</h2>
 
-    <table tabindex="0">
+    <div class="table-scroll" role="region" aria-label="Tabelle: Auf einen Blick" tabindex="0">
+    <table>
       <thead>
         <tr>
           <th>Was möglich ist</th>
@@ -671,6 +675,7 @@ main.wp-block-group>div:last-child{max-width:var(--max);margin:0 auto;padding:0 
         </tr>
       </tbody>
     </table>
+    </div>
 
     <!-- Section 2 -->
     <h2 id="loeschbar">Wann eine Bewertung realistisch entfernbar ist</h2>
@@ -679,7 +684,8 @@ main.wp-block-group>div:last-child{max-width:var(--max);margin:0 auto;padding:0 
 
     <p>Für Kosmetik- und Beautystudios sind diese Fälle besonders relevant:</p>
 
-    <table tabindex="0">
+    <div class="table-scroll" role="region" aria-label="Tabelle: Wann eine Bewertung realistisch entfernbar ist" tabindex="0">
+    <table>
       <thead>
         <tr>
           <th>Möglicher Löschgrund</th>
@@ -717,6 +723,7 @@ main.wp-block-group>div:last-child{max-width:var(--max);margin:0 auto;padding:0 
         </tr>
       </tbody>
     </table>
+    </div>
 
     <h3>Interessenkonflikt durch ehemalige Mitarbeitende</h3>
 
@@ -925,7 +932,8 @@ main.wp-block-group>div:last-child{max-width:var(--max);margin:0 auto;padding:0 
 
     <p>Drei Punkte unterscheiden den Fall vom Google-Prozess:</p>
 
-    <table tabindex="0">
+    <div class="table-scroll" role="region" aria-label="Tabelle: Nicelocal im Vergleich zum Google-Prozess" tabindex="0">
+    <table>
       <thead>
         <tr>
           <th>Unterschied zu Google</th>
@@ -947,6 +955,7 @@ main.wp-block-group>div:last-child{max-width:var(--max);margin:0 auto;padding:0 
         </tr>
       </tbody>
     </table>
+    </div>
 
     <p>Die oben beschriebenen BGH-Grundsätze zu Prüfpflichten (VI ZR 1244/20) sind nicht auf Google beschränkt: Rügen Sie begründet einen fehlenden Kundenkontakt, können auch bei anderen Portalen Prüfpflichten ausgelöst werden.</p>
 
