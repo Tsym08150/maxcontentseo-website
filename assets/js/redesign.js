@@ -18,6 +18,7 @@
       btn.addEventListener('click', function () {
         var wrap = btn.closest('[data-menu]');
         var isOpen = wrap.getAttribute('data-open') === 'true';
+        wrap.removeAttribute('data-closed');
         closeMenus();
         if (!isOpen) { wrap.setAttribute('data-open', 'true'); btn.setAttribute('aria-expanded', 'true'); }
         else { btn.blur(); }
@@ -44,9 +45,43 @@
         if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
       }
     });
+    // Astra R1 Befund 2 (2026-10-20): :hover/:focus-within hielten das Desktop-Untermenue nach Escape offen.
+    // data-closed="true" uebersteuert beide CSS-Regeln, bis Maus und Fokus das Menue verlassen haben.
+    // aria-expanded folgt der tatsaechlichen Sichtbarkeit (Fokus im Menue oder Klickoeffnung).
+    document.querySelectorAll('[data-menu]').forEach(function (m) {
+      var b = m.querySelector('[data-menu-btn]');
+      function sync() {
+        if (!b) return;
+        var shown = m.getAttribute('data-closed') !== 'true' &&
+          (m.getAttribute('data-open') === 'true' || m.contains(document.activeElement));
+        b.setAttribute('aria-expanded', shown ? 'true' : 'false');
+      }
+      m.addEventListener('focusin', sync);
+      m.addEventListener('focusout', function (e) {
+        if (e.relatedTarget && m.contains(e.relatedTarget)) return;
+        if (!m.matches(':hover')) m.removeAttribute('data-closed');
+        m.removeAttribute('data-open');
+        setTimeout(sync, 0);
+      });
+      m.addEventListener('mouseleave', function () {
+        if (!m.contains(document.activeElement)) m.removeAttribute('data-closed');
+      });
+    });
     // K-1 (Vollaudit 2026-10): Escape schliesst auch das mobile Menue und gibt den Fokus an den Menue-Knopf zurueck.
     document.addEventListener('keydown', function (e) {
       if (e.key !== 'Escape') return;
+      var active = document.activeElement;
+      document.querySelectorAll('[data-menu]').forEach(function (m) {
+        var inside = m.contains(active);
+        if (!(inside || m.matches(':hover') || m.getAttribute('data-open') === 'true')) return;
+        m.setAttribute('data-closed', 'true');
+        m.removeAttribute('data-open');
+        var b = m.querySelector('[data-menu-btn]');
+        if (b) {
+          b.setAttribute('aria-expanded', 'false');
+          if (inside && active !== b) b.focus();
+        }
+      });
       closeMenus();
       var mnav = document.querySelector('nav[data-mobile-open="true"]');
       if (mnav) {

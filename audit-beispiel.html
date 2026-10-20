@@ -645,6 +645,7 @@ button, input { font: inherit; }
 @font-face{font-family:'Geist Mono';font-style:normal;font-weight:400 500;font-display:swap;src:url('/assets/fonts/geist-mono-latin-var.woff2') format('woff2');}
 [data-menu-panel]{opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s ease,transform .18s ease,visibility .18s;}
 [data-menu]:hover>[data-menu-panel],[data-menu]:focus-within>[data-menu-panel],[data-menu][data-open="true"]>[data-menu-panel]{opacity:1;visibility:visible;transform:translateY(0);}
+[data-menu][data-closed="true"]>[data-menu-panel]{opacity:0;visibility:hidden;transform:translateY(6px);} /* Astra R1 Befund 2: Escape-Zustand */
 [data-burger]{display:none;}
 [data-mobile-panel]{display:none;}
 nav[data-mobile-open="true"] [data-mobile-panel]{display:block;}

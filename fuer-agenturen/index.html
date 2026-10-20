@@ -59,7 +59,7 @@ footer{background:#1B1916;color:rgba(250,247,242,.5);padding:2.5rem clamp(1.25re
 .footer-links a{color:rgba(250,247,242,.7);text-decoration:none;}
 .block--wide{max-width:980px;}
 .muster-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem;margin:1.5rem 0 1.25rem;}
-.muster-fig{margin:0;}
+.muster-fig{margin:0;min-width:0;} /* min-width:0: aufgeklappte Textfassung darf die Rasterspalte nicht verbreitern (Astra R1 Befund 3) */
 .muster-zoom{display:block;border:1px solid #cfe3d7;border-radius:8px;overflow:hidden;background:#FFF;box-shadow:0 6px 18px rgba(38,36,31,.08);transition:transform .15s ease,box-shadow .15s ease;}
 .muster-zoom:hover,.muster-zoom:focus-visible{transform:translateY(-2px);box-shadow:0 10px 26px rgba(38,36,31,.14);}
 .muster-zoom:focus-visible{outline:3px solid #C4633F;outline-offset:3px;}
@@ -72,6 +72,21 @@ footer{background:#1B1916;color:rgba(250,247,242,.5);padding:2.5rem clamp(1.25re
 .muster-dialog img{display:block;width:100%;height:auto;max-height:calc(94vh - 3.5rem);object-fit:contain;background:#FFF;border-radius:6px;}
 .muster-dialog__bar{display:flex;justify-content:flex-end;margin-bottom:.5rem;}
 .muster-dialog__close{background:#FAF7F2;color:#26241F;border:0;border-radius:6px;font:inherit;font-weight:600;padding:.45rem .9rem;cursor:pointer;}
+/* Astra R1 Befund 3 (2026-10-20): aufklappbare Textfassung je Musterseite (WCAG 1.1.1) */
+.muster-text{margin-top:.6rem;font-size:.85rem;line-height:1.5;color:#26241F;}
+.muster-text summary{cursor:pointer;font-weight:600;color:#134d35;padding:.65rem 0;}
+.muster-text summary:focus-visible{outline:3px solid #C4633F;outline-offset:2px;}
+.muster-text h3{font-size:1rem;line-height:1.3;margin:.6rem 0 .4rem;color:#134d35;}
+.muster-text h4{font-size:.92rem;line-height:1.3;margin:.9rem 0 .35rem;color:#134d35;}
+.muster-text p{line-height:1.5;margin:0 0 .55rem;}
+.muster-text ol{margin:0 0 .55rem;padding-left:1.2rem;}
+.muster-table{overflow-x:auto;margin:.4rem 0 .75rem;border:1px solid #cfe3d7;border-radius:6px;background:#FFF;}
+.muster-table:focus-visible{outline:3px solid #C4633F;outline-offset:2px;}
+.muster-table table{border-collapse:collapse;width:100%;min-width:22rem;font-size:.8rem;}
+.muster-table table.muster-table--wide{min-width:34rem;}
+.muster-table th,.muster-table td{border-bottom:1px solid #e3ece6;padding:.4rem .5rem;text-align:left;vertical-align:top;}
+.muster-table thead th{background:#eef5f0;color:#134d35;}
+.muster-table tbody th{font-weight:600;}
 @media (max-width:820px){.muster-grid{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto;}}
 @media (max-width:520px){.draft-header__inner{align-items:flex-start;}.back-link{text-align:right;}.content{padding-left:.75rem;padding-right:.75rem;}.card{padding:1.25rem;}}
 @media (max-width:400px){.hero h1{font-size:2.1rem;}} /* langes Wort im Titel, Ueberlauf bei 360 px (Vollaudit 2026-10) */
@@ -226,7 +241,7 @@ footer{background:#1B1916;color:rgba(250,247,242,.5);padding:2.5rem clamp(1.25re
 
     <section class="block block--wide" id="muster" aria-labelledby="vollmuster-heading">
       <h2 id="vollmuster-heading">So sieht der Bericht aus: das vollständige Muster</h2>
-      <p>Das ist der Bericht, den Sie mit Ihrem Logo bekommen. Im Muster steht ein Platzhalter-Logo „Muster-Agentur“. Gemessen wurde meine eigene Website maxcontentseo.de, an Messtagen zwischen dem 03. und dem 09.10.2026. Drei der 14 Seiten sehen Sie hier; ein Klick zeigt die Seite groß.</p>
+      <p>Das ist der Bericht, den Sie mit Ihrem Logo bekommen. Im Muster steht ein Platzhalter-Logo „Muster-Agentur“. Gemessen wurde meine eigene Website maxcontentseo.de, an Messtagen zwischen dem 03. und dem 09.10.2026. Drei der 14 Seiten sehen Sie hier; ein Klick zeigt die Seite groß. Unter jedem Bild können Sie den Text der Seite aufklappen.</p>
       <div class="muster-grid">
         <figure class="muster-fig">
           <a class="muster-zoom" href="/assets/muster-agenturbericht/agenturbericht-muster-seite-1-ergebnis-gross.webp" data-alt="Seite 1 des Muster-Agenturberichts in Großansicht: Ergebnis mit fünf Prüfbereichen, Ampel je Bereich und den drei wichtigsten nächsten Schritten">
@@ -236,6 +251,35 @@ footer{background:#1B1916;color:rgba(250,247,242,.5);padding:2.5rem clamp(1.25re
             </picture>
           </a>
           <figcaption><strong>Seite 1: das Ergebnis</strong>Fünf Prüfbereiche mit Ampel und Kurzbefund, darunter die drei wichtigsten nächsten Schritte.</figcaption>
+          <details class="muster-text">
+            <summary>Textfassung dieser Seite</summary>
+            <div class="muster-text__body">
+              <p>MUSTER: So sieht Ihr Kundenbericht mit Ihrem Logo aus. Die Messwerte betreffen die Website maxcontentseo.de.</p>
+              <p>Sichtbarkeitsbericht · 09.10.2026</p>
+              <h3>So stehen Sie da: maxcontentseo.de</h3>
+              <p>SEO-Beratung für Beauty-, Wellness- und TCM-Studios · Inhaber Georg Stopfer, Kirchheim b. München</p>
+              <div class="muster-table" role="region" aria-label="Tabelle Seite 1: Ergebnis je Prüfbereich" tabindex="0">
+                <table>
+                  <thead><tr><th scope="col">Prüfbereich</th><th scope="col">Status</th><th scope="col">Befund</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">KI-Assistenten (ChatGPT und Gemini)</th><td>ausbaufähig</td><td>Ohne Ihren Namen in der Frage nennen beide Assistenten Sie selten: <strong>je 1 von 7 Fragen</strong>. Fragt man ausdrücklich nach Ihrem Firmennamen, nennen beide Sie in 3 von 3 Fragen.</td></tr>
+                    <tr><th scope="row">Google-Suche</th><td>nicht bestätigt</td><td>Bei „seo für kosmetikstudios kirchheim bei münchen“ stehen Sie auf <strong>Platz 1</strong>, von zwei Datenquellen bestätigt. Bei „seo beratung kirchheim bei münchen“ ist Ihr Platz nicht bestätigt (Platz 5 bzw. 7), bei „local seo kirchheim bei münchen“ wurden Sie nicht gefunden.</td></tr>
+                    <tr><th scope="row">Google-Karte (Maps)</th><td>handeln</td><td>Kein verlässlicher Platz: Die Analyse ergab je nach Messpunkt unterschiedliche Plätze. In Google Maps selbst erschien Ihr Profil nur bei einem von drei Suchbegriffen, auf Platz 7.</td></tr>
+                    <tr><th scope="row">Name, Adresse, Telefon</th><td>ausbaufähig</td><td>Name und Anschrift widersprechen sich nirgends. <strong>Eine Telefonnummer steht in keiner der vier Quellen</strong>; das Google-Profil zeigt keine Anschrift, und bei 11880.com und golocal.de wurde kein Eintrag gefunden.</td></tr>
+                    <tr><th scope="row">Weg zur Anfrage</th><td>ausbaufähig</td><td>Das Anfrageformular ist auf Computer und Handy erreichbar (nicht abgesendet). Nach dem Klick auf den Hauptknopf liegt das erste Formularfeld knapp unter bzw. am unteren Rand des sichtbaren Bereichs; einen Telefonlink gibt es nicht.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>Status: gut · ausbaufähig · handeln · nicht bestätigt (Google: erster Suchbegriff des Auftrags); Schwellen im Anhang A „Messweg“ (S. 9).</p>
+              <h4>Ihre 3 wichtigsten nächsten Schritte</h4>
+              <ol>
+                <li><strong>Telefonnummer:</strong> Entscheiden, ob Sie eine Nummer veröffentlichen. Falls ja, dieselbe Nummer in Impressum, Startseite (anklickbar), Google-Profil und Verzeichnissen eintragen.</li>
+                <li><strong>Google-Profil:</strong> Entscheiden, ob es eine Anschrift oder ein Servicegebiet zeigt, passend zum Impressum.</li>
+                <li><strong>Verzeichnisse:</strong> Entscheiden, ob Sie bei 11880.com und golocal.de eingetragen sein wollen; falls ja, mit denselben Angaben wie im Impressum.</li>
+              </ol>
+              <p>Berichtsdatum 09.10.2026. Datenstand: Messungen vom 03.10. bis 09.10.2026; wann und wie jeder Teil gemessen wurde, steht im Anhang A „Messweg“ (S. 9).</p>
+            </div>
+          </details>
         </figure>
         <figure class="muster-fig">
           <a class="muster-zoom" href="/assets/muster-agenturbericht/agenturbericht-muster-seite-4-google-gross.webp" data-alt="Seite 4 des Muster-Agenturberichts in Großansicht: Google-Plätze aus zwei Datenquellen, Kartenbereich an zwei Messpunkten und Gegenprobe live in Google Maps">
@@ -245,6 +289,37 @@ footer{background:#1B1916;color:rgba(250,247,242,.5);padding:2.5rem clamp(1.25re
             </picture>
           </a>
           <figcaption><strong>Seite 4: eine Messseite</strong>Google-Plätze aus zwei Datenquellen, Abweichungen offen benannt, dazu der Kartenbereich mit Gegenprobe live in Google Maps.</figcaption>
+          <details class="muster-text">
+            <summary>Textfassung dieser Seite</summary>
+            <div class="muster-text__body">
+              <h3>Teil 2: Wo stehen Sie bei Google?</h3>
+              <p><strong>Befund:</strong> Bestätigt ist ein Platz: Platz 1 bei „seo für kosmetikstudios kirchheim bei münchen“. Für die beiden anderen Suchbegriffe gibt es keinen bestätigten Platz. Im Google-Kartenbereich ist kein Platz bestätigt; in Google Maps selbst erschien Ihr Profil nur bei einem Begriff, auf Platz 7.</p>
+              <h4>Google-Suche (organische Treffer)</h4>
+              <div class="muster-table" role="region" aria-label="Tabelle Seite 4: Google-Suche, organische Treffer" tabindex="0">
+                <table>
+                  <thead><tr><th scope="col">Suchbegriff</th><th scope="col">Ergebnis</th><th scope="col">Einordnung</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">seo beratung kirchheim bei münchen</th><td>Platz 5 laut DataForSEO, Platz 7 laut Serper; davor auf Platz 1 ein Branchenbuch-Eintrag (branchenbuch.portal.muenchen.de)</td><td><strong>Quellen weichen ab, Platz nicht bestätigt.</strong></td></tr>
+                    <tr><th scope="row">seo für kosmetikstudios kirchheim bei münchen</th><td>Platz 1 laut beiden Quellen</td><td><strong>Von beiden Quellen bestätigt.</strong></td></tr>
+                    <tr><th scope="row">local seo kirchheim bei münchen</th><td>bei keiner Quelle unter den Treffern; bei Serper auf Platz 1 ein Branchenbuch-Eintrag</td><td>Von keiner Quelle gefunden.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <h4>Google-Kartenbereich</h4>
+              <div class="muster-table" role="region" aria-label="Tabelle Seite 4: Google-Kartenbereich" tabindex="0">
+                <table class="muster-table--wide">
+                  <thead><tr><th scope="col">Suchbegriff</th><th scope="col">Messpunkt A (Impressum-Anschrift)</th><th scope="col">Messpunkt B (Koordinaten aus der Profil-Adresse)</th><th scope="col">Gegenprobe: Google Maps live, 08.10.2026, 16:42 Uhr</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">seo beratung kirchheim bei münchen</th><td>Platz 2</td><td>nicht unter den abgerufenen Treffern</td><td>Profil nicht in der angezeigten Liste (die Liste zeigte 2 Einträge)</td></tr>
+                    <tr><th scope="row">seo für kosmetikstudios kirchheim bei münchen</th><td>Platz 3</td><td>Platz 5</td><td>Profil auf Platz 7 der angezeigten Liste (8 Einträge)</td></tr>
+                    <tr><th scope="row">local seo kirchheim bei münchen</th><td>nicht unter den abgerufenen Treffern</td><td>nicht unter den abgerufenen Treffern</td><td>Profil nicht unter den 10 angezeigten Einträgen</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>Die Plätze laut Analyse hängen vom Messpunkt ab und werden von der Live-Ansicht nicht bestätigt; sie sind ein Hinweis aus nur einer Quelle, kein bestätigter Wert.</p>
+              <p><strong>So wurde gemessen:</strong> organische Treffer bei zwei unabhängigen Datenquellen (DataForSEO, Serper) am 03.10.2026; Kartenbereich mit einer Datenquelle an zwei Messpunkten und Gegenprobe live in Google Maps am 08.10.2026. Einzelheiten: Anhang A „Messweg“ (S. 12).</p>
+            </div>
+          </details>
         </figure>
         <figure class="muster-fig">
           <a class="muster-zoom" href="/assets/muster-agenturbericht/agenturbericht-muster-seite-2-massnahmen-gross.webp" data-alt="Seite 2 des Muster-Agenturberichts in Großansicht: Maßnahmenliste nach Dringlichkeit mit Zuständigkeit, geschätztem Aufwand und Beleg">
@@ -254,6 +329,27 @@ footer{background:#1B1916;color:rgba(250,247,242,.5);padding:2.5rem clamp(1.25re
             </picture>
           </a>
           <figcaption><strong>Seite 2: die Maßnahmen</strong>Sortiert nach Dringlichkeit, je mit Begründung, Zuständigkeit, geschätztem Aufwand und Verweis auf den Beleg.</figcaption>
+          <details class="muster-text">
+            <summary>Textfassung dieser Seite</summary>
+            <div class="muster-text__body">
+              <h3>Maßnahmen: was zu tun ist</h3>
+              <p>Sortiert nach Dringlichkeit. Reihenfolge und Aufwand sind eine fachliche Einschätzung; Zusagen zu Ergebnissen gibt es nicht (siehe „Grenzen der Messung“, S. 7). <strong>Sofort</strong> = jetzt angehen · <strong>In 30 Tagen</strong> = im nächsten Monat · <strong>Beobachten</strong> = erst erneut messen.</p>
+              <div class="muster-table" role="region" aria-label="Tabelle Seite 2: Maßnahmen" tabindex="0">
+                <table class="muster-table--wide">
+                  <thead><tr><th scope="col">Priorität</th><th scope="col">Was zu tun ist</th><th scope="col">Warum</th><th scope="col">Wer</th><th scope="col">Aufwand (Schätzung, vor Ort zu prüfen)</th><th scope="col">Beleg</th></tr></thead>
+                  <tbody>
+                    <tr><td>Sofort</td><td>Entscheiden, ob eine Telefonnummer veröffentlicht wird. Falls ja: dieselbe Nummer in Impressum, Website (anklickbarer Telefonlink), Google-Profil und Verzeichnissen eintragen.</td><td>Keine der vier Quellen zeigt eine Telefonnummer; die Startseite hat keinen Telefonlink.</td><td>Inhaber entscheidet<br>Webdesigner<br>Google-Profil</td><td>ca. 1 Std.</td><td>S. 5, S. 6</td></tr>
+                    <tr><td>Sofort</td><td>Entscheiden, ob das Google-Profil eine Anschrift oder ein Servicegebiet zeigt, und die Wahl mit dem Impressum abstimmen. Danach den Kartenbereich neu messen.</td><td>Das Profil zeigt nur ein Servicegebiet; die Kartenplätze sind uneinheitlich und live nicht bestätigt.</td><td>Inhaber entscheidet<br>Google-Profil</td><td>unter 1 Std.</td><td>S. 4, S. 5</td></tr>
+                    <tr><td>In 30 Tagen</td><td>Entscheiden, ob Einträge bei 11880.com und golocal.de gewünscht sind; falls ja, Angaben exakt wie im Impressum.</td><td>In je drei dokumentierten Suchen wurde kein Eintrag gefunden.</td><td>Inhaber entscheidet</td><td>ca. 1 Std.</td><td>S. 6</td></tr>
+                    <tr><td>In 30 Tagen</td><td>Weitere echte Bewertungen im Google-Profil auf dem üblichen Weg erbitten (nicht kaufen oder steuern).</td><td>Das Profil hat 1 Bewertung (5,0).</td><td>Inhaber</td><td>laufend, wenige Minuten</td><td>S. 5</td></tr>
+                    <tr><td>In 30 Tagen</td><td>Inhalte veröffentlichen, die allgemeine Einstiegsfragen der Zielgruppe direkt beantworten (zum Beispiel: wie ein Studio im Google-Kartenbereich erscheint).</td><td>Bei den drei Einstiegsfragen nannte kein Assistent Sie; die Ursache belegt die Messung nicht.</td><td>Inhaber (Inhalt)<br>Webdesigner</td><td>mehrere Tage</td><td>S. 3</td></tr>
+                    <tr><td>In 30 Tagen</td><td>Den Hauptknopf so einstellen, dass nach dem Klick das erste Formularfeld sofort sichtbar ist.</td><td>Das erste Eingabefeld liegt knapp unter (Computer) bzw. am unteren Rand (Handy) des sichtbaren Bereichs.</td><td>Webdesigner</td><td>unter 1 Std.</td><td>S. 6</td></tr>
+                    <tr><td>Beobachten</td><td>„seo beratung kirchheim bei münchen“ und „local seo kirchheim bei münchen“ mit beiden Datenquellen erneut messen, bevor daraus Maßnahmen abgeleitet werden.</td><td>Quellen weichen ab (Platz 5 gegen 7) bzw. finden die Website nicht.</td><td>Webdesigner</td><td>unter 1 Std.</td><td>S. 4</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </details>
         </figure>
       </div>
       <p>Die übrigen Seiten enthalten die Auswertung der KI-Antworten, den Abgleich von Name, Adresse und Telefonnummer, den Klicktest mit Bildschirmfotos, die Grenzen der Messung, eine Seite für Ihr eigenes Angebot an den Kunden und im Anhang den Messweg. Das ganze Muster als PDF schicke ich Ihnen auf Anfrage.</p>

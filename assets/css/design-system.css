@@ -18,6 +18,8 @@ html { scroll-behavior: smooth; }
   [id] { scroll-margin-top: 84px; }
   [data-menu-panel] { opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s; }
   [data-menu]:hover > [data-menu-panel], [data-menu]:focus-within > [data-menu-panel], [data-menu][data-open="true"] > [data-menu-panel] { opacity: 1; visibility: visible; transform: translateY(0); }
+  /* Astra R1 Befund 2 (2026-10-20): Escape-Zustand uebersteuert :hover/:focus-within (gleiche Spezifitaet, steht danach). */
+  [data-menu][data-closed="true"] > [data-menu-panel] { opacity: 0; visibility: hidden; transform: translateY(6px); }
   [data-burger] { display: none; }
   [data-mobile-panel] { display: none; }
   nav[data-mobile-open="true"] [data-mobile-panel] { display: block; }
