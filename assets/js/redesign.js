@@ -7,21 +7,37 @@
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // ---- Navigation ----
-    function closeMenus() {
-      document.querySelectorAll('[data-menu][data-open="true"]').forEach(function (m) {
+    // Astra R2 Befund 2 (2026-10-20): aria-expanded folgt der tatsaechlichen Sichtbarkeit,
+    // auch beim reinen Hover (CSS :hover). data-closed="true" uebersteuert :hover und :focus-within.
+    function menuShown(m) {
+      return m.getAttribute('data-closed') !== 'true' &&
+        (m.getAttribute('data-open') === 'true' || m._hover === true || m.contains(document.activeElement));
+    }
+    function syncMenu(m) {
+      var b = m.querySelector('[data-menu-btn]');
+      if (b) b.setAttribute('aria-expanded', menuShown(m) ? 'true' : 'false');
+    }
+    function closeMenus(except) {
+      document.querySelectorAll('[data-menu]').forEach(function (m) {
+        if (m === except) return;
         m.removeAttribute('data-open');
-        var b = m.querySelector('[data-menu-btn]');
-        if (b) b.setAttribute('aria-expanded', 'false');
+        syncMenu(m);
       });
     }
     document.querySelectorAll('[data-menu-btn]').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var wrap = btn.closest('[data-menu]');
         var isOpen = wrap.getAttribute('data-open') === 'true';
-        wrap.removeAttribute('data-closed');
-        closeMenus();
-        if (!isOpen) { wrap.setAttribute('data-open', 'true'); btn.setAttribute('aria-expanded', 'true'); }
-        else { btn.blur(); }
+        closeMenus(wrap);
+        if (!isOpen) {
+          wrap.removeAttribute('data-closed');
+          wrap.setAttribute('data-open', 'true');
+        } else {
+          // Zweiter Klick schliesst sichtbar, auch wenn die Maus noch darueber steht; der Fokus bleibt auf dem Knopf.
+          wrap.removeAttribute('data-open');
+          wrap.setAttribute('data-closed', 'true');
+        }
+        syncMenu(wrap);
       });
     });
     var burger = document.querySelector('[data-burger]');
@@ -47,24 +63,22 @@
     });
     // Astra R1 Befund 2 (2026-10-20): :hover/:focus-within hielten das Desktop-Untermenue nach Escape offen.
     // data-closed="true" uebersteuert beide CSS-Regeln, bis Maus und Fokus das Menue verlassen haben.
-    // aria-expanded folgt der tatsaechlichen Sichtbarkeit (Fokus im Menue oder Klickoeffnung).
+    // aria-expanded folgt der tatsaechlichen Sichtbarkeit (Hover, Fokus im Menue oder Klickoeffnung).
     document.querySelectorAll('[data-menu]').forEach(function (m) {
-      var b = m.querySelector('[data-menu-btn]');
-      function sync() {
-        if (!b) return;
-        var shown = m.getAttribute('data-closed') !== 'true' &&
-          (m.getAttribute('data-open') === 'true' || m.contains(document.activeElement));
-        b.setAttribute('aria-expanded', shown ? 'true' : 'false');
-      }
-      m.addEventListener('focusin', sync);
+      m._hover = m.matches(':hover');
+      syncMenu(m);
+      m.addEventListener('mouseenter', function () { m._hover = true; syncMenu(m); });
+      m.addEventListener('mouseleave', function () {
+        m._hover = false;
+        if (!m.contains(document.activeElement)) m.removeAttribute('data-closed');
+        syncMenu(m);
+      });
+      m.addEventListener('focusin', function () { syncMenu(m); });
       m.addEventListener('focusout', function (e) {
         if (e.relatedTarget && m.contains(e.relatedTarget)) return;
-        if (!m.matches(':hover')) m.removeAttribute('data-closed');
+        if (!m._hover) m.removeAttribute('data-closed');
         m.removeAttribute('data-open');
-        setTimeout(sync, 0);
-      });
-      m.addEventListener('mouseleave', function () {
-        if (!m.contains(document.activeElement)) m.removeAttribute('data-closed');
+        setTimeout(function () { syncMenu(m); }, 0);
       });
     });
     // K-1 (Vollaudit 2026-10): Escape schliesst auch das mobile Menue und gibt den Fokus an den Menue-Knopf zurueck.
@@ -73,14 +87,12 @@
       var active = document.activeElement;
       document.querySelectorAll('[data-menu]').forEach(function (m) {
         var inside = m.contains(active);
-        if (!(inside || m.matches(':hover') || m.getAttribute('data-open') === 'true')) return;
+        if (!(inside || m._hover === true || m.getAttribute('data-open') === 'true')) return;
         m.setAttribute('data-closed', 'true');
         m.removeAttribute('data-open');
+        syncMenu(m);
         var b = m.querySelector('[data-menu-btn]');
-        if (b) {
-          b.setAttribute('aria-expanded', 'false');
-          if (inside && active !== b) b.focus();
-        }
+        if (b && inside && active !== b) b.focus();
       });
       closeMenus();
       var mnav = document.querySelector('nav[data-mobile-open="true"]');
