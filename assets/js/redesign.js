@@ -168,12 +168,14 @@
     var vh = els.length ? window.innerHeight : 0, below = [];
     var tops = els.map(function (el) { return el.getBoundingClientRect().top + 26; });
     els.forEach(function (el, i) {
+      // Nachaudit N-1: Elemente im ersten Viewport nie ausblenden (kein unsichtbarer Hero,
+      // Speed Index); nur Elemente unterhalb werden ausgeblendet und beim Scrollen eingeblendet.
+      if (tops[i] < vh * 0.92) { showEl(el); return; }
       var d = el.getAttribute('data-delay') || '0';
       el.style.transition = 'opacity 0.9s ease ' + d + 'ms, transform 0.9s ease ' + d + 'ms';
       el.style.opacity = '0';
       el.style.transform = 'translateY(26px)';
-      if (tops[i] < vh * 0.92) { setTimeout(function () { showEl(el); }, 60); }
-      else below.push(el);
+      below.push(el);
     });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) { if (en.isIntersecting) { showEl(en.target); io.unobserve(en.target); } });
