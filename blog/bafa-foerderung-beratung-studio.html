@@ -162,6 +162,8 @@ h3{font-size:1.05rem;}
 .table-wrap table{width:100%;border-collapse:collapse;background:#FFFFFF;border:1px solid #E3DCCE;border-radius:12px;overflow:hidden;font-size:0.95rem;color:#26241F;}
 .table-wrap th,.table-wrap td{border-bottom:1px solid #E3DCCE;padding:0.8rem 0.95rem;text-align:left;vertical-align:top;}
 .table-wrap th{background:rgba(196,99,63,0.12);font-family:'Geist Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:#8E4227;font-weight:500;}
+/* T-1 Technik-Pruefung 10/2026: Tabelle ist hier weiss; die globale Regel fuer dunkle Tabellenkoepfe (#E8956F) ergab 2,0:1. #8E4227 auf dem Kopfgrund = 6,1:1. */
+html body .table-wrap[role="region"] table th{color:#8E4227 !important;}
 .measurement-note{font-size:0.9rem;color:#6E675C;margin-top:1rem;}
 .cta-box{background:#A94F30;border-radius:16px;padding:clamp(2rem,4vw,3rem);text-align:center;}
 .cta-box .stack{align-items:center;text-align:center;}

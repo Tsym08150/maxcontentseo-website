@@ -138,7 +138,7 @@ h3{font-size:1.05rem;}
 .hero__lead{font-size:1.12rem;font-weight:500;color:rgba(250,247,242,0.72);max-width:640px;margin:0 0 1rem;}
 .hero__copy .button-primary,.hero__copy .button-secondary{margin:1rem 0.6rem 0 0;}
 .hero-card{border:1px solid rgba(250,247,242,0.12);border-radius:16px;background:#2E332B;padding:0.85rem;}
-.hero-card__image{border-radius:12px;width:100%;object-fit:cover;display:block;}
+.hero-card__image{border-radius:12px;width:100%;height:auto;object-fit:cover;display:block;}
 .card-grid{display:grid;gap:1.25rem;grid-template-columns:repeat(3,minmax(0,1fr));}
 .summary-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
 .summary-grid .card strong{display:block;font-family:'Lora',Georgia,serif;font-size:2.1rem;font-weight:600;line-height:1;letter-spacing:-0.02em;color:#C4633F;margin-bottom:0.35rem;}
@@ -376,7 +376,7 @@ h3{font-size:1.05rem;}
           </div>
         </div>
         <article class="hero-card">
-          <img class="hero-card__image" src="../assets/lingqi-foto.webp" alt="LingQi TCM Head Spa München">
+          <img class="hero-card__image" src="../assets/lingqi-foto.webp" srcset="../assets/lingqi-foto-800.webp 800w, ../assets/lingqi-foto.webp 1280w" sizes="(max-width: 900px) 90vw, 400px" width="1280" height="2293" fetchpriority="high" alt="LingQi TCM Head Spa München">
         </article>
       </div>
     </section>
