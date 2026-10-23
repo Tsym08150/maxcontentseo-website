@@ -1,0 +1,35 @@
+1. **„Kurz gesagt“ und FAQ verallgemeinern die Kennzeichnungspflicht.**  
+   **Fundstelle:** „Deepfakes müssen offengelegt werden, und Texte, die die Öffentlichkeit über Angelegenheiten von öffentlichem Interesse informieren sollen, ebenfalls.“ Außerdem: „Für Texte mit Gesundheitsbezug entfällt die Kennzeichnung nur, wenn …“  
+   **Beleg:** [Artikel 50 Absatz 4](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50) betrifft KI-generierte oder KI-manipulierte Texte mit entsprechendem Veröffentlichungszweck. Gesundheitsbezug allein genügt nicht. Im isoliert zitierten Kasten fehlt ausdrücklich die Einschränkung auf KI-Texte.  
+   **Korrektur:** „KI-generierte oder wesentlich mit KI bearbeitete Texte können kennzeichnungspflichtig sein, wenn sie die Öffentlichkeit über Angelegenheiten von öffentlichem Interesse informieren sollen, etwa über öffentliche Gesundheit. Die Pflicht entfällt bei inhaltlicher menschlicher Prüfung oder redaktioneller Kontrolle und redaktioneller Verantwortung.“ FAQ, Tabelle und Social-Ableitung entsprechend präzisieren.
+
+2. **Die persönliche Prüfung durch die Studioinhaberin wird zu Unrecht als Voraussetzung dargestellt.**  
+   **Fundstelle:** „Entweder Sie prüfen jede Aussage selbst an der Quelle und stehen namentlich dafür ein, oder Sie kennzeichnen den Text.“ Gleichlautend in der Checkliste.  
+   **Beleg:** Artikel 50 Absatz 4 erlaubt menschliche Überprüfung **oder** redaktionelle Kontrolle. Die [Kommissions-FAQ zur Ausnahme](https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act) nennt sachkundige Prüfende und eine redaktionell verantwortliche Person. Das müssen weder dieselbe Person noch die Studioinhaberin sein.  
+   **Korrektur:** „Lassen Sie den Inhalt durch eine sachkundige Person prüfen oder einer wirksamen redaktionellen Kontrolle unterziehen. Zusätzlich muss eine natürliche oder juristische Person die redaktionelle Verantwortung tragen.“ Eine persönliche Quellenprüfung als eigene Empfehlung kennzeichnen. Auch die LinkedIn-Formulierung erlaubt derzeit nur eine Person für beide Aufgaben.
+
+3. **Der Anwendungsbereich des Heilmittelwerbegesetzes ist zu weit formuliert.**  
+   **Fundstelle:** „Unabhängig vom AI Act gilt für Gesundheitsthemen weiter das Heilmittelwerbegesetz.“  
+   **Beleg:** [§ 1 HWG](https://www.gesetze-im-internet.de/heilmwerbg/__1.html) erfasst bestimmte Werbung für Arzneimittel, Medizinprodukte sowie weitere Mittel und Behandlungen unter den dort genannten Voraussetzungen. Nicht jeder redaktionelle Gesundheitstext fällt darunter.  
+   **Korrektur:** „Unabhängig vom AI Act kann bei gesundheitsbezogener Werbung das Heilmittelwerbegesetz gelten, insbesondere bei Werbung für die Erkennung, Beseitigung oder Linderung von Krankheiten oder krankhaften Beschwerden.“
+
+4. **Die pauschale Entwarnung für Raumansichten ist unbelegt.**  
+   **Fundstelle:** „Für Raumansichten, Illustrationen und erkennbar künstlerische Bilder ist das Risiko deutlich geringer.“  
+   **Beleg:** Die Deepfake-Definition in [Artikel 3 Nummer 60](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-3) umfasst ausdrücklich auch Orte und Einrichtungen. Eine erzeugte Studioansicht kann außerdem über die tatsächliche Ausstattung täuschen; maßgeblich ist [§ 5 UWG](https://www.gesetze-im-internet.de/uwg_2004/__5.html). Die behauptete Risikominderung ist nicht belegt und nicht ausdrücklich als Einschätzung markiert.  
+   **Korrektur:** „Auch erzeugte Raumansichten können kennzeichnungspflichtig oder irreführend sein, wenn sie wie Fotos Ihrer tatsächlichen Räume erscheinen. Bei erkennbaren Illustrationen kommt es auf Darstellung und Verwendung an.“
+
+5. **Die strukturierten Datumsangaben liegen in der Zukunft.**  
+   **Fundstelle:** Im BlogPosting-Schema: `"datePublished": "2027-01-22"` und `"dateModified": "2027-01-22"`; sichtbar dagegen „Stand: 23.10.2026“.  
+   **Beleg:** [Google Search Central zu Veröffentlichungsdaten](https://developers.google.com/search/docs/appearance/publication-dates) verlangt tatsächliche Veröffentlichungs- beziehungsweise Aktualisierungsdaten und rät ausdrücklich von Zukunftsdaten ab.  
+   **Korrektur:** Beim Veröffentlichen das tatsächliche Veröffentlichungsdatum einsetzen; `dateModified` auf die tatsächliche letzte inhaltliche Aktualisierung setzen. Entsprechende sichtbare Datumsangaben ergänzen.
+
+6. **Die Social-Ableitung beschreibt die Fristverschiebung zu allgemein.**  
+   **Fundstelle:** LinkedIn: „Die Fristverschiebung vom Juli 2026 betrifft übrigens nur Anbieter von KI-Werkzeugen, nicht die Nutzer.“  
+   **Beleg:** Die [Änderungsverordnung, Artikel 1 Nummern 39 und 40, PDF-Kopie](https://www.ibf-solutions.com/fileadmin/dateidownloads/verordnung-2026-1744.pdf) enthält neben der Anbieterfrist für Artikel 50 Absatz 2 auch Änderungen der Hochrisiko-Fristen. Die Aussage stimmt nur mit ausdrücklichem Bezug auf die Übergangsfrist zur maschinenlesbaren Markierung.  
+   **Korrektur:** „Die Übergangsfrist bis zum 2. Dezember 2026 betrifft ausschließlich die Anbieterpflicht zur maschinenlesbaren Markierung nach Artikel 50 Absatz 2 bei bereits vor dem 2. August 2026 in Verkehr gebrachten Systemen.“
+
+Unauffällig: Meta-Description exakt **155 Zeichen**, keine Gedankenstriche im sichtbaren HTML-Text, durchgängige Sie-Ansprache und alle vier FAQ-Fragen samt Antworten wortgleich im Schema. Die Social-Zeichenangaben **1125** und **478** stimmen. Keine der ausdrücklich verbotenen Aussagen, keine Heil-, Umsatz-, Buchungs- oder Rankingversprechen und keine vorwurfsvollen Anbieternennungen gefunden. Rechtsberatungshinweise sind vorhanden. Titel und Gliederung sind verständlich; die Eigenwerbung bleibt begrenzt.
+
+**Quellengrenzen:** EUR-Lex war durch eine JavaScript-/Botprüfung blockiert. Die Änderungsverordnung konnte über die verlinkte PDF-Kopie geprüft werden. Die [Kommissionsseite zu den Leitlinien](https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems) war erreichbar, das [Leitlinien-PDF](https://ec.europa.eu/newsroom/dae/redirection/document/131215) dagegen nicht. Dokumentnummer und einzelne Randnummern, Beispiele sowie Detailaussagen daraus sind deshalb nicht vollständig unabhängig bestätigt; ergänzend wurden die offiziellen Kommissions-FAQ geprüft. Dateien wurden nicht verändert.
+
+URTEIL: BEFUNDE (6)

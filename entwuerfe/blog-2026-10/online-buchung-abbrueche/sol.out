@@ -1,0 +1,30 @@
+1. **„Kurz gesagt“ behauptet eine Forschungslücke zu absolut.**  
+   **Fundstelle:** „Für Termine bei Studios gibt es keine unabhängige Studie, die zeigt, an welcher Stelle Kundinnen die Online-Buchung abbrechen.“  
+   **Beleg:** Die Quellennotizen dokumentieren keine systematische Literaturrecherche, die eine solche Nichtexistenz belegen könnte. Im Haupttext steht zutreffend vorsichtiger: „Ich habe keine […] Untersuchung gefunden.“  
+   **Korrektur:** „Eine unabhängige, veröffentlichte Untersuchung zu Abbruchstellen bei Online-Buchungen in Kosmetik-, Wellness- oder TCM-Studios habe ich nicht gefunden.“ Damit bleibt der Kasten auch einzeln zitiert belastbar.
+
+2. **Die Kontopflicht-Zahl erhält einen falschen Nenner.**  
+   **Fundstelle, Abschnitt 4:** „In der Baymard-Befragung war es der Grund für 18 % der Abbrüche im Onlinehandel.“  
+   **Beleg:** Baymard berichtet über von US-Onlinekäufern genannte Abbruchgründe. Das ist keine Messung des Anteils sämtlicher Abbruchvorgänge. Die Darstellung der weiteren Gründe klammert zudem „nur gestöbert/nicht kaufbereit“ aus. [Baymard-Originalquelle](https://baymard.com/lists/cart-abandonment-rate)  
+   **Korrektur:** „18 % der befragten US-Onlinekäufer nannten die Pflicht zum Kundenkonto als Abbruchgrund.“ Im ersten Studienabsatz ergänzen, dass Baymard diese Gründe unter Ausklammerung von „nur gestöbert/nicht kaufbereit“ darstellt. Die absoluten Prozentwerte 40, 18, 17 und 12 stimmen mit der Quelle überein.
+
+3. **Die Übertragung auf Studiobuchungen wird als gesicherte Wirkung formuliert.**  
+   **Fundstelle:** „Die Richtung lässt sich trotzdem übertragen: Jede unerwartete Hürde kostet einen Teil der Menschen, die eigentlich kaufen oder buchen wollten.“  
+   **Beleg:** Die verlinkte Untersuchung betrifft den Onlinehandel und belegt weder diese ausnahmslose Aussage noch deren Gültigkeit für Studiotermine. [Baymard](https://baymard.com/lists/cart-abandonment-rate)  
+   **Korrektur:** „Meine Einschätzung: Ähnliche Hürden können auch bei Studiobuchungen zum Abbruch beitragen. Ob das bei Ihrem Studio geschieht, sollten Sie am eigenen Buchungsweg prüfen.“ Auch in der LinkedIn-Ableitung „die Richtung lässt sich übertragen“ entsprechend als Einschätzung kennzeichnen.
+
+4. **Gesundheitsfragen werden pauschal ausgeschlossen; der rechtliche Hinweis fehlt an dieser Stelle.**  
+   **Fundstellen:** „Gesundheitsfragen gehören, wenn überhaupt, in ein gesondertes Gespräch und nicht in ein Pflichtfeld des Buchungsformulars.“ Außerdem: „keine Gesundheitsfragen im Formular“.  
+   **Beleg:** Art. 5 Abs. 1 lit. c DSGVO verlangt Datenminimierung, verbietet aber nicht generell Gesundheitsfragen in Buchungsformularen. Für Gesundheitsdaten gelten zusätzlich die besonderen Voraussetzungen des Art. 9 DSGVO. Ein Gespräch ist ebenfalls kein pauschaler Ausweg aus diesen Anforderungen. [Art. 5 DSGVO](https://dsgvo-gesetz.de/art-5-dsgvo/), [Art. 9 DSGVO](https://dsgvo-gesetz.de/art-9-dsgvo/)  
+   **Korrektur:** „Fragen Sie bei der Terminbuchung nur notwendige Daten ab. Prüfen Sie bei Gesundheitsangaben besonders, ob sie bereits für die Buchung erforderlich sind und welche datenschutzrechtlichen Voraussetzungen gelten. Dieser Artikel ersetzt keine Rechtsberatung.“ Checklistenpunkt: „Keine unnötigen Gesundheitsfragen bei der Terminbuchung.“
+
+5. **Die eigene Ladezeitmessung wird methodisch zu stark verkürzt.**  
+   **Fundstelle:** „[…] lagen 102 darüber, der mittlere Wert betrug 7,8 Sekunden.“ Entsprechend verkürzt im Ladezeit-FAQ.  
+   **Beleg:** Der verlinkte Messartikel nennt einen **Median von 7,79 Sekunden**, einen arithmetischen Mittelwert von **9,64 Sekunden** und verwendet je Website den **schlechtesten gemessenen Wert**. Diese Auswahl ist für die Einordnung wesentlich. Googles Empfehlung berücksichtigt dagegen das 75. Perzentil der Seitenaufrufe, getrennt nach Mobilgeräten und Desktop. [Messartikel](https://maxcontentseo.de/blog/ladezeit-kosmetikstudio.html), [web.dev](https://web.dev/articles/lcp)  
+   **Korrektur:** „In meiner nicht repräsentativen Laborauswertung von 106 Studio-Websites lag der jeweils schlechteste gemessene Ladezeitwert bei 102 Websites über 2,5 Sekunden. Der Median, also der Wert in der Mitte der sortierten Ergebnisse, betrug 7,8 Sekunden.“ Das FAQ entsprechend präzisieren und anschließend das Schema wortgleich aktualisieren.
+
+Keine weiteren belegten Beanstandungen: Die Meta-Description hat **149 Zeichen**; die vier FAQ-Fragen und Antworten stimmen wortgleich mit dem Schema überein. Im sichtbaren HTML-Text stehen keine Gedankenstriche. Die Sie-Form wird eingehalten. Die ausdrücklich verbotenen Aussagen, Heilversprechen sowie Umsatz-, Buchungs- oder Rankinggarantien kommen nicht vor. Titel und Zwischenüberschriften sind verständlich; die Eigenwerbung bleibt überwiegend auf den Schluss beschränkt.
+
+Zur Quellenprüfung: Die verlinkte Planity-Unterseite `/de-DE/b` war nicht erreichbar. Die zitierte 50-%-Anbieterangabe steht jedoch auf der erreichbaren [deutschen Planity-Startseite](https://www.planity.com/de-DE). Der Ladezeitartikel ließ sich nicht direkt öffnen; geprüft wurden die Suchindexfassung und die vorhandene lokale HTML-Fassung. Rohmessdaten lagen nicht vor. EUR-Lex blockierte den Abruf durch eine JavaScript-Prüfung; die DSGVO-Texte waren über die oben verlinkte Wiedergabe erreichbar. Die Datumsangaben `2026-12-04` im BlogPosting-Schema passen nur bei tatsächlicher Veröffentlichung beziehungsweise Aktualisierung an diesem Tag.
+
+URTEIL: BEFUNDE (5)

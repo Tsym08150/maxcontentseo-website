@@ -1,0 +1,42 @@
+1. **Zwei Untersuchungen werden als drei angekündigt.**  
+   **Fundstelle:** Einleitung: „Drei Untersuchungen aus diesem Jahr zeigen …“; ebenso im LinkedIn-Beitrag.  
+   **Beleg:** Verlinkt sind zwei empirische Untersuchungen. Die [OpenAI-Hilfe](https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt) beschreibt Produktfunktionen und ist keine dritte Untersuchung.  
+   **Korrektur:** „Zwei Untersuchungen und die Dokumentation der Anbieter zeigen, warum dieser Schluss nicht trägt.“
+
+2. **Das SparkToro-Datum weicht von der Originalseite ab.**  
+   **Fundstelle:** „SparkToro, 28.01.2026“, auch im Quellenverzeichnis und den Quellennotizen.  
+   **Beleg:** Die erreichbare [SparkToro-Originalseite](https://sparktoro.com/blog/new-research-ais-are-highly-inconsistent-when-recommending-brands-or-products-marketers-should-take-care-when-tracking-ai-visibility/) zeigt „27 Jan 2026“.  
+   **Korrektur:** Auf „27.01.2026“ vereinheitlichen oder eine abweichende Datierung nachvollziehbar belegen.
+
+3. **Die Wiederholungsbefunde werden zu stark verallgemeinert.**  
+   **Fundstelle:** „Die Wahrscheinlichkeit, dass zwei Antworten dieselbe Liste von Marken enthalten, lag unter eins zu hundert.“ FAQ: „Die Antworten […] wiederholen sich fast nie.“  
+   **Beleg:** [SparkToro](https://sparktoro.com/blog/new-research-ais-are-highly-inconsistent-when-recommending-brands-or-products-marketers-should-take-care-when-tracking-ai-visibility/) nennt unter einem Prozent ausdrücklich für ChatGPT und Google; Claude lieferte etwas häufiger gleiche Listen. Untersucht wurden Empfehlungslisten, keine beliebigen Antworten.  
+   **Korrektur:** „Bei den untersuchten Empfehlungsfragen lieferten ChatGPT und Googles KI selten dieselbe Markenliste; Claude wiederholte Listen etwas häufiger.“ Die Eingrenzung auch in „Kurz gesagt“, FAQ und Social übernehmen.
+
+4. **Der Messplan vermittelt mehr statistische Absicherung als belegt.**  
+   **Fundstelle:** „SparkToro nennt für belastbare Werte 60 bis 100 Durchläufe je Frage.“ FAQ: „[…] zeigen zehn Durchläufe […] bereits eine Richtung“.  
+   **Beleg:** [SparkToro](https://sparktoro.com/blog/new-research-ais-are-highly-inconsistent-when-recommending-brands-or-products-marketers-should-take-care-when-tracking-ai-visibility/) empfiehlt gewöhnlich mindestens 60 bis 100 Wiederholungen, lässt die statistisch erforderliche Anzahl aber ausdrücklich offen. Die Autoren-Quellennotizen kennzeichnen zehn Durchläufe als eigene Erfahrung; im FAQ fehlt diese Einschränkung.  
+   **Korrektur:** „Fishkin empfiehlt meist mindestens 60 bis 100 Wiederholungen. Eine statistisch abgesicherte Mindestzahl liefert die Untersuchung nicht. Zehn Durchläufe schlage ich als ersten Überblick vor; die Quote kann noch stark schwanken.“ FAQ-Schema entsprechend mitändern.
+
+5. **Die 26,2 Prozent sind in den eigenständig lesbaren Kurzfassungen unzureichend eingegrenzt.**  
+   **Fundstelle:** „Kurz gesagt“: „Eine Studie vom Oktober 2026 fand zudem, dass […] zusammen nur 26,2 % der Seiten trafen, die ChatGPT in der App zitierte.“ Ebenso FAQ und LinkedIn.  
+   **Beleg:** Der [Originalvorabdruck, Abschnitte 4.1 und 4.2](https://arxiv.org/html/2610.15382), berichtet diesen Wert für GPT-5.5 Instant, als Mittelwert über die untersuchten Fragen. Verglichen wurden zusammengefasste Quellenmengen mehrerer Durchläufe. Das ist keine allgemeine Trefferquote beliebiger Messwerkzeuge. Im Haupttext ist die Modellzuordnung vorhanden.  
+   **Korrektur:** „Ein nicht begutachteter Vorabdruck fand für GPT-5.5 Instant: Google-Ergebnisse und die über mehrere Durchläufe gesammelten API-Quellen deckten im Mittel 26,2 % der in der Web-App zitierten Seiten ab.“
+
+6. **Die erste Listenposition wird unzulässig mit einer Empfehlung gleichgesetzt.**  
+   **Fundstelle:** „Empfohlen: Das Studio steht an erster Stelle oder wird ausdrücklich als passend beschrieben.“ Ebenso FAQ und Schema.  
+   **Beleg:** [SparkToro](https://sparktoro.com/blog/new-research-ais-are-highly-inconsistent-when-recommending-brands-or-products-marketers-should-take-care-when-tracking-ai-visibility/) trennt Nennungshäufigkeit und Position und warnt davor, die Reihenfolge inhaltlich zu deuten.  
+   **Korrektur:** „Empfohlen: Die Antwort empfiehlt das Studio ausdrücklich für die gesuchte Leistung.“ Eine erste Listenposition separat erfassen.
+
+7. **Die Social-Ableitung macht aus einem möglichen Standortunterschied eine Gewissheit.**  
+   **Fundstelle, LinkedIn:** „Wer aus München misst, sieht andere Antworten als eine Kundin in Augsburg.“  
+   **Beleg:** Die [OpenAI-Hilfe, Abschnitt „Location“](https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt), beschreibt einen möglichen Einfluss von IP-Standort, Standortfreigabe und Erinnerungen. Unterschiedliche Antworten sind dadurch nicht zwingend.  
+   **Korrektur:** „Wer aus München misst, kann andere lokale Antworten erhalten als eine Kundin in Augsburg.“
+
+Weitere Prüfergebnisse: Meta-Description **153 Zeichen**, keine Gedankenstriche im sichtbaren HTML-Text, durchgehend Sie-Form, alle vier FAQ-Fragen und Antworten wortgleich zum Schema. Die übrigen genannten Studienzahlen und die beiden SEJ-Berichtsdaten stimmen mit den geöffneten Quellen überein. Googles Faktoren und die Standortbeschreibung sind korrekt wiedergegeben. Titel und Zwischenüberschriften sind verständlich; die Werbung bleibt zurückhaltend.
+
+Keine Heil-, Wirkungs-, Umsatz-, Buchungs- oder Rankingversprechen und keine der ausdrücklich verbotenen Aussagen gefunden. Keine Anbieterbeschuldigung erkennbar. Aus [§§ 1 und 3 HWG](https://www.gesetze-im-internet.de/heilmwerbg/__3.html) sowie [§ 5 UWG](https://www.gesetze-im-internet.de/uwg_2004/__5.html) ergibt sich hier kein zusätzlicher konkreter Textbefund. Ein Hinweis „keine Rechtsberatung“ ist im Artikel mangels rechtlicher Erläuterungen nicht erforderlich.
+
+Alle externen Fachquellen waren erreichbar. Nicht abrufbar waren die internen Seiten [zu eigenen Messungen](https://maxcontentseo.de/blog/ranking-und-ki-nennung.html), [zur Messprüfung](https://maxcontentseo.de/blog/ki-sichtbarkeit-messung-pruefen.html) und [zum Check-Angebot](https://maxcontentseo.de/ki-sichtbarkeits-check/). Deren Inhalte konnten nicht bestätigt werden. Keine Dateien geändert.
+
+URTEIL: BEFUNDE (7)

@@ -1,0 +1,77 @@
+1. **Zukünftige Veröffentlichungs- und Änderungsdaten**
+   
+   **Fundstelle:** Im BlogPosting-Schema stehen `"datePublished": "2027-01-08"` und `"dateModified": "2027-01-08"`.
+   
+   **Beleg:** Am Prüfdatum 23.10.2026 liegen beide Angaben in der Zukunft. Google verlangt tatsächliche Veröffentlichungs- beziehungsweise Änderungsdaten und rät ausdrücklich von zukünftigen Angaben ab. [Google-Dokumentation](https://developers.google.com/search/docs/appearance/publication-dates)
+   
+   **Korrektur:** Beim Veröffentlichen das tatsächliche Veröffentlichungsdatum einsetzen; `dateModified` auf die tatsächliche letzte inhaltliche Änderung setzen. Ein sichtbares Veröffentlichungsdatum ergänzen.
+
+2. **„Erstmals“ wird außerhalb des untersuchten Zeitraums behauptet**
+   
+   **Fundstelle:** Kurz-gesagt-Kasten: „erstmals mehr als Friseurbetriebe mit 80.119“. Dieselbe unbeschränkte Aussage steht in der Meta-Description und im Google-Unternehmensprofil-Beitrag.
+   
+   **Beleg:** Laut Quellenverzeichnis wurden ausschließlich Jahresdaten von 2015 bis 2025 untersucht. Die erreichbare [ZDH-Auswertung 2025](https://www.zdh-statistik.de/application/stat_det.php?LID=1&ID=MDU3MDU=&cID=00968) bestätigt die Bestände, belegt aber keinen erstmaligen Überholvorgang über sämtliche früheren Jahre.
+   
+   **Korrektur:** Überall „erstmals in der untersuchten Jahresreihe seit 2015“ schreiben. Alternativ in der Meta-Description nur „mehr als Friseurbetriebe“ verwenden.
+
+3. **Pauschaler Ausschluss kosmetischer Angebote in anderen Betriebsformen**
+   
+   **Fundstelle:** „Kosmetische Leistungen, die in Friseursalons, Spas, Hotels oder Arztpraxen angeboten werden, stecken nicht in der Zahl der Kosmetikbetriebe.“ Entsprechend auch im FAQ und dessen Schema.
+   
+   **Beleg:** Die ZDH-Tabelle zählt registrierte Betriebe nach Gewerbezuordnung. Daraus folgt kein vollständiger Ausschluss aller kosmetischen Betriebe an solchen Standorten. Die handwerksrechtliche Einordnung richtet sich nach der Tätigkeit und Betriebsstruktur, einschließlich möglicher Nebenbetriebe. [§ 18 HwO](https://www.gesetze-im-internet.de/hwo/__18.html)
+   
+   **Korrektur:** „Die Zahl erfasst eingetragene Kosmetikerbetriebe. Sie bildet nicht sämtliche Orte ab, an denen kosmetische Leistungen angeboten werden, etwa zusätzlich in Friseursalons, Hotels oder Spas.“ FAQ und Schema gemeinsam anpassen.
+
+4. **Registerbewegungen werden zu tatsächlichen Studioeröffnungen**
+   
+   **Fundstelle:** „Jedes Jahr eröffnen neue Studios, die in den Suchergebnissen und Karten neben Ihnen auftauchen, und andere verschwinden.“
+   
+   **Beleg:** Die ZDH-Daten weisen Zugänge und Abgänge im Register aus. Sie belegen weder ausschließlich Neueröffnungen und Schließungen noch das Auftauchen in Suchergebnissen. Zusätzlich hat sich 2025 die handwerksrechtliche Zuordnung unter anderem für Nagelstudios und Make-up-Angebote geändert. [IHK Chemnitz zur Änderung des § 18 HwO](https://www.ihk.de/chemnitz/recht-und-steuern/rechtsinformationen/gewerberecht/basiswissen/handwerksrechtliche-abgrenzung/-18-abs-2-hwo-nagelstudio-make-up-artist-7022946)
+   
+   **Korrektur:** „Die Register zeigen bundesweit viele Eintragungen und Abmeldungen. Wie sich die Zahl tatsächlich aktiver Wettbewerber in Ihrem Ort verändert, lässt sich daraus nicht ableiten.“ Die Überschrift „81.021 und weiter steigend“ präzisieren zu „81.021 eingetragene Betriebe Ende 2025“.
+
+5. **Heilpraktikerzahlen: Bezugsjahr und Veröffentlichungsjahr vermischt; neuere Hochrechnung fehlt**
+   
+   **Fundstelle:** Kurz-gesagt-Kasten: „genannt werden für 2018 und 2020 rund 46.000 bis 47.000“. Ähnlich im LinkedIn-Beitrag.
+   
+   **Beleg:** Die [AOK](https://www.aok.de/pp/lexikon/heilpraktiker/) nennt ausdrücklich 2018. Bei der zweiten Angabe ist 2020 im Artikel lediglich das Erscheinungsjahr des Landtagsantrags; ein Bezugsjahr der 46.000 wird nicht nachgewiesen. Außerdem enthält das neuere BMG-Auftragsgutachten eine Hochrechnung von **67.387 Personen mit allgemeiner Heilpraktikererlaubnis für 2022**, ausdrücklich mit methodischen Einschränkungen. Das ist keine Zählung aktuell praktizierender Personen. [BMG-Gutachten, Kapitel 5.2.2.16 und Tabelle 65, Seiten 83/84](https://www.bundesgesundheitsministerium.de/fileadmin/Dateien/5_Publikationen/Gesundheit/Abschlussberichte/Endfassung_Empirisches_Gutachten_zum_Heilpraktikerwesen_in_DE.pdf)
+   
+   **Korrektur:** „Die AOK nennt für 2018 rund 47.000 Heilpraktiker. Ein Landtagsantrag von 2020 nennt rund 46.000 ohne hier nachgewiesenes Bezugsjahr.“ Die neuere Hochrechnung mit Definition und Grenzen ergänzen. Im Kasten keine scheinbar einheitliche Spanne verwenden.
+
+6. **Unbelegte Anbieterzahl zur Online-Buchung**
+   
+   **Fundstelle:** „Eine Plattform schreibt zum Beispiel, dass die Hälfte der online gebuchten Termine außerhalb der Öffnungszeiten gebucht wird, ohne Methode.“
+   
+   **Beleg:** Eine Originalquelle wird nicht verlinkt und fehlt in `quellen.md`. Der verlinkte [Artikel „Buchungsplattform oder eigene Website“](https://maxcontentseo.de/blog/plattform-oder-eigene-website.html) war online nicht erreichbar; seine lokal vorhandene HTML-Fassung enthält diese konkrete Angabe ebenfalls nicht. Weder die Hälfte noch der Vorwurf einer fehlenden Methode sind damit überprüfbar.
+   
+   **Korrektur:** Den Satz streichen oder die konkrete Originalseite verlinken und präzisieren: „Auf der verlinkten Seite werden Erhebungszeitraum, Stichprobe und Berechnung nicht erläutert“, sofern das tatsächlich geprüft wurde.
+
+7. **Ladezeitkennzahl und Auswahl des Messwerts fehlen**
+   
+   **Fundstelle:** „lagen 102 über Googles Schwelle von 2,5 Sekunden, der mittlere Wert lag bei 7,8 Sekunden“.
+   
+   **Beleg:** Die lokal vorhandene Fassung des [Ladezeitartikels](https://maxcontentseo.de/blog/ladezeit-kosmetikstudio.html) nennt den jeweils größten LCP-Laborwert pro Website, einen Median von 7,79 Sekunden und einen arithmetischen Mittelwert von 9,64 Sekunden. Googles 2,5-Sekunden-Grenze betrifft ausdrücklich LCP; für die Bewertung tatsächlicher Nutzung nennt Google das 75. Perzentil. [Google/web.dev zu LCP](https://web.dev/articles/lcp)
+   
+   **Korrektur:** „Bei 102 von 106 Websites lag der jeweils größte gemessene LCP-Laborwert über 2,5 Sekunden. Der Median betrug 7,8 Sekunden. LCP misst, wann der größte sichtbare Inhalt erscheint. Die Laborwerte beschreiben nicht die tatsächlichen Ladezeiten aller Besucherinnen.“
+
+8. **Aus einer Suchmaschinenbefragung wird eine Aussage speziell über Google**
+   
+   **Fundstelle:** „KI-Assistenten kommen dazu, sie ersetzen Google nicht.“ FAQ: „Wie viele Menschen suchen schon mit KI statt mit Google?“
+   
+   **Beleg:** Bitkom untersucht klassische Suchmaschinen insgesamt und KI-Chats. Die Daten erlauben keine gesonderte Aussage über Google. Außerdem suchen laut Befragung fünf Prozent ausschließlich per KI. [Bitkom-Originalmitteilung](https://www.bitkom.org/Presse/Presseinformation/Internet-Suche-Wandel-Haelfte-nutzt-KI-Chats)
+   
+   **Korrektur:** „Für 72 % der Internetnutzer ab 16 bleiben klassische Suchmaschinen der ausschließliche oder überwiegende Suchweg.“ Die FAQ-Frage auf „statt mit einer Suchmaschine“ ändern, ebenso im Schema.
+
+9. **Weltweite Nichtveröffentlichung zu absolut behauptet**
+   
+   **Fundstelle:** „Wie oft dabei nach einem Kosmetikstudio, einer Massage oder einer TCM-Praxis gefragt wird, veröffentlicht niemand.“
+   
+   **Beleg:** Weder die [Bitkom-Befragung](https://www.bitkom.org/Presse/Presseinformation/Internet-Suche-Wandel-Haelfte-nutzt-KI-Chats) noch die [ARD/ZDF-Veröffentlichung](https://presseportal.zdf.de/pressemitteilung/ard-zdf-medienstudie-2026-nutzung-von-ki-tools-nimmt-fahrt-auf) untersucht diese Branchenfragen. Eine erfolglose Recherche belegt nicht, dass weltweit niemand entsprechende Daten veröffentlicht.
+   
+   **Korrektur:** „Eine öffentlich zugängliche, methodisch nachvollziehbare Erhebung speziell zu diesen Studioanfragen habe ich bei meiner Recherche im Oktober 2026 nicht gefunden.“
+
+Ohne Befund: Meta-Description mit **142 Zeichen**, keine sichtbaren Gedankenstriche, durchgehende Sie-Ansprache und vier wortgleiche FAQ-Paare. Keine der ausdrücklich verbotenen Aussagen, keine Heil-, Umsatz-, Buchungs- oder Rankingversprechen und kein namentlicher Anbietervorwurf gefunden. Ein zusätzlicher Hinweis „keine Rechtsberatung“ erscheint für die vorhandene allgemeine handwerksrechtliche Einordnung nicht erforderlich. Verständlichkeit und Werbeanteil sind insgesamt angemessen.
+
+Prüfgrenzen: Die bayerische Originaldrucksache sowie die ZDH-Jahresabfragen 2015 bis 2022 und 2024 waren nicht erreichbar. ZDH 2023 und 2025 waren erreichbar; darüber lassen sich auch einzelne Vorjahresbestände bestätigen. Die beiden internen Bloglinks waren online nicht erreichbar und wurden anhand lokaler Fassungen geprüft. Die ARD/ZDF-Prozentwerte stimmen mit t3n überein; die detaillierten Originaltabellen waren wegen der JavaScript-Anwendung nicht auslesbar. Die offizielle ZDF-Mitteilung bestätigt Stichprobengröße und Erhebungszeitraum. Diese Einschränkungen sind keine nachgewiesenen Zahlenfehler.
+
+URTEIL: BEFUNDE (9)

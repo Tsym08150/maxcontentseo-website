@@ -1,0 +1,32 @@
+1. **KI-Wissensstand und Websuche werden zu absolut dargestellt.**  
+   **Fundstelle:** „KI-Assistenten antworten ohne Websuche aus ihrem Trainingsstand, und der ist Monate alt. Ein Studio, das gerade eröffnet hat, kommt darin nicht vor.“ Ebenso im FAQ: „Ein neues Studio kann ohnehin nur in Antworten mit aktueller Websuche vorkommen“.  
+   **Beleg:** Die verlinkte [Google-Dokumentation](https://developers.google.com/search/docs/appearance/ai-features) beschreibt Googles Suchfunktionen, keine allgemeine Regel für sämtliche KI-Assistenten. Modelle können außerdem aktuelle Informationen aus Nutzereingaben oder bereitgestellten Dokumenten verwenden, wie die [Gemini-Dokumentation zum Kontextfenster](https://ai.google.dev/gemini-api/docs/long-context) erläutert. Ein bereits vor der Eröffnung angekündigtes Studio kann zudem früher öffentlich bekannt gewesen sein.  
+   **Korrekturvorschlag:** „Ob ein KI-Assistent Ihr neues Studio kennt, hängt vom Modell und den verfügbaren Informationen ab. Aktuelle Websuche kann neue Angaben erschließen. Auch Informationen aus dem Gespräch oder bereitgestellten Dokumenten können einfließen.“ Die entsprechende FAQ-Antwort gleichzeitig im sichtbaren Text und im Schema ändern.
+
+2. **PDFs werden fälschlich als grundsätzlich unlesbar bezeichnet.**  
+   **Fundstelle:** „Preisliste nur als Bild oder PDF, sodass sie weder Google noch eine KI lesen kann.“  
+   **Beleg:** Google führt PDF ausdrücklich als [indexierbaren Dateityp](https://developers.google.com/search/docs/crawling-indexing/indexable-file-types) auf. Auch KI-Systeme können PDFs verarbeiten, beispielsweise über die dokumentierten [Dateieingaben bei Gemini](https://ai.google.dev/gemini-api/docs/file-input-methods).  
+   **Korrekturvorschlag:** „Preisliste ausschließlich als Bild oder PDF: Stellen Sie Leistungen und Preise zusätzlich als normalen Text auf der Website bereit. PDFs sind grundsätzlich auslesbar; bei Bilddateien und eingescannten Dokumenten kann die Texterkennung erschwert sein.“
+
+3. **Das Profil der Vorgängerin wird vorschnell als unerlaubtes Doppelprofil eingeordnet.**  
+   **Fundstelle:** „Zwei Profile für ein Studio, zum Beispiel eines von der Vorgängerin am selben Ort und ein neues. Ein Profil je Standort“.  
+   **Beleg:** Googles [Unternehmensrichtlinien](https://support.google.com/business/answer/3038177?hl=de), insbesondere „Adresse“ und „Rebranding“, unterscheiden Unternehmensfortführung und neues Unternehmen. Dieselbe Adresse allein macht zwei Einträge nicht zu Doppelprofilen.  
+   **Korrekturvorschlag:** „Legen Sie kein zweites Profil für dasselbe Unternehmen am selben Standort an. Bei einer Übernahme prüfen Sie, ob das bestehende Profil fortgeführt werden kann. Bei einem eigenständigen neuen Studio kann ein neues Profil erforderlich sein; das geschlossene Vorgängerunternehmen sollte entsprechend gekennzeichnet werden.“
+
+4. **Die pauschale Empfehlung zu Öffnungszeiten übersieht reine Terminbetriebe.**  
+   **Fundstelle:** Im Plan: „Fotos vom Studio, Beschreibung, Öffnungszeiten, Buchungslink“; Erledigungskriterium: „Profil ohne leere Felder“.  
+   **Beleg:** Nach Googles [Richtlinien, Abschnitt „Öffnungszeiten“](https://support.google.com/business/answer/3038177?hl=de), sollen Unternehmen, die ausschließlich nach Vereinbarung arbeiten, keine regulären Öffnungszeiten angeben. Das ist für Studios unmittelbar relevant.  
+   **Korrekturvorschlag:** „Reguläre Öffnungszeiten eintragen, sofern vorhanden. Arbeiten Sie ausschließlich nach Terminvereinbarung, beachten Sie Googles besondere Vorgaben dazu.“ Als Erledigungskriterium: „Alle zutreffenden Profilangaben vollständig und korrekt“.
+
+5. **„Nicht mehr verändern“ kann zur Pflege veralteter Angaben verleiten.**  
+   **Fundstelle:** „Bei einem neuen Studio ist der Moment günstig, sie einmal festzulegen und dann nicht mehr zu verändern“.  
+   **Beleg:** Google empfiehlt ausdrücklich, [Unternehmensinformationen aktuell zu halten](https://support.google.com/business/answer/7091?hl=de). Einheitlichkeit darf notwendige Änderungen nicht verhindern.  
+   **Korrekturvorschlag:** „Legen Sie eine einheitliche Schreibweise fest. Wenn sich Name, Adresse, Telefonnummer oder Öffnungszeiten ändern, aktualisieren Sie die betroffenen Einträge zeitnah.“
+
+Die sieben externen Originalquellen waren erreichbar. Die genannten Eröffnungsfristen, die Bewertungsfreigabe, die Crawling-Zeitspanne und die beiden Aktualisierungsdaten vom 10.12.2025 stimmen mit ihnen überein. Zwei interne Weiterführungen waren über das Abrufwerkzeug nicht erreichbar: [Eine Seite je Behandlung](https://maxcontentseo.de/blog/eine-seite-je-behandlung.html) und [Messung der KI-Sichtbarkeit prüfen](https://maxcontentseo.de/blog/ki-sichtbarkeit-messung-pruefen.html). Daraus lässt sich kein sicherer Linkdefekt ableiten.
+
+Formal bestanden: Meta-Description mit **150 Zeichen**, keine Gedankenstriche im sichtbaren HTML-Text, durchgehende Sie-Ansprache und alle vier FAQ-Paare wortgleich im Schema. Der Kasten „Kurz gesagt“ ist eigenständig verständlich. Auch die Zeichenangaben der Social-Ableitung stimmen.
+
+Keine der ausdrücklich verbotenen Aussagen, keine konkreten Heil-, Umsatz-, Buchungs- oder Rankinggarantien und keine vorwurfsvoll genannten Anbieter gefunden. Aus den geprüften [HWG-](https://www.gesetze-im-internet.de/heilmwerbg/__3.html) und [UWG-Vorgaben](https://www.gesetze-im-internet.de/uwg_2004/__5.html) ergibt sich hier kein weiterer konkreter Befund. Ein fehlender Hinweis „keine Rechtsberatung“ ist bei den überwiegend als Google-Regeln dargestellten Aussagen kein eigenständiger Mangel. Werbeanteil und Überschriften sind angemessen.
+
+URTEIL: BEFUNDE (5)
