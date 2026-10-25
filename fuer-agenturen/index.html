@@ -94,18 +94,116 @@ footer{background:#1B1916;color:rgba(250,247,242,.5);padding:2.5rem clamp(1.25re
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://maxcontentseo.de/#organization",
+      "name": "MaxContentSEO",
+      "url": "https://maxcontentseo.de/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://maxcontentseo.de/#logo",
+        "url": "https://maxcontentseo.de/assets/og-logo.png",
+        "width": 1200,
+        "height": 630
+      },
+      "image": "https://maxcontentseo.de/assets/og-logo.png",
+      "description": "SEO und KI-Sichtbarkeit für Beauty-, Wellness- und TCM-Studios in Deutschland.",
+      "email": "georg@maxcontentseo.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hauptstr. 29",
+        "postalCode": "85551",
+        "addressLocality": "Kirchheim b. München",
+        "addressCountry": "DE"
+      },
+      "areaServed": "Deutschland",
+      "founder": {
+        "@id": "https://maxcontentseo.de/#georg"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "georg@maxcontentseo.de",
+        "url": "https://maxcontentseo.de/#kontakt"
+      },
+      "knowsAbout": [
+        "Lokales SEO",
+        "Generative Engine Optimization",
+        "KI-Sichtbarkeit",
+        "Suchmaschinenoptimierung für Beauty-Studios",
+        "Suchmaschinenoptimierung für Wellness-Studios",
+        "Suchmaschinenoptimierung für TCM-Praxen",
+        "KI-Prozessberatung",
+        "EU AI Act",
+        "DSGVO"
+      ],
+      "priceRange": "€€",
+      "sameAs": [
+        "https://www.google.com/maps?cid=10269924105326167199",
+        "https://www.linkedin.com/company/maxcontentseo"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://maxcontentseo.de/#georg",
+      "name": "Georg Stopfer",
+      "url": "https://maxcontentseo.de/ueber-mich/",
+      "image": "https://maxcontentseo.de/assets/georg.webp",
+      "jobTitle": "SEO-Berater und Inhaber von MaxContentSEO",
+      "description": "SEO-Berater für Beauty-, Wellness- und TCM-Studios, vor Ort im Raum München und digital deutschlandweit. Inhaber von MaxContentSEO, ansässig in Kirchheim b. München.",
+      "email": "georg@maxcontentseo.de",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kirchheim b. München",
+        "addressCountry": "DE"
+      },
+      "worksFor": {
+        "@id": "https://maxcontentseo.de/#organization"
+      },
+      "knowsAbout": [
+        "Lokales SEO",
+        "Generative Engine Optimization",
+        "KI-Sichtbarkeit",
+        "KI-Prozessberatung",
+        "EU AI Act",
+        "DSGVO"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/georg-stopfer-7a0584421/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://maxcontentseo.de/#website",
+      "url": "https://maxcontentseo.de/",
+      "name": "MaxContentSEO",
+      "inLanguage": "de-DE",
+      "publisher": {
+        "@id": "https://maxcontentseo.de/#organization"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "Service",
+  "@id": "https://maxcontentseo.de/fuer-agenturen/#service",
   "name": "Sichtbarkeitsbericht unter Ihrem Namen",
   "serviceType": "Sichtbarkeitsbericht für SEO-Dienstleister und Agenturen",
   "description": "Bericht über die Website eines Kunden einer Agentur: Nennung in ChatGPT und Gemini mit Websuche bei 10 typischen Kundenfragen, Abgleich der organischen Google-Position mit zwei Datenquellen (Abweichungen werden offengelegt, bei Ausfall einer Quelle wird die Messung als Einzelquelle gekennzeichnet), Prüfung der Position im Google-Kartenbereich am Standort, Abgleich von Name, Adresse und Telefonnummer in vier Quellen sowie ein automatischer Klicktest der Wege zur Anfrage oder Buchung im Browser in der Computer- und einer nachgestellten Handy-Ansicht, ohne Formularversand und ohne Bezahlung, dazu eine fachlich priorisierte Maßnahmenliste. Jeder Befund wird von einem zweiten KI-Modell eines anderen Anbieters gegengeprüft. Lieferung als PDF mit dem Logo der Agentur.",
   "url": "https://maxcontentseo.de/fuer-agenturen/",
-  "audience": {"@type": "BusinessAudience", "audienceType": "Webdesigner, Website-Betreuer, SEO-Berater und Agenturen mit lokalen Kunden"},
+  "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Webdesigner, Website-Betreuer, SEO-Berater und Agenturen mit lokalen Kunden"
+  },
   "provider": {
-    "@type": "Organization",
-    "@id": "https://maxcontentseo.de/#organization",
-    "name": "MaxContentSEO",
-    "url": "https://maxcontentseo.de/",
-    "email": "georg@maxcontentseo.de"
+    "@id": "https://maxcontentseo.de/#organization"
   },
   "offers": {
     "@type": "Offer",
@@ -122,6 +220,25 @@ footer{background:#1B1916;color:rgba(250,247,242,.5);padding:2.5rem clamp(1.25re
 <link rel="stylesheet" href="/assets/tap-targets.css">
 <!-- K-2 (Vollaudit 2026-10): ohne JavaScript oeffnet der Menue-Link das mobile Menue ueber :target -->
 <noscript><style>[data-burger-fallback]{display:none;}@media (max-width:950px){[data-burger]{display:none !important;}[data-burger-fallback]{display:inline-flex;}#mobilmenu:target{display:block;}}</style></noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Start",
+      "item": "https://maxcontentseo.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Für Agenturen"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="mcs-skip" href="#main">Zum Inhalt springen</a>
@@ -411,6 +528,12 @@ footer{background:#1B1916;color:rgba(250,247,242,.5);padding:2.5rem clamp(1.25re
       <h2 id="muster-heading">Weiteres Beispiel: mein Selbst-Audit</h2>
       <p>Zusätzlich gibt es mein öffentliches Selbst-Audit vom 03.10.2026. Es zeigt die Google- und KI-Messung an meiner eigenen Website und einen Citability-Teil, der im Agenturbericht nicht enthalten ist. Den Aufbau des Agenturberichts zeigt das Muster weiter oben. Preise und Bestellweg auf der Seite des Selbst-Audits gelten für Betriebe, nicht für Ihren Agenturbericht. Die Messwerte darin gelten nur für die gezeigte Website.</p>
       <a class="btn btn--ghost" href="/audit-beispiel-maxcontentseo.html">Selbst-Audit ansehen</a>
+    </section>
+
+    <section class="block" aria-labelledby="weiterlesen-heading">
+      <h2 id="weiterlesen-heading">Weiterlesen</h2>
+      <p>Artikel aus dem Blog zur Messung der KI-Sichtbarkeit:</p>
+      <ul style="margin:0; padding-left:1.25rem; line-height:1.8;"><li><a style="color:#134d35;font-weight:600;" href="/blog/ki-sichtbarkeit-messung-pruefen.html">Sechs Angaben, an denen Sie eine Messung der KI-Sichtbarkeit prüfen</a></li><li><a style="color:#134d35;font-weight:600;" href="/blog/ranking-und-ki-nennung.html">Kaum bei Google gefunden, trotzdem in KI-Antworten genannt</a></li></ul>
     </section>
 
     <div style="max-width:640px;margin:3rem auto 1.5rem;text-align:center;">
