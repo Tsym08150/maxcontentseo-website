@@ -18,10 +18,10 @@ Zeilennummern beziehen sich auf den Stand nach den Änderungen, sofern nicht „
 | 9 | **Probebericht zählt zur Fünfergrenze.** Die Seite sagt, Probeberichte und Kennenlernpreis teilen sich die Grenze von 5 Dienstleistern. Das Angebot nennt die Grenze nur für den Einführungspreis. Folge: Wer nach dem Brief anfragt, kann den Probebericht verlieren, obwohl der Preis noch gilt. | Z. 495 | **Offene Frage:** Soll der Probebericht außerhalb der Fünfergrenze liegen? Nicht geändert. |
 | 10 | Preisverlängerung wird mit dem Briefversand begründet („Anlass ist mein Briefversand an Webdesigner Ende Oktober“). Für Briefempfänger ist das ein Hinweis auf eine Massenaktion und kann den Eindruck „exklusiv“ schwächen. | Z. 356 | **Offene Frage:** Satz kürzen oder behalten? Nicht geändert, weil es eine Offenlegung ist. |
 | 11 | Rechenbeispiel „150 € Rohertrag je Bericht“ ist rechnerisch richtig (299 minus 149; 299 minus 249 = 50) und mit Haftungsausschluss versehen. Es nähert sich dennoch einer Ertragsaussage. | Z. 357 | **Offene Frage:** Behalten oder entfernen. Nicht geändert. |
-| 12 | Kundenschutz 24 Monate ab Lieferung: stimmt mit dem Angebot überein. Preis 149 € bis 30.11.2026, danach 249 €: stimmt. Beispiel 299 €: stimmt. | Z. 356, 357, 517 | Keine Änderung nötig. |
+| 12 | Kundenschutz 24 Monate ab Lieferung: stimmt mit dem Angebot überein. Preis 149 € bis 30.11.2026, danach 249 €: stimmt. Beispiel 299 €: stimmt. | Z. 356, 357, 515 | Keine Änderung nötig. |
 | 13 | Metabeschreibung und Strukturdaten nennen weiterhin „verlängert“ und Preise. Sie decken sich mit dem Seitentext. | Z. 7, 216 | Nicht geändert, aber bei Entscheidung zu Nr. 7 bis 10 mitprüfen. |
-| 14 | Unbelegt oder dehnbar, ohne dass ich es ändern konnte: „Drei der 14 Seiten“ im Muster, „5 Werktage“, „Antwort innerhalb von 24 Stunden“. Aus dem Repo nicht prüfbar. | Z. 453 (Muster), Z. 495, 518 | **Offene Frage:** Bitte gegen die tatsächliche Praxis prüfen. |
-| 15 | Gedankenstriche als Satzzeichen, Rankingversprechen, erfundene Zahlen, Referenzen: keine gefunden. „Grenzen“-Abschnitt schließt Platzierungs-, Nennungs- und Umsatzzusagen ausdrücklich aus. | Z. 520 bis 528 | Keine Änderung nötig. |
+| 14 | Unbelegt oder dehnbar, ohne dass ich es ändern konnte: „Drei der 14 Seiten“ im Muster, „5 Werktage“, „Antwort innerhalb von 24 Stunden“. Aus dem Repo nicht prüfbar. | Z. 363 (Muster), Z. 494, 516 | **Offene Frage:** Bitte gegen die tatsächliche Praxis prüfen. |
+| 15 | Gedankenstriche als Satzzeichen, Rankingversprechen, erfundene Zahlen, Referenzen: keine gefunden. „Grenzen“-Abschnitt schließt Platzierungs-, Nennungs- und Umsatzzusagen ausdrücklich aus. | Z. 523 bis 530 | Keine Änderung nötig. |
 
 ## 2. Vorher und nachher
 
