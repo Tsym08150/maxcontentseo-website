@@ -41,6 +41,8 @@
 
 ## Wissen
 
+- [Google-Unternehmensprofil fürs Studio prüfen](https://maxcontentseo.de/blog/google-unternehmensprofil-studio-pruefen.html): Kategorien, Öffnungszeiten, Adresse und Website mit dem tatsächlichen Betrieb abgleichen. Mit Checkliste und Google-Originalquellen, Stand November 2026.
+
 - [Blog](https://maxcontentseo.de/blog/): Beiträge zu lokaler Sichtbarkeit.
 - [SEO-Begriffe einfach erklärt](https://maxcontentseo.de/seo-begriffe/): Glossar mit 31 Begriffen.
 - [Negative Google-Bewertung löschen lassen](https://maxcontentseo.de/blog/google-bewertung-loeschen.html): was möglich ist und was nicht.
