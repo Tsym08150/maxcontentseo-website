@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methode des Sichtbarkeitsberichts | MaxContentSEO</title>
+<meta name="description" content="Wie ich den Sichtbarkeitsbericht messe: KI-Fragen mit Websuche, feste Zählregel, Google aus zwei Quellen und die Grenzen der Messung.">
+<link rel="canonical" href="https://maxcontentseo.de/fuer-agenturen/methode/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maxcontentseo.de/fuer-agenturen/methode/">
+<meta property="og:title" content="Methode des Sichtbarkeitsberichts | MaxContentSEO">
+<meta property="og:description" content="Methodenblatt für SEO-Fachleute: was der Sichtbarkeitsbericht misst, wie gezählt wird und wo die Messung an Grenzen stößt.">
+<meta property="og:image" content="https://maxcontentseo.de/assets/og-logo.png">
+<link rel="icon" href="/favicon.ico">
+<link rel="preload" href="/assets/fonts/lora-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/geist-mono-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/lora-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/design-system.css">
+<style>
+.hero{padding:clamp(4.5rem,10vw,7rem) clamp(1.25rem,5vw,2rem);text-align:center;background:#26241F;color:#FAF7F2;}
+.hero__inner{max-width:760px;margin:0 auto;}
+.eyebrow{font-family:'Geist Mono',monospace;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#C4633F;margin:0 0 .9rem;}
+.hero h1{font-family:'Lora',Georgia,serif;font-size:clamp(2.4rem,6vw,4rem);line-height:1.08;font-weight:600;letter-spacing:-.03em;margin:0;}
+.hero__lead{color:rgba(250,247,242,.75);font-size:1.1rem;line-height:1.6;max-width:600px;margin:1.25rem auto 0;}
+.content{background:#FAF7F2;color:#26241F;padding:clamp(2rem,6vw,4.5rem) clamp(1.25rem,5vw,2rem);}
+.capsule{max-width:65ch;margin:0 auto 2.5rem;font-size:1.08rem;line-height:1.65;}
+.block{max-width:640px;margin:2.5rem auto;}
+.block h2{font-family:'Lora',Georgia,serif;font-size:clamp(1.5rem,3vw,2rem);line-height:1.2;font-weight:600;color:#134d35;margin:0 0 1rem;}
+.block p{line-height:1.65;margin:0 0 .9rem;}
+.card{padding:1.75rem;border:1px solid #cfe3d7;border-radius:12px;background:#f6faf7;}
+.list{margin:0 0 1rem;padding-left:1.2rem;line-height:1.65;}
+.list li{margin-bottom:.45rem;}
+.btn{display:inline-block;background:#134d35;color:#FFF;text-decoration:none;font-weight:600;padding:.85rem 1.6rem;border-radius:8px;}
+.btn:hover{background:#0f3d2b;}
+.btn--ghost{background:transparent;color:#134d35;border:1px solid #134d35;}
+.btn--ghost:hover{background:#eef5f0;}
+.small{font-size:.85rem;color:#56645b;line-height:1.5;}
+.crumbs{max-width:640px;margin:0 auto 1.5rem;font-size:.9rem;color:#56645b;}
+.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.35rem;}
+.crumbs li+li::before{content:"›";margin-right:.35rem;color:#56645b;}
+.crumbs a{color:#134d35;font-weight:600;}
+.actions{max-width:640px;margin:3rem auto 1.5rem;display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;}
+@media (max-width:520px){.content{padding-left:.75rem;padding-right:.75rem;}.card{padding:1.25rem;}}
+@media (max-width:400px){.hero h1{font-size:2.1rem;}}
+</style>
+<link rel="stylesheet" href="/assets/tap-targets.css">
+<!-- K-2 (Vollaudit 2026-10): ohne JavaScript oeffnet der Menue-Link das mobile Menue ueber :target -->
+<noscript><style>[data-burger-fallback]{display:none;}@media (max-width:950px){[data-burger]{display:none !important;}[data-burger-fallback]{display:inline-flex;}#mobilmenu:target{display:block;}}</style></noscript>
+</head>
+<body>
+<a class="mcs-skip" href="#main">Zum Inhalt springen</a>
+<nav data-mobile-open="false" style="position:sticky; top:0; z-index:100; background:rgba(38,36,31,0.88); backdrop-filter:blur(12px); border-bottom:1px solid rgba(250,247,242,0.1);">
+  <div style="max-width:1140px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:0.9rem clamp(1.25rem,5vw,2rem);">
+    <a href="/#top" style="font-weight:700; font-size:1.05rem; letter-spacing:-0.02em; color:#FAF7F2; text-decoration:none;">MaxContent<span style="color:#C4633F;">SEO</span></a>
+    <div data-nav-desktop="true" style="display:flex; align-items:center; gap:0.15rem;">
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Leistungen<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/leistungen/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Leistungsübersicht</a></li>
+          <li><a class="h1" href="/beratung-bafa/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">BAFA-Beratung</a></li>
+          <li><a class="h1" href="/ki-sichtbarkeit/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">KI-Sichtbarkeit (GEO)</a></li>
+          <li><a class="h1" href="/ki-sichtbarkeits-check/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">KI-Sichtbarkeits-Check</a></li>
+          <li><a class="h1" href="/fuer-agenturen/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Für Agenturen und Webdesigner</a></li>
+        </ul>
+      </div>
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Branchen<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/branchen/kosmetikstudios.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Kosmetikstudios</a></li>
+          <li><a class="h1" href="/branchen/tcm-praxen.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">TCM-Praxen</a></li>
+          <li><a class="h1" href="/branchen/wellness-spa.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Wellness &amp; Spa</a></li>
+          <li><a class="h1" href="/seo-muenchen/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">SEO München</a></li>
+        </ul>
+      </div>
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Ergebnisse<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/cases/lingqi.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Referenz LingQi</a></li>
+          <li><a class="h1" href="/audit-beispiel.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Muster: Premium-Audit</a></li>
+          <li><a class="h1" href="/audit-beispiel-kombi.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Muster: Kombi-Audit</a></li>
+        </ul>
+      </div>
+      <div data-menu="true" style="position:relative;">
+        <button class="h0" data-menu-btn="true" type="button" aria-haspopup="true" aria-expanded="false" style="display:flex; align-items:center; gap:0.4rem; background:none; border:none; cursor:pointer; font-family:'Figtree', system-ui, sans-serif; font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); padding:0.5rem 0.7rem;">Wissen<span aria-hidden="true" style="font-size:0.55rem; opacity:0.7;">▾</span></button>
+        <ul data-menu-panel="true" style="position:absolute; top:100%; left:0; margin:0.35rem 0 0; padding:0.4rem; list-style:none; min-width:230px; background:#2E332B; border:1px solid rgba(250,247,242,0.12); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,0.4); display:flex; flex-direction:column; gap:0.1rem;">
+          <li><a class="h1" href="/blog/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">Blog</a></li>
+          <li><a class="h1" href="/seo-anbieter-finden.html" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">SEO-Anbieter erkennen</a></li>
+          <li><a class="h1" href="/seo-begriffe/" style="display:block; padding:0.55rem 0.85rem; border-radius:6px; font-size:0.87rem; font-weight:500; color:rgba(250,247,242,0.75); text-decoration:none;">SEO-Begriffe</a></li>
+        </ul>
+      </div>
+      <a class="h0" href="/#preise" style="font-size:0.88rem; font-weight:500; color:rgba(250,247,242,0.65); text-decoration:none; padding:0.5rem 0.7rem;">Preise</a>
+      <a class="h2" href="/fuer-agenturen/#probebericht" style="background:#A94F30; color:#FAF7F2; padding:0.5rem 1.2rem; border-radius:8px; text-decoration:none; font-size:0.86rem; font-weight:600; margin-left:0.75rem;">Kostenloser Probebericht</a>
+    </div>
+    <a class="h2" data-mobile-cta="true" href="/fuer-agenturen/#probebericht">Probebericht</a>
+    <button class="h3" data-burger="true" type="button" aria-expanded="false" aria-controls="mobilmenu" style="align-items:center; background:none; border:1px solid rgba(250,247,242,0.25); border-radius:8px; cursor:pointer; font-family:'Geist Mono', monospace; font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:#FAF7F2; padding:0.45rem 0.9rem;">Menü</button>
+    <noscript><a class="h3" data-burger-fallback="true" href="#mobilmenu" style="align-items:center; background:none; border:1px solid rgba(250,247,242,0.25); border-radius:8px; cursor:pointer; font-family:'Geist Mono', monospace; font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:#FAF7F2; padding:0.45rem 0.9rem; text-decoration:none;">Menü</a></noscript>
+  </div>
+  <div data-mobile-panel="true" id="mobilmenu" style="border-top:1px solid rgba(250,247,242,0.1); padding:0.5rem clamp(1.25rem,5vw,2rem) 1.25rem; max-height:calc(100vh - 64px); overflow:auto;">
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Leistungen<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/leistungen/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Leistungsübersicht</a>
+        <a class="h0" href="/beratung-bafa/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">BAFA-Beratung</a>
+        <a class="h0" href="/ki-sichtbarkeit/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">KI-Sichtbarkeit (GEO)</a>
+        <a class="h0" href="/ki-sichtbarkeits-check/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">KI-Sichtbarkeits-Check</a>
+        <a class="h0" href="/fuer-agenturen/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Für Agenturen und Webdesigner</a>
+      </div>
+    </details>
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Branchen<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/branchen/kosmetikstudios.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Kosmetikstudios</a>
+        <a class="h0" href="/branchen/tcm-praxen.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">TCM-Praxen</a>
+        <a class="h0" href="/branchen/wellness-spa.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Wellness &amp; Spa</a>
+        <a class="h0" href="/seo-muenchen/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">SEO München</a>
+      </div>
+    </details>
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Ergebnisse<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/cases/lingqi.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Referenz LingQi</a>
+        <a class="h0" href="/audit-beispiel.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Muster: Premium-Audit</a>
+        <a class="h0" href="/audit-beispiel-kombi.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Muster: Kombi-Audit</a>
+      </div>
+    </details>
+    <details style="border-bottom:1px solid rgba(250,247,242,0.08);">
+      <summary style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; cursor:pointer; list-style:none; font-size:0.95rem; font-weight:500; color:#FAF7F2;">Wissen<span aria-hidden="true" style="font-size:0.6rem; opacity:0.6;">▾</span></summary>
+      <div style="display:flex; flex-direction:column; gap:0.1rem; padding:0 0 0.85rem;">
+        <a class="h0" href="/blog/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">Blog</a>
+        <a class="h0" href="/seo-anbieter-finden.html" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">SEO-Anbieter erkennen</a>
+        <a class="h0" href="/seo-begriffe/" style="padding:0.5rem 0.75rem; font-size:0.9rem; font-weight:500; color:rgba(250,247,242,0.7); text-decoration:none; border-radius:6px;">SEO-Begriffe</a>
+      </div>
+    </details>
+    <a href="/#preise" style="display:block; padding:0.85rem 0; font-size:0.95rem; font-weight:500; color:#FAF7F2; text-decoration:none; border-bottom:1px solid rgba(250,247,242,0.08);">Preise</a>
+    <a class="h2" href="/fuer-agenturen/#probebericht" style="display:block; text-align:center; margin-top:1rem; background:#A94F30; color:#FAF7F2; padding:0.8rem 1.2rem; border-radius:8px; text-decoration:none; font-size:0.92rem; font-weight:600;">Kostenloser Probebericht</a>
+  </div>
+</nav>
+
+<main id="main" tabindex="-1">
+  <section class="hero">
+    <div class="hero__inner">
+      <p class="eyebrow">Methodenblatt für SEO-Fachleute</p>
+      <h1>So messe ich den Sichtbarkeitsbericht</h1>
+      <p class="hero__lead">Diese Seite beschreibt, was der Bericht misst und wie. Jede Zeile beschreibt, was tatsächlich gemessen wird.</p>
+    </div>
+  </section>
+
+  <div class="content">
+    <nav class="crumbs" aria-label="Brotkrumen">
+      <ol>
+        <li><a href="/">Start</a></li>
+        <li><a href="/fuer-agenturen/">Für Agenturen</a></li>
+        <li aria-current="page">Methode</li>
+      </ol>
+    </nav>
+
+    <p class="capsule">Der Sichtbarkeitsbericht unter Ihrem Namen und der kostenlose Probebericht über Ihre eigene Website sind derselbe Bericht. Beide haben dieselben vier Prüfteile: Nennung in KI-Antworten, Position bei Google, Name, Adresse und Telefonnummer sowie der Weg zur Anfrage oder Buchung. Stand: 10.11.2026. Modelle und Werkzeuge ändern sich. Darum nennt jeder Bericht das jeweilige Messdatum.</p>
+
+    <section class="block" aria-labelledby="ki-heading">
+      <h2 id="ki-heading">1. Wird der Betrieb in KI-Antworten genannt?</h2>
+      <ul class="list">
+        <li><strong>Fragen.</strong> Ich stelle 10 deutsche Kundenfragen entlang der Kundenreise. Sie entstehen je Auftrag aus Leistung, Stadt und Wettbewerbern. Die Verteilung ist vorgegeben: 3 Einstiegsfragen und 4 Vergleichsfragen sollen den Namen des Betriebs nicht enthalten. 2 Bewertungsfragen und 1 Entscheidungsfrage dürfen ihn nennen. So wird getrennt sichtbar, ob ein Betrieb nur auf Nachfrage genannt wird oder auch bei allgemeinen Fragen.</li>
+        <li><strong>Abfrage.</strong> Die Fragen gehen an ChatGPT (OpenAI) und Gemini (Google), jeweils mit Websuche. Bei Gemini ist die Google-Suche die Quelle.</li>
+        <li><strong>Standort der Websuche.</strong> Bei ChatGPT übergebe ich die Stadt des Auftrags als ungefähren Standort der Websuche. Gemini erhält keinen eigenen Standort. Fällt die Fragenerzeugung aus, liefert das Werkzeug allgemeine Ersatzfragen. Solche Läufe verwende ich für keinen Bericht, ich wiederhole sie.</li>
+        <li><strong>Was gespeichert wird.</strong> Der Wortlaut jeder Antwort, das Abfragedatum, das verwendete Modell, die vom Dienst gelieferten Quellenlinks und die vom Dienst protokollierten Suchanfragen. Bei Gemini sind die Quellenlinks Weiterleitungslinks, deren Zieldomain sich nicht erkennen lässt. Darum speichere ich dort zusätzlich die Quellentitel. Ausgewertet werden die Quellenlinks nur bei ChatGPT, bei Gemini werden sie gezählt.</li>
+        <li><strong>Antworten aus Modellwissen.</strong> Eine Antwort ohne protokollierte Suchanfrage und ohne Quelle kennzeichne ich als „aus Modellwissen“. Fehlen dort Quellen, ist das kein Befund über die Website.</li>
+      </ul>
+    </section>
+
+    <section class="block card" aria-labelledby="zaehlung-heading">
+      <h2 id="zaehlung-heading">Wie eine Nennung gezählt wird</h2>
+      <p>Ob der Betrieb genannt ist, wird nach einer festen Regel gezählt. Kein Modell schätzt es.</p>
+      <ul class="list">
+        <li><strong>Kennzeichen.</strong> Die volle Domain, der Nachname des Inhabers laut Impressum (ab 3 Zeichen), der volle mehrwortige Markenname, das erste Markenwort, der Domainstamm und dessen erstes Segment. Die letzten drei gelten ab 4 Zeichen und nur, wenn sie kein Wort aus Branche oder Zielgruppe und kein Vorname des Inhabers sind. Gezählt wird nur ein Treffer als ganzes Wort.</li>
+        <li><strong>Verneinungen.</strong> Bestimmte Formulierungen des Nicht-Findens oder Nicht-Kennens schließe ich über feste Textmuster aus, wenn sie höchstens 80 Zeichen vom Kennzeichen entfernt stehen. Die Regel erkennt nicht jede Verneinung. Eine verneinende Antwort kann deshalb als Nennung zählen.</li>
+        <li><strong>Name schon in der Frage.</strong> Steht die Domain schon in der Frage, zählt sie in der Antwort nur als Link. Steht der volle mehrwortige Markenname oder der Nachname des Inhabers schon in der Frage, zählt seine bloße Wiederholung nicht. Bei einem einwortigen Namen in der Frage greift diese Sperre nicht. Darum weise ich Fragen ohne und mit Namen getrennt aus.</li>
+        <li><strong>Keine Empfehlungsprüfung.</strong> Ob die Antwort den Betrieb empfiehlt, prüft die Regel nicht.</li>
+      </ul>
+    </section>
+
+    <section class="block" aria-labelledby="vergleich-heading">
+      <h2 id="vergleich-heading">Vorher-Nachher-Vergleich</h2>
+      <p>Ich vergleiche nur Messungen mit demselben Modell. Stammt die Vorher-Messung von einem älteren Modell, messe ich den heutigen Stand mit diesem Modell und zusätzlich mit dem aktuellen Modell. Welche Zahl verglichen wird, lege ich vor der Messung fest.</p>
+    </section>
+
+    <section class="block" aria-labelledby="google-heading">
+      <h2 id="google-heading">2. Wo steht der Betrieb bei Google?</h2>
+      <ul class="list">
+        <li><strong>Organische Position aus zwei Datenquellen.</strong> Ich frage zwei Quellen ab, mit einer Suchtiefe von bis zu 30 Treffern. Wie viele Treffer tatsächlich geliefert wurden, steht beim jeweiligen Ergebnis. Der Standort liegt möglichst auf Stadtebene. Fällt eine Quelle aus oder muss ich auf eine gröbere Ebene (Bundesland, Land) ausweichen, mache ich das kenntlich. Weichen die Quellen voneinander ab, steht das offen im Bericht.</li>
+        <li><strong>Plattformen vor der eigenen Website.</strong> Erscheint eine Plattform oder ein Verzeichnis mit dem Betrieb vor dessen eigener Website, weise ich das aus.</li>
+        <li><strong>Kartenbereich nur als Hinweis.</strong> Ich messe die Position im Google-Kartenbereich für das Suchwort an einem Punkt am Standort des Betriebs (Plätze 1 bis 20). Diese Messung hat nur eine Quelle. Ich bezeichne sie darum als „laut Analyse“ und sehe sie vor einer Aussage im Bericht live in Google Maps nach.</li>
+        <li><strong>Neutrale Messung.</strong> Die Messung ist nicht personalisiert. Die Ansicht des eingeloggten Inhabers am Standort kann höher liegen.</li>
+      </ul>
+    </section>
+
+    <section class="block" aria-labelledby="nap-heading">
+      <h2 id="nap-heading">3. Stimmen Name, Adresse und Telefonnummer?</h2>
+      <ul class="list">
+        <li><strong>Vier Quellen.</strong> Impressum der Website, Google Maps, 11880.com und golocal.de. Ich rufe sie im Browser ab und vergleiche sie Feld für Feld.</li>
+        <li><strong>Google-Unternehmensprofil.</strong> Über die Google-Places-Schnittstelle prüfe ich Kategorie, Bewertung, Anzahl der Bewertungen, Betriebsstatus und ob Öffnungszeiten hinterlegt sind. Bewertung und Anzahl prüfe ich vor einer Aussage live im Profil gegen.</li>
+        <li><strong>Bekannte Ausnahme.</strong> Eine gesonderte Anschrift der redaktionell verantwortlichen Person im Impressum werte ich nicht automatisch als Abweichung.</li>
+      </ul>
+    </section>
+
+    <section class="block" aria-labelledby="weg-heading">
+      <h2 id="weg-heading">4. Funktioniert der Weg zur Anfrage oder Buchung?</h2>
+      <ul class="list">
+        <li><strong>Automatische Erhebung.</strong> Im Browser, getrennt für Computer und Handy: Ist ein Buchungs- oder Anfrageknopf ohne Scrollen sichtbar? Sind Preise, eine Telefonnummer oder ein Telefonlink ohne Scrollen erkennbar? Gibt es einen klaren Buchungsweg?</li>
+        <li><strong>Danach jeder Knopf einzeln.</strong> Jeden Knopf und Link, über den der Bericht etwas sagt, klicke ich tatsächlich, auf Computer und Handy. Ich protokolliere die Ziel-URL nach allen Weiterleitungen und den HTTP-Status. Erst dann gilt ein Befund als gesichert. Der Grund: Cookie-Banner und spät nachgeladene Knöpfe verfälschen automatische Messungen.</li>
+      </ul>
+    </section>
+
+    <section class="block card" aria-labelledby="pruefung-heading">
+      <h2 id="pruefung-heading">Wie Befunde geprüft werden, bevor sie im Bericht stehen</h2>
+      <ul class="list">
+        <li><strong>Zwei-Quellen-Regel.</strong> Organische Positionen aus nur einer Quelle kennzeichne ich als Hinweis. Kartenpositionen gleiche ich live mit Google Maps ab. Profil- und Klickweg-Befunde prüfe ich vor gesicherten Aussagen live gegen.</li>
+        <li><strong>Zweites Modell.</strong> Ein KI-Modell eines anderen Anbieters prüft die Befunde gegen, bevor ein Bericht entsteht. Widerspricht es, geht der Befund nicht ungeprüft hinaus.</li>
+      </ul>
+    </section>
+
+    <section class="block" aria-labelledby="grenzen-heading">
+      <h2 id="grenzen-heading">Grenzen der Messung</h2>
+      <ul class="list">
+        <li>Jede Messung ist eine Momentaufnahme. Antworten von KI-Assistenten schwanken zwischen Abfragen.</li>
+        <li>Die App-Ansicht eines eingeloggten Nutzers kann von meiner Abfrage abweichen.</li>
+        <li>Die Zählregel erkennt nicht jede Verneinung und prüft nicht, ob eine Antwort den Betrieb empfiehlt.</li>
+        <li>Der Kartenbereich stützt sich auf eine einzige Quelle und gilt deshalb nur als Hinweis.</li>
+        <li>Ladezeit und die Zitierfähigkeit der Website für KI sind nicht Teil dieses Berichts.</li>
+        <li>Der Bericht sagt nichts zu, weder Platzierungen bei Google noch Nennungen in KI-Antworten, Anfragen oder Umsatz.</li>
+      </ul>
+    </section>
+
+    <section class="block" aria-labelledby="brauche-heading">
+      <h2 id="brauche-heading">Was ich für den Bericht brauche und was nicht</h2>
+      <p>Domain, Stadt und Hauptleistung, beim Bericht unter Ihrem Namen dazu Ihr Logo. Beim Probebericht über Ihre eigene Website ist das Logo freiwillig. Ich brauche keine Zugänge und keine nicht öffentlichen Unterlagen.</p>
+      <p>Ich nutze öffentlich abrufbare Angaben und dokumentiere die Antworten meiner eigenen Testabfragen an KI-Assistenten. Öffentlich sichtbare Angaben können personenbezogen sein, etwa im Impressum. Für Auswertung und Gegenprüfung setze ich KI-Werkzeuge ein. Deren Anbieter können Daten auch in den USA verarbeiten.</p>
+    </section>
+
+    <div class="actions">
+      <a class="btn" href="/fuer-agenturen/">Zurück zur Agenturseite</a>
+      <a class="btn btn--ghost" href="/assets/muster-agenturbericht.pdf">Muster-Bericht als PDF</a>
+    </div>
+  </div>
+</main>
+
+<footer class="mcs-footer" style="background:#1B1916; color:rgba(250,247,242,0.5); padding:2.5rem clamp(1.25rem,5vw,2rem); text-align:center; font-size:0.85rem; font-weight:500;">
+  <div style="max-width:1140px; margin:0 auto;">
+    <div class="mcs-footer__links" style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem 2rem; margin-bottom:0.75rem; font-family:'Geist Mono', monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">
+      <a class="h0" href="/was-kostet-seo-kosmetikstudio/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Preise im Detail</a>
+      <a class="h0" href="/fuer-agenturen/" style="color:rgba(250,247,242,0.7); text-decoration:none;">Für Agenturen</a>
+      <a class="h0" href="/impressum.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Impressum</a>
+      <a class="h0" href="/datenschutz.html" style="color:rgba(250,247,242,0.7); text-decoration:none;">Datenschutz</a>
+      <a class="h0" href="/ki-transparenz/" style="color:rgba(250,247,242,0.7); text-decoration:none;">KI-Transparenz</a>
+      <a class="h0" href="mailto:georg@maxcontentseo.de" style="color:rgba(250,247,242,0.7); text-decoration:none;">E-Mail</a>
+    </div>
+    <p style="margin:0;">© 2026 MaxContentSEO · Georg Stopfer</p>
+  </div>
+</footer>
+
+<script src="/assets/js/redesign.js?v=20261020" defer></script>
+<script src="/assets/js/funnel.js" defer></script>
+</body>
+</html>
