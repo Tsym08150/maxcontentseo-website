@@ -45,6 +45,15 @@ html { scroll-behavior: smooth; }
 .h6:focus-visible{outline:2px solid #C4633F; outline-offset:-2px;}
 .h7:hover{transform:translateY(-1px); box-shadow:0 4px 20px rgba(38,36,31,0.35);}
 .h8:hover{background:#8E4227; transform:translateY(-1px); box-shadow:0 4px 16px rgba(196,99,63,0.3);}
+/* Inline-Konflikte (11.11.2026): nur die vorhandenen Basiswerte uebersteuern.
+   Klassenbasierte Knopfstile und die uebrigen Hover-Eigenschaften bleiben unveraendert. */
+.h2[style*="background:#A94F30" i]:hover,
+.h4[style*="background:#A94F30" i]:hover,
+.h8[style*="background:#A94F30" i]:hover{background-color:#8E4227 !important;}
+.h3[style*="border:1px solid rgba(250,247,242,0.25)" i]:hover{border-color:#FAF7F2 !important;}
+.h4[style*="border:1px solid #A94F30" i]:hover{border-color:#8E4227 !important;}
+.h5[style*="border:1px solid #E3DCCE" i]:hover{border-color:#C4633F !important;}
+.h6[style*="background:#FAF7F2" i]:hover{background-color:#FFFFFF !important;}
 .f0:focus{border-color:#C4633F;}
 .f0:focus-visible{outline:2px solid #C4633F; outline-offset:2px;} /* W-1: sichtbarer Tastaturfokus (Vollaudit 2026-10) */
 
@@ -87,3 +96,7 @@ html body summary:not(:is(.section-alt, .about-box, .arbeitsprobe-box, .case-car
 html body :is(.compare th, .table-wrap th, .wrap thead th):not(:is(.section-alt, .about-box, .arbeitsprobe-box, .case-card) *) { color: var(--terra-on-dark-soft) !important; }
 /* Codex 16.10.: halbtransparente Kopfzeile liegt beim Scrollen auch über hellen Abschnitten; dort reicht #E08A66 nicht (4,05:1), #E8956F hält 4,5:1. */
 html body :is(header, nav) :is([style*="color:#C4633F" i], [style*="color: #C4633F" i], [style*="color:#E08A66" i], a.h0[aria-current="page"], a.h1[aria-current="page"]) { color: var(--terra-on-dark-soft) !important; }
+
+/* Inline-Links in hellen Karten (p13 A4, 11.11.2026): Klasse .inline-link nimmt den Link aus der Regel .card a:not([class]) oben heraus.
+   Farbe #134d35 auf Kartengrund #f6faf7 (.card auf /fuer-agenturen/): 9,31:1, gefordert 4,5:1. Das hellere Terrakotta #E08A66 hätte dort nur 2,49:1. */
+html body .card a.inline-link { color: #134d35 !important; }
