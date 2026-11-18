@@ -42,6 +42,7 @@
 ## Wissen
 
 - [Google-Unternehmensprofil fürs Studio prüfen](https://maxcontentseo.de/blog/google-unternehmensprofil-studio-pruefen.html): Kategorien, Öffnungszeiten, Adresse und Website mit dem tatsächlichen Betrieb abgleichen. Mit Checkliste und Google-Originalquellen, Stand November 2026.
+- [Öffnungszeiten an Weihnachten und Silvester abgleichen](https://maxcontentseo.de/blog/oeffnungszeiten-feiertage-jahreswechsel.html): spezielle Öffnungszeiten bei Google, Betriebsferien, Website-Text und strukturierte Daten, Buchung und Datumsliste, Stand November 2026.
 
 - [Blog](https://maxcontentseo.de/blog/): Beiträge zu lokaler Sichtbarkeit.
 - [SEO-Begriffe einfach erklärt](https://maxcontentseo.de/seo-begriffe/): Glossar mit 31 Begriffen.
