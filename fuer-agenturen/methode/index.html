@@ -190,7 +190,7 @@
       <ul class="list">
         <li><strong>Organische Position aus zwei Datenquellen.</strong> Ich frage zwei Quellen ab, mit einer Suchtiefe von bis zu 30 Treffern. Wie viele Treffer tatsächlich geliefert wurden, steht beim jeweiligen Ergebnis. Der Standort liegt möglichst auf Stadtebene. Fällt eine Quelle aus oder muss ich auf eine gröbere Ebene (Bundesland, Land) ausweichen, mache ich das kenntlich. Weichen die Quellen voneinander ab, steht das offen im Bericht.</li>
         <li><strong>Plattformen vor der eigenen Website.</strong> Erscheint eine Plattform oder ein Verzeichnis mit dem Betrieb vor dessen eigener Website, weise ich das aus.</li>
-        <li><strong>Kartenbereich nur als Hinweis.</strong> Ich messe die Position im Google-Kartenbereich für das Suchwort an einem Punkt am Standort des Betriebs (Plätze 1 bis 20). Diese Messung hat nur eine Quelle. Ich bezeichne sie darum als „laut Analyse“ und sehe sie vor einer Aussage im Bericht live in Google Maps nach.</li>
+        <li><strong>Kartenbereich nur als Hinweis.</strong> Ich messe die Position im Google-Kartenbereich für das Suchwort an einem Punkt am Standort des Betriebs (Plätze 1 bis 20). Diese Messung hat nur eine Quelle. Für diese Messung verwende ich keine Live-Ansicht. Im Bericht steht die Position darum als nicht bestätigt.</li>
         <li><strong>Neutrale Messung.</strong> Die Messung ist nicht personalisiert. Die Ansicht des eingeloggten Inhabers am Standort kann höher liegen.</li>
       </ul>
     </section>
@@ -198,8 +198,8 @@
     <section class="block" aria-labelledby="nap-heading">
       <h2 id="nap-heading">3. Stimmen Name, Adresse und Telefonnummer?</h2>
       <ul class="list">
-        <li><strong>Vier Quellen.</strong> Impressum der Website, Google Maps, 11880.com und golocal.de. Ich rufe sie im Browser ab und vergleiche sie Feld für Feld.</li>
-        <li><strong>Google-Unternehmensprofil.</strong> Über die Google-Places-Schnittstelle prüfe ich Kategorie, Bewertung, Anzahl der Bewertungen, Betriebsstatus und ob Öffnungszeiten hinterlegt sind. Bewertung und Anzahl prüfe ich vor einer Aussage live im Profil gegen.</li>
+        <li><strong>Vier Quellen.</strong> Das Werkzeug gleicht Name, Adresse und Telefonnummer automatisch zwischen dem Impressum der Website, Google Maps, 11880.com und golocal.de ab.</li>
+        <li><strong>Google-Unternehmensprofil.</strong> Über die Google-Places-Schnittstelle ruft das Werkzeug Kategorie, Bewertung, Anzahl der Bewertungen, Betriebsstatus und die Angabe ab, ob Öffnungszeiten hinterlegt sind.</li>
         <li><strong>Bekannte Ausnahme.</strong> Eine gesonderte Anschrift der redaktionell verantwortlichen Person im Impressum werte ich nicht automatisch als Abweichung.</li>
       </ul>
     </section>
@@ -208,14 +208,14 @@
       <h2 id="weg-heading">4. Funktioniert der Weg zur Anfrage oder Buchung?</h2>
       <ul class="list">
         <li><strong>Automatische Erhebung.</strong> Im Browser, getrennt für Computer und Handy: Ist ein Buchungs- oder Anfrageknopf ohne Scrollen sichtbar? Sind Preise, eine Telefonnummer oder ein Telefonlink ohne Scrollen erkennbar? Gibt es einen klaren Buchungsweg?</li>
-        <li><strong>Danach jeder Knopf einzeln.</strong> Jeden Knopf und Link, über den der Bericht etwas sagt, klicke ich tatsächlich, auf Computer und Handy. Ich protokolliere die Ziel-URL nach allen Weiterleitungen und den HTTP-Status. Erst dann gilt ein Befund als gesichert. Der Grund: Cookie-Banner und spät nachgeladene Knöpfe verfälschen automatische Messungen.</li>
+        <li><strong>Danach jeder Knopf einzeln.</strong> Ein Skript prüft die Klickwege zur Anfrage oder Buchung in einem echten Browser am Computer und in einer nachgestellten Handy-Ansicht. Es erstellt Bildschirmfotos, die ich mir selbst ansehe.</li>
       </ul>
     </section>
 
     <section class="block card" aria-labelledby="pruefung-heading">
       <h2 id="pruefung-heading">Wie Befunde geprüft werden, bevor sie im Bericht stehen</h2>
       <ul class="list">
-        <li><strong>Zwei-Quellen-Regel.</strong> Organische Positionen aus nur einer Quelle kennzeichne ich als Hinweis. Kartenpositionen gleiche ich live mit Google Maps ab. Profil- und Klickweg-Befunde prüfe ich vor gesicherten Aussagen live gegen.</li>
+        <li><strong>Zwei-Quellen-Regel.</strong> Organische Positionen aus nur einer Quelle kennzeichne ich als Hinweis. Kartenpositionen stammen aus einer Quelle und stehen im Bericht als nicht bestätigt. Das Werkzeug liest Name, Adresse und Telefonnummer des Google-Unternehmensprofils aus der Google-Places-Schnittstelle und aus der Live-Ansicht von Google Maps. Ein Skript prüft die Wege zur Anfrage oder Buchung in einem echten Browser. Die Bildschirmfotos sehe ich mir selbst an.</li>
         <li><strong>Zweites Modell.</strong> Ein KI-Modell eines anderen Anbieters prüft die Befunde gegen, bevor ein Bericht entsteht. Widerspricht es, geht der Befund nicht ungeprüft hinaus.</li>
       </ul>
     </section>
